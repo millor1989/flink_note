@@ -1,0 +1,736 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>客户端操作 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="time-window.html" />
+    
+    
+    <link rel="prev" href="datastream-api.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../try-flink/local.html">
+            
+                <a href="../try-flink/local.html">
+            
+                    
+                    本地模式安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../try-flink/002.html">
+            
+                <a href="../try-flink/002.html">
+            
+                    
+                    基于DataStream API实现欺诈检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../try-flink/003.html">
+            
+                <a href="../try-flink/003.html">
+            
+                    
+                    基于Table API实现实时报表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../try-flink/004.html">
+            
+                <a href="../try-flink/004.html">
+            
+                    
+                    一个Flink操作场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../practice.html">
+            
+                <a href="../practice.html">
+            
+                    
+                    实践练习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../practice/001.html">
+            
+                <a href="../practice/001.html">
+            
+                    
+                    DataStream API 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../practice/002.html">
+            
+                <a href="../practice/002.html">
+            
+                    
+                    数据管道 & ETL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../practice/003.html">
+            
+                <a href="../practice/003.html">
+            
+                    
+                    流式分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../flink-china.html">
+            
+                <a href="../flink-china.html">
+            
+                    
+                    Flink 中国社区文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="setdeployrun.html">
+            
+                <a href="setdeployrun.html">
+            
+                    
+                    Flink 环境搭建、配置、部署及运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="datastream-api.html">
+            
+                <a href="datastream-api.html">
+            
+                    
+                    DataStream API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="client.html">
+            
+                <a href="client.html">
+            
+                    
+                    客户端操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="time-window.html">
+            
+                <a href="time-window.html">
+            
+                    
+                    Time&Window
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../wai-lian.html">
+            
+                <a href="../wai-lian.html">
+            
+                    
+                    外链
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >客户端操作</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="flink-&#x5BA2;&#x6237;&#x7AEF;&#x64CD;&#x4F5C;">Flink &#x5BA2;&#x6237;&#x7AEF;&#x64CD;&#x4F5C;</h3>
+<p>Flink &#x63D0;&#x4F9B;&#x4E86;&#x4E30;&#x5BCC;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x64CD;&#x4F5C;&#x6765;&#x63D0;&#x4EA4;&#x8BA4;&#x4E3A;&#x548C;&#x4E0E;&#x4EFB;&#x52A1;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x3002;</p>
+<p><img src="../assets/1639447804294.png" alt="1639447804294"></p>
+<p>Flink &#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x7684; bin &#x76EE;&#x5F55;&#x4E0B;&#x6709; flink&#xFF0C;start-scala-shell.sh&#xFF0C;sql-client.sh &#x7B49;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E9B;&#x90FD;&#x662F;&#x5BA2;&#x6237;&#x7AEF;&#x64CD;&#x4F5C;&#x7684;&#x5165;&#x53E3;&#x3002;</p>
+<h4 id="1&#x3001;flink-&#x547D;&#x4EE4;&#x884C;&#xFF08;commandline&#xFF09;">1&#x3001;Flink &#x547D;&#x4EE4;&#x884C;&#xFF08;CommandLine&#xFF09;</h4>
+<p><code>-h</code> &#x67E5;&#x770B; flink &#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;&#x53CA;&#x8BF4;&#x660E;&#xFF1A;</p>
+<pre><code class="lang-shell">$flink-1.7.2 bin/flink -h
+</code></pre>
+<p>&#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#x53CA;&#x8BF4;&#x660E;&#xFF0C;&#x6BD4;&#x5982; <code>run</code>&#xFF1A;</p>
+<pre><code class="lang-shell">$flink-1.7.2 bin/flink run -h
+</code></pre>
+<h5 id="11&#x3001;standalone-&#x6A21;&#x5F0F;">1.1&#x3001;Standalone &#x6A21;&#x5F0F;</h5>
+<h5 id="111&#x3001;run-&#x8FD0;&#x884C;&#x4EFB;&#x52A1;">1.1.1&#x3001;<code>run</code> &#x8FD0;&#x884C;&#x4EFB;&#x52A1;</h5>
+<p>&#x8FD0;&#x884C;&#x4EFB;&#x52A1;&#xFF0C;&#x4EE5; Flink &#x81EA;&#x5E26;&#x7684; <code>TopSpeedWindowing</code> &#x4E3A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-shell">$flink-1.7.2 bin/flink run -d examples/streaming/TopSpeedWindowing.jar
+
+Starting execution of program
+Executing TopSpeedWindowing example with default input data set.
+Use --input to specify file input.
+Printing result to stdout. Use --output to specify output path.
+Job has been submitted with JobID 5e20cb6b0f357591171dfcca2eea09de
+</code></pre>
+<p>&#x6253;&#x5F00;Web &#x754C;&#x9762; <a href="http://127.0.0.1:8081" target="_blank">http://127.0.0.1:8081</a> &#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x9ED8;&#x8BA4;&#x662F; 1 &#x4E2A;&#x5E76;&#x53D1;&#xFF0C;&#x4ECE; Task Manager &#x9875;&#x7B7E;&#x7684; Stdout &#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8F93;&#x51FA;&#x65E5;&#x5FD7;&#x3002;</p>
+<h5 id="112&#x3001;list-&#x67E5;&#x770B;&#x4EFB;&#x52A1;&#x5217;&#x8868;">1.1.2&#x3001;<code>list</code> &#x67E5;&#x770B;&#x4EFB;&#x52A1;&#x5217;&#x8868;</h5>
+<pre><code class="lang-shell">$flink-1.7.2 bin/flink list -m 127.0.0.1:8081
+Waiting for response...
+------------------ Running/Restarting Jobs -------------------
+24.03.2019 10:14:06 : 5e20cb6b0f357591171dfcca2eea09de : CarTopSpeedWindowingExample (RUNNING)
+--------------------------------------------------------------
+No scheduled jobs.
+</code></pre>
+<h5 id="113&#x3001;stop-&#x505C;&#x6B62;&#x4EFB;&#x52A1;">1.1.3&#x3001;<code>stop</code> &#x505C;&#x6B62;&#x4EFB;&#x52A1;</h5>
+<p>&#x901A;&#x8FC7; -m &#x6765;&#x6307;&#x5B9A;&#x8981;&#x505C;&#x6B62;&#x7684; JobManager &#x7684;&#x4E3B;&#x673A;&#x5730;&#x5740;&#x548C;&#x7AEF;&#x53E3;&#x3002;</p>
+<pre><code class="lang-shell">$flink-1.7.2 bin/flink stop -m 127.0.0.1:8081 d67420e52bd051fae2fddbaa79e046bb
+Stopping job d67420e52bd051fae2fddbaa79e046bb.
+</code></pre>
+<p>&#x4E00;&#x4E2A; Job &#x80FD;&#x591F;&#x88AB; Stop &#x8981;&#x6C42;&#x6240;&#x6709;&#x7684; Source &#x90FD;&#x662F;&#x53EF;&#x4EE5; Stoppable &#x7684;&#xFF0C;&#x5373;&#x5B9E;&#x73B0;&#x4E86; StoppableFunction &#x63A5;&#x53E3;&#x3002;&#x5426;&#x5219; <code>stop</code> &#x547D;&#x4EE4;&#x4F1A;&#x5931;&#x8D25;&#x3002;</p>
+<h5 id="114&#x3001;cancel-&#x53D6;&#x6D88;&#x4EFB;&#x52A1;">1.1.4&#x3001;<code>cancel</code> &#x53D6;&#x6D88;&#x4EFB;&#x52A1;</h5>
+<p>&#x5982;&#x679C;&#x5728; <code>conf/flink-conf.yaml</code> &#x91CC;&#x9762;&#x914D;&#x7F6E;&#x4E86; <code>state.savepoints.dir</code>&#xFF0C;&#x4F1A;&#x4FDD;&#x5B58; Savepoint&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x4F1A;&#x4FDD;&#x5B58; Savepoint&#x3002;</p>
+<pre><code class="lang-shell">$flink-1.7.2 bin/flink cancel -m 127.0.0.1:8081 5e20cb6b0f357591171dfcca2eea09de
+
+Cancelling job 5e20cb6b0f357591171dfcca2eea09de.
+Cancelled job 5e20cb6b0f357591171dfcca2eea09de.
+</code></pre>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x53D6;&#x6D88;&#x4EFB;&#x52A1;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x663E;&#x5F0F;&#x5730;&#x6307;&#x5B9A; Savepoint &#x76EE;&#x5F55;&#xFF1A;</p>
+<pre><code class="lang-shell">$flink-1.7.2 bin/flink cancel -m 127.0.0.1:8081 -s /tmp/savepoint 29da945b99dea6547c3fbafd57ed8759
+
+Cancelling job 29da945b99dea6547c3fbafd57ed8759 with savepoint to /tmp/savepoint.
+Cancelled job 29da945b99dea6547c3fbafd57ed8759. Savepoint stored in file:/tmp/savepoint/savepoint-29da94-88299bacafb7.
+</code></pre>
+<h5 id="&#x53D6;&#x6D88;&#x548C;&#x505C;&#x6B62;&#x6D41;&#x4F5C;&#x4E1A;&#x7684;&#x533A;&#x522B;&#xFF1A;">&#x53D6;&#x6D88;&#x548C;&#x505C;&#x6B62;&#x6D41;&#x4F5C;&#x4E1A;&#x7684;&#x533A;&#x522B;&#xFF1A;</h5>
+<ul>
+<li><code>cancel()</code> &#x8C03;&#x7528;&#xFF0C;&#x7ACB;&#x5373;&#x8C03;&#x7528;&#x4F5C;&#x4E1A;&#x7B97;&#x5B50;&#x7684; <code>cancel()</code> &#x65B9;&#x6CD5;&#xFF0C;&#x4EE5;&#x5C3D;&#x5FEB;&#x53D6;&#x6D88;&#x5B83;&#x4EEC;&#x3002;&#x5982;&#x679C;&#x7B97;&#x5B50;&#x5728;&#x63A5;&#x5230; <code>cancel()</code> &#x8C03;&#x7528;&#x540E;&#x6CA1;&#x6709;&#x505C;&#x6B62;&#xFF0C;Flink &#x5C06;&#x5F00;&#x59CB;&#x5B9A;&#x671F;&#x4E2D;&#x65AD;&#x7B97;&#x5B50;&#x7EBF;&#x7A0B;&#x7684;&#x6267;&#x884C;&#xFF0C;&#x76F4;&#x5230;&#x6240;&#x6709;&#x7B97;&#x5B50;&#x505C;&#x6B62;&#x4E3A;&#x6B62;&#x3002;</li>
+<li><code>stop()</code>&#x8C03;&#x7528;&#xFF0C;&#x662F;&#x4EE5;&#x66F4;&#x4F18;&#x96C5;&#x7684;&#x65B9;&#x5F0F;&#x505C;&#x6B62;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x6D41;&#x4F5C;&#x4E1A;&#x3002;<code>stop()</code> &#x4EC5;&#x9002;&#x7528;&#x4E8E; Source &#x5B9E;&#x73B0;&#x4E86; StoppableFunction &#x63A5;&#x53E3;&#x7684;&#x4F5C;&#x4E1A;&#x3002;&#x5F53;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x505C;&#x6B62;&#x4F5C;&#x4E1A;&#x65F6;&#xFF0C;&#x4F5C;&#x4E1A;&#x7684;&#x6240;&#x6709; Source &#x90FD;&#x5C06;&#x63A5;&#x6536; <code>stop()</code> &#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x3002;&#x76F4;&#x5230;&#x6240;&#x6709; Source &#x6B63;&#x5E38;&#x5173;&#x95ED;&#x65F6;&#xFF0C;&#x4F5C;&#x4E1A;&#x624D;&#x4F1A;&#x6B63;&#x5E38;&#x7ED3;&#x675F;&#x3002;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x4F7F;&#x4F5C;&#x4E1A;&#x6B63;&#x5E38;&#x5904;&#x7406;&#x5B8C;&#x6240;&#x6709;&#x4F5C;&#x4E1A;&#x3002;</li>
+</ul>
+<h5 id="115&#x3001;savepoint">1.1.5&#x3001;Savepoint</h5>
+<p>&#x624B;&#x52A8;&#x89E6;&#x53D1; Savepoint&#xFF1A;</p>
+<pre><code class="lang-shell">$flink-1.7.2 bin/flink savepoint -m 127.0.0.1:8081 ec53edcfaeb96b2a5dadbfbe5ff62bbb /tmp/savepoint
+Triggering savepoint for job ec53edcfaeb96b2a5dadbfbe5ff62bbb.
+Waiting for response...
+Savepoint completed. Path: file:/tmp/savepoint/savepoint-ec53ed-84b00ce500ee
+You can resume your program from this savepoint with the run command.
+</code></pre>
+<h5 id="savepoint-&#x548C;-checkpoint-&#x7684;&#x533A;&#x522B;&#xFF1A;">Savepoint &#x548C; Checkpoint &#x7684;&#x533A;&#x522B;&#xFF1A;</h5>
+<ul>
+<li>Checkpoint &#x662F;<strong>&#x589E;&#x91CF;</strong>&#x505A;&#x7684;&#xFF0C;&#x6BCF;&#x6B21;&#x7684;&#x65F6;&#x95F4;&#x8F83;&#x77ED;&#xFF0C;&#x6570;&#x636E;&#x91CF;&#x8F83;&#x5C0F;&#xFF0C;&#x53EA;&#x8981;&#x5728;&#x7A0B;&#x5E8F;&#x91CC;&#x9762;&#x542F;&#x7528;&#x540E;&#x4F1A;<strong>&#x81EA;&#x52A8;&#x89E6;&#x53D1;</strong>&#xFF0C;&#x7528;&#x6237;&#x65E0;&#x987B;&#x611F;&#x77E5;&#xFF1B;Checkpoint &#x662F;&#x4F5C;&#x4E1A; <strong>failover</strong> &#x7684;&#x65F6;&#x5019;&#x81EA;&#x52A8;&#x4F7F;&#x7528;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x7528;&#x6237;&#x6307;&#x5B9A;&#x3002;</li>
+<li>Savepoint &#x662F;<strong>&#x5168;&#x91CF;</strong>&#x505A;&#x7684;&#xFF0C;&#x6BCF;&#x6B21;&#x7684;&#x65F6;&#x95F4;&#x8F83;&#x957F;&#xFF0C;&#x6570;&#x636E;&#x91CF;&#x8F83;&#x5927;&#xFF0C;<strong>&#x9700;&#x8981;&#x7528;&#x6237;&#x4E3B;&#x52A8;&#x53BB;&#x89E6;&#x53D1;</strong>&#x3002;Savepoint &#x4E00;&#x822C;&#x7528;&#x4E8E;&#x7A0B;&#x5E8F;&#x7684;&#x7248;&#x672C;&#x66F4;&#x65B0;&#xFF08;&#x8BE6;&#x89C1;&#x6587;&#x6863;&#xFF09;&#xFF0C;Bug &#x4FEE;&#x590D;&#xFF0C;A/BTest &#x7B49;&#x573A;&#x666F;&#xFF0C;&#x9700;&#x8981;&#x7528;&#x6237;&#x6307;&#x5B9A;&#x3002;</li>
+</ul>
+<p>&#x4F7F;&#x7528; <code>-s</code> &#x53C2;&#x6570;&#xFF0C;&#x4F7F;&#x4EFB;&#x52A1;&#x4ECE;&#x6307;&#x5B9A;&#x7684; Savepoint &#x542F;&#x52A8;&#xFF1A;</p>
+<pre><code class="lang-shell">$flink-1.7.2 bin/flink run -d -s /tmp/savepoint/savepoint-f049ff-24ec0d3e0dc7 ./examples/streaming/TopSpeedWindowing.jar
+Starting execution of program
+Executing TopSpeedWindowing example with default input data set.
+</code></pre>
+<p>&#x4ECE; JobManager &#x7684;&#x65E5;&#x5FD7;&#xFF0C;&#x80FD;&#x591F;&#x770B;&#x5230;&#x7C7B;&#x4F3C;&#x5982;&#x4E0B;&#x7684;&#x65E5;&#x5FD7;&#xFF1A;</p>
+<pre><code class="lang-text">...
+Starting job 790d7b98db6f6af55d04aec1d773852d from savepoint /tmp/savepoint/savepoint-f049ff-24ec0d3e0dc7 ()
+...
+</code></pre>
+<h5 id="116&#x3001;modify-&#x4FEE;&#x6539;&#x4EFB;&#x52A1;&#x5E76;&#x884C;&#x5EA6;">1.1.6&#x3001;<code>modify</code> &#x4FEE;&#x6539;&#x4EFB;&#x52A1;&#x5E76;&#x884C;&#x5EA6;</h5>
+<p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x6F14;&#x793A;&#xFF0C;&#x4FEE;&#x6539; <code>conf/flink-conf.yaml</code> &#x5C06; Task Slot &#x6570;&#x4ECE;&#x9ED8;&#x8BA4;&#x7684; 1 &#x6539;&#x4E3A; 4&#xFF0C;&#x5E76;&#x914D;&#x7F6E; Savepoint &#x76EE;&#x5F55;&#xFF1A;</p>
+<pre><code class="lang-yaml">taskmanager.numberOfTaskSlots: <span class="hljs-number">4</span>
+state.savepoints.dir: file:///tmp/savepoint
+</code></pre>
+<p>&#x4FEE;&#x6539;&#x53C2;&#x6570;&#x540E;&#x9700;&#x8981;&#x91CD;&#x542F; standalone &#x96C6;&#x7FA4;&#xFF0C;&#x4ECE; Web UI &#x53EF;&#x4EE5;&#x770B;&#x5230; Task slot &#x4E3A; 4&#xFF0C;&#x4EFB;&#x52A1;&#x9ED8;&#x8BA4;&#x5E76;&#x884C;&#x5EA6;&#x4E3A; 1&#x3002;</p>
+<pre><code class="lang-shell">$flink-1.7.2 bin/flink modify -p 4 7752ea7b0e7303c780de9d86a5ded3fa
+Modify job 7752ea7b0e7303c780de9d86a5ded3fa.
+Rescaled job 7752ea7b0e7303c780de9d86a5ded3fa. Its new parallelism is 4.
+
+$flink-1.7.2 ll /tmp/savepoint
+total 0
+drwxr-xr-x 3 baoniu 96 Jun 17 09:05 savepoint-7752ea-00c05b015836/
+
+$flink-1.7.2 bin/flink modify -p 3 7752ea7b0e7303c780de9d86a5ded3fa
+Modify job 7752ea7b0e7303c780de9d86a5ded3fa.
+Rescaled job 7752ea7b0e7303c780de9d86a5ded3fa. Its new parallelism is 3.
+
+$flink-1.7.2 ll /tmp/savepoint
+total 0
+drwxr-xr-x 3 baoniu 96 Jun 17 09:08 savepoint-7752ea-449b131b2bd4/
+</code></pre>
+<p>&#x901A;&#x8FC7; <code>modify</code> &#x547D;&#x4EE4;&#x4F9D;&#x6B21;&#x5C06;&#x5E76;&#x53D1;&#x5EA6;&#x4FEE;&#x6539;&#x4E3A; 4 &#x548C; 3&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6BCF;&#x6B21; <code>modify</code> &#x547D;&#x4EE4;&#x90FD;&#x4F1A;&#x89E6;&#x53D1;&#x4E00;&#x6B21; Savepoint&#xFF0C;&#x4EFB;&#x52A1;&#x3002;</p>
+<h5 id="117&#x3001;info-&#x547D;&#x4EE4;&#x67E5;&#x770B;&#x6267;&#x884C;&#x8BA1;&#x5212;">1.1.7&#x3001;<code>info</code> &#x547D;&#x4EE4;&#x67E5;&#x770B;&#x6267;&#x884C;&#x8BA1;&#x5212;</h5>
+<p><code>info</code> &#x547D;&#x4EE4;&#x662F;&#x7528;&#x6765;&#x67E5;&#x770B; Flink &#x4EFB;&#x52A1;&#x7684;&#x6267;&#x884C;&#x8BA1;&#x5212;&#xFF08;StreamGraph&#xFF09;&#x7684;&#x3002;</p>
+<pre><code class="lang-shell">$flink-1.7.2 bin/flink info examples/streaming/TopSpeedWindowing.jar
+----------------------- Execution Plan -----------------------
+{&quot;nodes&quot;:[{&quot;id&quot;:1,&quot;type&quot;:&quot;Source: Custom Source&quot;,&quot;pact&quot;:&quot;Data Source&quot;,&quot;contents&quot;:&quot;Source: Custom Source&quot;,&quot;parallelism&quot;:1},{&quot;id&quot;:2,&quot;type&quot;:&quot;Timestamps/Watermarks&quot;,&quot;pact&quot;:&quot;Operator&quot;,&quot;contents&quot;:&quot;Timestamps/Watermarks&quot;,&quot;parallelism&quot;:1,&quot;predecessors&quot;:[{&quot;id&quot;:1,&quot;ship_strategy&quot;:&quot;FORWARD&quot;,&quot;side&quot;:&quot;second&quot;}]},{&quot;id&quot;:4,&quot;type&quot;:&quot;Window(GlobalWindows(), DeltaTrigger, TimeEvictor, ComparableAggregator, PassThroughWindowFunction)&quot;,&quot;pact&quot;:&quot;Operator&quot;,&quot;contents&quot;:&quot;Window(GlobalWindows(), DeltaTrigger, TimeEvictor, ComparableAggregator, PassThroughWindowFunction)&quot;,&quot;parallelism&quot;:1,&quot;predecessors&quot;:[{&quot;id&quot;:2,&quot;ship_strategy&quot;:&quot;HASH&quot;,&quot;side&quot;:&quot;second&quot;}]},{&quot;id&quot;:5,&quot;type&quot;:&quot;Sink: Print to Std. Out&quot;,&quot;pact&quot;:&quot;Data Sink&quot;,&quot;contents&quot;:&quot;Sink: Print to Std. Out&quot;,&quot;parallelism&quot;:1,&quot;predecessors&quot;:[{&quot;id&quot;:4,&quot;ship_strategy&quot;:&quot;FORWARD&quot;,&quot;side&quot;:&quot;second&quot;}]}]}
+--------------------------------------------------------------
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7684; Json &#x5185;&#x5BB9;&#xFF0C;&#x7C98;&#x8D34;&#x5230;&#x7F51;&#x7AD9;&#xFF1A;<a href="http://flink.apache.org/visualizer/" target="_blank">http://flink.apache.org/visualizer/</a></p>
+<p><img src="../assets/1639450175699.png" alt="1639450175699"></p>
+<p>&#x53EF;&#x4EE5;&#x4E0E; Web UI &#x663E;&#x793A;&#x7684;&#x7269;&#x7406;&#x6267;&#x884C;&#x8BA1;&#x5212;&#x5BF9;&#x6BD4;&#x3002;</p>
+<h5 id="12&#x3001;yarn-per-job">1.2&#x3001;Yarn per-job</h5>
+<h5 id="121&#x3001;&#x5355;&#x4EFB;&#x52A1;-attach-&#x6A21;&#x5F0F;">1.2.1&#x3001;&#x5355;&#x4EFB;&#x52A1; Attach &#x6A21;&#x5F0F;</h5>
+<p>&#x9ED8;&#x8BA4;&#x4E3A; Attach &#x6A21;&#x5F0F;&#x2014;&#x2014;&#x5BA2;&#x6237;&#x7AEF;&#x4F1A;&#x4E00;&#x76F4;&#x7B49;&#x5F85;&#x76F4;&#x5230;&#x7A0B;&#x5E8F;&#x7ED3;&#x675F;&#x624D;&#x4F1A;&#x9000;&#x51FA;&#x3002;</p>
+<p>&#x901A;&#x8FC7; <code>-m yarn-cluster</code> &#x6307;&#x5B9A; Yarn &#x6A21;&#x5F0F;&#xFF0C;&#x8FD0;&#x884C; Batch &#x4EFB;&#x52A1;</p>
+<pre><code class="lang-shell">$./bin/flink run -m yarn-cluster ./examples/batch/WordCount.jar
+</code></pre>
+<p>Yarn &#x8D44;&#x6E90;&#x7BA1;&#x7406;&#x5668; Web UI &#x53EF;&#x4EE5;&#x770B;&#x5230;&#x540D;&#x4E3A; <code>Flink session cluster</code> &#x7684;&#x5E94;&#x7528;&#xFF0C;WordCount &#x8FD9;&#x4E2A; batch &#x4EFB;&#x52A1;&#x8FD0;&#x884C;&#x5B8C;&#x72B6;&#x6001;&#x4F1A;&#x663E;&#x793A;&#x4E3A; FINISHED&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4EE5; Attach &#x6A21;&#x5F0F;&#x8FD0;&#x884C; Streaming &#x4EFB;&#x52A1;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x4F1A;&#x4E00;&#x76F4;&#x7B49;&#x5F85;&#x4E0D;&#x9000;&#x51FA;&#xFF1A;</p>
+<pre><code class="lang-shell">$./bin/flink run -m yarn-cluster ./examples/streaming/TopSpeedWindowing.jar
+</code></pre>
+<h5 id="122&#x3001;&#x5355;&#x4EFB;&#x52A1;-detached-&#x6A21;&#x5F0F;">1.2.2&#x3001;&#x5355;&#x4EFB;&#x52A1; Detached &#x6A21;&#x5F0F;</h5>
+<p>Detached &#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x5728;&#x63D0;&#x4EA4;&#x5B8C;&#x4EFB;&#x52A1;&#x540E;&#x5C31;&#x4F1A;&#x9000;&#x51FA;&#xFF1A;</p>
+<pre><code class="lang-shell">$./bin/flink run -yd -m yarn-cluster ./examples/streaming/TopSpeedWindowing.jar
+</code></pre>
+<p>Yarn &#x8D44;&#x6E90;&#x7BA1;&#x7406;&#x5668;&#x4E2D;&#x4EFB;&#x52A1;&#x7684;&#x540D;&#x79F0;&#x4E3A; per-job cluster&#x3002;</p>
+<h5 id="13&#x3001;yarn-session">1.3&#x3001;Yarn session</h5>
+<h5 id="131&#x3001;&#x542F;&#x52A8;-session">1.3.1&#x3001;&#x542F;&#x52A8; Session</h5>
+<pre><code class="lang-shell">$./bin/yarn-session.sh -tm 2048 -s 3
+</code></pre>
+<p>&#x8868;&#x793A;&#x542F;&#x52A8;&#x4E00;&#x4E2A; Yarn session &#x96C6;&#x7FA4;&#xFF0C;&#x6BCF;&#x4E2A; TM &#x7684;&#x5185;&#x5B58;&#x662F; 2 G&#xFF0C;&#x6BCF;&#x4E2A; TM &#x6709; 3 &#x4E2A; Slot&#x3002;</p>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x9ED8;&#x8BA4;&#x662F; Attach &#x6A21;&#x5F0F;&#xFF0C;&#x4E0D;&#x4F1A;&#x9000;&#x51FA;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>ctrl + C</code> &#x9000;&#x51FA;&#xFF0C;&#x4E4B;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>./bin/yarn-session.sh -idapplication_1532332183347_0726</code> &#x91CD;&#x65B0;&#x8FDE;&#x63A5;&#x3002;</p>
+<p>&#x542F;&#x52A8; yarn session &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>-d</code> &#x4EE5; Detached &#x6A21;&#x5F0F;&#x542F;&#x52A8;&#x3002;</p>
+<p>Yarn &#x8D44;&#x6E90;&#x7BA1;&#x7406;&#x5668;&#x4E0A;&#x663E;&#x793A;&#x4E3A; Flink session cluster&#xFF0C;&#x5728;&#x672C;&#x673A;&#x7684;&#x4E34;&#x65F6;&#x76EE;&#x5F55;&#xFF08;<code>/tmp</code>&#xFF0C;&#x67D0;&#x4E9B;&#x673A;&#x5668;&#x662F; <code>/var</code>&#xFF09;&#x4E0B;&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-shell">$flink-1.7.2 cat /var/folders/2b/r6d49pcs23z43b8fqsyz885c0000gn/T/.yarn-properties-admin
+
+parallelism=3
+dynamicPropertiesString=
+applicationID=application_1532332183347_0726
+</code></pre>
+<p>&#x63D0;&#x4EA4;&#x4EFB;&#x52A1;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x4F1A;&#x6839;&#x636E;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x63D0;&#x4EA4;&#x5230;&#x521A;&#x542F;&#x52A8;&#x7684; session&#xFF1A;</p>
+<pre><code class="lang-shell">$flink-1.7.2 ./bin/flink run ./examples/batch/WordCount.jar
+</code></pre>
+<p>&#x4EFB;&#x52A1;&#x8FD0;&#x884C;&#x7ED3;&#x675F;&#xFF0C;TM &#x7684;&#x8D44;&#x6E90;&#x4F1A;&#x91CA;&#x653E;&#x3002;</p>
+<h5 id="132&#x3001;&#x63D0;&#x4EA4;&#x5230;&#x6307;&#x5B9A;&#x7684;-session">1.3.2&#x3001;&#x63D0;&#x4EA4;&#x5230;&#x6307;&#x5B9A;&#x7684; session</h5>
+<p>&#x901A;&#x8FC7; <code>-yid</code> &#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x63D0;&#x4EA4;&#x4EFB;&#x52A1;&#x5230;&#x6307;&#x5B9A;&#x7684; session&#xFF1A;</p>
+<pre><code class="lang-shell">$./bin/flink run -d -p 30 -m yarn-cluster -yid application_1532332183347_0708 ./examples/streaming/TopSpeedWindowing.jar
+</code></pre>
+<h4 id="2&#x3001;scala-shell">2&#x3001;Scala shell</h4>
+<h5 id="21&#x3001;deploy">2.1&#x3001;Deploy</h5>
+<h5 id="211&#x3001;local">2.1.1&#x3001;Local</h5>
+<pre><code class="lang-shell">$bin/start-scala-shell.sh local
+
+Starting Flink Shell:
+Starting local Flink cluster (host: localhost, port: 8081).
+Connecting to Flink cluster (host: localhost, port: 8081).
+... ...
+scala&gt;
+</code></pre>
+<p>&#x4EFB;&#x52A1;&#x8FD0;&#x884C;&#x8BF4;&#x660E;&#xFF1A;</p>
+<p>&#x2022; Batch &#x4EFB;&#x52A1;&#x5185;&#x7F6E;&#x4E86; <code>benv</code> &#x53D8;&#x91CF;&#xFF0C;&#x901A;&#x8FC7; <code>print()</code> &#x5C06;&#x7ED3;&#x679C;&#x8F93;&#x51FA;&#x5230;&#x63A7;&#x5236;&#x53F0;&#xFF1B;</p>
+<p>&#x2022; Streaming &#x4EFB;&#x52A1;&#x5185;&#x7F6E;&#x4E86; <code>senv</code> &#x53D8;&#x91CF;&#xFF0C;&#x901A;&#x8FC7; <code>senv.execute(&quot;job name&quot;)</code> &#x6765;&#x63D0;&#x4EA4;&#x4EFB;&#x52A1;&#xFF0C;&#x4E14; Datastream &#x7684;&#x8F93;&#x51FA;&#x53EA;&#x6709;&#x5728; Local &#x6A21;&#x5F0F;&#x4E0B;&#x6253;&#x5370;&#x5230;&#x63A7;&#x5236;&#x53F0;&#xFF1B;</p>
+<h5 id="212&#x3001;remote">2.1.2&#x3001;Remote</h5>
+<p>&#x9996;&#x5148;&#x542F;&#x52A8; yarn session cluster&#xFF1A;</p>
+<pre><code class="lang-shell">$./bin/yarn-session.sh  -tm 2048 -s 3
+
+
+......
+Flink JobManager is now running on z054.sqa.net:28665 with leader id 00000000-0000-0000-0000-000000000000.
+JobManager Web Interface: http://z054.sqa.net:28665
+</code></pre>
+<p>&#x542F;&#x52A8; scala shell&#xFF0C;&#x8FDE;&#x63A5;&#x5230; JM&#xFF1A;</p>
+<pre><code class="lang-shell">$bin/start-scala-shell.sh remote z054.sqa.net 28665
+
+Starting Flink Shell:
+Connecting to Flink cluster (host: z054.sqa.net, port: 28665).
+... ...
+scala&gt;
+</code></pre>
+<h5 id="213&#x3001;yarn">2.1.3&#x3001;Yarn</h5>
+<pre><code class="lang-shell">$./bin/start-scala-shell.sh yarn -n 2 -jm 1024 -s 2 -tm 1024 -nm flink-yarn
+
+Starting Flink Shell:
+......
+
+Connecting to Flink cluster (host: 10.10.10.10, port: 56942).
+</code></pre>
+<p>Yarn &#x8D44;&#x6E90;&#x7BA1;&#x7406;&#x5668;&#x4E2D;&#x542F;&#x52A8;&#x7684;&#x5E94;&#x7528;&#x540D;&#x79F0;&#x4E3A; flink-yarn&#xFF08;-nm&#xFF09;&#xFF0C;&#x6309; CTRL + C &#x9000;&#x51FA; Shell &#x540E;&#xFF0C;&#x8FD9;&#x4E2A; Flink cluster &#x8FD8;&#x4F1A;&#x7EE7;&#x7EED;&#x8FD0;&#x884C;&#xFF0C;&#x4E0D;&#x4F1A;&#x9000;&#x51FA;&#x3002;</p>
+<h5 id="22&#x3001;execute">2.2&#x3001;Execute</h5>
+<h5 id="221&#x3001;dataset-&#x4EFB;&#x52A1;">2.2.1&#x3001;DataSet &#x4EFB;&#x52A1;</h5>
+<pre><code class="lang-shell">$flink-1.7.2 bin/stop-cluster.sh
+No taskexecutor daemon to stop on host zkb-MBP.local.
+No standalonesession daemon to stop on host zkb-MBP.local.
+
+$flink-1.7.2 bin/start-scala-shell.sh local
+Starting Flink Shell:
+Starting local Flink cluster (host: localhost, port: 8081).
+Connecting to Flink cluster (host: localhost, port: 8081).
+
+scala&gt; val text = benv.fromElements(&quot;To be, or not to be,--that is the question:--&quot;)
+text: org.apache.flink.api.scala.DataSet[String] = org.apache.flink.api.scala.DataSet@5b407336
+
+scala&gt; val counts = text.flatMap { _.toLowerCase.split(&quot;\\W+&quot;) }.map { (_, 1) }.groupBy(0).sum(1)
+counts: org.apache.flink.api.scala.AggregateDataSet[(String, Int)] = org.apache.flink.api.scala.AggregateDataSet@6ee34fe4
+
+scala&gt; counts.print()
+(be,2)
+(is,1)
+(not,1)
+(or,1)
+(question,1)
+(that,1)
+(the,1)
+(to,2)
+</code></pre>
+<p>&#x5BF9; DataSet &#x4EFB;&#x52A1;&#x6765;&#x8BF4;&#xFF0C;<code>print()</code> &#x4F1A;&#x89E6;&#x53D1;&#x4EFB;&#x52A1;&#x7684;&#x6267;&#x884C;&#x3002;&#x901A;&#x8FC7; Flink Web UI &#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6267;&#x884C;&#x7684;&#x4EFB;&#x52A1;&#x3002;</p>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x7ED3;&#x679C;&#x8F93;&#x51FA;&#x5230;&#x6587;&#x4EF6;&#xFF08;&#x8981;&#x5148;&#x5220;&#x9664; <code>/tmp/out1</code>&#xFF0C;&#x4E0D;&#x7136;&#x4F1A;&#x56E0;&#x4E3A;&#x5B58;&#x5728;&#x540C;&#x540D;&#x6587;&#x4EF6;&#x800C;&#x62A5;&#x9519;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-shell">scala&gt; counts.writeAsText(&quot;/tmp/out1&quot;)
+res1: org.apache.flink.api.java.operators.DataSink[(String, Int)] = DataSink &apos;&lt;unnamed&gt;&apos; (TextOutputFormat (/tmp/out1) - UTF-8)
+
+scala&gt; benv.execute(&quot;batch test&quot;)
+res2: org.apache.flink.api.common.JobExecutionResult = org.apache.flink.api.common.JobExecutionResult@737652a9
+</code></pre>
+<p>&#x67E5;&#x770B; <code>/tmp/out1</code> &#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code class="lang-shell">$flink-1.7.2 cat /tmp/out1
+(be,2)
+(is,1)
+(not,1)
+(or,1)
+(question,1)
+(that,1)
+(the,1)
+(to,2)
+</code></pre>
+<h5 id="222&#x3001;datastream-&#x4EFB;&#x52A1;">2.2.2&#x3001;DataStream &#x4EFB;&#x52A1;</h5>
+<pre><code class="lang-shell">scala&gt; val textStreaming = senv.fromElements(&quot;To be, or not to be,--that is the question:--&quot;)
+textStreaming: org.apache.flink.streaming.api.scala.DataStream[String] = org.apache.flink.streaming.api.scala.DataStream@4970b93d
+
+scala&gt; val countsStreaming = textStreaming.flatMap { _.toLowerCase.split(&quot;\\W+&quot;) }.map { (_, 1) }.keyBy(0).sum(1)
+countsStreaming: org.apache.flink.streaming.api.scala.DataStream[(String, Int)] = org.apache.flink.streaming.api.scala.DataStream@6a478680
+
+scala&gt; countsStreaming.print()
+res3: org.apache.flink.streaming.api.datastream.DataStreamSink[(String, Int)] = org.apache.flink.streaming.api.datastream.DataStreamSink@42bfc11f
+
+scala&gt; senv.execute(&quot;Streaming Wordcount&quot;)
+(to,1)
+(be,1)
+(or,1)
+(not,1)
+(to,2)
+(be,2)
+(that,1)
+(is,1)
+(the,1)
+(question,1)
+res4: org.apache.flink.api.common.JobExecutionResult = org.apache.flink.api.common.JobExecutionResult@1878815a
+</code></pre>
+<p>&#x5BF9; DataStream &#x4EFB;&#x52A1;&#xFF0C;print() &#x5E76;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x4EFB;&#x52A1;&#x7684;&#x6267;&#x884C;&#xFF0C;&#x9700;&#x8981;&#x663E;&#x5F0F;&#x8C03;&#x7528; <code>execute(&quot;job name&quot;)</code> &#x624D;&#x4F1A;&#x6267;&#x884C;&#x4EFB;&#x52A1;&#x3002;</p>
+<h5 id="223&#x3001;tableapi-&#x4EFB;&#x52A1;">2.2.3&#x3001;TableAPI &#x4EFB;&#x52A1;</h5>
+<p>...</p>
+<h4 id="3&#x3001;sql-client">3&#x3001;SQL Client</h4>
+<h5 id="31&#x3001;&#x57FA;&#x672C;&#x7528;&#x6CD5;">3.1&#x3001;&#x57FA;&#x672C;&#x7528;&#x6CD5;</h5>
+<pre><code class="lang-shell">$flink-1.7.2 bin/start-cluster.sh
+Starting cluster.
+Starting standalonesession daemon on host zkb-MBP.local.
+Starting taskexecutor daemon on host zkb-MBP.local.
+
+$flink-1.7.2 ./bin/sql-client.sh embedded
+...
+
+Flink SQL&gt; help;
+The following commands are available:
+
+QUIT    Quits the SQL CLI client.
+CLEAR    Clears the current terminal.
+HELP    Prints the available commands.
+SHOW TABLES    Shows all registered tables.
+SHOW FUNCTIONS    Shows all registered user-defined functions.
+DESCRIBE    Describes the schema of a table with the given name.
+EXPLAIN    Describes the execution plan of a query or table with the given name.
+SELECT    Executes a SQL SELECT query on the Flink cluster.
+INSERT INTO    Inserts the results of a SQL SELECT query into a declared table sink.
+CREATE VIEW    Creates a virtual table from a SQL query. Syntax: &apos;CREATE VIEW &lt;name&gt; AS &lt;query&gt;;&apos;
+DROP VIEW    Deletes a previously created virtual table. Syntax: &apos;DROP VIEW &lt;name&gt;;&apos;
+SOURCE    Reads a SQL SELECT query from a file and executes it on the Flink cluster.
+SET    Sets a session configuration property. Syntax: &apos;SET &lt;key&gt;=&lt;value&gt;;&apos;. Use &apos;SET;&apos; for listing all properties.
+RESET    Resets all session configuration properties.
+
+Hint: Make sure that a statement ends with &apos;;&apos; for finalizing (multi-line) statements.
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x5728; Flink SQL &#x6A21;&#x5F0F;&#x4E0B;&#x4EA4;&#x4E92;&#x5F0F;&#x7684;&#x6267;&#x884C; SQL&#xFF0C;&#x4F7F;&#x7528; <code>EXPLAN</code> &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x67E5;&#x770B; SQL &#x7684;&#x6267;&#x884C;&#x8BA1;&#x5212;&#x3002;</p>
+<h5 id="32&#x3001;&#x7ED3;&#x679C;&#x5C55;&#x793A;">3.2&#x3001;&#x7ED3;&#x679C;&#x5C55;&#x793A;</h5>
+<p>SQL Client &#x652F;&#x6301;&#x4E24;&#x79CD;&#x6A21;&#x5F0F;&#x6765;&#x7EF4;&#x62A4;&#x5E76;&#x5C55;&#x793A;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#xFF1A;</p>
+<ul>
+<li><p>tablemode&#xFF1A;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x7269;&#x5316;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#xFF0C;&#x5E76;&#x4EE5;&#x5206;&#x9875; table &#x5F62;&#x5F0F;&#x5C55;&#x793A;&#x3002;&#x542F;&#x7528; table mode &#x7684;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code>SET execution.result-mode=table
+</code></pre></li>
+<li><p>changelog mode&#xFF1A;&#x4E0D;&#x4F1A;&#x7269;&#x5316;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#xFF0C;&#x76F4;&#x63A5;&#x5BF9; continuous query &#x5DEE;&#x751F;&#x7684;&#x6DFB;&#x52A0;&#x548C;&#x64A4;&#x56DE;&#xFF08;retractions&#xFF09;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x5C55;&#x793A;&#x3002;&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x542F;&#x7528;&#xFF1A;</p>
+<pre><code>SET execution.result-mode=changelog
+</code></pre></li>
+</ul>
+<h5 id="33&#x3001;environment-files">3.3&#x3001;Environment Files</h5>
+<p>...</p>
+<h4 id="4&#x3001;restful-api">4&#x3001;Restful API</h4>
+<p>&#x901A;&#x8FC7; Restful API &#x53EF;&#x4EE5;&#x63D0;&#x4EA4; JAR &#x5305;&#x3001;&#x6267;&#x884C;&#x4EFB;&#x52A1;&#x3002;Restful API &#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x5F88;&#x591A;&#x76D1;&#x63A7;&#x548C; Metrics &#x76F8;&#x5173;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5BF9;&#x4E8E;&#x4EFB;&#x52A1;&#x63D0;&#x4EA4;&#x7684;&#x64CD;&#x4F5C;&#x7684;&#x652F;&#x6301;&#x4E5F;&#x6BD4;&#x8F83;&#x5168;&#x9762;&#x3002;</p>
+<h5 id="5&#x3001;web">5&#x3001;Web</h5>
+<p>&#x5728; Flink Dashboard &#x9875;&#x9762;&#x5DE6;&#x4FA7;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6709;&#x4E2A;&#x300C;Submit new Job&#x300D;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x4E0A;&#x4F20; Jar &#x5305;&#x548C;&#x663E;&#x793A;&#x6267;&#x884C;&#x8BA1;&#x5212;&#x548C;&#x63D0;&#x4EA4;&#x4EFB;&#x52A1;&#x3002;Web &#x63D0;&#x4EA4;&#x529F;&#x80FD;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x65B0;&#x624B;&#x5165;&#x95E8;&#x548C;&#x6F14;&#x793A;&#x7528;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="datastream-api.html" class="navigation navigation-prev " aria-label="Previous page: DataStream API">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="time-window.html" class="navigation navigation-next " aria-label="Next page: Time&Window">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"客户端操作","level":"1.3.3","depth":2,"next":{"title":"Time&Window","level":"1.3.4","depth":2,"path":"flink-china/time-window.md","ref":"flink-china/time-window.md","articles":[]},"previous":{"title":"DataStream API","level":"1.3.2","depth":2,"path":"flink-china/datastream-api.md","ref":"flink-china/datastream-api.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"flink-china/client.md","mtime":"2021-12-14T12:53:39.926Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-13T12:19:58.220Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,570 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>DataStream API · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="client.html" />
+    
+    
+    <link rel="prev" href="setdeployrun.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../try-flink/local.html">
+            
+                <a href="../try-flink/local.html">
+            
+                    
+                    本地模式安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../try-flink/002.html">
+            
+                <a href="../try-flink/002.html">
+            
+                    
+                    基于DataStream API实现欺诈检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../try-flink/003.html">
+            
+                <a href="../try-flink/003.html">
+            
+                    
+                    基于Table API实现实时报表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../try-flink/004.html">
+            
+                <a href="../try-flink/004.html">
+            
+                    
+                    一个Flink操作场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../practice.html">
+            
+                <a href="../practice.html">
+            
+                    
+                    实践练习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../practice/001.html">
+            
+                <a href="../practice/001.html">
+            
+                    
+                    DataStream API 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../practice/002.html">
+            
+                <a href="../practice/002.html">
+            
+                    
+                    数据管道 & ETL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../practice/003.html">
+            
+                <a href="../practice/003.html">
+            
+                    
+                    流式分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../flink-china.html">
+            
+                <a href="../flink-china.html">
+            
+                    
+                    Flink 中国社区文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="setdeployrun.html">
+            
+                <a href="setdeployrun.html">
+            
+                    
+                    Flink 环境搭建、配置、部署及运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="datastream-api.html">
+            
+                <a href="datastream-api.html">
+            
+                    
+                    DataStream API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="client.html">
+            
+                <a href="client.html">
+            
+                    
+                    客户端操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="time-window.html">
+            
+                <a href="time-window.html">
+            
+                    
+                    Time&Window
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../wai-lian.html">
+            
+                <a href="../wai-lian.html">
+            
+                    
+                    外链
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >DataStream API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="datastream-api">DataStream API</h3>
+<h4 id="1&#x3001;&#x6D41;&#x5904;&#x7406;">1&#x3001;&#x6D41;&#x5904;&#x7406;</h4>
+<p>&#x6D41;&#x5904;&#x7406;&#x4E0E;&#x6279;&#x5904;&#x7406;&#x662F;&#x5BF9;&#x7ACB;&#x7EDF;&#x4E00;&#x7684;&#x6982;&#x5FF5;&#xFF1B;&#x7C7B;&#x4F3C;&#x4E8E;&#x5BF9; Java ArrayList &#x5143;&#x7D20;&#x7684;&#x904D;&#x5386;&#xFF0C;&#x662F;&#x5C06;&#x5176;&#x770B;&#x4F5C;&#x4E00;&#x4E2A;&#x6709;&#x9650;&#x6570;&#x636E;&#x96C6;&#x5E76;&#x7528;&#x4E0B;&#x6807;&#x53BB;&#x8BBF;&#x95EE;&#xFF0C;&#x8FD8;&#x662F;&#x7528;&#x8FED;&#x4EE3;&#x5668;&#x53BB;&#x8BBF;&#x95EE;&#x3002;</p>
+<h5 id="11&#x3001;&#x5206;&#x5E03;&#x5F0F;&#x6D41;&#x5904;&#x7406;&#x7684;&#x57FA;&#x672C;&#x6A21;&#x578B;">1.1&#x3001;&#x5206;&#x5E03;&#x5F0F;&#x6D41;&#x5904;&#x7406;&#x7684;&#x57FA;&#x672C;&#x6A21;&#x578B;</h5>
+<p>&#x7531;&#x4E8E;&#x9700;&#x8981;&#x652F;&#x6301;&#x65E0;&#x9650;&#x6570;&#x636E;&#x96C6;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x6D41;&#x5904;&#x7406;&#x7CFB;&#x7EDF;&#x4E00;&#x822C;&#x91C7;&#x7528;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x9A71;&#x52A8;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x3002;&#x5B83;&#x4F1A;&#x63D0;&#x524D;&#x8BBE;&#x7F6E;&#x4E00;&#x4E9B;&#x7B97;&#x5B50;&#xFF0C;&#x7136;&#x540E;&#x7B49;&#x5230;&#x6570;&#x636E;&#x5230;&#x8FBE;&#x540E;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;&#x4E3A;&#x4E86;&#x8868;&#x8FBE;&#x590D;&#x6742;&#x7684;&#x8BA1;&#x7B97;&#x903B;&#x8F91;&#xFF0C;&#x5305;&#x62EC; Flink &#x5728;&#x5185;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x6D41;&#x5904;&#x7406;&#x5F15;&#x64CE;&#x4E00;&#x822C;&#x91C7;&#x7528; DAG &#x56FE;&#x6765;&#x8868;&#x793A;&#x6574;&#x4E2A;&#x8BA1;&#x7B97;&#x903B;&#x8F91;&#xFF0C;&#x5176;&#x4E2D; DAG &#x56FE;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x70B9;&#x5C31;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x57FA;&#x672C;&#x7684;&#x903B;&#x8F91;&#x5355;&#x5143;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x524D;&#x9762;&#x8BF4;&#x7684;&#x7B97;&#x5B50;&#x3002;&#x7531;&#x4E8E;&#x8BA1;&#x7B97;&#x903B;&#x8F91;&#x88AB;&#x7EC4;&#x7EC7;&#x6210;&#x6709;&#x5411;&#x56FE;&#xFF0C;&#x6570;&#x636E;&#x4F1A;&#x6309;&#x7167;&#x8FB9;&#x7684;&#x65B9;&#x5411;&#xFF0C;&#x4ECE;&#x4E00;&#x4E9B;&#x7279;&#x6B8A;&#x7684; Source &#x8282;&#x70B9;&#x6D41;&#x5165;&#x7CFB;&#x7EDF;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;&#x3001;&#x672C;&#x5730;&#x4F20;&#x8F93;&#x7B49;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x65B9;&#x5F0F;&#x5728;&#x7B97;&#x5B50;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x53D1;&#x9001;&#x548C;&#x5904;&#x7406;&#xFF0C;&#x6700;&#x540E;&#x4F1A;&#x901A;&#x8FC7;&#x53E6;&#x5916;&#x4E00;&#x4E9B;&#x7279;&#x6B8A;&#x7684; Sink &#x8282;&#x70B9;&#x5C06;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x53D1;&#x9001;&#x5230;&#x67D0;&#x4E2A;&#x5916;&#x90E8;&#x7CFB;&#x7EDF;&#x6216;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x3002;</p>
+<p><img src="../assets/1639050629775.png" alt="1639050629775"></p>
+<p>&#x4E0A;&#x56FE;&#x4E3A;&#x4E00;&#x4E2A; DAG &#x8BA1;&#x7B97;&#x903B;&#x8F91;&#x56FE;&#x4E0E;&#x5B9E;&#x9645;&#x7684;&#x7269;&#x7406;&#x6A21;&#x578B;&#x3002;&#x903B;&#x8F91;&#x56FE;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x7B97;&#x5B50;&#x5728;&#x7269;&#x7406;&#x56FE;&#x4E2D;&#x53EF;&#x80FD;&#x6709;&#x591A;&#x4E2A;&#x5E76;&#x53D1;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x5B9E;&#x9645;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x6D41;&#x5904;&#x7406;&#x5F15;&#x64CE;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x5B9E;&#x9645;&#x8FD0;&#x884C;&#x65F6;&#x7269;&#x7406;&#x6A21;&#x578B;&#x8981;&#x66F4;&#x590D;&#x6742;&#x4E00;&#x4E9B;&#xFF0C;&#x8FD9;&#x662F;&#x7531;&#x4E8E;&#x6BCF;&#x4E2A;&#x7B97;&#x5B50;&#x90FD;&#x53EF;&#x80FD;&#x6709;&#x591A;&#x4E2A;&#x5B9E;&#x4F8B;&#x3002;&#x5982;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x4F5C;&#x4E3A; Source &#x7684; A &#x7B97;&#x5B50;&#x6709;&#x4E24;&#x4E2A;&#x5B9E;&#x4F8B;&#xFF0C;&#x4E2D;&#x95F4;&#x7B97;&#x5B50; C &#x4E5F;&#x6709;&#x4E24;&#x4E2A;&#x5B9E;&#x4F8B;&#x3002;&#x5728;&#x903B;&#x8F91;&#x6A21;&#x578B;&#x4E2D;&#xFF0C;A &#x548C; B &#x662F; C &#x7684;&#x4E0A;&#x6E38;&#x8282;&#x70B9;&#xFF0C;&#x800C;&#x5728;&#x5BF9;&#x5E94;&#x7684;&#x7269;&#x7406;&#x903B;&#x8F91;&#x4E2D;&#xFF0C;C &#x7684;&#x6240;&#x6709;&#x5B9E;&#x4F8B;&#x548C; A&#x3001;B &#x7684;&#x6240;&#x6709;&#x5B9E;&#x4F8B;&#x4E4B;&#x95F4;&#x53EF;&#x80FD;&#x90FD;&#x5B58;&#x5728;&#x6570;&#x636E;&#x4EA4;&#x6362;&#x3002;&#x5728;&#x7269;&#x7406;&#x6A21;&#x578B;&#x4E2D;&#xFF0C;&#x4F1A;&#x6839;&#x636E;&#x8BA1;&#x7B97;&#x903B;&#x8F91;&#xFF0C;&#x91C7;&#x7528;&#x7CFB;&#x7EDF;&#x81EA;&#x52A8;&#x4F18;&#x5316;&#x6216;&#x4EBA;&#x4E3A;&#x6307;&#x5B9A;&#x7684;&#x65B9;&#x5F0F;&#x5C06;&#x8BA1;&#x7B97;&#x5DE5;&#x4F5C;&#x5206;&#x5E03;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x5B9E;&#x4F8B;&#x4E2D;&#x3002;&#x53EA;&#x6709;&#x5F53;&#x7B97;&#x5B50;&#x5B9E;&#x4F8B;&#x5206;&#x5E03;&#x5230;&#x4E0D;&#x540C;&#x8FDB;&#x7A0B;&#x4E0A;&#x65F6;&#xFF0C;&#x624D;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x7F51;&#x7EDC;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x4F20;&#x8F93;&#xFF0C;&#x800C;&#x540C;&#x4E00;&#x8FDB;&#x7A0B;&#x4E2D;&#x7684;&#x591A;&#x4E2A;&#x5B9E;&#x4F8B;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x901A;&#x5E38;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x7F51;&#x7EDC;&#x7684;&#x3002;</p>
+<h5 id="12&#x3001;&#x6D41;&#x5904;&#x7406;-api-&#x7684;&#x6F14;&#x53D8;">1.2&#x3001;&#x6D41;&#x5904;&#x7406; API &#x7684;&#x6F14;&#x53D8;</h5>
+<h6 id="&#x793A;&#x4F8B;-1&#xFF1A;apache-storm-&#x6784;&#x9020;-dag-&#x8BA1;&#x7B97;&#x56FE;&#x3002;apache-storm-&#x7684;&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#x66F4;&#x52A0;&#x9762;&#x5411;&#x64CD;&#x4F5C;&#xFF0C;&#x56E0;&#x6B64;&#x66F4;&#x52A0;&#x5E95;&#x5C42;&#x3002;">&#x793A;&#x4F8B; 1&#xFF1A;Apache Storm &#x6784;&#x9020; DAG &#x8BA1;&#x7B97;&#x56FE;&#x3002;Apache Storm &#x7684;&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#x66F4;&#x52A0;&#x201C;&#x9762;&#x5411;&#x64CD;&#x4F5C;&#x201D;&#xFF0C;&#x56E0;&#x6B64;&#x66F4;&#x52A0;&#x5E95;&#x5C42;&#x3002;</h6>
+<pre><code class="lang-java">TopologyBuilder builder = <span class="hljs-keyword">new</span> TopologyBuilder();
+
+builder.setSpout(<span class="hljs-string">&quot;spout&quot;</span>, <span class="hljs-keyword">new</span> RandomSentenceSpout(), <span class="hljs-number">5</span>);
+builder.setBolt(<span class="hljs-string">&quot;split&quot;</span>, <span class="hljs-keyword">new</span> SplitSentence(), <span class="hljs-number">8</span>).shuffleGrouping(<span class="hljs-string">&quot;spout&quot;</span>);
+builder.setBolt(<span class="hljs-string">&quot;count&quot;</span>, <span class="hljs-keyword">new</span> WordCount(), <span class="hljs-number">12</span>).fieldsGrouping(<span class="hljs-string">&quot;split&quot;</span>, <span class="hljs-keyword">new</span> Fields(<span class="hljs-string">&quot;word&quot;</span>));
+</code></pre>
+<h6 id="&#x793A;&#x4F8B;-2&#xFF1A;apache-flink-&#x6784;&#x9020;-dag-&#x8BA1;&#x7B97;&#x56FE;&#x3002;apache-flink-&#x7684;&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#x66F4;&#x52A0;&#x9762;&#x5411;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x6B64;&#x66F4;&#x52A0;&#x9AD8;&#x5C42;&#x3002;">&#x793A;&#x4F8B; 2&#xFF1A;Apache Flink &#x6784;&#x9020; DAG &#x8BA1;&#x7B97;&#x56FE;&#x3002;Apache Flink &#x7684;&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#x66F4;&#x52A0;&#x201C;&#x9762;&#x5411;&#x6570;&#x636E;&#x201D;&#xFF0C;&#x56E0;&#x6B64;&#x66F4;&#x52A0;&#x9AD8;&#x5C42;&#x3002;</h6>
+<pre><code class="lang-java">StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+
+DataStream text = env.readTextFile (<span class="hljs-string">&quot;input&quot;</span>);
+DataStream&lt;Tuple2&lt;String, Integer&gt;&gt; counts = text.flatMap(<span class="hljs-keyword">new</span> Tokenizer()).keyBy(<span class="hljs-number">0</span>).sum(<span class="hljs-number">1</span>);
+counts.writeAsText(<span class="hljs-string">&quot;output&quot;</span>);
+</code></pre>
+<p>&#x7531;&#x4E8E;&#x6D41;&#x5904;&#x7406;&#x7684;&#x8BA1;&#x7B97;&#x903B;&#x8F91;&#x662F;&#x901A;&#x8FC7; DAG &#x56FE;&#x6765;&#x8868;&#x793A;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x5B83;&#x4EEC;&#x7684;&#x5927;&#x90E8;&#x5206; API &#x90FD;&#x662F;&#x56F4;&#x7ED5;&#x6784;&#x5EFA;&#x8FD9;&#x79CD;&#x8BA1;&#x7B97;&#x903B;&#x8F91;&#x56FE;&#x6765;&#x8BBE;&#x8BA1;&#x7684;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5BF9;&#x4E8E;&#x51E0;&#x5E74;&#x524D;&#x975E;&#x5E38;&#x6D41;&#x884C;&#x7684; Apache Storm&#xFF0C;&#x5B83;&#x7684; Word Count &#x7684;&#x793A;&#x4F8B;&#x5982;&#x4E0A;&#x6240;&#x793A;&#x3002;&#x57FA;&#x4E8E; Apache Storm &#x7528;&#x6237;&#x9700;&#x8981;&#x5728;&#x56FE;&#x4E2D;&#x6DFB;&#x52A0; Spout &#x6216; Bolt &#x8FD9;&#x79CD;&#x7B97;&#x5B50;&#xFF0C;&#x5E76;&#x6307;&#x5B9A;&#x7B97;&#x5B50;&#x4E4B;&#x524D;&#x7684;&#x8FDE;&#x63A5;&#x65B9;&#x5F0F;&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x5728;&#x5B8C;&#x6210;&#x6574;&#x4E2A;&#x56FE;&#x7684;&#x6784;&#x5EFA;&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5C06;&#x56FE;&#x63D0;&#x4EA4;&#x5230;&#x8FDC;&#x7A0B;&#x6216;&#x672C;&#x5730;&#x96C6;&#x7FA4;&#x8FD0;&#x884C;&#x3002;</p>
+<p>&#x800C; Apache Flink &#x7684;&#x63A5;&#x53E3;&#x867D;&#x7136;&#x4E5F;&#x662F;&#x5728;&#x6784;&#x5EFA;&#x8BA1;&#x7B97;&#x903B;&#x8F91;&#x56FE;&#xFF0C;&#x4F46;&#x662F; Flink &#x7684; API &#x5B9A;&#x4E49;&#x66F4;&#x52A0;&#x9762;&#x5411;&#x6570;&#x636E;&#x672C;&#x8EAB;&#x7684;&#x5904;&#x7406;&#x903B;&#x8F91;&#xFF0C;&#x5B83;&#x628A;&#x6570;&#x636E;&#x6D41;&#x62BD;&#x8C61;&#x6210;&#x4E3A;&#x4E00;&#x4E2A;&#x65E0;&#x9650;&#x96C6;&#xFF0C;&#x7136;&#x540E;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x7EC4;&#x96C6;&#x5408;&#x4E0A;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x5E95;&#x5C42;&#x81EA;&#x52A8;&#x6784;&#x5EFA;&#x76F8;&#x5E94;&#x7684; DAG &#x56FE;&#x3002;Flink &#x7684; API &#x8981;&#x66F4;&#x201C;&#x9AD8;&#x5C42;&#x201D;&#x4E00;&#x4E9B;&#x3002;</p>
+<p>&#x8BB8;&#x591A;&#x7814;&#x7A76;&#x8005;&#x5728;&#x8FDB;&#x884C;&#x5B9E;&#x9A8C;&#x65F6;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x66F4;&#x559C;&#x6B22;&#x81EA;&#x7531;&#x5EA6;&#x9AD8;&#x7684; Storm&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x66F4;&#x5BB9;&#x6613;&#x4FDD;&#x8BC1;&#x5B9E;&#x73B0;&#x9884;&#x60F3;&#x7684;&#x56FE;&#x7ED3;&#x6784;&#xFF1B;&#x800C;&#x5728;&#x5DE5;&#x4E1A;&#x754C;&#x5219;&#x66F4;&#x559C;&#x6B22; Flink &#x8FD9;&#x7C7B;&#x9AD8;&#x7EA7; API&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4F7F;&#x7528;&#x66F4;&#x52A0;&#x7B80;&#x5355;&#x3002;</p>
+<h4 id="2&#x3001;datastream-api-&#x6982;&#x89C8;">2&#x3001;DataStream API &#x6982;&#x89C8;</h4>
+<h6 id="&#x793A;&#x4F8B;-3&#xFF1A;&#x57FA;&#x4E8E;-flink-datastream-api-&#x7684;-word-count-&#x793A;&#x4F8B;">&#x793A;&#x4F8B; 3&#xFF1A;&#x57FA;&#x4E8E; Flink DataStream API &#x7684; Word Count &#x793A;&#x4F8B;.</h6>
+<pre><code class="lang-java"><span class="hljs-comment">//1&#x3001;&#x8BBE;&#x7F6E;&#x8FD0;&#x884C;&#x73AF;&#x5883;</span>
+StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+<span class="hljs-comment">//2&#x3001;&#x914D;&#x7F6E;&#x6570;&#x636E;&#x6E90;&#x8BFB;&#x53D6;&#x6570;&#x636E;</span>
+DataStream text = env.readTextFile (<span class="hljs-string">&quot;input&quot;</span>);
+<span class="hljs-comment">//3&#x3001;&#x8FDB;&#x884C;&#x4E00;&#x7CFB;&#x5217;&#x8F6C;&#x6362;</span>
+DataStream&lt;Tuple2&lt;String, Integer&gt;&gt; counts = text.flatMap(<span class="hljs-keyword">new</span> Tokenizer()).keyBy(<span class="hljs-number">0</span>).sum(<span class="hljs-number">1</span>);
+<span class="hljs-comment">//4&#x3001;&#x914D;&#x7F6E;&#x6570;&#x636E;&#x6C47;&#x5199;&#x51FA;&#x6570;&#x636E;</span>
+counts.writeAsText(<span class="hljs-string">&quot;output&quot;</span>);
+<span class="hljs-comment">//5&#x3001;&#x63D0;&#x4EA4;&#x6267;&#x884C;</span>
+env.execute(<span class="hljs-string">&quot;Streaming WordCount&quot;</span>);
+</code></pre>
+<p>&#x8BE5;&#x4F8B;&#x7ED9;&#x51FA;&#x4E86;&#x57FA;&#x4E8E; Flink DataStream API &#x5F00;&#x53D1;&#x7A0B;&#x5E8F;&#x7684;&#x57FA;&#x672C;&#x7ED3;&#x6784;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x6784;&#x5EFA;&#x4E00;&#x4E2A; <code>StreamExecutionEnvironment</code> &#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x662F;&#x6784;&#x5EFA;&#x56FE;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x5BF9;&#x8C61;&#x3002;&#x5BF9;&#x4E8E;&#x6D41;&#x5904;&#x7406;&#x7A0B;&#x5EA6;&#xFF0C;&#x4E00;&#x822C;&#x9700;&#x8981;&#x9996;&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x6E90;&#x53BB;&#x63A5;&#x5165;&#x6570;&#x636E;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;&#x4E86; <code>Environment</code> &#x5BF9;&#x8C61;&#x4E2D;&#x5185;&#x7F6E;&#x7684;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x5F97;&#x5230;&#x4E86;&#x4E00;&#x4E2A; <code>DataStream</code> &#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x770B;&#x4F5C;&#x4E00;&#x4E2A;&#x65E0;&#x9650;&#x7684;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x8BE5;&#x96C6;&#x5408;&#x4E0A;&#x8FDB;&#x884C;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x5728; Word Count &#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x9996;&#x5148;&#x5C06;&#x6BCF;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#xFF08;&#x5373;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x4E00;&#x884C;&#xFF09;&#x5206;&#x9694;&#x4E3A;&#x5355;&#x8BCD;&#xFF0C;&#x8FD9;&#x662F;&#x901A;&#x8FC7; <code>flatMap</code> &#x64CD;&#x4F5C;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#x3002;&#x8C03;&#x7528; <code>flatMap</code> &#x5C06;&#x4F1A;&#x5728;&#x5E95;&#x5C42;&#x7684; DAG &#x56FE;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; <code>flatMap</code> &#x7B97;&#x5B50;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x5F97;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x8BB0;&#x5F55;&#x4E3A;&#x5355;&#x8BCD;&#x7684;&#x6D41;&#xFF0C;&#x5C06;&#x6D41;&#x4E2D;&#x7684;&#x5355;&#x8BCD;&#x8FDB;&#x884C;&#x5206;&#x7EC4;&#xFF08;<code>keyBy</code>&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x7D2F;&#x79EF;&#x8BA1;&#x7B97;&#x6BCF;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x7684;&#x6570;&#x636E;&#xFF08;<code>sum(1)</code>&#xFF09;&#x3002;&#x8BA1;&#x7B97;&#x51FA;&#x7684;&#x5355;&#x8BCD;&#x7684;&#x6570;&#x636E;&#x7EC4;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6D41;&#xFF0C;&#x5C06;&#x5B83;&#x5199;&#x5230;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
+<p>&#x6700;&#x540E;&#xFF0C;&#x8C03;&#x7528; <code>env.execute</code> &#x65B9;&#x6CD5;&#x6765;&#x5F00;&#x59CB;&#x7A0B;&#x5E8F;&#x7684;&#x6267;&#x884C;&#x3002;&#x9700;&#x8981;&#x5F3A;&#x8C03;&#x7684;&#x662F;&#xFF0C;&#x524D;&#x9762;&#x8C03;&#x7528;&#x7684;&#x6240;&#x6709;&#x65B9;&#x6CD5;&#xFF0C;&#x90FD;&#x4E0D;&#x662F;&#x5728;&#x5B9E;&#x9645;&#x5904;&#x7406;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x662F;&#x5728;&#x6784;&#x901A;&#x8868;&#x8FBE;&#x8BA1;&#x7B97;&#x903B;&#x8F91;&#x7684; DAG &#x56FE;&#x3002;&#x53EA;&#x6709;&#x5C06;&#x6574;&#x4E2A;&#x56FE;&#x6784;&#x5EFA;&#x5B8C;&#x6210;&#x5E76;&#x663E;&#x5F0F;&#x7684;&#x8C03;&#x7528; <code>execute</code> &#x65B9;&#x6CD5;&#x540E;&#xFF0C;&#x6846;&#x67B6;&#x624D;&#x4F1A;&#x628A;&#x8BA1;&#x7B97;&#x56FE;&#x63D0;&#x4F9B;&#x5230;&#x96C6;&#x7FA4;&#x4E2D;&#xFF0C;&#x63A5;&#x5165;&#x6570;&#x636E;&#x5E76;&#x6267;&#x884C;&#x5B9E;&#x9645;&#x7684;&#x903B;&#x8F91;&#x3002;</p>
+<p>&#x7EFC;&#x4E0A;&#xFF0C;&#x57FA;&#x4E8E; Flink &#x7684; DataStream API &#x6765;&#x7F16;&#x5199;&#x6D41;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x4E00;&#x822C;&#x9700;&#x8981;&#x4E09;&#x6B65;&#xFF1A;&#x901A;&#x8FC7; Source &#x63A5;&#x5165;&#x6570;&#x636E;&#x3001;&#x8FDB;&#x884C;&#x4E00;&#x7CFB;&#x7EDF;&#x5217;&#x7684;&#x5904;&#x7406;&#x4EE5;&#x53CA;&#x5C06;&#x6570;&#x636E;&#x5199;&#x51FA;&#x3002;&#x6700;&#x540E;&#xFF0C;&#x663E;&#x5F0F;&#x8C03;&#x7528; <code>execute</code> &#x65B9;&#x6CD5;&#xFF0C;&#x5426;&#x5219;&#x524D;&#x9762;&#x7F16;&#x5199;&#x7684;&#x903B;&#x8F91;&#x5E76;&#x4E0D;&#x4F1A;&#x771F;&#x6B63;&#x6267;&#x884C;&#x3002;</p>
+<p><img src="../assets/1639052012526.png" alt="&#x64CD;&#x4F5C;&#x6982;&#x89C8;"></p>
+<p>Flink DataStream API &#x7684;&#x6838;&#x5FC3;&#xFF0C;&#x5C31;&#x662F;&#x4EE3;&#x8868;&#x6D41;&#x6570;&#x636E;&#x7684; DataStream &#x5BF9;&#x8C61;&#x3002;&#x6574;&#x4E2A;&#x8BA1;&#x7B97;&#x903B;&#x8F91;&#x56FE;&#x7684;&#x6784;&#x5EFA;&#x5C31;&#x662F;&#x56F4;&#x7ED5;&#x8C03;&#x7528; DataStream &#x5BF9;&#x8C61;&#x4E0A;&#x7684;&#x4E0D;&#x540C;&#x64CD;&#x4F5C;&#x4EA7;&#x751F;&#x65B0;&#x7684; DataStream &#x5BF9;&#x8C61;&#x5C55;&#x5F00;&#x7684;&#x3002;</p>
+<p>&#x6574;&#x4F53;&#x6765;&#x8BF4;&#xFF0C;DataStream &#x4E0A;&#x7684;&#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x56DB;&#x7C7B;&#xFF1A;</p>
+<p>&#x7B2C;&#x4E00;&#x7C7B;&#x662F;&#x5BF9;&#x4E8E;<strong>&#x5355;&#x6761;&#x8BB0;&#x5F55;&#x7684;&#x64CD;&#x4F5C;</strong>&#xFF0C;&#x6BD4;&#x5982;&#x7B5B;&#x9664;&#x6389;&#x4E0D;&#x7B26;&#x5408;&#x8981;&#x6C42;&#x7684;&#x8BB0;&#x5F55;&#xFF08;Filter &#x64CD;&#x4F5C;&#xFF09;&#xFF0C;&#x6216;&#x8005;&#x5C06;&#x6BCF;&#x6761;&#x8BB0;&#x5F55;&#x90FD;&#x505A;&#x4E00;&#x4E2A;&#x8F6C;&#x6362;&#xFF08;Map &#x64CD;&#x4F5C;&#xFF09;&#x3002;</p>
+<p>&#x7B2C;&#x4E8C;&#x7C7B;&#x662F;&#x5BF9;<strong>&#x591A;&#x6761;&#x8BB0;&#x5F55;&#x7684;&#x64CD;&#x4F5C;</strong>&#x3002;&#x6BD4;&#x5982;&#x8BF4;&#x7EDF;&#x8BA1;&#x4E00;&#x4E2A;&#x5C0F;&#x65F6;&#x5185;&#x7684;&#x8BA2;&#x5355;&#x603B;&#x6210;&#x4EA4;&#x91CF;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x5C06;&#x4E00;&#x4E2A;&#x5C0F;&#x65F6;&#x5185;&#x7684;&#x6240;&#x6709;&#x8BA2;&#x5355;&#x8BB0;&#x5F55;&#x7684;&#x6210;&#x4EA4;&#x91CF;&#x52A0;&#x5230;&#x4E00;&#x8D77;&#x3002;&#x4E3A;&#x4E86;&#x652F;&#x6301;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5C31;&#x5F97;&#x901A;&#x8FC7; Window &#x5C06;&#x9700;&#x8981;&#x7684;&#x8BB0;&#x5F55;&#x5173;&#x8054;&#x5230;&#x4E00;&#x8D77;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x7B2C;&#x4E09;&#x7C7B;&#x662F;&#x5BF9;<strong>&#x591A;&#x4E2A;&#x6D41;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;</strong>&#x5E76;&#x8F6C;&#x6362;&#x4E3A;&#x5355;&#x4E2A;&#x6D41;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x591A;&#x4E2A;&#x6D41;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; Union&#x3001;Join &#x6216; Connect &#x7B49;&#x64CD;&#x4F5C;&#x5408;&#x5230;&#x4E00;&#x8D77;&#x3002;&#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#x5408;&#x5E76;&#x7684;&#x903B;&#x8F91;&#x4E0D;&#x540C;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x4EEC;&#x6700;&#x7EC8;&#x90FD;&#x4F1A;&#x4EA7;&#x751F;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7EDF;&#x4E00;&#x7684;&#x6D41;&#xFF0C;&#x4ECE;&#x800C;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x8DE8;&#x6D41;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x6700;&#x540E;&#xFF0C; DataStream &#x8FD8;&#x652F;&#x6301;&#x4E0E;&#x5408;&#x5E76;&#x5BF9;&#x79F0;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5373;<strong>&#x628A;&#x4E00;&#x4E2A;&#x6D41;&#x6309;&#x4E00;&#x5B9A;&#x89C4;&#x5219;&#x62C6;&#x5206;&#x4E3A;&#x591A;&#x4E2A;&#x6D41;</strong>&#xFF08;Split &#x64CD;&#x4F5C;&#xFF09;&#xFF0C;&#x6BCF;&#x4E2A;&#x6D41;&#x662F;&#x4E4B;&#x524D;&#x6D41;&#x7684;&#x4E00;&#x4E2A;&#x5B50;&#x96C6;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x6D41;&#x4F5C;&#x4E0D;&#x540C;&#x7684;&#x5904;&#x7406;&#x3002;</p>
+<p><img src="../assets/1639052207439.png" alt="DataStream &#x57FA;&#x672C;&#x8F6C;&#x6362;"></p>
+<p>&#x4E3A;&#x4E86;&#x652F;&#x6301;&#x8FD9;&#x4E9B;&#x4E0D;&#x540C;&#x7684;&#x6D41;&#x64CD;&#x4F5C;&#xFF0C;Flink &#x5F15;&#x5165;&#x4E86;&#x4E00;&#x7EC4;&#x4E0D;&#x540C;&#x7684;&#x6D41;&#x7C7B;&#x578B;&#xFF0C;&#x7528;&#x6765;&#x8868;&#x793A;&#x67D0;&#x4E9B;&#x64CD;&#x4F5C;&#x7684;&#x4E2D;&#x95F4;&#x6D41;&#x6570;&#x636E;&#x96C6;&#x7C7B;&#x578B;&#x3002;&#x5B8C;&#x6574;&#x7684;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x5173;&#x7CFB;&#x5982;&#x4E0A;&#x56FE;&#x6240;&#x793A;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E00;&#x4E9B;&#x9488;&#x5BF9;&#x5355;&#x6761;&#x8BB0;&#x5F55;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5982; Map &#x7B49;&#xFF0C;&#x64CD;&#x4F5C;&#x7684;&#x7ED3;&#x679C;&#x4ECD;&#x7136;&#x662F;&#x662F;&#x57FA;&#x672C;&#x7684; DataStream &#x7C7B;&#x578B;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x5BF9;&#x4E8E; Split &#x64CD;&#x4F5C;&#xFF0C;&#x5B83;&#x4F1A;&#x9996;&#x5148;&#x4EA7;&#x751F;&#x4E00;&#x4E2A; SplitStream&#xFF0C;&#x57FA;&#x4E8E; SplitStream &#x53EF;&#x4EE5;&#x4F7F;&#x7528; Select &#x65B9;&#x6CD5;&#x6765;&#x7B5B;&#x9009;&#x51FA;&#x7B26;&#x5408;&#x8981;&#x6C42;&#x7684;&#x8BB0;&#x5F55;&#x5E76;&#x518D;&#x5C06;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x57FA;&#x672C;&#x7684; DataStream &#x7C7B;&#x578B;&#x6D41;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E; Connect &#x64CD;&#x4F5C;&#xFF0C;&#x5728;&#x8C03;&#x7528; streamA.connect(streamB)&#x540E;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x4E13;&#x95E8;&#x7684; ConnectedStream&#x3002;ConnectedStream &#x652F;&#x6301;&#x7684;&#x64CD;&#x4F5C;&#x4E0E;&#x666E;&#x901A;&#x7684; DataStream &#x6709;&#x6240;&#x533A;&#x522B;&#xFF0C;&#x7531;&#x4E8E;&#x5B83;&#x4EE3;&#x8868;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x6D41;&#x6DF7;&#x5408;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x56E0;&#x6B64;&#x5B83;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x5BF9;&#x4E24;&#x4E2A;&#x6D41;&#x4E2D;&#x7684;&#x8BB0;&#x5F55;&#x5206;&#x522B;&#x6307;&#x5B9A;&#x4E0D;&#x540C;&#x7684;&#x5904;&#x7406;&#x903B;&#x8F91;&#xFF0C;&#x7136;&#x540E;&#x5B83;&#x4EEC;&#x7684;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x5F62;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684; DataStream &#x6D41;&#x3002;&#x7531;&#x4E8E;&#x4E0D;&#x540C;&#x8BB0;&#x5F55;&#x7684;&#x5904;&#x7406;&#x662F;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x7B97;&#x5B50;&#x4E2D;&#x8FDB;&#x884C;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x5B83;&#x4EEC;&#x5728;&#x5904;&#x7406;&#x65F6;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7684;&#x5171;&#x4EAB;&#x4E00;&#x4E9B;&#x72B6;&#x6001;&#x4FE1;&#x606F;&#x3002;&#x4E0A;&#x5C42;&#x7684;&#x4E00;&#x4E9B; Join &#x64CD;&#x4F5C;&#xFF0C;&#x5728;&#x5E95;&#x5C42;&#x4E5F;&#x662F;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x4E8E; Connect &#x64CD;&#x4F5C;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#x3002;</p>
+<p>&#x901A;&#x8FC7; Window &#x64CD;&#x4F5C;&#x5BF9;&#x6D41;&#x53EF;&#x4EE5;&#x6309;&#x65F6;&#x95F4;&#x6216;&#x8005;&#x4E2A;&#x6570;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x5207;&#x5206;&#xFF0C;&#x4ECE;&#x800C;&#x5C06;&#x6D41;&#x5207;&#x5206;&#x6210;&#x4E00;&#x4E2A;&#x4E2A;&#x8F83;&#x5C0F;&#x7684;&#x5206;&#x7EC4;&#x3002;&#x5177;&#x4F53;&#x7684;&#x5207;&#x5206;&#x903B;&#x8F91;&#x53EF;&#x4EE5;&#x7531;&#x7528;&#x6237;&#x8FDB;&#x884C;&#x9009;&#x62E9;&#x3002;&#x5F53;&#x4E00;&#x4E2A;&#x5206;&#x7EC4;&#x4E2D;&#x6240;&#x6709;&#x8BB0;&#x5F55;&#x90FD;&#x5230;&#x8FBE;&#x540E;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x62FF;&#x5230;&#x8BE5;&#x5206;&#x7EC4;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x8BB0;&#x5F55;&#xFF0C;&#x4ECE;&#x800C;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x904D;&#x5386;&#x6216;&#x8005;&#x7D2F;&#x52A0;&#x64CD;&#x4F5C;&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x5BF9;&#x6BCF;&#x4E2A;&#x5206;&#x7EC4;&#x7684;&#x5904;&#x7406;&#x90FD;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x4E00;&#x7EC4;&#x8F93;&#x51FA;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x4E9B;&#x8F93;&#x51FA;&#x6570;&#x636E;&#x5F62;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x57FA;&#x672C;&#x6D41;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x666E;&#x901A;&#x7684; DataStream&#xFF0C;&#x5FC5;&#x987B;&#x4F7F;&#x7528; allWindow &#x64CD;&#x4F5C;&#xFF0C;&#x5B83;&#x4EE3;&#x8868;&#x5BF9;&#x6574;&#x4E2A;&#x6D41;&#x8FDB;&#x884C;&#x7EDF;&#x4E00;&#x7684; Window &#x5904;&#x7406;&#xFF0C;&#x56E0;&#x6B64;&#x662F;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x7B97;&#x5B50;&#x5B9E;&#x4F8B;&#x8FDB;&#x884C;&#x540C;&#x65F6;&#x8BA1;&#x7B97;&#x7684;&#x3002;&#x9488;&#x5BF9;&#x8FD9;&#x4E00;&#x95EE;&#x9898;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x9996;&#x5148;&#x4F7F;&#x7528; KeyBy &#x65B9;&#x6CD5;&#x5BF9;&#x8BB0;&#x5F55;&#x6309; Key &#x8FDB;&#x884C;&#x5206;&#x7EC4;&#xFF0C;&#x7136;&#x540E;&#x624D;&#x53EF;&#x4EE5;&#x5E76;&#x884C;&#x7684;&#x5BF9;&#x4E0D;&#x540C; Key &#x5BF9;&#x5E94;&#x7684;&#x8BB0;&#x5F55;&#x8FDB;&#x884C;&#x5355;&#x72EC;&#x7684; Window &#x64CD;&#x4F5C;&#x3002;KeyBy &#x64CD;&#x4F5C;&#x662F;&#x65E5;&#x5E38;&#x7F16;&#x7A0B;&#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x64CD;&#x4F5C;&#x4E4B;&#x4E00;&#x3002;</p>
+<p><img src="../assets/1639052561718.png" alt="KeyedStream"></p>
+<p>&#x57FA;&#x672C; DataStream &#x5BF9;&#x8C61;&#x4E0A;&#x7684; allWindow &#x4E0E; KeyedStream &#x4E0A;&#x7684; Window &#x64CD;&#x4F5C;&#x7684;&#x5BF9;&#x6BD4;&#x5982;&#x4E0A;&#x56FE;&#x6240;&#x793A;&#x3002;&#x4E3A;&#x4E86;&#x80FD;&#x591F;&#x5728;&#x591A;&#x4E2A;&#x5E76;&#x53D1;&#x5B9E;&#x4F8B;&#x4E0A;&#x5E76;&#x884C;&#x7684;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x9700;&#x8981;&#x901A;&#x8FC7; KeyBy &#x5C06;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5206;&#x7EC4;&#x3002;KeyBy &#x548C; Window &#x64CD;&#x4F5C;&#x90FD;&#x662F;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5206;&#x7EC4;&#xFF0C;&#x4F46;&#x662F; KeyBy &#x662F;&#x5728;&#x6C34;&#x5E73;&#x5206;&#x5411;&#x5BF9;&#x6D41;&#x8FDB;&#x884C;&#x5207;&#x5206;&#xFF0C;&#x800C; Window &#x662F;&#x5728;&#x5782;&#x76F4;&#x65B9;&#x5F0F;&#x5BF9;&#x6D41;&#x8FDB;&#x884C;&#x5207;&#x5206;&#x3002;</p>
+<p>&#x4F7F;&#x7528; KeyBy &#x8FDB;&#x884C;&#x6570;&#x636E;&#x5207;&#x5206;&#x4E4B;&#x540E;&#xFF0C;&#x540E;&#x7EED;&#x7B97;&#x5B50;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x53EF;&#x4EE5;&#x53EA;&#x5904;&#x7406;&#x7279;&#x5B9A; Key &#x96C6;&#x5408;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x3002;&#x9664;&#x4E86;&#x5904;&#x7406;&#x672C;&#x8EAB;&#x5916;&#xFF0C;Flink &#x4E2D;&#x5141;&#x8BB8;&#x7B97;&#x5B50;&#x7EF4;&#x62A4;&#x4E00;&#x90E8;&#x5206;&#x72B6;&#x6001;&#xFF08;State&#xFF09;&#xFF0C;&#x5728;KeyedStream &#x7B97;&#x5B50;&#x7684;&#x72B6;&#x6001;&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x5206;&#x5E03;&#x5F0F;&#x5B58;&#x50A8;&#x7684;&#x3002;&#x7531;&#x4E8E; KeyBy &#x662F;&#x4E00;&#x79CD;&#x786E;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x5206;&#x914D;&#x65B9;&#x5F0F;&#xFF0C;&#x56E0;&#x6B64;&#x5373;&#x4F7F;&#x53D1;&#x751F; Failover &#x4F5C;&#x4E1A;&#x91CD;&#x542F;&#xFF0C;&#x751A;&#x81F3;&#x53D1;&#x751F;&#x4E86;&#x5E76;&#x53D1;&#x5EA6;&#x7684;&#x6539;&#x53D8;&#xFF0C;Flink &#x90FD;&#x53EF;&#x4EE5;&#x91CD;&#x65B0;&#x5206;&#x914D; Key &#x5206;&#x7EC4;&#x5E76;&#x4FDD;&#x8BC1;&#x5904;&#x7406;&#x67D0;&#x4E2A; Key &#x7684;&#x5206;&#x7EC4;&#x4E00;&#x5B9A;&#x5305;&#x542B;&#x8BE5; Key &#x7684;&#x72B6;&#x6001;&#xFF0C;&#x4ECE;&#x800C;&#x4FDD;&#x8BC1;&#x4E00;&#x81F4;&#x6027;&#x3002;</p>
+<p>&#x6700;&#x540E;&#x9700;&#x8981;&#x5F3A;&#x8C03;&#x7684;&#x662F;&#xFF0C;KeyBy &#x64CD;&#x4F5C;&#x53EA;&#x6709;&#x5F53; Key &#x7684;&#x6570;&#x91CF;&#x8D85;&#x8FC7;&#x7B97;&#x5B50;&#x7684;&#x5E76;&#x53D1;&#x5B9E;&#x4F8B;&#x6570;&#x624D;&#x53EF;&#x4EE5;&#x8F83;&#x597D;&#x7684;&#x5DE5;&#x4F5C;&#x3002;&#x7531;&#x4E8E;&#x540C;&#x4E00;&#x4E2A; Key &#x5BF9;&#x5E94;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#x90FD;&#x4F1A;&#x53D1;&#x9001;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x4E0A;&#xFF0C;&#x56E0;&#x6B64;&#x5982;&#x679C;Key &#x7684;&#x6570;&#x91CF;&#x6BD4;&#x5B9E;&#x4F8B;&#x6570;&#x91CF;&#x5C11;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x5BFC;&#x81F4;&#x90E8;&#x5206;&#x5B9E;&#x4F8B;&#x6536;&#x4E0D;&#x5230;&#x6570;&#x636E;&#xFF0C;&#x4ECE;&#x800C;&#x5BFC;&#x81F4;&#x8BA1;&#x7B97;&#x80FD;&#x529B;&#x4E0D;&#x80FD;&#x5145;&#x5206;&#x53D1;&#x6325;&#x3002;</p>
+<h4 id="3&#x3001;&#x5176;&#x5B83;&#x95EE;&#x9898;">3&#x3001;&#x5176;&#x5B83;&#x95EE;&#x9898;</h4>
+<h5 id="31&#x3001;&#x7269;&#x7406;&#x5206;&#x7EC4;">3.1&#x3001;&#x7269;&#x7406;&#x5206;&#x7EC4;</h5>
+<p>&#x9664;&#x4E86; KeyBy&#xFF0C;Flink &#x5728;&#x7B97;&#x5B50;&#x4E4B;&#x524D;&#x4EA4;&#x6362;&#x6570;&#x636E;&#x65F6;&#x8FD8;&#x652F;&#x6301;&#x5176;&#x5B83;&#x7684;&#x7269;&#x7406;&#x5206;&#x7EC4;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<ul>
+<li>global: &#x4E0A;&#x6E38;&#x7B97;&#x5B50;&#x5C06;&#x6240;&#x6709;&#x8BB0;&#x5F55;&#x53D1;&#x9001;&#x7ED9;&#x4E0B;&#x6E38;&#x7B97;&#x5B50;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x3002;</li>
+<li>broadcast: &#x4E0A;&#x6E38;&#x7B97;&#x5B50;&#x5C06;&#x6BCF;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x53D1;&#x9001;&#x7ED9;&#x4E0B;&#x6E38;&#x7B97;&#x5B50;&#x7684;&#x6240;&#x6709;&#x5B9E;&#x4F8B;&#x3002;</li>
+<li>forward&#xFF1A;&#x53EA;&#x9002;&#x7528;&#x4E8E;&#x4E0A;&#x6E38;&#x7B97;&#x5B50;&#x5B9E;&#x4F8B;&#x6570;&#x4E0E;&#x4E0B;&#x6E38;&#x7B97;&#x5B50;&#x76F8;&#x540C;&#x65F6;&#xFF0C;&#x6BCF;&#x4E2A;&#x4E0A;&#x6E38;&#x7B97;&#x5B50;&#x5B9E;&#x4F8B;&#x5C06;&#x8BB0;&#x5F55;&#x53D1;&#x9001;&#x7ED9;&#x4E0B;&#x6E38;&#x7B97;&#x5B50;&#x5BF9;&#x5E94;&#x7684;&#x5B9E;&#x4F8B;&#x3002;</li>
+<li>shuffle&#xFF1A;&#x4E0A;&#x6E38;&#x7B97;&#x5B50;&#x5BF9;&#x6BCF;&#x6761;&#x8BB0;&#x5F55;&#x968F;&#x673A;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x4E0B;&#x6E38;&#x7B97;&#x5B50;&#x8FDB;&#x884C;&#x53D1;&#x9001;&#x3002;</li>
+<li>rebalance&#xFF1A;&#x4E0A;&#x6E38;&#x7B97;&#x5B50;&#x901A;&#x8FC7;&#x8F6E;&#x8BE2;&#xFF08;Round-Robin&#xFF09;&#x7684;&#x65B9;&#x5F0F;&#x53D1;&#x9001;&#x6570;&#x636E;&#x3002;</li>
+<li>rescale&#xFF1A;&#x5F53;&#x4E0A;&#x6E38;&#x548C;&#x4E0B;&#x6E38;&#x7B97;&#x5B50;&#x7684;&#x5B9E;&#x4F8B;&#x6570;&#x4E3A; n &#x6216; m &#x65F6;&#xFF0C;&#x5982;&#x679C; n &lt; m&#xFF0C;&#x5219;&#x6BCF;&#x4E2A;&#x4E0A;&#x6E38;&#x5B9E;&#x4F8B;&#x5411; ceil(m/n) &#x6216; floor(m/n) &#x4E2A;&#x4E0B;&#x6E38;&#x5B9E;&#x4F8B;&#x8F6E;&#x8BE2;&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF1B;&#x5982;&#x679C; n &gt; m&#xFF0C;&#x5219; floor(n/m) &#x6216; ceil(n/m) &#x4E2A;&#x4E0A;&#x6E38;&#x5B9E;&#x4F8B;&#x5411;&#x4E0B;&#x6E38;&#x5B9E;&#x4F8B;&#x8F6E;&#x8BE2;&#x53D1;&#x9001;&#x6570;&#x636E;&#x3002;</li>
+<li>partitionCustomer&#xFF1A;&#x5F53;&#x4E0A;&#x8FF0;&#x5185;&#x7F6E;&#x5206;&#x914D;&#x65B9;&#x5F0F;&#x4E0D;&#x6EE1;&#x8DB3;&#x9700;&#x6C42;&#x65F6;&#xFF0C;&#x7528;&#x6237;&#x8FD8;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x81EA;&#x5B9A;&#x4E49;&#x5206;&#x7EC4;&#x65B9;&#x5F0F;&#x3002;</li>
+</ul>
+<h5 id="32&#x3001;&#x7C7B;&#x578B;&#x7CFB;&#x7EDF;">3.2&#x3001;&#x7C7B;&#x578B;&#x7CFB;&#x7EDF;</h5>
+<p>Flink DataStream &#x5BF9;&#x50CF;&#x90FD;&#x662F;&#x5F3A;&#x7C7B;&#x578B;&#x7684;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A; DataStream &#x5BF9;&#x8C61;&#x90FD;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x7684;&#x7C7B;&#x578B;&#xFF0C;Flink &#x81EA;&#x5DF1;&#x5E95;&#x5C42;&#x7684;&#x5E8F;&#x5217;&#x5316;&#x673A;&#x5236;&#x6B63;&#x662F;&#x4F9D;&#x8D56;&#x4E8E;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x5BF9;&#x5E8F;&#x5217;&#x5316;&#x7B49;&#x8FDB;&#x884C;&#x4F18;&#x5316;&#x3002;&#x5177;&#x4F53;&#x6765;&#x8BF4;&#xFF0C;&#x5728; Flink &#x5E95;&#x5C42;&#xFF0C;&#x5B83;&#x662F;&#x4F7F;&#x7528; TypeInformation &#x5BF9;&#x8C61;&#x5BF9;&#x7C7B;&#x578B;&#x8FDB;&#x884C;&#x63CF;&#x8FF0;&#x7684;&#xFF0C;TypeInformation &#x5BF9;&#x8C61;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x7EC4;&#x7C7B;&#x578B;&#x76F8;&#x5173;&#x7684;&#x4FE1;&#x606F;&#x4F9B;&#x5E8F;&#x5217;&#x5316;&#x6846;&#x67B6;&#x4F7F;&#x7528;&#x3002;</p>
+<p><img src="../assets/1639053595537.png" alt="1639053595537"></p>
+<p>Flink &#x5185;&#x7F6E;&#x4E86;&#x4E00;&#x90E8;&#x5206;&#x5E38;&#x7528;&#x7684;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#xFF0C;&#x5BF9;&#x4E8E;&#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#xFF0C;Flink &#x4E5F;&#x5185;&#x7F6E;&#x4E86;&#x5B83;&#x4EEC;&#x7684;TypeInformation&#xFF0C;&#x7528;&#x6237;&#x4E00;&#x822C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x989D;&#x5916;&#x7684;&#x58F0;&#x660E;&#xFF0C;Flink &#x81EA;&#x5DF1;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<strong>&#x7C7B;&#x578B;&#x63A8;&#x65AD;</strong>&#x673A;&#x5236;&#x8BC6;&#x522B;&#x51FA;&#x76F8;&#x5E94;&#x7684;&#x7C7B;&#x578B;&#x3002;&#x4F46;&#x662F;&#x4E5F;&#x4F1A;&#x6709;&#x4E00;&#x4E9B;&#x4F8B;&#x5916;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x6BD4;&#x5982;&#xFF0C;Flink DataStream API &#x540C;&#x65F6;&#x652F;&#x6301; Java &#x548C; Scala&#xFF0C;Scala API &#x8BB8;&#x591A;&#x63A5;&#x53E3;&#x662F;&#x901A;&#x8FC7;&#x9690;&#x5F0F;&#x7684;&#x53C2;&#x6570;&#x6765;&#x4F20;&#x9012;&#x7C7B;&#x578B;&#x4FE1;&#x606F;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x9700;&#x8981;&#x901A;&#x8FC7; Java &#x8C03;&#x7528; Scala &#x7684; API&#xFF0C;&#x5219;&#x9700;&#x8981;&#x628A;&#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#x4FE1;&#x606F;&#x901A;&#x8FC7;&#x9690;&#x5F0F;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x8FC7;&#x53BB;&#x3002;&#x53E6;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x662F; Java &#x4E2D;&#x5BF9;&#x6CDB;&#x578B;&#x5B58;&#x5728;<strong>&#x7C7B;&#x578B;&#x64E6;&#x9664;</strong>&#xFF0C;&#x5982;&#x679C;&#x6D41;&#x7684;&#x7C7B;&#x578B;&#x672C;&#x8EAB;&#x662F;&#x4E00;&#x4E2A;&#x6CDB;&#x578B;&#x7684;&#x8BDD;&#xFF0C;&#x5219;&#x53EF;&#x80FD;&#x5728;&#x64E6;&#x9664;&#x4E4B;&#x540E;&#x65E0;&#x6CD5;&#x63A8;&#x65AD;&#x51FA;&#x7C7B;&#x578B;&#x4FE1;&#x606F;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x4E5F;&#x9700;&#x8981;&#x663E;&#x5F0F;&#x7684;&#x6307;&#x5B9A;&#x3002;</p>
+<p>&#x5728; Flink &#x4E2D;&#xFF0C;&#x4E00;&#x822C; Java &#x63A5;&#x53E3;&#x91C7;&#x7528; Tuple &#x7C7B;&#x578B;&#x6765;&#x7EC4;&#x5408;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x800C; Scala &#x5219;&#x66F4;&#x7ECF;&#x5E38;&#x4F7F;&#x7528; Row &#x7C7B;&#x578B;&#x6216; Case Class&#x3002;&#x76F8;&#x5BF9;&#x4E8E; Row&#xFF0C;Tuple &#x7C7B;&#x578B;&#x5B58;&#x5728;&#x4E24;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x5B57;&#x6BB5;&#x4E2A;&#x6570;&#x4E0D;&#x80FD;&#x8D85;&#x8FC7; 25 &#x4E2A;&#xFF0C;&#x6B64;&#x5916;&#xFF0C;&#x6240;&#x6709;&#x5B57;&#x6BB5;&#x4E0D;&#x5141;&#x8BB8;&#x6709; NULL &#x503C;&#x3002;&#x6700;&#x540E;&#xFF0C;Flink &#x4E5F;&#x652F;&#x6301;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x65B0;&#x7684;&#x7C7B;&#x578B;&#x548C; TypeInformation&#xFF0C;&#x5E76;&#x901A;&#x8FC7; Kryo &#x6765;&#x5B9E;&#x73B0;&#x5E8F;&#x5217;&#x5316;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x53EF;&#x5E26;&#x6765;&#x4E00;&#x4E9B;&#x8FC1;&#x79FB;&#x7B49;&#x65B9;&#x9762;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x6240;&#x4EE5;<strong>&#x5C3D;&#x91CF;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x7C7B;&#x578B;</strong>&#x3002;</p>
+<h4 id="4&#x3001;&#x793A;&#x4F8B;">4&#x3001;&#x793A;&#x4F8B;</h4>
+<p>&#x5047;&#x8BBE;&#x6709;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x5B83;&#x76D1;&#x63A7;&#x7CFB;&#x7EDF;&#x4E2D;&#x8BA2;&#x5355;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5F53;&#x6709;&#x65B0;&#x8BA2;&#x5355;&#x65F6;&#xFF0C;&#x5B83;&#x4F7F;&#x7528; <code>Tuple2&lt;String, Integer&gt;</code> &#x8F93;&#x51FA;&#x8BA2;&#x5355;&#x4E2D;&#x5546;&#x54C1;&#x7684;&#x7C7B;&#x578B;&#x548C;&#x4EA4;&#x6613;&#x989D;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x5B9E;&#x65F6;&#x7EDF;&#x8BA1;&#x6BCF;&#x4E2A;&#x7C7B;&#x522B;&#x7684;&#x4EA4;&#x6613;&#x989D;&#xFF0C;&#x4EE5;&#x53CA;&#x5B9E;&#x65F6;&#x7EDF;&#x8BA1;&#x5168;&#x90E8;&#x7C7B;&#x522B;&#x7684;&#x4EA4;&#x6613;&#x989D;&#x3002;</p>
+<pre><code class="lang-java">
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GroupedProcessingTimeWindowSample</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DataSource</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">RichParallelSourceFunction</span>&lt;<span class="hljs-title">Tuple2</span>&lt;<span class="hljs-title">String</span>, <span class="hljs-title">Integer</span>&gt;&gt; </span>{
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">volatile</span> <span class="hljs-keyword">boolean</span> isRunning = <span class="hljs-keyword">true</span>;
+
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">(SourceContext&lt;Tuple2&lt;String, Integer&gt;&gt; ctx)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+            Random random = <span class="hljs-keyword">new</span> Random();
+            <span class="hljs-keyword">while</span> (isRunning) {
+                Thread.sleep((getRuntimeContext().getIndexOfThisSubtask() + <span class="hljs-number">1</span>) * <span class="hljs-number">1000</span> * <span class="hljs-number">5</span>);
+                String key = <span class="hljs-string">&quot;&#x7C7B;&#x522B;&quot;</span> + (<span class="hljs-keyword">char</span>) (<span class="hljs-string">&apos;A&apos;</span> + random.nextInt(<span class="hljs-number">3</span>));
+                <span class="hljs-keyword">int</span> value = random.nextInt(<span class="hljs-number">10</span>) + <span class="hljs-number">1</span>;
+
+                System.out.println(String.format(<span class="hljs-string">&quot;Emits\t(%s, %d)&quot;</span>, key, value));
+                ctx.collect(<span class="hljs-keyword">new</span> Tuple2&lt;&gt;(key, value));
+            }
+        }
+
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">cancel</span><span class="hljs-params">()</span> </span>{
+            isRunning = <span class="hljs-keyword">false</span>;
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        env.setParallelism(<span class="hljs-number">2</span>);
+
+        DataStream&lt;Tuple2&lt;String, Integer&gt;&gt; ds = env.addSource(<span class="hljs-keyword">new</span> DataSource());
+        KeyedStream&lt;Tuple2&lt;String, Integer&gt;, Tuple&gt; keyedStream = ds.keyBy(<span class="hljs-number">0</span>);
+
+        keyedStream.sum(<span class="hljs-number">1</span>).keyBy(<span class="hljs-keyword">new</span> KeySelector&lt;Tuple2&lt;String, Integer&gt;, Object&gt;() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">getKey</span><span class="hljs-params">(Tuple2&lt;String, Integer&gt; stringIntegerTuple2)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+                <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span>;
+            }
+        }).fold(<span class="hljs-keyword">new</span> HashMap&lt;String, Integer&gt;(), <span class="hljs-keyword">new</span> FoldFunction&lt;Tuple2&lt;String, Integer&gt;, HashMap&lt;String, Integer&gt;&gt;() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> HashMap&lt;String, Integer&gt; <span class="hljs-title">fold</span><span class="hljs-params">(HashMap&lt;String, Integer&gt; accumulator, Tuple2&lt;String, Integer&gt; value)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+                accumulator.put(value.f0, value.f1);
+                <span class="hljs-keyword">return</span> accumulator;
+            }
+        }).addSink(<span class="hljs-keyword">new</span> SinkFunction&lt;HashMap&lt;String, Integer&gt;&gt;() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">invoke</span><span class="hljs-params">(HashMap&lt;String, Integer&gt; value, Context context)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+                  <span class="hljs-comment">// &#x6BCF;&#x4E2A;&#x7C7B;&#x578B;&#x7684;&#x5546;&#x54C1;&#x6210;&#x4EA4;&#x91CF;</span>
+                  System.out.println(value);
+                  <span class="hljs-comment">// &#x5546;&#x54C1;&#x6210;&#x4EA4;&#x603B;&#x91CF;</span>
+                  System.out.println(value.values().stream().mapToInt(v -&gt; v).sum());
+            }
+        });
+
+        env.execute();
+    }
+}
+</code></pre>
+<p>&#x672C;&#x4F8B;&#x4E2D;&#xFF0C;&#x9996;&#x5148;&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x4E2A;<strong>&#x6A21;&#x62DF;&#x7684;&#x6570;&#x636E;&#x6E90;</strong>&#xFF0C;&#x7EE7;&#x627F;&#x81EA; <code>RichParallelSourceFunction</code>&#x2014;&#x2014;&#x5B83;&#x662F;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#x5B9E;&#x4F8B;&#x7684; <code>SourceFunction</code> &#x63A5;&#x53E3;&#x7684;&#x5B9E;&#x73B0;&#x3002;&#x5B83;&#x6709;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#xFF1A;<code>run</code> &#x65B9;&#x6CD5;&#x2014;&#x2014; Flink &#x5728;&#x8FD0;&#x884C;&#x65F6;&#x5BF9; Source &#x4F1A;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x65AD;&#x5730;&#x8F93;&#x51FA;&#x6570;&#x636E;&#x4ECE;&#x800C;&#x5F62;&#x6210;&#x521D;&#x59CB;&#x7684;&#x6D41;&#x3002;&#x5728; <code>run</code> &#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x4E2D;&#xFF0C;&#x968F;&#x673A;&#x5730;&#x4EA7;&#x751F;&#x4E86;&#x5546;&#x54C1;&#x7C7B;&#x522B;&#x548C;&#x4EA4;&#x6613;&#x91CF;&#x7684;&#x8BB0;&#x5F55;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7; <code>ctx#collect</code> &#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x53D1;&#x9001;&#x3002;&#x53E6;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x662F; <code>cancel</code> &#x65B9;&#x6CD5;&#xFF0C;&#x5F53; Flink &#x9700;&#x8981; Cancel Source Task &#x7684;&#x65F6;&#x5019;&#x4F1A;&#x6389;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#x3002;&#x4F7F;&#x7528; volatile &#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x6765;&#x6807;&#x8BB0;&#x548C;&#x63A7;&#x5236;&#x6267;&#x884C;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+<p><code>main</code> &#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x9996;&#x5148;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A; <code>StreamExecutioniEnviroment</code> &#x5BF9;&#x8C61;&#x3002;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x8C03;&#x7528;&#x7684; <code>getExecutionEnvironment</code> &#x65B9;&#x6CD5;&#x4F1A;&#x81EA;&#x52A8;&#x5224;&#x65AD;&#x6240;&#x5904;&#x7684;&#x73AF;&#x5883;&#xFF0C;&#x4ECE;&#x800C;&#x521B;&#x5EFA;&#x5408;&#x9002;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x5728; IDE &#x4E2D;&#x76F4;&#x63A5;&#x53F3;&#x952E;&#x8FD0;&#x884C;&#xFF0C;&#x5219;&#x4F1A;&#x521B;&#x5EFA; <code>LocalStreamExecutionEnvironment</code> &#x5BF9;&#x8C61;&#xFF1B;&#x5982;&#x679C;&#x662F;&#x5728;&#x4E00;&#x4E2A;&#x5B9E;&#x9645;&#x7684;&#x73AF;&#x5883;&#x4E2D;&#xFF0C;&#x5219;&#x4F1A;&#x521B;&#x5EFA; <code>RemoteStreamExecutionEnvironment</code> &#x5BF9;&#x8C61;&#x3002;&#x57FA;&#x4E8E; <code>Environment</code> &#x5BF9;&#x8C61;&#xFF0C;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A; <code>Source</code>&#xFF0C;&#x4ECE;&#x800C;&#x5F97;&#x5230;&#x521D;&#x59CB;&#x7684;<code>&lt;&#x5546;&#x54C1;&#x7C7B;&#x578B;&#xFF0C;&#x6210;&#x4EA4;&#x91CF;&gt;</code>&#x6D41;&#x3002;&#x4E3A;&#x4E86;&#x7EDF;&#x8BA1;&#x6BCF;&#x79CD;&#x7C7B;&#x522B;&#x7684;&#x6210;&#x4EA4;&#x91CF;&#xFF0C;&#x4F7F;&#x7528; <code>keyBy(0)</code> &#x6309; Tuple &#x7684;&#x7B2C; 1 &#x4E2A;&#x5B57;&#x6BB5;&#xFF08;&#x5373;&#x5546;&#x54C1;&#x7C7B;&#x578B;&#xFF09;&#x5BF9;&#x8F93;&#x5165;&#x6D41;&#x8FDB;&#x884C;&#x5206;&#x7EC4;&#xFF0C;&#x5E76;&#x7528; <code>sum(1)</code> &#x5BF9;&#x6BCF;&#x4E00;&#x4E2A; Key &#x5BF9;&#x5E94;&#x7684;&#x8BB0;&#x5F55;&#x7684;&#x7B2C; 2 &#x4E2A;&#x5B57;&#x6BB5;&#xFF08;&#x5373;&#x6210;&#x4EA4;&#x91CF;&#xFF09;&#x8FDB;&#x884C;&#x6C42;&#x5408;&#x3002;&#x5728;&#x5E95;&#x5C42;&#xFF0C;<code>sum</code> &#x7B97;&#x5B50;&#x5185;&#x90E8;&#x4F1A;&#x4F7F;&#x7528; state &#x6765;&#x7EF4;&#x62A4;&#x6BCF;&#x4E2A;Key&#xFF08;&#x5373;&#x5546;&#x54C1;&#x7C7B;&#x578B;&#xFF09;&#x5BF9;&#x5E94;&#x7684;&#x6210;&#x4EA4;&#x91CF;&#x4E4B;&#x548C;&#x3002;&#x5F53;&#x6709;&#x65B0;&#x8BB0;&#x5F55;&#x5230;&#x8FBE;&#x65F6;&#xFF0C;<code>sum</code> &#x7B97;&#x5B50;&#x5185;&#x90E8;&#x4F1A;&#x66F4;&#x65B0;&#x6240;&#x7EF4;&#x62A4;&#x7684;&#x6210;&#x4EA4;&#x91CF;&#x4E4B;&#x548C;&#xFF0C;&#x5E76;&#x8F93;&#x51FA;&#x4E00;&#x6761;<code>&lt;&#x5546;&#x54C1;&#x7C7B;&#x578B;&#xFF0C;&#x66F4;&#x65B0;&#x540E;&#x7684;&#x6210;&#x4EA4;&#x91CF;&gt;</code>&#x8BB0;&#x5F55;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x7EDF;&#x8BA1;&#x6240;&#x6709;&#x7C7B;&#x578B;&#x7684;&#x603B;&#x6210;&#x4EA4;&#x91CF;&#x3002;&#x9700;&#x8981;&#x5C06;&#x6240;&#x6709;&#x8BB0;&#x5F55;&#x8F93;&#x51FA;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x8BA1;&#x7B97;&#x8282;&#x70B9;&#x7684;&#x5B9E;&#x4F8B;&#x4E0A;&#x3002;&#x901A;&#x8FC7; <code>keyBy(new KeySelector())</code> &#x5BF9;&#x6240;&#x6709;&#x8BB0;&#x5F55;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x76F8;&#x540C;&#x7684; Key&#xFF0C;&#x5C06;&#x6240;&#x6709;&#x8BB0;&#x5F55;&#x5206;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x7EC4;&#x4E2D;&#xFF0C;&#x4ECE;&#x800C;&#x53EF;&#x4EE5;&#x5168;&#x90E8;&#x53D1;&#x9001;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x4E0A;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x4F7F;&#x7528; <code>fold</code> &#x65B9;&#x6CD5;&#x6765;&#x5728;&#x7B97;&#x5B50;&#x4E2D;&#x7EF4;&#x62A4;&#x6BCF;&#x79CD;&#x7C7B;&#x578B;&#x5546;&#x54C1;&#x7684;&#x6210;&#x4EA4;&#x91CF;&#x3002;&#x6CE8;&#x610F;&#x867D;&#x7136;&#x76EE;&#x524D; <code>fold</code> &#x65B9;&#x6CD5;&#x5DF2;&#x7ECF;&#x88AB;&#x6807;&#x8BB0;&#x4E3A; <code>Deprecated</code>&#xFF0C;&#x4F46;&#x662F;&#x5728; DataStream API &#x4E2D;&#x6682;&#x65F6;&#x8FD8;&#x6CA1;&#x6709;&#x80FD;&#x66FF;&#x4EE3;&#x5B83;&#x7684;&#x5176;&#x5B83;&#x64CD;&#x4F5C;&#xFF0C;&#x6240;&#x4EE5;&#x4ECD;&#x7136;&#x4F7F;&#x7528; <code>fold</code> &#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x4E00;&#x65B9;&#x6CD5;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x521D;&#x59CB;&#x503C;&#xFF0C;&#x7136;&#x540E;&#x5F53;&#x540E;&#x7EED;&#x6D41;&#x4E2D;&#x6BCF;&#x6761;&#x8BB0;&#x5F55;&#x5230;&#x8FBE;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7B97;&#x5B50;&#x4F1A;&#x8C03;&#x7528;&#x6240;&#x4F20;&#x9012;&#x7684; <code>FoldFunction</code> &#x5BF9;&#x521D;&#x59CB;&#x503C;&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#xFF0C;&#x5E76;&#x53D1;&#x9001;&#x66F4;&#x65B0;&#x540E;&#x7684;&#x503C;&#x3002;&#x4F7F;&#x7528;&#x4E00;&#x4E2A; <code>HashMap</code> &#x6765;&#x5BF9;&#x5404;&#x4E2A;&#x7C7B;&#x522B;&#x7684;&#x5F53;&#x524D;&#x6210;&#x4EA4;&#x91CF;&#x8FDB;&#x884C;&#x7EF4;&#x62A4;&#xFF0C;&#x5F53;&#x6709;&#x4E00;&#x6761;&#x65B0;&#x7684;<code>&lt;&#x5546;&#x54C1;&#x7C7B;&#x522B;&#xFF0C;&#x6210;&#x4EA4;&#x91CF;&gt;</code>&#x5230;&#x8FBE;&#x65F6;&#xFF0C;&#x5C31;&#x66F4;&#x65B0;&#x8BE5; <code>HashMap</code>&#x3002;&#x8FD9;&#x6837;&#x5728; Sink &#x4E2D;&#xFF0C;&#x6536;&#x5230;&#x7684;&#x662F;&#x6700;&#x65B0;&#x7684;&#x5546;&#x54C1;&#x7C7B;&#x522B;&#x548C;&#x6210;&#x4EA4;&#x91CF;&#x7684; <code>HashMap</code>&#xFF0C;&#x53EF;&#x4EE5;&#x4F9D;&#x8D56;&#x8FD9;&#x4E2A;&#x503C;&#x6765;&#x8F93;&#x51FA;&#x5404;&#x4E2A;&#x5546;&#x54C1;&#x7684;&#x6210;&#x4EA4;&#x91CF;&#x548C;&#x603B;&#x7684;&#x6210;&#x4EA4;&#x91CF;&#x3002;</p>
+<p>&#x9700;&#x8981;&#x6307;&#x51FA;&#x7684;&#x662F;&#xFF0C;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E3B;&#x8981;&#x662F;&#x7528;&#x6765;&#x6F14;&#x793A; DataStream API &#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x8FD8;&#x4F1A;&#x6709;&#x66F4;&#x9AD8;&#x6548;&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x6B64;&#x5916;&#xFF0C;&#x66F4;&#x4E0A;&#x5C42;&#x7684; Table / SQL &#x8FD8;&#x652F;&#x6301; Retraction&#xFF08;&#x64A4;&#x56DE;&#xFF09;&#x673A;&#x5236;&#xFF0C;&#x53EF;&#x4EE5;&#x66F4;&#x597D;&#x7684;&#x5904;&#x7406;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x3002;</p>
+<h5 id="41&#x3001;api-&#x539F;&#x7406;">4.1&#x3001;API &#x539F;&#x7406;</h5>
+<p><img src="../assets/1639104813378.png" alt="1639104813378"></p>
+<p>&#x8C03;&#x7528; <code>DataStream#map</code> &#x7B97;&#x5B50;&#x65F6;&#xFF0C;Flink &#x5728;&#x5E95;&#x5C42;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; Transformation &#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E00;&#x5BF9;&#x8C61;&#x5C31;&#x4EE3;&#x8868;&#x8BA1;&#x7B97;&#x903B;&#x8F91;&#x56FE;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#x3002;&#x5B83;&#x5176;&#x4E2D;&#x5C31;&#x8BB0;&#x5F55;&#x4E86;&#x4F20;&#x5165;&#x7684; <code>MapFunction</code>&#xFF0C;&#x4E5F;&#x5C31;&#x662F; UDF&#xFF08;User Define Function&#xFF09;&#x3002;&#x968F;&#x7740;&#x8C03;&#x7528;&#x66F4;&#x591A;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x521B;&#x5EFA;&#x4E86;&#x66F4;&#x591A;&#x7684; DataStream &#x5BF9;&#x8C61;&#xFF0C;&#x6BCF;&#x4E2A;&#x5BF9;&#x8C61;&#x5728;&#x5185;&#x90E8;&#x90FD;&#x6709;&#x4E00;&#x4E2A; Transformation &#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E9B;&#x5BF9;&#x8C61;&#x6839;&#x636E;&#x8BA1;&#x7B97;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x7EC4;&#x6210;&#x4E00;&#x4E2A;&#x56FE;&#x7ED3;&#x6784;&#xFF0C;&#x5C31;&#x662F;&#x8BA1;&#x7B97;&#x56FE;&#x3002;&#x540E;&#x7EED; Flink &#x5C06;&#x5BF9;&#x8FD9;&#x4E2A;&#x56FE;&#x7ED3;&#x6784;&#x8FDB;&#x884C;&#x8FDB;&#x4E00;&#x6B65;&#x7684;&#x8F6C;&#x6362;&#xFF0C;&#x4ECE;&#x800C;&#x6700;&#x7EC8;&#x751F;&#x6210;&#x63D0;&#x4EA4;&#x4F5C;&#x4E1A;&#x6240;&#x9700;&#x8981;&#x7684; JobGraph&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="setdeployrun.html" class="navigation navigation-prev " aria-label="Previous page: Flink 环境搭建、配置、部署及运行">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="client.html" class="navigation navigation-next " aria-label="Next page: 客户端操作">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"DataStream API","level":"1.3.2","depth":2,"next":{"title":"客户端操作","level":"1.3.3","depth":2,"path":"flink-china/client.md","ref":"flink-china/client.md","articles":[]},"previous":{"title":"Flink 环境搭建、配置、部署及运行","level":"1.3.1","depth":2,"path":"flink-china/setdeployrun.md","ref":"flink-china/setdeployrun.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"flink-china/datastream-api.md","mtime":"2021-12-10T02:59:11.007Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-13T12:19:58.220Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
