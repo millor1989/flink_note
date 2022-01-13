@@ -218,7 +218,78 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../wai-lian.html">
+        <li class="chapter " data-level="1.3" data-path="../flink-china.html">
+            
+                <a href="../flink-china.html">
+            
+                    
+                    Flink 中国社区文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../flink-china/setdeployrun.html">
+            
+                <a href="../flink-china/setdeployrun.html">
+            
+                    
+                    Flink 环境搭建、配置、部署及运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../flink-china/datastream-api.html">
+            
+                <a href="../flink-china/datastream-api.html">
+            
+                    
+                    DataStream API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../flink-china/client.html">
+            
+                <a href="../flink-china/client.html">
+            
+                    
+                    客户端操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../flink-china/time-window.html">
+            
+                <a href="../flink-china/time-window.html">
+            
+                    
+                    Time&Window
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../wai-lian.html">
             
                 <a href="../wai-lian.html">
             
@@ -277,12 +348,12 @@
                                 <section class="normal markdown-section">
                                 
                                 <h3 id="&#x57FA;&#x4E8E;datastream-api&#x5B9E;&#x73B0;&#x6B3A;&#x8BC8;&#x68C0;&#x6D4B;">&#x57FA;&#x4E8E;DataStream API&#x5B9E;&#x73B0;&#x6B3A;&#x8BC8;&#x68C0;&#x6D4B;</h3>
-<p>ApacheStream&#x7684;DataStream API&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x7A33;&#x5B9A;&#x53EF;&#x9760;&#x7684;&#x3001;&#x6709;&#x72B6;&#x6001;&#x7684;&#x6D41;&#x5904;&#x7406;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;Flink&#x652F;&#x6301;&#x5BF9;&#x72B6;&#x6001;&#x548C;&#x65F6;&#x95F4;&#x7684;&#x7EC6;&#x7C92;&#x5EA6;&#x63A7;&#x5236;&#xFF0C;&#x4EE5;&#x5B9E;&#x73B0;&#x590D;&#x6742;&#x7684;&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#x6570;&#x636E;&#x5904;&#x7406;&#x7CFB;&#x7EDF;&#x3002;&#x6B64;&#x5904;&#xFF0C;&#x4ECB;&#x7ECD;&#x901A;&#x8FC7;Flink DataStream API&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x6709;&#x72B6;&#x6001;&#x6D41;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x3002;</p>
+<p>Apache Flink &#x7684; DataStream API &#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x7A33;&#x5B9A;&#x53EF;&#x9760;&#x7684;&#x3001;&#x6709;&#x72B6;&#x6001;&#x7684;&#x6D41;&#x5904;&#x7406;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;Flink &#x652F;&#x6301;&#x5BF9;&#x72B6;&#x6001;&#x548C;&#x65F6;&#x95F4;&#x7684;&#x7EC6;&#x7C92;&#x5EA6;&#x63A7;&#x5236;&#xFF0C;&#x4EE5;&#x5B9E;&#x73B0;&#x590D;&#x6742;&#x7684;&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#x6570;&#x636E;&#x5904;&#x7406;&#x7CFB;&#x7EDF;&#x3002;&#x6B64;&#x5904;&#xFF0C;&#x4ECB;&#x7ECD;&#x901A;&#x8FC7; Flink DataStream API &#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x6709;&#x72B6;&#x6001;&#x6D41;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x3002;</p>
 <h4 id="1&#x3001;&#x8981;&#x5B9E;&#x73B0;&#x7CFB;&#x7EDF;&#x7684;&#x4ECB;&#x7ECD;">1&#x3001;&#x8981;&#x5B9E;&#x73B0;&#x7CFB;&#x7EDF;&#x7684;&#x4ECB;&#x7ECD;</h4>
 <p>&#x5BF9;&#x4E8E;&#x4FE1;&#x7528;&#x5361;&#x6B3A;&#x8BC8;&#xFF0C; &#x7F6A;&#x72AF;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BC8;&#x9A97;&#x6216;&#x8005;&#x5165;&#x4FB5;&#x5B89;&#x5168;&#x7EA7;&#x522B;&#x8F83;&#x4F4E;&#x7CFB;&#x7EDF;&#x6765;&#x76D7;&#x7A83;&#x4FE1;&#x7528;&#x5361;&#x5361;&#x53F7;&#x3002; &#x7528;&#x76D7;&#x5F97;&#x7684;&#x4FE1;&#x7528;&#x5361;&#x8FDB;&#x884C;&#x5F88;&#x5C0F;&#x989D;&#x5EA6;&#x7684;&#x4F8B;&#x5982;&#x4E00;&#x7F8E;&#x5143;&#x6216;&#x8005;&#x66F4;&#x5C0F;&#x989D;&#x5EA6;&#x7684;&#x6D88;&#x8D39;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x3002; &#x5982;&#x679C;&#x6D4B;&#x8BD5;&#x6D88;&#x8D39;&#x6210;&#x529F;&#xFF0C;&#x90A3;&#x4E48;&#x4ED6;&#x4EEC;&#x5C31;&#x4F1A;&#x7528;&#x8FD9;&#x4E2A;&#x4FE1;&#x7528;&#x5361;&#x8FDB;&#x884C;&#x5927;&#x7B14;&#x6D88;&#x8D39;&#xFF0C;&#x6765;&#x8D2D;&#x4E70;&#x4E00;&#x4E9B;&#x4ED6;&#x4EEC;&#x5E0C;&#x671B;&#x5F97;&#x5230;&#x7684;&#xFF0C;&#x6216;&#x8005;&#x53EF;&#x4EE5;&#x5012;&#x5356;&#x7684;&#x8D22;&#x7269;&#x3002;</p>
 <p>&#x8981;&#x5B9E;&#x73B0;&#x7684;&#x662F;&#x9488;&#x5BF9;&#x53EF;&#x7591;&#x4FE1;&#x7528;&#x5361;&#x4EA4;&#x6613;&#x884C;&#x4E3A;&#x7684;&#x53CD;&#x6B3A;&#x8BC8;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x3002; &#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x4E00;&#x7EC4;&#x7B80;&#x5355;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x53EF;&#x4EE5;&#x4E86;&#x89E3;&#x5230; Flink &#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x590D;&#x6742;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5E76;&#x5B9E;&#x65F6;&#x6267;&#x884C;&#x3002;</p>
 <h4 id="2&#x3001;&#x4EE3;&#x7801;&#x5206;&#x6790;">2&#x3001;&#x4EE3;&#x7801;&#x5206;&#x6790;</h4>
-<p>&#x4F7F;&#x7528;mvn&#x5FEB;&#x901F;&#x6784;&#x5EFA;&#x5305;&#x542B;&#x4E86;&#x5FC5;&#x8981;&#x4EE5;&#x6765;&#x7684;Flink&#x9879;&#x76EE;&#xFF0C;&#x5305;&#x542B;&#x7684;&#x4F9D;&#x8D56;&#x5305;&#x62EC;<code>flink-streaming-java</code>&#x3001;<code>flink-walkthrough-common</code>&#x7B49;&#xFF0C;&#x5B83;&#x4EEC;&#x5206;&#x522B;&#x662F;Flink&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x6838;&#x5FC3;&#x4F9D;&#x8D56;&#x9879;&#x548C;&#x4EE3;&#x7801;&#x7EC3;&#x4E60;&#x9700;&#x8981;&#x7684;&#x6570;&#x636E;&#x751F;&#x6210;&#x5668;&#x3002;</p>
+<p>&#x4F7F;&#x7528; Flink Maven Archetype &#x5FEB;&#x901F;&#x6784;&#x5EFA;&#x5305;&#x542B;&#x4E86;&#x5FC5;&#x8981;&#x4F9D;&#x8D56;&#x7684; Flink &#x9879;&#x76EE;&#x9AA8;&#x67B6;&#xFF0C;&#x5176;&#x4F9D;&#x8D56;&#x5305;&#x62EC; <code>flink-streaming-java</code>&#x3001;<code>flink-walkthrough-common</code> &#x7B49;&#xFF0C;&#x5B83;&#x4EEC;&#x5206;&#x522B;&#x662F;Flink&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x6838;&#x5FC3;&#x4F9D;&#x8D56;&#x9879;&#x548C;&#x8FD9;&#x4E2A;&#x4EE3;&#x7801;&#x7EC3;&#x4E60;&#x9700;&#x8981;&#x7684;&#x6570;&#x636E;&#x751F;&#x6210;&#x5668;&#x3002;</p>
 <pre><code class="lang-shell">$ mvn archetype:generate \
     -DarchetypeGroupId=org.apache.flink \
     -DarchetypeArtifactId=flink-walkthrough-datastream-scala \
@@ -293,8 +364,9 @@
     -Dpackage=spendreport \
     -DinteractiveMode=false
 </code></pre>
-<p><code>FraudDetectionJob</code>&#x7C7B;&#x5B9A;&#x4E49;&#x4E86;&#x7A0B;&#x5E8F;&#x7684;&#x6570;&#x636E;&#x6D41;&#xFF0C;&#x800C;<code>FraudDetector</code>&#x7C7B;&#x5B9A;&#x4E49;&#x4E86;&#x6B3A;&#x8BC8;&#x4EA4;&#x6613;&#x68C0;&#x6D4B;&#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x3002;</p>
-<p>&#x4ECE;<code>FraudDetectionJob</code>&#x7C7B;&#x4E2D;&#x7684;main&#x51FD;&#x6570;&#x5F00;&#x59CB;&#xFF1A;</p>
+<p>&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x60C5;&#x51B5;&#x4FEE;&#x6539; maven &#x547D;&#x4EE4;&#x4E2D;&#x7684;  <code>groupId</code>&#x3001; <code>artifactId</code> &#x548C; <code>package</code>&#x3002;</p>
+<p><code>FraudDetectionJob</code> &#x7C7B;&#x5B9A;&#x4E49;&#x4E86;&#x7A0B;&#x5E8F;&#x7684;&#x6570;&#x636E;&#x6D41;&#xFF0C;&#x800C; <code>FraudDetector</code> &#x7C7B;&#x5B9A;&#x4E49;&#x4E86;&#x6B3A;&#x8BC8;&#x4EA4;&#x6613;&#x68C0;&#x6D4B;&#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x3002;</p>
+<p>&#x4ECE; <code>FraudDetectionJob</code> &#x7C7B;&#x4E2D;&#x7684; main &#x51FD;&#x6570;&#x5F00;&#x59CB;&#xFF1A;</p>
 <h5 id="21&#x3001;&#x6267;&#x884C;&#x73AF;&#x5883;">2.1&#x3001;&#x6267;&#x884C;&#x73AF;&#x5883;</h5>
 <p><code>`StreamExecutionEnvironment</code> `&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x6267;&#x884C;&#x73AF;&#x5883;&#x3002;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x73AF;&#x5883;&#x7528;&#x4E8E;&#x5B9A;&#x4E49;&#x4EFB;&#x52A1;&#x7684;&#x5C5E;&#x6027;&#x3001;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x6E90;&#x4EE5;&#x53CA;&#x6700;&#x7EC8;&#x542F;&#x52A8;&#x4EFB;&#x52A1;&#x7684;&#x6267;&#x884C;&#x3002;</p>
 <pre><code class="lang-scala"><span class="hljs-keyword">val</span> env: <span class="hljs-type">StreamExecutionEnvironment</span> = <span class="hljs-type">StreamExecutionEnvironment</span>.getExecutionEnvironment
@@ -321,7 +393,7 @@
 <p>Flink &#x7A0B;&#x5E8F;&#x662F;<strong>&#x61D2;&#x52A0;&#x8F7D;</strong>&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x53EA;&#x6709;&#x5728;&#x5B8C;&#x5168;&#x642D;&#x5EFA;&#x597D;&#x4E4B;&#x540E;&#xFF0C;&#x624D;&#x80FD;&#x591F;&#x53D1;&#x5E03;&#x5230;&#x96C6;&#x7FA4;&#x4E0A;&#x6267;&#x884C;&#x3002; &#x8C03;&#x7528; <code>StreamExecutionEnvironment#execute</code> &#x65F6;&#x7ED9;&#x4EFB;&#x52A1;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#x540D;&#x53C2;&#x6570;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x8FD0;&#x884C;&#x4EFB;&#x52A1;&#x3002;</p>
 <pre><code class="lang-scala">env.execute(<span class="hljs-string">&quot;Fraud Detection&quot;</span>)
 </code></pre>
-<h5 id="26&#x3001;&#x6B3A;&#x8BC8;&#x68C0;&#x67E5;&#x5668;">2.6&#x3001;&#x6B3A;&#x8BC8;&#x68C0;&#x67E5;&#x5668;</h5>
+<h5 id="26&#x3001;&#x6B3A;&#x8BC8;&#x68C0;&#x6D4B;&#x5668;">2.6&#x3001;&#x6B3A;&#x8BC8;&#x68C0;&#x6D4B;&#x5668;</h5>
 <p>&#x6B3A;&#x8BC8;&#x68C0;&#x67E5;&#x7C7B; <code>FraudDetector</code> &#x662F; <code>KeyedProcessFunction</code> &#x63A5;&#x53E3;&#x7684;&#x4E00;&#x4E2A;&#x5B9E;&#x73B0;&#x3002; &#x5B83;&#x7684;&#x65B9;&#x6CD5; <code>KeyedProcessFunction#processElement</code> &#x5C06;&#x4F1A;&#x5728;&#x6BCF;&#x4E2A;&#x4EA4;&#x6613;&#x4E8B;&#x4EF6;&#x4E0A;&#x88AB;&#x8C03;&#x7528;&#x3002; &#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x91CC;&#x8FB9;&#x4F1A;&#x5BF9;&#x6BCF;&#x7B14;&#x4EA4;&#x6613;&#x53D1;&#x51FA;&#x8B66;&#x62A5;&#xFF0C;&#x53EF;&#x80FD;&#x8FD9;&#x4E48;&#x505A;&#x8FC7;&#x4E8E;&#x4FDD;&#x5B88;&#x4E86;&#x3002;&#x8FD9;&#x91CC;&#x53EA;&#x662F;&#x7B80;&#x4ECB;&#xFF0C;&#x540E;&#x9762;&#x4F1A;&#x8FDB;&#x884C;&#x771F;&#x6B63;&#x7684;&#x4E1A;&#x52A1;&#x6269;&#x5C55;&#x3002;</p>
 <pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">FraudDetector</span> </span>{
   <span class="hljs-keyword">val</span> <span class="hljs-type">SMALL_AMOUNT</span>: <span class="hljs-type">Double</span> = <span class="hljs-number">1.00</span>
@@ -345,7 +417,7 @@
   }
 }
 </code></pre>
-<h4 id="3&#x3001;&#x5B9E;&#x73B0;&#x771F;&#x6B63;&#x7684;&#x7A0B;&#x5E8F;">3&#x3001;&#x5B9E;&#x73B0;&#x771F;&#x6B63;&#x7684;&#x7A0B;&#x5E8F;</h4>
+<h4 id="3&#x3001;&#x5B9E;&#x73B0;&#x771F;&#x6B63;&#x7684;&#x7A0B;&#x5E8F;&#xFF08;v1&#xFF09;">3&#x3001;&#x5B9E;&#x73B0;&#x771F;&#x6B63;&#x7684;&#x7A0B;&#x5E8F;&#xFF08;v1&#xFF09;</h4>
 <p>&#x5148;&#x5B9E;&#x73B0;&#x7B2C;&#x4E00;&#x7248;&#x62A5;&#x8B66;&#x7A0B;&#x5E8F;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x8D26;&#x6237;&#xFF0C;&#x5982;&#x679C;&#x51FA;&#x73B0;&#x5C0F;&#x4E8E; 1 &#x7F8E;&#x5143;&#x7684;&#x4EA4;&#x6613;&#x540E;&#x7D27;&#x8DDF;&#x7740;&#x4E00;&#x4E2A;&#x5927;&#x4E8E; 500 &#x7F8E;&#x5143;&#x7684;&#x4EA4;&#x6613;&#xFF0C;&#x5C31;&#x8F93;&#x51FA;&#x4E00;&#x4E2A;&#x62A5;&#x8B66;&#x4FE1;&#x606F;&#x3002;</p>
 <p>&#x6B3A;&#x8BC8;&#x68C0;&#x6D4B;&#x5668;&#x9700;&#x8981;&#x5728;&#x591A;&#x4E2A;&#x4EA4;&#x6613;&#x4E8B;&#x4EF6;&#x4E4B;&#x95F4;&#x8BB0;&#x4F4F;&#x4E00;&#x4E9B;&#x4FE1;&#x606F;&#x3002;&#x4EC5;&#x5F53;&#x4E00;&#x4E2A;&#x5927;&#x989D;&#x7684;&#x4EA4;&#x6613;&#x7D27;&#x968F;&#x4E00;&#x4E2A;&#x5C0F;&#x989D;&#x4EA4;&#x6613;&#x7684;&#x60C5;&#x51B5;&#x53D1;&#x751F;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x5927;&#x989D;&#x4EA4;&#x6613;&#x624D;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x6B3A;&#x8BC8;&#x4EA4;&#x6613;&#x3002; &#x5728;&#x591A;&#x4E2A;&#x4E8B;&#x4EF6;&#x4E4B;&#x95F4;&#x5B58;&#x50A8;&#x4FE1;&#x606F;&#x5C31;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5230; <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.12/zh/concepts/glossary.html#managed-state" target="_blank">&#x72B6;&#x6001;</a>&#xFF0C;&#x8FD9;&#x4E5F;&#x662F;&#x9009;&#x62E9;&#x4F7F;&#x7528; <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.12/zh/dev/stream/operators/process_function.html" target="_blank">KeyedProcessFunction</a> &#x7684;&#x539F;&#x56E0;&#x3002;&#x5B83;&#x80FD;&#x591F;<strong>&#x540C;&#x65F6;&#x63D0;&#x4F9B;&#x5BF9;&#x72B6;&#x6001;&#x548C;&#x65F6;&#x95F4;&#x7684;&#x7EC6;&#x7C92;&#x5EA6;&#x64CD;&#x4F5C;</strong>&#xFF0C;&#x4ECE;&#x800C;&#x80FD;&#x591F;&#x5728;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x5B9E;&#x73B0;&#x66F4;&#x590D;&#x6742;&#x7684;&#x7B97;&#x6CD5;&#x3002;</p>
 <p>&#x6700;&#x76F4;&#x63A5;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x662F;&#x4F7F;&#x7528;&#x4E00;&#x4E2A; boolean &#x578B;&#x7684;&#x6807;&#x8BB0;&#x72B6;&#x6001;&#x6765;&#x8868;&#x793A;&#x662F;&#x5426;&#x521A;&#x5904;&#x7406;&#x8FC7;&#x4E00;&#x4E2A;&#x5C0F;&#x989D;&#x4EA4;&#x6613;&#x3002; &#x5F53;&#x5904;&#x7406;&#x5230;&#x8BE5;&#x8D26;&#x6237;&#x7684;&#x4E00;&#x4E2A;&#x5927;&#x989D;&#x4EA4;&#x6613;&#x65F6;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x68C0;&#x67E5;&#x8FD9;&#x4E2A;&#x6807;&#x8BB0;&#x72B6;&#x6001;&#x4FBF;&#x77E5;&#x9053;&#x4E0A;&#x4E00;&#x4E2A;&#x4EA4;&#x6613;&#x662F;&#x5426;&#x662F;&#x5C0F;&#x989D;&#x4EA4;&#x6613;&#x3002;</p>
@@ -579,7 +651,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"基于DataStream API实现欺诈检测","level":"1.1.2","depth":2,"next":{"title":"基于Table API实现实时报表","level":"1.1.3","depth":2,"path":"try-flink/003.md","ref":"try-flink/003.md","articles":[]},"previous":{"title":"本地模式安装","level":"1.1.1","depth":2,"path":"try-flink/local.md","ref":"try-flink/local.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"try-flink/002.md","mtime":"2021-02-24T09:15:46.734Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-03T06:12:28.545Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"基于DataStream API实现欺诈检测","level":"1.1.2","depth":2,"next":{"title":"基于Table API实现实时报表","level":"1.1.3","depth":2,"path":"try-flink/003.md","ref":"try-flink/003.md","articles":[]},"previous":{"title":"本地模式安装","level":"1.1.1","depth":2,"path":"try-flink/local.md","ref":"try-flink/local.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"try-flink/002.md","mtime":"2021-09-08T06:54:58.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-13T12:19:58.220Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
