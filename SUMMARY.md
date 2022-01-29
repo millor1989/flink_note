@@ -14,4 +14,5 @@
   * [DataStream API](flink-china/datastream-api.md)
   * [客户端操作](flink-china/client.md)
   * [Time&Window](flink-china/time-window.md)
+  * [状态管理和容错机制](flink-china/state-fault-tolerance.md)
 * [外链](wai-lian.md)
