@@ -407,6 +407,119 @@
 <li><strong>&#x53EF;&#x9760;</strong>&#xFF0C;Flink &#x63D0;&#x4F9B;&#x4E86;&#x72B6;&#x6001;&#x6301;&#x4E45;&#x5316;&#xFF0C;&#x5305;&#x62EC;&#x4E0D;&#x4E22;&#x4E0D;&#x91CD;&#x7684;&#x8BED;&#x4E49;&#x4EE5;&#x53CA;&#x5177;&#x5907;&#x81EA;&#x52A8;&#x7684;&#x5BB9;&#x9519;&#x80FD;&#x529B;&#xFF0C;&#x6BD4;&#x5982; HA&#xFF0C;&#x5F53;&#x8282;&#x70B9;&#x6302;&#x6389;&#x540E;&#x4F1A;&#x81EA;&#x52A8;&#x62C9;&#x8D77;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x4EBA;&#x5DE5;&#x4ECB;&#x5165;&#x3002;</li>
 </ul>
 <h4 id="2&#x3001;&#x72B6;&#x6001;&#x7684;&#x7C7B;&#x578B;&#x4E0E;&#x4F7F;&#x7528;">2&#x3001;&#x72B6;&#x6001;&#x7684;&#x7C7B;&#x578B;&#x4E0E;&#x4F7F;&#x7528;</h4>
+<h5 id="21&#x3001;managed-state-&#x548C;-raw-state">2.1&#x3001;Managed State &#x548C; Raw State</h5>
+<p><img src="../assets/1643448716003.png" alt="1643448716003"></p>
+<ul>
+<li>&#x72B6;&#x6001;&#x7BA1;&#x7406;&#x65B9;&#x5F0F;&#x4E0A;&#xFF1A;Managed State &#x7531; Flink Runtime &#x7BA1;&#x7406;&#xFF0C;&#x81EA;&#x52A8;&#x5B58;&#x50A8;&#xFF0C;&#x81EA;&#x52A8;&#x6062;&#x590D;&#xFF0C;&#x5728;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x4E0A;&#x6709;&#x4F18;&#x5316;&#xFF1B;&#x800C; Raw State &#x9700;&#x8981;&#x7528;&#x6237;&#x81EA;&#x5DF1;&#x7BA1;&#x7406;&#xFF0C;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x5E8F;&#x5217;&#x5316;&#xFF0C;Flink &#x4E0D;&#x77E5;&#x9053; State &#x4E2D;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x53EA;&#x6709;&#x7528;&#x6237;&#x81EA;&#x5DF1;&#x77E5;&#x9053;&#xFF0C;&#x9700;&#x8981;&#x6700;&#x7EC8;&#x5E8F;&#x5217;&#x5316;&#x4E3A;&#x53EF;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;</li>
+<li>&#x72B6;&#x6001;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E0A;&#xFF1A;Managed State &#x652F;&#x6301;&#x5DF2;&#x77E5;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x5982; Value&#x3001;List&#x3001;Map &#x7B49;&#x3002;&#x800C; Raw State &#x53EA;&#x652F;&#x6301;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#xFF0C;&#x6240;&#x6709;&#x72B6;&#x6001;&#x90FD;&#x8981;&#x8F6C;&#x5316;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#x624D;&#x53EF;&#x4EE5;&#x3002;</li>
+<li>&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x573A;&#x666F;&#xFF1A;Managed State &#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#x5747;&#x53EF;&#x4F7F;&#x7528;&#xFF0C;Raw State &#x662F;&#x5F53; Managed State &#x4E0D;&#x591F;&#x7528;&#x65F6;&#xFF0C;&#x4E0D;&#x5982;&#x9700;&#x8981;&#x81EA;&#x5B9A;&#x4E49; Operator &#x65F6;&#x63A8;&#x8350;&#x4F7F;&#x7528; Raw State&#x3002;</li>
+</ul>
+<h5 id="22&#x3001;keyed-state-&#x548C;-operator-state">2.2&#x3001;Keyed State &#x548C; Operator State</h5>
+<p>Managed State &#x5206;&#x4E3A;&#x4E24;&#x79CD;&#xFF0C;&#x4E00;&#x79CD;&#x662F; Keyed State&#xFF0C;&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x662F; Operator State&#x3002;</p>
+<p><img src="../assets/1643449243976.png" alt="1643449243976"></p>
+<p>Flink Stream &#x6A21;&#x578B;&#x4E2D;&#xFF0C;DataStream &#x7ECF;&#x8FC7; keyBy &#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x8F6C;&#x6362;&#x4E3A; KeyedStream&#x3002;</p>
+<p>&#x6BCF;&#x4E2A; Key &#x5BF9;&#x5E94;&#x4E00;&#x4E2A; State&#xFF0C;&#x5373;&#x4E00;&#x4E2A; Operator &#x5B9E;&#x4F8B;&#x5904;&#x7406;&#x591A;&#x4E2A; Key&#xFF0C;&#x8BBF;&#x95EE;&#x76F8;&#x5E94;&#x7684;&#x591A;&#x4E2A; State&#xFF0C;&#x7531;&#x6B64;&#x884D;&#x751F;&#x51FA; Keyed State&#x3002;Keyed State &#x53EA;&#x80FD;&#x7528;&#x5728; KeyedStream &#x7684;&#x7B97;&#x5B50;&#x4E2D;&#x3002;</p>
+<p>Operator State &#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x6240;&#x6709;&#x7684;&#x7B97;&#x5B50;&#xFF0C;&#x76F8;&#x5BF9;&#x4E8E;&#x6570;&#x636E;&#x6E90;&#x6709;&#x4E00;&#x4E2A;&#x66F4;&#x597D;&#x7684;&#x5339;&#x914D;&#x65B9;&#x5F0F;&#xFF0C;&#x5E38;&#x7528;&#x4E8E; Source&#xFF0C;&#x6BD4;&#x5982; FlinkKafkaConsumer&#x3002;</p>
+<p>&#x5BF9;&#x4E8E; Keyed State&#xFF0C;&#x4E00;&#x4E2A; Operator &#x5B9E;&#x4F8B;&#x5BF9;&#x5E94;&#x591A;&#x4E2A; State&#xFF0C;&#x968F;&#x7740;&#x5E76;&#x53D1;&#x7684;&#x6539;&#x53D8;&#xFF0C;Keyed State &#x4E2D; State &#x968F;&#x7740; Key &#x5728;&#x5B9E;&#x4F8B;&#x95F4;&#x8FC1;&#x79FB;&#xFF0C;&#x6BD4;&#x5982;&#x539F;&#x6765;&#x6709;&#x4E00;&#x4E2A;&#x5E76;&#x53D1;&#xFF0C;&#x5BF9;&#x5E94;&#x7684; API &#x8BF7;&#x6C42;&#x8FC7;&#x6765;&#xFF0C;/api/a &#x548C; /api/b &#x90FD;&#x5B58;&#x653E;&#x5728;&#x8FD9;&#x4E2A;&#x5B9E;&#x4F8B;&#x5F53;&#x4E2D;&#xFF1B;&#x5982;&#x679C;&#x8BF7;&#x6C42;&#x91CF;&#x53D8;&#x5927;&#xFF0C;&#x9700;&#x8981;&#x6269;&#x5BB9;&#xFF0C;&#x5C31;&#x4F1A;&#x628A; /api/a &#x7684;&#x72B6;&#x6001;&#x548C; /api/b &#x7684;&#x72B6;&#x6001;&#x5206;&#x522B;&#x653E;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x8282;&#x70B9;&#x3002;Operator State &#x6CA1;&#x6709; Key&#xFF0C;&#x4E00;&#x4E2A; Operator &#x5B9E;&#x4F8B;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A; State&#xFF0C;&#x5E76;&#x53D1;&#x6539;&#x53D8;&#x65F6;&#x9700;&#x8981;&#x9009;&#x62E9;&#x72B6;&#x6001;&#x5982;&#x4F55;&#x91CD;&#x65B0;&#x5206;&#x914D;&#x3002;&#x5176;&#x4E2D;&#x5185;&#x7F6E;&#x4E86; 2 &#x79CD;&#x5206;&#x914D;&#x65B9;&#x5F0F;&#xFF1A;&#x4E00;&#x79CD;&#x662F;&#x5747;&#x5300;&#x5206;&#x914D;&#xFF0C;&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x662F;&#x5C06;&#x6240;&#x6709; State &#x5408;&#x5E76;&#x4E3A;&#x5168;&#x91CF; State &#x518D;&#x5206;&#x53D1;&#x7ED9;&#x6BCF;&#x4E2A;&#x5B9E;&#x4F8B;&#x3002;</p>
+<p>&#x5728;&#x8BBF;&#x95EE;&#x4E0A;&#xFF0C;Keyed State &#x901A;&#x8FC7; RuntimeContext &#x8BBF;&#x95EE;&#xFF0C;&#x9700;&#x8981; Operator &#x662F;&#x4E00;&#x4E2A; Rich Function&#x3002;Operator State &#x9700;&#x8981;&#x81EA;&#x5DF1;&#x5B9E;&#x73B0; CheckpointedFunction &#x6216;&#x8005; ListCheckpointed &#x63A5;&#x53E3;&#x3002;&#x5728;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E0A;&#xFF0C;Keyed State &#x652F;&#x6301;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x8F83;&#x591A;&#xFF0C;&#x5305;&#x62EC;&#xFF1A;ValueState&#x3001;ListState&#x3001;ReducingState&#x3001;AggregatingState &#x548C; MapState&#xFF1B;&#x800C; Operator State &#x652F;&#x6301;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x76F8;&#x5BF9;&#x8F83;&#x5C11;&#xFF0C;&#x6BD4;&#x5982; ListState&#x3002;</p>
+<h5 id="23&#x3001;keyed-state-&#x4F7F;&#x7528;">2.3&#x3001;Keyed State &#x4F7F;&#x7528;</h5>
+<h5 id="&#x96C6;&#x4E2D;-keyed-state-&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;">&#x96C6;&#x4E2D; Keyed State &#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;</h5>
+<p><img src="../assets/1643510572565.png" alt="1643510572565"></p>
+<h5 id="keyed-state-&#x7684;&#x5DEE;&#x5F02;&#xFF1A;">Keyed State &#x7684;&#x5DEE;&#x5F02;&#xFF1A;</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>&#x72B6;&#x6001;&#x6570;&#x636E;&#x7C7B;&#x578B;</th>
+<th>&#x8BBF;&#x95EE;&#x63A5;&#x53E3;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ValueState</td>
+<td>&#x5355;&#x4E2A;&#x503C;</td>
+<td>update(T) / T value()</td>
+</tr>
+<tr>
+<td>MapState</td>
+<td>Map</td>
+<td>put(UK key, UV value) / putAll(Map&lt;UK, UV&gt; map)<br>remove(UK key)<br>boolean contains(UK key) / UV get(UK key)<br>Iterable&lt;Map.Entry&gt; entries() / Iterator&lt;Map.Entry&gt; iterator()<br>Iterable&lt;UK&gt; keys() / Iterable&lt;UV&gt; values()</td>
+</tr>
+<tr>
+<td>ListState</td>
+<td>List</td>
+<td>add(T) / addAll(List&lt;T&gt;)<br>update(List&lt;T&gt;) / Iterable&lt;T&gt; get()</td>
+</tr>
+<tr>
+<td>ReducingState</td>
+<td>&#x5355;&#x4E2A;&#x503C;</td>
+<td>add(T) / addAll(List&lt;T&gt;)<br>update(List&lt;T&gt;) / T get()</td>
+</tr>
+<tr>
+<td>AggregatingState</td>
+<td>&#x5355;&#x4E2A;&#x503C;</td>
+<td>add(IN) / OUT get()</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>ValueState&#xFF1A;&#x5B58;&#x50A8;&#x5355;&#x4E2A;&#x503C;&#xFF0C;&#x6BD4;&#x5982; Wordcount&#xFF0C;&#x7528; Word &#x4F5C; Key&#xFF0C;State &#x5C31;&#x662F; Word &#x5BF9;&#x5E94;&#x7684; Count&#x3002;&#x8FD9;&#x91CC;&#x9762;&#x7684;&#x5F53;&#x904F;&#x5236;&#x53EF;&#x80FD;&#x662F;&#x6570;&#x503C;&#x6216;&#x8005;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4F5C;&#x4E3A;&#x5355;&#x4E2A;&#x503C;&#xFF0C;&#x8BBF;&#x95EE;&#x63A5;&#x53E3;&#x6709;&#x4E24;&#x79CD; get &#x548C; set&#xFF0C;&#x5728; State &#x4E0A;&#x4F53;&#x73B0;&#x7684;&#x662F; <code>update(T)</code>&#x3001;<code>T value()</code>&#x3002;</li>
+<li>MapState&#xFF1A;&#x72B6;&#x6001;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x662F; Map&#xFF0C;&#x5728; State &#x4E0A;&#x6709; put&#x3001;remove &#x7B49;&#x3002;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x5728; MapState &#x4E2D; key &#x548C; Keyed state &#x4E2D;&#x7684; key &#x4E0D;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x3002;</li>
+<li>ListState&#xFF1A;&#x72B6;&#x6001;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x662F; List&#xFF0C;&#x8BBF;&#x95EE;&#x63A5;&#x53E3; add&#x3001;update &#x7B49;&#x3002;</li>
+<li>ReducingState &#x548C; AggregatingState &#x867D;&#x7136;&#x4E0E; ListState &#x90FD;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x7236;&#x7C7B;&#xFF0C;&#x4F46;&#x662F;&#x72B6;&#x6001;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x662F;&#x5355;&#x4E2A;&#x503C;&#xFF0C;&#x539F;&#x56E0;&#x5728;&#x4E8E; add &#x65B9;&#x6CD5;&#x4E0D;&#x662F;&#x628A;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x8FFD;&#x52A0;&#x5230;&#x5217;&#x8868;&#x4E2D;&#xFF0C;&#x800C;&#x662F;&#x628A;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x66F4;&#x65B0;&#x5230;&#x4E86; Reducing &#x7684;&#x7ED3;&#x679C;&#x4E2D;&#x3002;</li>
+<li>AggregatingState &#x4E0E; ReducingState &#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;&#xFF0C;ReducingState &#x7684; add&#x3001;get &#x6DFB;&#x52A0;&#x548C;&#x5F97;&#x5230;&#x7684;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#xFF0C;&#x800C; AggregatingState &#x8F93;&#x5165;&#x7684;&#x662F; IN&#xFF0C;&#x5F97;&#x5230;&#x7684;&#x662F; OUT&#x3002;</li>
+</ul>
+<h5 id="valuestate-&#x4F7F;&#x7528;&#x793A;&#x4F8B;">ValueState &#x4F7F;&#x7528;&#x793A;&#x4F8B;</h5>
+<pre><code class="lang-java"><span class="hljs-comment">// &#x7B80;&#x5355;&#x72B6;&#x6001;&#x673A;</span>
+<span class="hljs-comment">// &#x5B8C;&#x6574;&#x4EE3;&#x7801;&#xFF1A;https://github.com/apache/flink/blob/master/flink-examples/flink-examples-streaming/src/main/java/org/apache/flink/streaming/examples/statemachine/StateMachineExample.java</span>
+
+DataStream&lt;Event&gt; events = env.addSource(source);
+
+DataStream&lt;Alert&gt; alerts = events
+    .keyBy(Event::sourceAddress)
+    .flatMap(<span class="hljs-keyword">new</span> StateMachineMapper());
+
+<span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StateMachineMapper</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">RichFlatMapFunction</span>&lt;<span class="hljs-title">Event</span>, <span class="hljs-title">Alert</span>&gt; </span>{
+
+    <span class="hljs-comment">// currentState &#x662F;&#x5F53;&#x524D;&#x72B6;&#x6001;&#x673A;&#x4E0A;&#x7684;&#x72B6;&#x6001;</span>
+    <span class="hljs-keyword">private</span> ValueState&lt;State&gt; currentState;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">(Configuration conf)</span> </span>{
+        <span class="hljs-comment">// &#x901A;&#x8FC7; getRuntimeContext &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x72B6;&#x6001;&#x673A;&#x4E0A;&#x7684;&#x72B6;&#x6001;</span>
+        currentState = getRuntimeContext().getState(<span class="hljs-keyword">new</span> ValueStateDescriptor&lt;&gt;(<span class="hljs-string">&quot;state&quot;</span>, State.class));
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">flatMap</span><span class="hljs-params">(Event evt, Collector&lt;Alert&gt; out)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        <span class="hljs-comment">// state &#x662F;&#x672C;&#x5730;&#x53D8;&#x91CF;&#xFF0C;&#x4E0D;&#x662F; Flink &#x4E2D;&#x7BA1;&#x7406;&#x7684;&#x72B6;&#x6001;</span>
+        State state = currentState.value();
+        <span class="hljs-comment">// &#x5982;&#x679C; state &#x4E3A; null&#xFF0C;&#x8BF4;&#x660E;&#x72B6;&#x6001;&#x6CA1;&#x6709;&#x88AB;&#x4F7F;&#x7528;&#x8FC7;&#xFF0C;&#x5E94;&#x8BE5;&#x662F;&#x521D;&#x59CB;&#x72B6;&#x6001;&#xFF0C;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;</span>
+        <span class="hljs-keyword">if</span> (state == <span class="hljs-keyword">null</span>) {
+            <span class="hljs-comment">// state &#x521D;&#x59CB;&#x5316;</span>
+            state = State.Initial;
+        }
+        <span class="hljs-comment">// &#x901A;&#x8FC7; transition &#x5E94;&#x7528;&#x4E8B;&#x4EF6;&#x5BF9; state &#x7684;&#x5F71;&#x54CD;</span>
+        State nextState = state.transition(evt.type());
+        <span class="hljs-comment">//  &#x5224;&#x65AD; nextState &#x72B6;&#x6001;&#x662F;&#x5426;&#x5408;&#x6CD5;</span>
+        <span class="hljs-keyword">if</span> (nextState == State.InvalidTransition) {
+            out.collect(<span class="hljs-keyword">new</span> Alert(evt.sourceAddress(), state, evt.type()));
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nextState.isTerminal()) {
+            <span class="hljs-comment">// nextState &#x662F;&#x6700;&#x7EC8;&#x72B6;&#x6001;&#xFF0C;&#x4E0D;&#x4F1A;&#x518D;&#x53D1;&#x751F;&#x72B6;&#x6001;&#x6539;&#x53D8;&#x4E86;&#xFF0C;&#x6267;&#x884C; clear</span>
+            <span class="hljs-comment">// clear &#x662F;&#x6240;&#x6709; Flink &#x7BA1;&#x7406;&#x7684; keyed state &#x90FD;&#x6709;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x5C06;&#x4FE1;&#x606F;&#x5220;&#x9664;</span>
+            currentState.clear();
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// &#x5BF9;&#x72B6;&#x6001;&#x6267;&#x884C;&#x66F4;&#x65B0;</span>
+            currentState.update(nextState);
+        }
+    }
+}
+</code></pre>
+<p>&#x5176;&#x4E2D;&#xFF0C;Events &#x662F;&#x4E00;&#x4E2A; DataStream&#xFF0C;&#x901A;&#x8FC7; <code>env.addSource</code> &#x52A0;&#x8F7D;&#x6570;&#x636E;&#xFF0C;alerts &#x662F; events &#x5148; <code>keyBy</code> &#x518D; <code>flatMap(new StateMachineMapper())</code> &#x7684;&#x5230;&#x7684;&#x4E00;&#x4E2A; DataStream&#x3002;<code>StateMachineMapper</code> &#x662F;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#x673A;&#xFF0C;&#x72B6;&#x6001;&#x673A;&#x6307;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x72B6;&#x6001;&#x4E0E;&#x72B6;&#x6001;&#x95F4;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x8F6C;&#x6362;&#x5173;&#x7CFB;&#x7684;&#x7ED3;&#x5408;&#xFF0C;&#x4EE5;&#x8D2D;&#x7269;&#x8FC7;&#x7A0B;&#x4E3A;&#x4F8B;&#xFF1A;</p>
+<ul>
+<li>&#x9996;&#x5148;&#x4E0B;&#x5355;&#xFF0C;&#x8BA2;&#x5355;&#x751F;&#x6210;&#x540E;&#x72B6;&#x6001;&#x4E3A;&#x5F85;&#x4ED8;&#x6B3E;&#xFF0C;&#x5F53;&#x518D;&#x6765;&#x4E00;&#x4E2A;&#x4ED8;&#x6B3E;&#x6210;&#x529F;&#x7684;&#x4E8B;&#x4EF6;&#x72B6;&#x6001;&#xFF0C;&#x8BA2;&#x5355;&#x7684;&#x72B6;&#x6001;&#x5219;&#x4F1A;&#x4ECE;&#x5F85;&#x4ED8;&#x6B3E;&#x53D8;&#x4E3A;&#x5DF2;&#x4ED8;&#x6B3E;&#x4EE3;&#x53D1;&#x8D27;</li>
+<li>&#x5DF2;&#x4ED8;&#x6B3E;&#x5F85;&#x53D1;&#x8D27;&#x7684;&#x72B6;&#x6001;&#x65F6;&#x6536;&#x5230;&#x53D1;&#x8D27;&#x4E8B;&#x4EF6;&#xFF0C;&#x8BA2;&#x5355;&#x72B6;&#x6001;&#x5C06;&#x4F1A;&#x53D8;&#x4E3A;&#x914D;&#x9001;&#x4E2D;&#xFF0C;&#x914D;&#x9001;&#x4E2D;&#x7684;&#x72B6;&#x6001;&#x65F6;&#x6536;&#x5230;&#x7B7E;&#x6536;&#x4E8B;&#x4EF6;&#xFF0C;&#x8BA2;&#x5355;&#x7684;&#x72B6;&#x6001;&#x5C31;&#x53D8;&#x4E3A;&#x4E86;&#x5DF2;&#x7B7E;&#x6536;&#x3002;</li>
+<li>&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x968F;&#x65F6;&#x6536;&#x5230;&#x53D6;&#x6D88;&#x8BA2;&#x5355;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x65E0;&#x8BBA;&#x5F53;&#x524D;&#x662F;&#x54EA;&#x4E2A;&#x72B6;&#x6001;&#xFF0C;&#x6700;&#x7EC8;&#x72B6;&#x6001;&#x90FD;&#x4F1A;&#x8F6C;&#x79FB;&#x5230;&#x5DF2;&#x53D6;&#x6D88;&#xFF0C;&#x81F3;&#x6B64;&#x72B6;&#x6001;&#x5C31;&#x7ED3;&#x675F;&#x4E86;&#x3002;</li>
+</ul>
+<h4 id="3&#x3001;&#x5BB9;&#x9519;&#x673A;&#x5236;&#x4E0E;&#x6545;&#x969C;&#x6062;&#x590D;">3&#x3001;&#x5BB9;&#x9519;&#x673A;&#x5236;&#x4E0E;&#x6545;&#x969C;&#x6062;&#x590D;</h4>
 
                                 
                                 </section>
@@ -450,7 +563,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"状态管理和容错机制","level":"1.3.5","depth":2,"next":{"title":"外链","level":"1.4","depth":1,"path":"wai-lian.md","ref":"wai-lian.md","articles":[]},"previous":{"title":"Time&Window","level":"1.3.4","depth":2,"path":"flink-china/time-window.md","ref":"flink-china/time-window.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"flink-china/state-fault-tolerance.md","mtime":"2022-01-19T12:24:12.009Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-29T07:46:21.466Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"状态管理和容错机制","level":"1.3.5","depth":2,"next":{"title":"外链","level":"1.4","depth":1,"path":"wai-lian.md","ref":"wai-lian.md","articles":[]},"previous":{"title":"Time&Window","level":"1.3.4","depth":2,"path":"flink-china/time-window.md","ref":"flink-china/time-window.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"flink-china/state-fault-tolerance.md","mtime":"2022-01-30T05:46:10.647Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-30T05:47:10.562Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

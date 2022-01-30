@@ -62,3 +62,104 @@
 - **可靠**，Flink 提供了状态持久化，包括不丢不重的语义以及具备自动的容错能力，比如 HA，当节点挂掉后会自动拉起，不需要人工介入。
 
 #### 2、状态的类型与使用
+
+##### 2.1、Managed State 和 Raw State
+
+![1643448716003](/assets/1643448716003.png)
+
+- 状态管理方式上：Managed State 由 Flink Runtime 管理，自动存储，自动恢复，在内存管理上有优化；而 Raw State 需要用户自己管理，需要自己序列化，Flink 不知道 State 中存储的数据结构，只有用户自己知道，需要最终序列化为可存储的数据结构。
+- 状态数据结构上：Managed State 支持已知的数据结构，如 Value、List、Map 等。而 Raw State 只支持字节数组，所有状态都要转化为二进制字节数组才可以。
+- 推荐使用场景：Managed State 大多数情况下均可使用，Raw State 是当 Managed State 不够用时，不如需要自定义 Operator 时推荐使用 Raw State。
+
+##### 2.2、Keyed State 和 Operator State
+
+Managed State 分为两种，一种是 Keyed State，另外一种是 Operator State。
+
+![1643449243976](/assets/1643449243976.png)
+
+Flink Stream 模型中，DataStream 经过 keyBy 操作可以转换为 KeyedStream。
+
+每个 Key 对应一个 State，即一个 Operator 实例处理多个 Key，访问相应的多个 State，由此衍生出 Keyed State。Keyed State 只能用在 KeyedStream 的算子中。
+
+Operator State 可以用于所有的算子，相对于数据源有一个更好的匹配方式，常用于 Source，比如 FlinkKafkaConsumer。
+
+对于 Keyed State，一个 Operator 实例对应多个 State，随着并发的改变，Keyed State 中 State 随着 Key 在实例间迁移，比如原来有一个并发，对应的 API 请求过来，/api/a 和 /api/b 都存放在这个实例当中；如果请求量变大，需要扩容，就会把 /api/a 的状态和 /api/b 的状态分别放在不同的节点。Operator State 没有 Key，一个 Operator 实例对应一个 State，并发改变时需要选择状态如何重新分配。其中内置了 2 种分配方式：一种是均匀分配，另外一种是将所有 State 合并为全量 State 再分发给每个实例。
+
+在访问上，Keyed State 通过 RuntimeContext 访问，需要 Operator 是一个 Rich Function。Operator State 需要自己实现 CheckpointedFunction 或者 ListCheckpointed 接口。在数据结构上，Keyed State 支持的数据结构较多，包括：ValueState、ListState、ReducingState、AggregatingState 和 MapState；而 Operator State 支持的数据结构相对较少，比如 ListState。
+
+##### 2.3、Keyed State 使用
+
+##### 集中 Keyed State 之间的关系
+
+![1643510572565](/assets/1643510572565.png)
+
+##### Keyed State 的差异：
+
+|                  | 状态数据类型 | 访问接口                                                     |
+| ---------------- | ------------ | ------------------------------------------------------------ |
+| ValueState       | 单个值       | update(T) / T value()                                        |
+| MapState         | Map          | put(UK key, UV value) / putAll(Map&lt;UK, UV&gt; map)<br>remove(UK key)<br>boolean contains(UK key) / UV get(UK key)<br>Iterable&lt;Map.Entry&gt; entries() / Iterator&lt;Map.Entry&gt; iterator()<br>Iterable&lt;UK&gt; keys() / Iterable&lt;UV&gt; values() |
+| ListState        | List         | add(T) / addAll(List&lt;T&gt;)<br>update(List&lt;T&gt;) / Iterable&lt;T&gt; get() |
+| ReducingState    | 单个值       | add(T) / addAll(List&lt;T&gt;)<br/>update(List&lt;T&gt;) / T get() |
+| AggregatingState | 单个值       | add(IN) / OUT get()                                          |
+
+- ValueState：存储单个值，比如 Wordcount，用 Word 作 Key，State 就是 Word 对应的 Count。这里面的当遏制可能是数值或者字符串，作为单个值，访问接口有两种 get 和 set，在 State 上体现的是 `update(T)`、`T value()`。
+- MapState：状态数据类型是 Map，在 State 上有 put、remove 等。需要注意的是，在 MapState 中 key 和 Keyed state 中的 key 不是同一个。
+- ListState：状态数据类型是 List，访问接口 add、update 等。
+- ReducingState 和 AggregatingState 虽然与 ListState 都是同一个父类，但是状态数据类型是单个值，原因在于 add 方法不是把当前元素追加到列表中，而是把当前元素更新到了 Reducing 的结果中。
+- AggregatingState 与 ReducingState 的区别在于，ReducingState 的 add、get 添加和得到的是同一个类型，而 AggregatingState 输入的是 IN，得到的是 OUT。
+
+##### ValueState 使用示例
+
+```java
+// 简单状态机
+// 完整代码：https://github.com/apache/flink/blob/master/flink-examples/flink-examples-streaming/src/main/java/org/apache/flink/streaming/examples/statemachine/StateMachineExample.java
+
+DataStream<Event> events = env.addSource(source);
+
+DataStream<Alert> alerts = events
+	.keyBy(Event::sourceAddress)
+	.flatMap(new StateMachineMapper());
+
+static class StateMachineMapper extends RichFlatMapFunction<Event, Alert> {
+
+    // currentState 是当前状态机上的状态
+    private ValueState<State> currentState;
+
+    public void open(Configuration conf) {
+        // 通过 getRuntimeContext 获取当前状态机上的状态
+		currentState = getRuntimeContext().getState(new ValueStateDescriptor<>("state", State.class));
+	}
+
+    public void flatMap(Event evt, Collector<Alert> out) throws Exception {
+        // state 是本地变量，不是 Flink 中管理的状态
+		State state = currentState.value();
+        // 如果 state 为 null，说明状态没有被使用过，应该是初始状态，进行初始化
+		if (state == null) {
+            // state 初始化
+			state = State.Initial;
+		}
+        // 通过 transition 应用事件对 state 的影响
+		State nextState = state.transition(evt.type());
+        //  判断 nextState 状态是否合法
+		if (nextState == State.InvalidTransition) {
+			out.collect(new Alert(evt.sourceAddress(), state, evt.type()));
+		} else if (nextState.isTerminal()) {
+            // nextState 是最终状态，不会再发生状态改变了，执行 clear
+            // clear 是所有 Flink 管理的 keyed state 都有的方法，意味着将信息删除
+			currentState.clear();
+		} else {
+            // 对状态执行更新
+			currentState.update(nextState);
+		}
+	}
+}
+```
+
+其中，Events 是一个 DataStream，通过 `env.addSource` 加载数据，alerts 是 events 先 `keyBy` 再 `flatMap(new StateMachineMapper())` 的到的一个 DataStream。`StateMachineMapper` 是一个状态机，状态机指有不同的状态与状态间有不同的转换关系的结合，以购物过程为例：
+
+- 首先下单，订单生成后状态为待付款，当再来一个付款成功的事件状态，订单的状态则会从待付款变为已付款代发货
+- 已付款待发货的状态时收到发货事件，订单状态将会变为配送中，配送中的状态时收到签收事件，订单的状态就变为了已签收。
+- 整个过程中，如果随时收到取消订单的事件，无论当前是哪个状态，最终状态都会转移到已取消，至此状态就结束了。
+
+#### 3、容错机制与故障恢复
