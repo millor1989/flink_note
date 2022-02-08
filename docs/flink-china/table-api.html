@@ -1,0 +1,540 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Table API · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../wai-lian.html" />
+    
+    
+    <link rel="prev" href="state-fault-tolerance.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../try-flink/local.html">
+            
+                <a href="../try-flink/local.html">
+            
+                    
+                    本地模式安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../try-flink/002.html">
+            
+                <a href="../try-flink/002.html">
+            
+                    
+                    基于DataStream API实现欺诈检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../try-flink/003.html">
+            
+                <a href="../try-flink/003.html">
+            
+                    
+                    基于Table API实现实时报表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../try-flink/004.html">
+            
+                <a href="../try-flink/004.html">
+            
+                    
+                    一个Flink操作场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../practice.html">
+            
+                <a href="../practice.html">
+            
+                    
+                    实践练习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../practice/001.html">
+            
+                <a href="../practice/001.html">
+            
+                    
+                    DataStream API 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../practice/002.html">
+            
+                <a href="../practice/002.html">
+            
+                    
+                    数据管道 & ETL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../practice/003.html">
+            
+                <a href="../practice/003.html">
+            
+                    
+                    流式分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../flink-china.html">
+            
+                <a href="../flink-china.html">
+            
+                    
+                    Flink 中国社区文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="setdeployrun.html">
+            
+                <a href="setdeployrun.html">
+            
+                    
+                    Flink 环境搭建、配置、部署及运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="datastream-api.html">
+            
+                <a href="datastream-api.html">
+            
+                    
+                    DataStream API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="client.html">
+            
+                <a href="client.html">
+            
+                    
+                    客户端操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="time-window.html">
+            
+                <a href="time-window.html">
+            
+                    
+                    Time&Window
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="state-fault-tolerance.html">
+            
+                <a href="state-fault-tolerance.html">
+            
+                    
+                    状态管理和容错机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.6" data-path="table-api.html">
+            
+                <a href="table-api.html">
+            
+                    
+                    Table API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../wai-lian.html">
+            
+                <a href="../wai-lian.html">
+            
+                    
+                    外链
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Table API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="table-api">Table API</h3>
+<h4 id="1&#x3001;table-api-&#x548C;-sql">1&#x3001;Table API &#x548C; SQL</h4>
+<p>Table API &#x548C; SQL &#x662F; Flink API &#x4E2D;&#x6700;&#x4E3A;&#x4FBF;&#x6377;&#x7684; API&#xFF0C;&#x5176;&#x7279;&#x70B9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="../assets/1644215475493.png" alt="1644215475493"></p>
+<p>Table API &#x548C; SQL &#x662F;&#x58F0;&#x660E;&#x5F0F;&#x7684; API&#xFF0C;&#x4E0D;&#x7528;&#x5173;&#x5FC3;&#x5E95;&#x5C42;&#x662F;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x7684;&#x3002;</p>
+<p>Table API &#x548C; SQL &#x5E95;&#x5C42;&#x6709;&#x4F18;&#x5316;&#x5668;&#x5BF9;&#x67E5;&#x8BE2;&#x8FDB;&#x884C;&#x4F18;&#x5316;&#xFF0C;&#x4ECE;&#x800C;&#x80FD;&#x83B7;&#x5F97;<strong>&#x9AD8;&#x6027;&#x80FD;</strong>&#x3002;&#x5047;&#x5982;&#xFF0C;WordCount &#x7684;&#x4F8B;&#x5B50;&#x6709;&#x4E24;&#x4E2A; <code>count</code> &#x64CD;&#x4F5C;&#xFF0C;&#x4F18;&#x5316;&#x5668;&#x4F1A;&#x8BC6;&#x522B;&#x5E76;&#x907F;&#x514D;&#x91CD;&#x590D;&#x7684;&#x8BA1;&#x7B97;&#xFF0C;&#x8BA1;&#x7B97;&#x65F6;&#x53EA;&#x4FDD;&#x7559;&#x4E00;&#x4E2A; <code>count</code> &#x64CD;&#x4F5C;&#xFF0C;&#x8F93;&#x51FA;&#x65F6;&#x5C06;&#x76F8;&#x540C;&#x503C;&#x8F93;&#x51FA;&#x4E24;&#x904D;&#x4EE5;&#x8FBE;&#x5230;&#x66F4;&#x597D;&#x7684;&#x6027;&#x80FD;&#x3002;</p>
+<h5 id="11&#x3001;table-api-&#x7279;&#x70B9;">1.1&#x3001;Table API &#x7279;&#x70B9;</h5>
+<p><img src="../assets/1644215808837.png" alt="1644215808837"></p>
+<ol>
+<li><h5 id="table-api-&#x4F7F;&#x5F97;&#x591A;&#x58F0;&#x660E;&#x7684;&#x6570;&#x636E;&#x5904;&#x7406;&#x8D77;&#x6765;&#x6BD4;&#x8F83;&#x5BB9;&#x6613;">Table API &#x4F7F;&#x5F97;&#x591A;&#x58F0;&#x660E;&#x7684;&#x6570;&#x636E;&#x5904;&#x7406;&#x8D77;&#x6765;&#x6BD4;&#x8F83;&#x5BB9;&#x6613;</h5>
+<p>&#x5047;&#x5982;&#x6709;&#x4E00;&#x4E2A; Table&#xFF08;tab&#xFF09;&#xFF0C;&#x9700;&#x8981;&#x6267;&#x884C;&#x8FC7;&#x6EE4;&#x64CD;&#x4F5C;&#x7136;&#x540E;&#x8F93;&#x51FA;&#x5230;&#x7ED3;&#x679C;&#x8868;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x5B9E;&#x73B0;&#x4E3A;&#xFF1A;<code>tab.where(&quot;a &lt; 10&quot;).insert(&quot;resultTable1&quot;)</code>&#xFF1B;&#x53E6;&#x5916;&#x8FD8;&#x8981;&#x6267;&#x884C;&#x522B;&#x7684;&#x8FC7;&#x6EE4;&#x5E76;&#x8F93;&#x51FA;&#xFF1A;<code>tab.where(&quot;a &gt; 100&quot;).insertInto(&quot;resultTable2&quot;)</code>&#x3002;&#x53EF;&#x89C1;&#xFF0C;&#x7528; Table API &#x975E;&#x5E38;&#x7684;&#x7B80;&#x6D01;&#x3002;</p>
+</li>
+<li><h5 id="table-api-&#x662F;-flink-&#x81EA;&#x8EAB;&#x7684;&#x4E00;&#x5957;-api&#xFF0C;&#x53EF;&#x4EE5;&#x66F4;&#x5BB9;&#x6613;&#x5730;&#x53BB;&#x6269;&#x5C55;&#x6807;&#x51C6;&#x7684;-sql&#x3002;">Table API &#x662F; Flink &#x81EA;&#x8EAB;&#x7684;&#x4E00;&#x5957; API&#xFF0C;&#x53EF;&#x4EE5;&#x66F4;&#x5BB9;&#x6613;&#x5730;&#x53BB;&#x6269;&#x5C55;&#x6807;&#x51C6;&#x7684; SQL&#x3002;</h5>
+<p>&#x6269;&#x5C55; SQL &#x4E5F;&#x4E0D;&#x662F;&#x968F;&#x610F;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x8003;&#x8651; API &#x7684;&#x8BED;&#x4E49;&#x3001;&#x539F;&#x5B50;&#x6027;&#x548C;&#x6B63;&#x4EA4;&#x6027;&#xFF0C;&#x5E76;&#x4E14;&#x4EC5;&#x5F53;&#x9700;&#x8981;&#x65F6;&#x624D;&#x53BB;&#x6269;&#x5C55;&#x3002;</p>
+<p>&#x5BF9;&#x6BD4; SQL&#xFF0C;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A; Table API &#x662F; SQL &#x7684;&#x8D85;&#x96C6;&#x3002;SQL &#x6709;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;Table API &#x53EF;&#x4EE5;&#x6709;&#xFF0C;&#x53E6;&#x5916;&#x8FD8;&#x53EF;&#x4EE5;&#x4ECE;&#x6613;&#x7528;&#x6027;&#x548C;&#x529F;&#x80FD;&#x6027;&#x89D2;&#x5EA6;&#x5BF9; SQL &#x8FDB;&#x884C;&#x6269;&#x5C55;&#x548C;&#x63D0;&#x5347;&#x3002;</p>
+</li>
+</ol>
+<h4 id="2&#x3001;table-api-&#x7F16;&#x7A0B;">2&#x3001;Table API &#x7F16;&#x7A0B;</h4>
+<h5 id="21&#x3001;wordcount-&#x793A;&#x4F8B;">2.1&#x3001;WordCount &#x793A;&#x4F8B;</h5>
+<p>Java &#x8BED;&#x8A00; Batch &#x7248; WordCount &#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JavaBatchWordCount</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
+        BatchTableEnvironment tEnv = BatchTableEnvironment.create(env);
+
+        String path =
+            JavaBatchWordCount.class.getClassLoader().getResource(<span class="hljs-string">&quot;words.txt&quot;</span>).getPath();
+
+        tEnv.connect(<span class="hljs-keyword">new</span> FileSystem().path(path))
+            .withFormat(<span class="hljs-keyword">new</span> OldCsv().field(<span class="hljs-string">&quot;word&quot;</span>, Types.STRING).lineDelimiter(<span class="hljs-string">&quot;\n&quot;</span>))
+            .withSchema(<span class="hljs-keyword">new</span> Schema().field(<span class="hljs-string">&quot;word&quot;</span>, Types.STRING))
+            .registerTableSource(<span class="hljs-string">&quot;fileSource&quot;</span>);
+
+        Table result = tEnv.scan(<span class="hljs-string">&quot;fileSource&quot;</span>)
+            .groupBy(<span class="hljs-string">&quot;word&quot;</span>)
+            .select(<span class="hljs-string">&quot;word, count(1) as count&quot;</span>);
+
+        tEnv.toDataSet(result, Row.class).print();
+    }
+}
+</code></pre>
+<p>&#x9996;&#x5148;&#xFF0C;&#x521D;&#x59CB;&#x5316; environment &#x83B7;&#x53D6; <code>env</code>&#xFF0C;&#x7136;&#x540E;&#x83B7;&#x5F97; Table &#x73AF;&#x5883; <code>tEnv</code>&#xFF0C;&#x4E4B;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x6CE8;&#x518C; TableSource&#x3001;TableSink &#x6216;&#x6267;&#x884C;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x64CD;&#x4F5C;&#x3002;&#x672C;&#x4F8B;&#x901A;&#x8FC7;&#x6587;&#x4EF6;&#x6CE8;&#x518C; TableSource&#xFF0C;&#x6307;&#x5B9A;&#x4E86;&#x6587;&#x4EF6;&#x7684;&#x683C;&#x5F0F;&#x3001;&#x5206;&#x9694;&#x7B26;&#x3001;schema&#x3002;&#x4F7F;&#x7528; <code>scan</code> &#x6CE8;&#x518C;&#x7684; TableSource&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5F97;&#x5230; <code>Table</code> &#x5BF9;&#x8C61;&#x5E76;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#xFF08;groupBy&#x3001;count&#xFF09;&#xFF0C;&#x6700;&#x540E;&#xFF0C;&#x5C06; <code>Table</code> &#x4EE5; DataSet &#x7684;&#x65B9;&#x5F0F;&#x8F93;&#x51FA;&#x3002;</p>
+<p>&#x672C;&#x4F8B;&#x4E2D;&#xFF0C;<code>ExecutionEnvironment</code> &#x548C; <code>BatchTableEnvironment</code> &#x90FD;&#x662F; Java &#x7248;&#x672C;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x7F16;&#x5199; Scala &#x7A0B;&#x5E8F;&#xFF0C;&#x9700;&#x8981;&#x5BF9;&#x5E94;&#x7684; Scala &#x7248;&#x672C; API&#x3002;&#x5982;&#x4E0B;&#x4E3A; Flink environment &#x76F8;&#x5173; API &#x7684;&#x5F52;&#x7EB3;&#xFF1A;</p>
+<p><img src="../assets/1644216987462.png" alt="1644216987462"></p>
+<h5 id="22&#x3001;&#x83B7;&#x53D6;-table">2.2&#x3001;&#x83B7;&#x53D6; <code>Table</code></h5>
+<p>&#x83B7;&#x53D6; <code>Table</code> &#x5206;&#x4E24;&#x6B65;&#xFF1A;&#x6CE8;&#x518C;&#x5BF9;&#x5E94;&#x7684; <code>TableSource</code>&#xFF0C;&#x8C03;&#x7528; Table environment &#x7684; <code>scan</code> &#x65B9;&#x6CD5;&#x83B7;&#x53D6; Table &#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x6CE8;&#x518C; TableSource &#x7684;&#x4E09;&#x79CD;&#x65B9;&#x6CD5;&#xFF1A;&#x901A;&#x8FC7; Table descriptor &#x6CE8;&#x518C;&#xFF1B;&#x901A;&#x8FC7;&#x81EA;&#x5B9A;&#x4E49; source &#x6CE8;&#x518C;&#xFF1B;&#x901A;&#x8FC7; DataStream &#x6CE8;&#x518C;&#x3002;</p>
+<p><img src="../assets/1644218404025.png" alt="1644218404025"></p>
+<h5 id="23&#x3001;&#x8F93;&#x51FA;-table">2.3&#x3001;&#x8F93;&#x51FA; <code>Table</code></h5>
+<p>&#x4E09;&#x79CD;&#x65B9;&#x6CD5;&#xFF1A;&#x901A;&#x8FC7; Table descriptor&#xFF0C;&#x81EA;&#x5B9A;&#x4E49; Table Sink&#xFF0C;&#x8F93;&#x51FA;&#x4E00;&#x4E2A; DataStream&#x3002;</p>
+<p><img src="../assets/1644218670033.png" alt="1644218670033"></p>
+<h5 id="24&#x3001;&#x64CD;&#x4F5C;-table">2.4&#x3001;&#x64CD;&#x4F5C; <code>Table</code></h5>
+<h5 id="241&#x3001;table-&#x64CD;&#x4F5C;&#x603B;&#x89C8;">2.4.1&#x3001;Table &#x64CD;&#x4F5C;&#x603B;&#x89C8;</h5>
+<p><img src="../assets/1644218788390.png" alt="1644218788390"></p>
+<p>&#x5982;&#x56FE;&#xFF0C;&#x5BF9; <code>Table</code> &#x8FDB;&#x884C; <code>groupBy</code> &#x64CD;&#x4F5C;&#x540E;&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; <code>GroupedTable</code>&#xFF0C;<code>GroupedTable</code> &#x53EA;&#x6709;&#x4E00;&#x4E2A; <code>select</code> &#x64CD;&#x4F5C;&#x53EF;&#x7528;&#xFF0C;&#x5BF9; <code>GroupedTable</code> &#x6267;&#x884C; <code>select</code> &#x64CD;&#x4F5C;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; <code>Table</code>&#x2014;&#x2014;&#x7136;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5BF9;&#x5176;&#x6267;&#x884C; <code>Table</code> &#x7684;&#x64CD;&#x4F5C;&#x4E86;&#x3002;<code>OverWindowedTable</code> &#x7528;&#x6CD5;&#x4E0A;&#x4E0E; <code>GroupedTable</code> &#x7C7B;&#x4F3C;&#x3002;&#x5F15;&#x5165;&#x5404;&#x7C7B;&#x578B;&#x7684; Table &#x662F;&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1; API &#x7684;&#x5408;&#x6CD5;&#x6027;&#x548C;&#x4FBF;&#x5229;&#x6027;&#x3002;</p>
+<h5 id="table-api-&#x64CD;&#x4F5C;&#x5206;&#x7C7B;&#xFF1A;">Table API &#x64CD;&#x4F5C;&#x5206;&#x7C7B;&#xFF1A;</h5>
+<p><img src="../assets/1644219194521.png" alt="1644219194521"></p>
+<ul>
+<li>&#x8DDF; SQL &#x5BF9;&#x9F50;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x6BD4;&#x5982; select&#x3001;filter&#x3001;join &#x7B49;</li>
+<li>&#x63D0;&#x5347; Table API &#x6613;&#x7528;&#x6027;&#x7684;&#x64CD;&#x4F5C;</li>
+<li>&#x589E;&#x5F3A; Table API &#x529F;&#x80FD;&#x6027;&#x7684;&#x64CD;&#x4F5C;</li>
+</ul>
+<h5 id="242&#x3001;&#x63D0;&#x5347;-table-api-&#x6613;&#x7528;&#x6027;&#x7684;&#x64CD;&#x4F5C;">2.4.2&#x3001;&#x63D0;&#x5347; Table API &#x6613;&#x7528;&#x6027;&#x7684;&#x64CD;&#x4F5C;</h5>
+<p>&#x5047;&#x5982;&#xFF0C;&#x6709;&#x4E00;&#x5F20;&#x5F88;&#x5927;&#x7684;&#x8868;&#xFF0C;100 &#x5217;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x5217;&#x4E0D;&#x7528;&#xFF0C;SQL &#x5982;&#x4F55;&#x5199;&#x2026;&#x2026;&#x5982;&#x679C; select 99 &#x5217;&#xFF0C;&#x4F1A;&#x5F88;&#x96BE;&#x53D7;&#xFF01;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;Table &#x4E0A;&#x5F15;&#x5165;&#x4E86; <code>dropColumns</code> &#x65B9;&#x6CD5;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x5E94;&#x7528;&#x573A;&#x666F;&#x4E2D;&#x53EA;&#x7528;&#x53BB;&#x6389;&#x4E00;&#x5217;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;&#x6B64;&#x5916;&#x8FD8;&#x6709; <code>addColumns</code>&#x3001;<code>addOrReplaceColumns</code>&#x3001;<code>renameColumns</code> &#x65B9;&#x6CD5;&#x3002;</p>
+<p><img src="../assets/1644219677256.png" alt="1644219677256"></p>
+<p>&#x5047;&#x5982;&#xFF0C;100 &#x5217;&#x7684;&#x8868;&#xFF0C;&#x53EA;&#x9700;&#x8981; 20 ~ 80 &#x5217;&#xFF0C;&#x8BE5;&#x5982;&#x4F55;&#x64CD;&#x4F5C;&#x2026;&#x2026;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>withColumns</code> &#x548C; <code>withoutColumns</code> &#x65B9;&#x6CD5;&#x2014;&#x2014;<code>table.select(&quot;withColumns(20 to 80)&quot;)</code>&#x3002;</p>
+<p><img src="../assets/1644219992841.png" alt="1644219992841"></p>
+<h5 id="withcolumns--withoutcolumns-&#x8BED;&#x6CD5;&#xFF1A;">withColumns \ withoutColumns &#x8BED;&#x6CD5;&#xFF1A;</h5>
+<p><img src="../assets/1644221332694.png" alt="1644221332694"></p>
+<h5 id="243&#x3001;&#x589E;&#x5F3A;-table-api-&#x529F;&#x80FD;&#x6027;&#x7684;&#x64CD;&#x4F5C;">2.4.3&#x3001;&#x589E;&#x5F3A; Table API &#x529F;&#x80FD;&#x6027;&#x7684;&#x64CD;&#x4F5C;</h5>
+<p>Flink &#x6709;&#x4E09;&#x79CD;&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#xFF1A;<code>ScalarFunction</code>&#x3001;<code>TableFunction</code>&#x3001;<code>AggregateFunction</code>&#x3002;&#x4E0B;&#x56FE;&#x4EE5;&#x8F93;&#x5165;&#x3001;&#x8F93;&#x51FA;&#x7684;&#x7EF4;&#x5EA6;&#x5BF9;&#x8FD9;&#x4E9B;&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x4E86;&#x5206;&#x7C7B;&#xFF1A;</p>
+<p><img src="../assets/1644221781139.png" alt="1644221781139"></p>
+<p>&#x4E3A;&#x4E86;&#x8BA9;&#x8BED;&#x4E49;&#x66F4;&#x52A0;&#x5B8C;&#x6574;&#xFF0C;Table API &#x589E;&#x52A0;&#x4E86; <code>TableAggregateFunction</code>&#xFF0C;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x548C;&#x8F93;&#x51FA;&#x591A;&#x884C;&#x3002;<code>TableAggregateFunction</code> &#x6DFB;&#x52A0;&#x540E;&#xFF0C;Table API &#x7684;&#x529F;&#x80FD;&#x5F97;&#x5230;&#x5F88;&#x5230;&#x7684;&#x6269;&#x5C55;&#xFF0C;&#x67D0;&#x79CD;&#x7A0B;&#x5EA6;&#x4E0A;&#x53EF;&#x4EE5;&#x7528;&#x5B83;&#x6765;&#x5B9E;&#x73B0;&#x81EA;&#x5B9A;&#x4E49;&#x7684; operator&#xFF0C;&#x6BD4;&#x5982;&#x7528; <code>TableAggregateFunction</code> &#x5B9E;&#x73B0; TopN&#x3002;</p>
+<h5 id="map-operation&#x2014;&#x2014;&#x6613;&#x7528;&#x6027;">Map operation&#x2014;&#x2014;&#x6613;&#x7528;&#x6027;</h5>
+<p><img src="../assets/1644224383555.png" alt="1644224383555"></p>
+<h5 id="flatmap-operation&#x2014;&#x2014;&#x6613;&#x7528;&#x6027;">FlatMap operation&#x2014;&#x2014;&#x6613;&#x7528;&#x6027;</h5>
+<p><img src="../assets/1644224428152.png" alt="1644224428152"></p>
+<h5 id="aggregate-operation&#x2014;&#x2014;&#x6613;&#x7528;&#x6027;">Aggregate operation&#x2014;&#x2014;&#x6613;&#x7528;&#x6027;</h5>
+<p><img src="../assets/1644224939566.png" alt="1644224939566"></p>
+<h5 id="flataggregate-operation&#x2014;&#x2014;&#x529F;&#x80FD;&#x6027;">FlatAggregate operation&#x2014;&#x2014;&#x529F;&#x80FD;&#x6027;</h5>
+<p><img src="../assets/1644224695903.png" alt="1644224695903"></p>
+<h5 id="aggregate-vs-tableaggregate">Aggregate VS TableAggregate</h5>
+<p>&#x4F7F;&#x7528; Max &#x548C; Top2 &#x5E94;&#x7528;&#x573A;&#x666F;&#x6BD4;&#x8F83; Aggreage &#x548C; FlatAggregate &#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x5F02;</p>
+<p><img src="../assets/1644224820762.png" alt="1644224820762"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="state-fault-tolerance.html" class="navigation navigation-prev " aria-label="Previous page: 状态管理和容错机制">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../wai-lian.html" class="navigation navigation-next " aria-label="Next page: 外链">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Table API","level":"1.3.6","depth":2,"next":{"title":"外链","level":"1.4","depth":1,"path":"wai-lian.md","ref":"wai-lian.md","articles":[]},"previous":{"title":"状态管理和容错机制","level":"1.3.5","depth":2,"path":"flink-china/state-fault-tolerance.md","ref":"flink-china/state-fault-tolerance.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"flink-china/table-api.md","mtime":"2022-02-07T09:09:13.278Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-08T02:45:06.855Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

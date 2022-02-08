@@ -163,3 +163,79 @@ static class StateMachineMapper extends RichFlatMapFunction<Event, Alert> {
 - 整个过程中，如果随时收到取消订单的事件，无论当前是哪个状态，最终状态都会转移到已取消，至此状态就结束了。
 
 #### 3、容错机制与故障恢复
+
+##### 3.1、状态的保存与恢复
+
+![1644202439328](/assets/1644202439328.png)
+
+Flink 状态保存主要依靠 Checkpoint 机制，Checkpoint 会定时制作分布式快照对程序中的状态进行备份。对于故障恢复：假如作业分布式跑在 3 台机器上，其中一台宕机，需要将其中的进程或线程转移到活跃的其它两台机器上，那么需要将整个作业的所有 task 都会滚到最后一次成功 Checkpoint 的状态，然后从该点开始继续处理。
+
+Flink 从 Checkpoint 恢复的必要条件是数据源需要支持数据重新发送。从 Checkpoint 恢复后，Flink 提供两种一致性语义，一种是 exactly once，一种是 at least once。在做 Checkpoint 时可根据 Barries 对齐来判断——如果对齐就是 exactly once，否则是 at least once。如果作业是单线程的，那么 Barries 是不需要对齐的；如果只有一个 Checkpoint 在做，不管什么时候从 Checkpoint 恢复，都会恢复到刚才的状态；如果有多个节点，假如一个数据的 Barries 到了，另一个 Barries 还没有来，内存中的状态如果已经存储，那么这 2 个流是不对齐的，恢复的时候其中一个流可能会有重复。
+
+Checkpoint 代码实现：
+
+```java
+StreamExecutionEnvironment env =
+    StreamExecutionEnvironment.getExecutionEnvironment();
+env.enableCheckpointing(1000);
+env.getCheckpointConfig().setCheckpointingMode(CheckpointingMode.EXACTLY_ONCE);
+env.getCheckpointConfig().setMinPauseBetweenCheckpoints(500);
+env.getCheckpointConfig().setCheckpointTimeout(60000);
+env.getCheckpointConfig().setMaxConcurrentCheckpoints(1);
+env.getCheckpointConfig().enableExternalizedCheckpoints(ExternalizedCheckpointCleanup.RETAIN_ON_CANCELLATION);
+```
+
+- `env.enableCheckpointing(1000)` ，做 Checkpoint 的时间间隔为 1 秒。Checkpoint 越频繁恢复时追溯的数据就越少，但是做 Checkpoint 消耗的的 IO 会相对地比较多。
+- `setCheckpointingMode(CheckpointingMode.EXACTLY_ONCE)`，设置 Checkpoint 模式。`EXACTLY_ONCE` 模式需要 Barries 对齐，可以保证消息不丢不重。
+- `setMinPauseBetweenCheckpoints(500)`，Checkpoint 之间的最少等待时长。比如，一个 checkpoint 做了 700ms，由于之前设置了做 Checkpoint 的时间间隔为 1000ms，本该在 300ms 之后即可做下一次的 checkpoint，但是此处设置了 checkpoint 之间最少等待时长为 500ms，所以会相对的多等 200ms。这样可以防止 checkpoint 太过频繁而导致业务处理速度下降。
+- `setCheckpointTimeout(60000)`，做 checkpoint 的超时时间，如果超过时间 checkpoint 仍未完成，则 checkpoint 超时失败。
+- `setMaxConcurrentCheckpoints(1)`，同时可做 checkpoint 的个数。
+- `enableExternalizedCheckpoints`，Cancel 时是否保留当前的 checkpoint，默认作业 Cancel 时删除整个作业的 checkpoint。Checkpoint 是作业级别的保存点。
+
+除了故障恢复，还可以手动调整并重新分配状态。手动调整并发，必须重启作业，并会提示 Checkpoint 已经不存在。
+
+**状态恢复**：Flink 在 Cancel 时允许在外部媒介保留 checkpoint，另外，Flink 还有 Savepoint 机制。
+
+![1644204847999](/assets/1644204847999.png)
+
+Savepoint 与 Checkpoint 类似，都是把状态存储到外部介质。当做月失败时，可以从外部恢复。二者的区别：
+
+- 触发管理方式上，Checkpoint 由 Flink 自动触发并管理，Savepoint 由用户手动触发和管理
+- 用途上，Checkpoint 在 task 发生异常时可快速恢复，比如网络波动或超时异常时；Savepoint 则是有计划地进行备份，使作业停止后再恢复——比如在修改代码、调整并发时。
+- 特点上，checkpoint 比较轻量级，作业过程中出现故障自动恢复，作业停止后默认清除；Savepoint 比较持久，以标准格式存储，允许代码或配置发生改变，恢复需要启动作业，并手动指定一个路径恢复。
+
+##### 3.2、可选的状态存储方式
+
+状态存储方式：内存存储，文件系统存储，RocksDB 内存存储。
+
+##### 内存存储，MemoryStateBackend
+
+![1644211598065](/assets/1644211598065.png)
+
+构造方法中 `maxStateSize` 为每个 State 的最大大小，`asynchronousSnapshots` 为是否做异步快照。这种存储状态本身存储在 TaskManager 节点——即执行节点内存中，由于内存容量有限，单个 State 的 `maxStateSize` 为 5 Mb，需要注意 `maxStateSize <= akka.framesize` 默认 10 Mb。Checkpoint 存储在 JobManager 内存中，所以总大小不能超过 JobManager 的内存。推荐使用场景：本地测试、几乎无状态的作业——比如 ETL、JobManager 不容易挂掉或挂掉影响不大的情况。不推荐生产场景使用。
+
+##### 文件系统存储，FsStateBackend
+
+![1644212257619](/assets/1644212257619.png)
+
+构造方法中 `checkpointDataUri` 为文件路径，`asynchronousSnapshots` 为是否做异步快照。State 仍然在 TaskManager 内存中，没有类似 `MemoryStateBackend` 的单个 State 大小限制（只要 TaskManager 上总的 State 不超过 TaskManager 内存），Checkpoint 存储在外部文件系统（本地或 Hdfs）。可以用在生产场景中，推荐使用场景：常规使用状态的作业——分钟级窗口聚合或 join、需要开启 HA 的作业。
+
+##### RocksDB 存储，RocksDBStateBackend
+
+![1644212721006](/assets/1644212721006.png)
+
+RocksDB 是一个 key-value 内存存储系统，先将状态放入内存，内存快要满的时候则写入磁盘；RocksDB 不支持同步的 Checkpoint。RocksDB 支持增量的 Checkpoint——每次用户不需要将所有状态写入，将增量改变的状态写入即可。Checkpoint 存储在外部文件系统（本地或 Hdfs），其容量限制：单个 TaskManager 上 State 总量不超过内存 + 磁盘的总和，单个 Key 最大 2G。可再生产环境使用，推荐使用场景为：超大状态的作业——比如天级窗口聚合、需要开启 HA 的作业、对状态读写性能要求不高的作业。
+
+#### 4、总结
+
+##### 4.1、为什么要使用状态？
+
+有状态的作业需要有状态的逻辑，有状态的逻辑是因为数据之间存在关联，单条数据无法获取需要的信息，所以需要通过状态来满足业务逻辑。
+
+##### 4.2、为什么要管理状态？
+
+实时作业需要 7 * 24 小时不间断的运行，需要应对不可靠的因素带来的影响。
+
+##### 4.3、如何选择状态的类型和存储方式？
+
+根据业务场景和状态类型、存储方式的差异来综合比较。
