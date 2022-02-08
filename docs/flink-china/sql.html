@@ -1,0 +1,558 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Flink SQL · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../wai-lian.html" />
+    
+    
+    <link rel="prev" href="table-api.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../try-flink/local.html">
+            
+                <a href="../try-flink/local.html">
+            
+                    
+                    本地模式安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../try-flink/002.html">
+            
+                <a href="../try-flink/002.html">
+            
+                    
+                    基于DataStream API实现欺诈检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../try-flink/003.html">
+            
+                <a href="../try-flink/003.html">
+            
+                    
+                    基于Table API实现实时报表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../try-flink/004.html">
+            
+                <a href="../try-flink/004.html">
+            
+                    
+                    一个Flink操作场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../practice.html">
+            
+                <a href="../practice.html">
+            
+                    
+                    实践练习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../practice/001.html">
+            
+                <a href="../practice/001.html">
+            
+                    
+                    DataStream API 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../practice/002.html">
+            
+                <a href="../practice/002.html">
+            
+                    
+                    数据管道 & ETL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../practice/003.html">
+            
+                <a href="../practice/003.html">
+            
+                    
+                    流式分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../flink-china.html">
+            
+                <a href="../flink-china.html">
+            
+                    
+                    Flink 中国社区文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="setdeployrun.html">
+            
+                <a href="setdeployrun.html">
+            
+                    
+                    Flink 环境搭建、配置、部署及运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="datastream-api.html">
+            
+                <a href="datastream-api.html">
+            
+                    
+                    DataStream API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="client.html">
+            
+                <a href="client.html">
+            
+                    
+                    客户端操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="time-window.html">
+            
+                <a href="time-window.html">
+            
+                    
+                    Time&Window
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="state-fault-tolerance.html">
+            
+                <a href="state-fault-tolerance.html">
+            
+                    
+                    状态管理和容错机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="table-api.html">
+            
+                <a href="table-api.html">
+            
+                    
+                    Table API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.7" data-path="sql.html">
+            
+                <a href="sql.html">
+            
+                    
+                    Flink SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../wai-lian.html">
+            
+                <a href="../wai-lian.html">
+            
+                    
+                    外链
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Flink SQL</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="flink-sql">Flink SQL</h3>
+<h4 id="1&#x3001;flink-sql-&#x7684;&#x7279;&#x70B9;">1&#x3001;Flink SQL &#x7684;&#x7279;&#x70B9;</h4>
+<ul>
+<li>&#x58F0;&#x660E;&#x5F0F; API&#xFF1A;Flink &#x6700;&#x9AD8;&#x5C42;&#x7684; API&#xFF0C;&#x6613;&#x4E8E;&#x4F7F;&#x7528;</li>
+<li>&#x6D41;&#x6279;&#x7EDF;&#x4E00;&#xFF1A;&#x4E00;&#x6837;&#x7684; SQL&#xFF0C;&#x4E00;&#x6837;&#x7684;&#x7ED3;&#x679C;</li>
+<li>&#x81EA;&#x52A8;&#x4F18;&#x5316;&#xFF1A;&#x5C4F;&#x853D; State &#x7684;&#x590D;&#x6742;&#x6027;&#xFF0C;&#x81EA;&#x52A8;&#x505A;&#x5230;&#x6700;&#x4F18;&#x5904;&#x7406;</li>
+<li>&#x7528;&#x9014;&#x5E7F;&#x6CDB;&#xFF1A;ETL&#xFF0C;&#x7EDF;&#x8BA1;&#x5206;&#x6790;&#xFF0C;&#x5B9E;&#x65F6;&#x62A5;&#x8868;&#xFF0C;&#x5B9E;&#x65F6;&#x98CE;&#x63A7;</li>
+</ul>
+<h4 id="2&#x3001;flink-sql-&#x5E94;&#x7528;&#x793A;&#x4F8B;">2&#x3001;Flink SQL &#x5E94;&#x7528;&#x793A;&#x4F8B;</h4>
+<p>&#x793A;&#x4F8B;&#x73AF;&#x5883;&#xFF0C;Docker&#xFF0C;&#x8D44;&#x6E90; 3 - 4 GB&#xFF0C;3 - 4 CPUs</p>
+<h5 id="&#x542F;&#x52A8;-flink-sql-cli&#xFF1A;">&#x542F;&#x52A8; Flink SQL CLI&#xFF1A;</h5>
+<pre><code class="lang-shell">docker-compose exec sql-client ./sql-client.sh
+</code></pre>
+<p>Docker Compose &#x9884;&#x5148;&#x6CE8;&#x518C;&#x4E86;&#x8868;&#x548C;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>show talbes</code> &#x67E5;&#x770B;&#x3002;&#x793A;&#x4F8B;&#x7528;&#x5230;&#x4E86;&#x8868; <code>Rides</code>&#x2014;&#x2014;&#x51FA;&#x79DF;&#x8F66;&#x884C;&#x8F66;&#x8BB0;&#x5F55;&#x6570;&#x636E;&#x6D41;&#xFF08;Kafka &#x6570;&#x636E;&#x6D41;&#xFF0C;&#x5305;&#x542B;&#x65F6;&#x95F4;&#x548C;&#x4F4D;&#x7F6E;&#x4FE1;&#x606F;&#xFF09;&#x3002;&#x67E5;&#x770B;&#x8868;&#x7ED3;&#x6784;&#xFF1A;</p>
+<pre><code class="lang-sql">Flink SQL&gt; DESCRIBE Rides;
+root
+ |-- rideId: Long           // &#x884C;&#x4E3A; ID (&#x5305;&#x542B;&#x4E24;&#x6761;&#x8BB0;&#x5F55;&#xFF0C;&#x4E00;&#x6761;&#x5165;&#x4E00;&#x6761;&#x51FA;&#xFF09;
+ |-- taxiId: Long           // &#x51FA;&#x79DF;&#x8F66; ID 
+ |-- isStart: Boolean       // &#x5F00;&#x59CB; or &#x7ED3;&#x675F;
+ |-- lon: Float             // &#x7ECF;&#x5EA6;
+ |-- lat: Float             // &#x7EAC;&#x5EA6;
+ |-- rideTime: TimeIndicatorTypeInfo(rowtime)     // &#x65F6;&#x95F4;
+ |-- psgCnt: Integer        // &#x4E58;&#x5BA2;&#x6570;
+</code></pre>
+<h5 id="&#x793A;&#x4F8B;-1&#xFF1A;&#x8FC7;&#x6EE4;-filter">&#x793A;&#x4F8B; 1&#xFF1A;&#x8FC7;&#x6EE4; Filter</h5>
+<p>&#x67E5;&#x770B;&#x53D1;&#x751F;&#x5728;&#x7EBD;&#x7EA6;&#x7684;&#x884C;&#x8F66;&#x8BB0;&#x5F55;</p>
+<p>Docker &#x73AF;&#x5883;&#x4E2D;&#x9884;&#x5B9A;&#x4E00;&#x4E86;&#x4E00;&#x4E9B;&#x51FD;&#x6570;&#xFF0C;&#x6BD4;&#x5982; <code>isInNYC(lon, lat)</code> &#x786E;&#x5B9A;&#x4E00;&#x4E2A;&#x7ECF;&#x7EAC;&#x5EA6;&#x5750;&#x6807;&#x662F;&#x5426;&#x5728;&#x7EBD;&#x7EA6;&#xFF0C;<code>toAreaId(lon, lat)</code> &#x5C06;&#x7ECF;&#x7EAC;&#x5EA6;&#x8F6C;&#x6362;&#x4E3A;&#x533A;&#x5757;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x67E5;&#x8BE2;&#x7EBD;&#x7EA6;&#x7684;&#x884C;&#x8F66;&#x8BB0;&#x5F55;&#xFF0C;&#x53EA;&#x9700;&#x5728; SQL CLI &#x4E2D;&#x8FD0;&#x884C;&#x5982;&#x4E0B;&#x67E5;&#x8BE2;&#xFF1A;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> Rides <span class="hljs-keyword">WHERE</span> isInNYC(lon, lat)
+</code></pre>
+<p>SQL CLI &#x4F1A;&#x63D0;&#x4EA4; SQL &#x4EFB;&#x52A1;&#x5230; Docker &#x96C6;&#x7FA4;&#x4E2D;&#xFF0C;&#x4ECE;&#x6570;&#x636E;&#x6E90;&#x4E0D;&#x65AD;&#x62C9;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x901A;&#x8FC7; <code>isInNYC</code> &#x8FC7;&#x6EE4;&#x51FA;&#x6240;&#x9700;&#x8981;&#x7684;&#x6570;&#x636E;&#xFF0C;SQL CLI &#x4F1A;&#x8FDB;&#x5165;&#x53EF;&#x89C6;&#x5316;&#x6A21;&#x5F0F;&#x5E76;&#x4E0D;&#x65AD;&#x5C55;&#x793A;&#x8FC7;&#x6EE4;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <a href="http://localhost:8081" target="_blank">Web UI</a> &#x67E5;&#x770B; Flink &#x4F5C;&#x4E1A;&#x7684;&#x8FD0;&#x884C;&#x60C5;&#x51B5;&#x3002;</p>
+<h5 id="&#x793A;&#x4F8B;-2&#xFF1A;group-aggregate">&#x793A;&#x4F8B; 2&#xFF1A;Group Aggregate</h5>
+<p>&#x8BA1;&#x7B97;&#x5728;&#x7EBD;&#x7EA6;&#x642D;&#x8F7D;&#x6BCF;&#x79CD;&#x4E58;&#x5BA2;&#x6570;&#x91CF;&#x7684;&#x884C;&#x8F66;&#x4E8B;&#x4EF6;&#x6570;&#xFF08;&#x5373;&#x642D;&#x8F7D; 1 &#x4E2A;&#x4E58;&#x5BA2;&#x3001;2 &#x4E2A;&#x4E58;&#x5BA2; ... &#x7684;&#x884C;&#x8F66;&#x4E8B;&#x4EF6;&#x6570;&#xFF09;&#x3002;</p>
+<p>&#x6309;&#x7167;&#x4E58;&#x5BA2;&#x6570; <code>psgCnt</code> &#x505A;&#x5206;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> psgCnt, <span class="hljs-keyword">COUNT</span>(*) <span class="hljs-keyword">AS</span> cnt 
+<span class="hljs-keyword">FROM</span> Rides 
+<span class="hljs-keyword">WHERE</span> isInNYC(lon, lat)
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> psgCnt;
+</code></pre>
+<h5 id="&#x793A;&#x4F8B;-3&#xFF1A;window-aggregate">&#x793A;&#x4F8B; 3&#xFF1A;Window Aggregate</h5>
+<p>&#x4E3A;&#x4E86;&#x6301;&#x7EED;&#x76D1;&#x6D4B;&#x7EBD;&#x7EA6;&#x7684;&#x4EA4;&#x901A;&#x6D41;&#x91CF;&#xFF0C;&#x9700;&#x8981;&#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x533A;&#x5757;&#x6BCF; 5 &#x5206;&#x949F;&#x8FDB;&#x5165;&#x7684;&#x8F66;&#x8F86;&#x6570;&#x2014;&#x2014;&#x53EA;&#x5173;&#x5FC3;&#x6709;&#x8D85;&#x8FC7; 5 &#x8F86;&#x8F66;&#x5B50;&#x8FDB;&#x5165;&#x7684;&#x533A;&#x5757;&#x3002;</p>
+<p>&#x201C;&#x6BCF; 5 &#x5206;&#x949F;&#x201D;&#x2014;&#x2014;&#x9700;&#x8981;&#x7528;&#x5230; Tumbling Window &#x8BED;&#x6CD5;&#xFF1B;&#x201C;&#x6BCF;&#x4E2A;&#x533A;&#x5757;&#x201D;&#x2014;&#x2014;&#x9700;&#x8981;&#x7528; <code>toAreaId</code> &#x51FD;&#x6570;&#x8FDB;&#x884C;&#x5206;&#x7EC4;&#x8BA1;&#x7B97;&#xFF1B;<code>isStart</code> &#x5B57;&#x6BB5;&#x8868;&#x793A;&#x884C;&#x7A0B;&#x5F00;&#x59CB;&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> 
+  toAreaId(lon, lat) <span class="hljs-keyword">AS</span> area, 
+  TUMBLE_END(rideTime, <span class="hljs-built_in">INTERVAL</span> <span class="hljs-string">&apos;5&apos;</span> <span class="hljs-keyword">MINUTE</span>) <span class="hljs-keyword">AS</span> window_end, 
+  <span class="hljs-keyword">COUNT</span>(*) <span class="hljs-keyword">AS</span> cnt 
+<span class="hljs-keyword">FROM</span> Rides 
+<span class="hljs-keyword">WHERE</span> isInNYC(lon, lat) <span class="hljs-keyword">and</span> isStart
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> 
+  toAreaId(lon, lat), 
+  TUMBLE(rideTime, <span class="hljs-built_in">INTERVAL</span> <span class="hljs-string">&apos;5&apos;</span> <span class="hljs-keyword">MINUTE</span>) 
+<span class="hljs-keyword">HAVING</span> <span class="hljs-keyword">COUNT</span>(*) &gt;= <span class="hljs-number">5</span>;
+</code></pre>
+<h5 id="window-aggregate-&#x4E0E;-group-aggregate-&#x7684;&#x533A;&#x522B;">Window Aggregate &#x4E0E; Group Aggregate &#x7684;&#x533A;&#x522B;</h5>
+<p><img src="../assets/1644299969008.png" alt="&#x7A97;&#x53E3;"></p>
+<p>window Aggregation &#x8BA1;&#x7B97;&#x6BCF;&#x5C0F;&#x65F6;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x7684;&#x6B21;&#x6570;&#xFF1A;</p>
+<p><img src="../assets/1644300050381.png" alt="1644300050381"></p>
+<p>Group Aggregation &#x4ECE;&#x5386;&#x53F2;&#x5230;&#x73B0;&#x5728;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x7684;&#x6B21;&#x6570;&#xFF1A;</p>
+<p><img src="../assets/1644300128265.png" alt="1644300128265"></p>
+<p>Window Aggregate &#x662F; window &#x7ED3;&#x675F;&#x65F6;&#x624D;&#x8F93;&#x51FA;&#xFF0C;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x662F;&#x6700;&#x7EC8;&#x503C;&#xFF0C;&#x4E0D;&#x4F1A;&#x518D;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x5176;&#x8F93;&#x51FA;&#x6D41;&#x662F; <strong>Append &#x6D41;</strong>&#x3002;Group Aggregate &#x5219;&#x662F;&#x6CA1;&#x5904;&#x7406;&#x4E00;&#x6761;&#x6570;&#x636E;&#xFF0C;&#x5C31;&#x8F93;&#x51FA;&#x6700;&#x65B0;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x662F;&#x4E0D;&#x65AD;&#x66F4;&#x65B0;&#x7684;&#xFF0C;&#x5176;&#x8F93;&#x51FA;&#x6D41;&#x662F; <strong>Update &#x6D41;</strong>&#x3002;</p>
+<p>&#x53E6;&#x5916;&#xFF0C;window &#x662F;&#x6709; watermark &#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#x54EA;&#x4E9B;&#x7A97;&#x53E3;&#x5DF2;&#x7ECF;&#x8FC7;&#x671F;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x53CA;&#x65F6;&#x6E05;&#x7406;&#x8FC7;&#x671F;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x4FDD;&#x8BC1;&#x72B6;&#x6001;&#x7EF4;&#x6301;&#x5728;&#x7A33;&#x5B9A;&#x7684;&#x5927;&#x5C0F;&#x3002;&#x800C; Group Aggregate &#x4E0D;&#x77E5;&#x9053;&#x54EA;&#x4E9B;&#x6570;&#x636E;&#x4F1A;&#x8FC7;&#x671F;&#xFF0C;&#x6240;&#x4EE5;&#x72B6;&#x6001;&#x4F1A;&#x65E0;&#x9650;&#x589E;&#x957F;&#xFF0C;&#x5BF9;&#x4E8E;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4F5C;&#x4E1A;&#x6765;&#x8BF4;&#x662F;&#x4E0D;&#x7A33;&#x5B9A;&#x56E0;&#x7D20;&#xFF0C;&#x5EFA;&#x8BAE;&#x5BF9; Group Aggregate &#x7684;&#x4F5C;&#x4E1A;&#x914D;&#x7F6E; State TTL&#x3002;</p>
+<p><img src="../assets/1644300231302.png" alt="1644300231302"></p>
+<p>&#x4F8B;&#x5982;&#x7EDF;&#x8BA1;&#x6BCF;&#x4E2A;&#x5E97;&#x94FA;&#x6BCF;&#x5929;&#x7684;&#x5B9E;&#x65F6; PV&#xFF0C;&#x53EF;&#x4EE5;&#x5C06; TTL &#x8BBE;&#x7F6E;&#x4E3A; 24+ &#x5C0F;&#x65F6;&#xFF0C;&#x56E0;&#x4E3A;&#x4E00;&#x5929;&#x524D;&#x7684;&#x72B6;&#x6001;&#x4E00;&#x822C;&#x662F;&#x7528;&#x4E0D;&#x5230;&#x4E86;&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span>  <span class="hljs-keyword">DATE_FORMAT</span>(ts, <span class="hljs-string">&apos;yyyy-MM-dd&apos;</span>), shop_id, <span class="hljs-keyword">COUNT</span>(*) <span class="hljs-keyword">as</span> pv
+<span class="hljs-keyword">FROM</span> T
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> <span class="hljs-keyword">DATE_FORMAT</span>(ts, <span class="hljs-string">&apos;yyyy-MM-dd&apos;</span>), shop_id
+</code></pre>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#xFF0C;&#x5982;&#x679C; TTL &#x8BBE;&#x7F6E;&#x7684;&#x592A;&#x5C0F;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x6F0F;&#x6389;&#x4E00;&#x4E9B;&#x6709;&#x7528;&#x7684;&#x72B6;&#x6001;&#x548C;&#x6570;&#x636E;&#xFF0C;&#x4ECE;&#x800C;&#x5BFC;&#x81F4;&#x6570;&#x636E;&#x7CBE;&#x786E;&#x6027;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x8FD9;&#x662F;&#x9700;&#x8981;&#x89C6;&#x60C5;&#x51B5;&#x505A;&#x6743;&#x8861;&#x7684;&#x3002;</p>
+<h5 id="&#x793A;&#x4F8B;-4&#xFF1A;&#x5C06;-append-&#x6D41;&#x5199;&#x5165;-kafka">&#x793A;&#x4F8B; 4&#xFF1A;&#x5C06; Append &#x6D41;&#x5199;&#x5165; Kafka</h5>
+<p>&#x5728; Flink &#x4E2D;&#xFF0C;&#x76EE;&#x524D; Update &#x6D41;&#x53EA;&#x80FD;&#x5199;&#x5165;&#x652F;&#x6301;&#x66F4;&#x65B0;&#x7684;&#x5916;&#x90E8;&#x5B58;&#x50A8;&#xFF0C;&#x6BD4;&#x5982; MySQL&#x3001;HBase&#x3001;ElasticSearch&#x3002;Append &#x6D41;&#x53EF;&#x4EE5;&#x5199;&#x5165;&#x4EFB;&#x610F;&#x5B58;&#x50A8;&#xFF0C;&#x4E00;&#x822C;&#x5199;&#x5165;&#x65E5;&#x5FD7;&#x7C7B;&#x578B;&#x7684;&#x7CFB;&#x7EDF;&#xFF0C;&#x6BD4;&#x5982; Kafka&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x7684;&#x9700;&#x6C42;&#x662F;&#x5C06;&#x6BCF; 10 &#x5206;&#x949F;&#x7684;&#x642D;&#x4E58;&#x7684;&#x4E58;&#x5BA2;&#x6570;&#x5199;&#x5165; Kafka&#x3002;</p>
+<p>&#x5DF2;&#x7ECF;&#x9884;&#x5B9A;&#x4E49;&#x4E86; Kafka &#x7ED3;&#x679C; Table Sink_TenMinPsgCnts&#xFF0C;&#x6BCF; 10 &#x5206;&#x949F;&#x7684;&#x642D;&#x4E58;&#x7684;&#x4E58;&#x5BA2;&#x6570;&#x53EF;&#x4EE5;&#x7528; Tumbling Window &#x6765;&#x63CF;&#x8FF0;&#xFF1A;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> Sink_TenMinPsgCnts 
+<span class="hljs-keyword">SELECT</span> 
+  TUMBLE_START(rideTime, <span class="hljs-built_in">INTERVAL</span> <span class="hljs-string">&apos;10&apos;</span> <span class="hljs-keyword">MINUTE</span>) <span class="hljs-keyword">AS</span> cntStart,  
+  TUMBLE_END(rideTime, <span class="hljs-built_in">INTERVAL</span> <span class="hljs-string">&apos;10&apos;</span> <span class="hljs-keyword">MINUTE</span>) <span class="hljs-keyword">AS</span> cntEnd,
+  <span class="hljs-keyword">CAST</span>(<span class="hljs-keyword">SUM</span>(psgCnt) <span class="hljs-keyword">AS</span> <span class="hljs-built_in">BIGINT</span>) <span class="hljs-keyword">AS</span> cnt 
+<span class="hljs-keyword">FROM</span> Rides 
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> TUMBLE(rideTime, <span class="hljs-built_in">INTERVAL</span> <span class="hljs-string">&apos;10&apos;</span> <span class="hljs-keyword">MINUTE</span>);
+</code></pre>
+<h5 id="&#x793A;&#x4F8B;-5&#xFF1A;&#x5C06;-update-&#x6D41;&#x5199;&#x5165;-elasticsearch">&#x793A;&#x4F8B; 5&#xFF1A;&#x5C06; Update &#x6D41;&#x5199;&#x5165; ElasticSearch</h5>
+<p>&#x5C06;&#x6BCF;&#x4E2A;&#x533A;&#x57DF;&#x51FA;&#x53D1;&#x7684;&#x884C;&#x8F66;&#x6570;&#x5199;&#x5165; ES&#x3002;</p>
+<p>&#x5DF2;&#x7ECF;&#x9884;&#x5B9A;&#x4E49;&#x4E86; ES &#x7ED3;&#x679C;&#x8868; Sink_AreaCnts&#x2014;&#x2014;&#x53EA;&#x6709;&#x4E24;&#x4E2A;&#x5B57;&#x6BB5; areaId &#x548C; cnt&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> Sink_AreaCnts 
+<span class="hljs-keyword">SELECT</span> toAreaId(lon, lat) <span class="hljs-keyword">AS</span> areaId, <span class="hljs-keyword">COUNT</span>(*) <span class="hljs-keyword">AS</span> cnt 
+<span class="hljs-keyword">FROM</span> Rides 
+<span class="hljs-keyword">WHERE</span> isStart
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> toAreaId(lon, lat);
+</code></pre>
+<p>&#x5728; SQL CLI &#x6267;&#x884C;&#x8BE5;&#x67E5;&#x8BE2;&#x540E;&#xFF0C;ES &#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA; area-cnts &#x7D22;&#x5F15;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; ES &#x67E5;&#x8BE2;&#x5199;&#x5165;&#x7ED3;&#x679C;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="table-api.html" class="navigation navigation-prev " aria-label="Previous page: Table API">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../wai-lian.html" class="navigation navigation-next " aria-label="Next page: 外链">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Flink SQL","level":"1.3.7","depth":2,"next":{"title":"外链","level":"1.4","depth":1,"path":"wai-lian.md","ref":"wai-lian.md","articles":[]},"previous":{"title":"Table API","level":"1.3.6","depth":2,"path":"flink-china/table-api.md","ref":"flink-china/table-api.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"flink-china/sql.md","mtime":"2022-02-08T06:25:44.776Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-08T06:54:23.298Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

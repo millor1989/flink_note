@@ -16,4 +16,5 @@
   * [Time&Window](flink-china/time-window.md)
   * [状态管理和容错机制](flink-china/state-fault-tolerance.md)
   * [Table API](flink-china/table-api.md)
+  * [Flink SQL](flink-china/sql.md)
 * [外链](wai-lian.md)
