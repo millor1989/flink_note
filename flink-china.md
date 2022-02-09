@@ -110,15 +110,19 @@ Batch Analysis 就是传统意义上使用类似于 Map Reduce、Hive、Spark Ba
 
 传统批处理方法是持续收取数据，以时间作为划分多个批次的依据，再周期性地执行批次运算。
 
+![1644378129031](/assets/1644378129031.png)
+
 但假设需要计算每小时出现事件转换的次数，如果事件转换跨越了所定义的时间划分，传统批处理会将中间运算结果带到下一个批次进行计算；除此之外，当出现接收到的事件顺序颠倒情况下，传统批处理仍会将中间状态带到下一批次的运算结果中，这种处理方式也不尽如人意。
 
-![理想方法](/assets/1637910325831.png)
+![1644377992127](/assets/1644377992127.png)
 
 理想方法要满足的条件：
 
 1. 必须要有能力可以累积状态和维护状态，累积状态代表着过去历史中接收过的所有事件，会影响到输出。
 2. 对于数据完整性有机制可以操控，当所有数据都完全接受到后，输出计算结果。
 3. 实时产生结果，但更重要的是采用新的持续性数据处理模型来处理实时数据，这样才最符合 continuous data 的特性。
+
+![理想方法](/assets/1637910325831.png)
 
 ##### 3.2、流式处理
 
@@ -176,6 +180,8 @@ Flink 作为分布式的处理引擎，在分布式的场景下，进行多个�
 
 Flink 基于 simple lamport 演算法机制在不中断运算的情况下持续产生 Global consistent snapshot。已知一个点 Checkpoint barrier，Flink 在某个 Datastream 中会一直安插 Checkpoint barrier，Checkpoint barrier N 表示所有这个范围内的数据都属于 Checkpoint barrier N。
 
+![1644383848068](/assets/1644383848068.png)
+
 ![1638757643614](/assets/1638757643614.png)
 
 假如要产生 Checkpoint barrier N，Flink 的 job manager 会触发 Checkpoint，Checkpoint 被触发后开始从数据源产生 Checkpoint barrier。job 产生 Checkpoint barrier N 的过程，可以理解为 Checkpoint barrier N 逐步填充左下角的表格的过程。
@@ -187,6 +193,8 @@ Flink 基于 simple lamport 演算法机制在不中断运算的情况下持续�
 在以上的基础上，当数据源收到 Checkpoint barrier N 之后会先将自己的状态保存，以读取 Kafka 资料为例，数据源的状态就是目前它在 Kafka 分区的位置，这个状态也会写入到上面提到的表格中。下游的 Operator 1 会开始运算属于 Checkpoint barrier N 的数据，当 Checkpoint barrier N 跟着这些数据流动到 Operator 1 之后，Operator 1 也将属于 Checkpoint barrier N 的所有数据都反映在状态中，当收到 Checkpoint barrier N 时也会直接对 Checkpoint 去做快照。
 
 ![1638758131919](/assets/1638758131919.png)
+
+![1644384082533](/assets/1644384082533.png)
 
 当快照完成后继续往下游走，Operator 2 也会接收到所有数据，然后搜索 Checkpoint barrier N 的数据并直接反映到状态，当状态收到 Checkpoint barrier N 之后也会直接写入到 Checkpoint N 中。以上过程到此可以看到 Checkpoint barrier N 已经完成了一个完整的表格，这个表格叫做 Distributed Snapshots，即**分布式快照**。**分布式快照可以用来做状态容错，任何一个节点挂掉的时候可以在之前的 Checkpoint 中将其恢复。**继续以上 Process，当多个 Checkpoint 同时进行，Checkpoint barrier N 已经流到 job manager 2，Flink job manager 可以触发其他的 Checkpoint，比如 Checkpoint N + 1，Checkpoint N + 2 等等也同步进行，利用这种机制，可以在不阻挡运算的状况下持续地产生 Checkpoint。
 
