@@ -396,13 +396,14 @@
 <h5 id="21&#x3001;&#x57FA;&#x672C;&#x6982;&#x5FF5;">2.1&#x3001;&#x57FA;&#x672C;&#x6982;&#x5FF5;</h5>
 <p><img src="../assets/1638760857217.png" alt="1638760857217"></p>
 <p>Task &#x662F; Flink &#x4E2D;&#x8D44;&#x6E90;&#x8C03;&#x5EA6;&#x7684;&#x6700;&#x5C0F;&#x5355;&#x4F4D;&#xFF0C;&#x5728;&#x4E00;&#x4E2A; DAG &#x56FE;&#x4E2D;&#xFF0C;&#x4E0D;&#x80FD;&#x88AB; chain &#x5728;&#x4E00;&#x8D77;&#x7684; operator &#x4F1A;&#x88AB;&#x5206;&#x9694;&#x5230;&#x4E0D;&#x540C;&#x7684; Task &#x4E2D;&#x3002;</p>
-<p><img src="../assets/1638760968229.png" alt="1638760968229"></p>
+<p><img src="../assets/1638760968229.png" alt="Flink runtime &#x67B6;&#x6784;&#x56FE;"></p>
 <p>Flink &#x8FD0;&#x884C;&#x65F6;&#x5305;&#x62EC;&#x4E24;&#x7C7B;&#x8FDB;&#x7A0B;&#xFF1A;</p>
 <ul>
 <li>JobManager&#xFF08;&#x53C8;&#x79F0; JobMaster&#xFF09;&#xFF1A;&#x534F;&#x8C03; Task &#x7684;&#x5206;&#x5E03;&#x5F0F;&#x6267;&#x884C;&#xFF0C;&#x5305;&#x62EC;&#x8C03;&#x5EA6; Task&#x3001;&#x534F;&#x8C03;&#x521B;&#x5EFA; checkpoint &#x4EE5;&#x53CA;&#x5F53; job failover &#x65F6;&#x534F;&#x8C03;&#x5404;&#x4E2A; Task &#x4ECE; checkpoint &#x6062;&#x590D;&#x3002;</li>
 <li>TaskManager&#xFF08;&#x53C8;&#x79F0; Worker&#xFF09;&#xFF1A;&#x6267;&#x884C; Dataflow &#x4E2D;&#x7684; Tasks&#xFF0C;&#x5305;&#x62EC;&#x5185;&#x5B58; buffer &#x7684;&#x5206;&#x914D;&#x3001;DataStream &#x7684;&#x4F20;&#x9012;&#x7B49;&#x3002;</li>
 </ul>
 <p><img src="../assets/1638761166824.png" alt="1638761166824"></p>
+<p>Task Slot &#x662F;&#x4E00;&#x4E2A; TaskManager &#x4E2D;&#x7684;&#x6700;&#x5C0F;&#x8D44;&#x6E90;&#x5206;&#x914D;&#x5355;&#x4F4D;&#xFF0C;&#x4E00;&#x4E2A; TaskManager &#x4E2D;&#x6709;&#x591A;&#x5C11;&#x4E2A; Task Slot &#x5C31;&#x610F;&#x5473;&#x7740;&#x80FD;&#x652F;&#x6301;&#x591A;&#x5C11;&#x5E76;&#x53D1;&#x7684; Task &#x5904;&#x7406;&#x3002;&#x4E00;&#x4E2A; Task Slot &#x53EF;&#x4EE5;&#x6267;&#x884C;&#x591A;&#x4E2A; Operator&#xFF0C;&#x8FD9;&#x4E9B; Operator &#x662F;&#x53EF;&#x4EE5;&#x88AB; Chain &#x5728;&#x4E00;&#x8D77;&#x5904;&#x7406;&#x7684;&#x3002;</p>
 <h5 id="22&#x3001;&#x5355;&#x673A;-standalone-&#x6A21;&#x5F0F;&#x8FD0;&#x884C;">2.2&#x3001;&#x5355;&#x673A; standalone &#x6A21;&#x5F0F;&#x8FD0;&#x884C;</h5>
 <p>Flink binary &#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x6267;&#x884C;&#xFF1A;</p>
 <pre><code class="lang-sh">./bin/start-cluster.sh
@@ -423,7 +424,22 @@
 <pre><code class="lang-shell">./bin/stop-cluster.sh
 </code></pre>
 <h5 id="23&#x3001;&#x591A;&#x673A;&#x90E8;&#x7F72;-flink-standalone-&#x96C6;&#x7FA4;">2.3&#x3001;&#x591A;&#x673A;&#x90E8;&#x7F72; Flink standalone &#x96C6;&#x7FA4;</h5>
-<h5 id="24&#x3001;yarn-&#x6A21;&#x5F0F;-&#x8FD0;&#x884C;-flink">2.4&#x3001;yarn &#x6A21;&#x5F0F; &#x8FD0;&#x884C; Flink</h5>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#xFF1A;</p>
+<ul>
+<li>&#x6BCF;&#x53F0;&#x673A;&#x5668;&#x4E0A;&#x90FD;&#x8981;&#x914D;&#x7F6E;&#x597D; Java &#x4EE5;&#x53CA; JAVA_HOME &#x73AF;&#x5883;&#x53D8;&#x91CF;</li>
+<li>&#x6BCF;&#x53F0;&#x673A;&#x5668;&#x4E0A;&#x90E8;&#x7F72;&#x7684; Flink binary &#x76EE;&#x5F55;&#x4FDD;&#x8BC1;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;</li>
+<li>&#x5982;&#x679C;&#x9700;&#x8981;&#x7528; hdfs&#xFF0C;&#x9700;&#x8981;&#x914D;&#x7F6E; HADOOP_CONF_DIR &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x914D;&#x7F6E;</li>
+<li>&#x6700;&#x597D;&#x6311;&#x9009;&#x4E00;&#x53F0;&#x673A;&#x5668;&#xFF0C;&#x548C;&#x5176;&#x4ED6;&#x673A;&#x5668; ssh &#x6253;&#x901A;</li>
+</ul>
+<p>&#x65E2;&#x7136;&#x662F;&#x96C6;&#x7FA4;&#x90E8;&#x7F72;&#xFF0C;&#x63D0;&#x4EA4;&#x4F5C;&#x4E1A;&#x65F6;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x5E76;&#x884C;&#x5EA6;&#xFF1A;</p>
+<pre><code class="lang-bash">./bin/flink run examples/streaming/WordCount.jar --input hdfs:///<span class="hljs-built_in">test</span>_dir/input_dir/story --output hdfs:///<span class="hljs-built_in">test</span>_dir/output_dir/output --parallelism 20
+</code></pre>
+<h5 id="24&#x3001;standalone-&#x6A21;&#x5F0F;&#x7684;-highavailability&#xFF08;ha&#xFF09;&#x90E8;&#x7F72;&#x548C;&#x914D;&#x7F6E;">2.4&#x3001;Standalone &#x6A21;&#x5F0F;&#x7684; HighAvailability&#xFF08;HA&#xFF09;&#x90E8;&#x7F72;&#x548C;&#x914D;&#x7F6E;</h5>
+<p>&#x4ECE; Flink Runtime &#x67B6;&#x6784;&#x53EF;&#x77E5;&#xFF0C;JobManager &#x662F;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#xFF0C;&#x5982;&#x679C; TaskManager &#x6709;&#x4E00;&#x4E2A;&#x6545;&#x969C;&#xFF0C;&#x8D44;&#x6E90;&#x8DB3;&#x591F;&#x60C5;&#x51B5;&#x4E0B;&#x53EA;&#x9700;&#x5C06;&#x76F8;&#x5173; Task &#x8C03;&#x5EA6;&#x5230;&#x5176;&#x4ED6;&#x7A7A;&#x95F2; TaskSlot &#x4E0A;&#xFF0C;&#x7136;&#x540E; Job &#x4ECE; Checkpoint &#x4E2D;&#x6062;&#x590D;&#x5373;&#x53EF;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C; JobManager &#x6545;&#x969C;&#xFF0C;&#x5C31;&#x5FC5;&#x987B;&#x7B49; JobManager &#x91CD;&#x65B0;&#x6062;&#x590D;&#xFF0C;&#x5982;&#x679C;&#x6062;&#x590D;&#x65F6;&#x95F4;&#x8FC7;&#x957F;&#xFF0C;&#x5219;&#x6574;&#x4E2A; Job &#x5931;&#x8D25;&#x3002;</p>
+<p>&#x4F7F;&#x7528; standalone &#x6A21;&#x5F0F;&#xFF0C;&#x53EF;&#x4EE5;&#x90E8;&#x7F72;&#x914D;&#x7F6E; HA&#xFF0C;&#x6709;&#x591A;&#x4E2A; JobManager &#x5F85;&#x547D;&#xFF0C;&#x4ECE;&#x800C;&#x4F7F;&#x5F97; JobManager &#x80FD;&#x591F;&#x6301;&#x7EED;&#x670D;&#x52A1;&#x3002;</p>
+<p><img src="../assets/1644399471533.png" alt="standalone ha"></p>
+<p>standalone ha &#x90E8;&#x7F72;&#x9700;&#x8981;&#x4F9D;&#x8D56; Zookeeper&#x3002;</p>
+<h5 id="25&#x3001;yarn-&#x6A21;&#x5F0F;&#x8FD0;&#x884C;-flink">2.5&#x3001;yarn &#x6A21;&#x5F0F;&#x8FD0;&#x884C; Flink</h5>
 <p><img src="../assets/1639016198046.png" alt="1639016198046"></p>
 <p>&#x76F8;&#x6BD4; standalone &#x6A21;&#x5F0F;&#xFF0C;yarn &#x6A21;&#x5F0F;&#x8FD0;&#x884C; flink job &#x7684;&#x4F18;&#x70B9;&#xFF1A;
 &#x25CF; &#x8D44;&#x6E90;&#x6309;&#x9700;&#x4F7F;&#x7528;&#xFF0C;&#x63D0;&#x9AD8;&#x96C6;&#x7FA4;&#x7684;&#x8D44;&#x6E90;&#x5229;&#x7528;&#x7387;
@@ -432,6 +448,74 @@
   &#x25CB; JobManager &#x8FDB;&#x7A0B;&#x548C; TaskManager &#x8FDB;&#x7A0B;&#x90FD;&#x7531; Yarn NodeManager &#x76D1;&#x63A7;
   &#x25CB; &#x5982;&#x679C; JobManager &#x8FDB;&#x7A0B;&#x5F02;&#x5E38;&#x9000;&#x51FA;&#xFF0C;&#x5219; Yarn ResourceManager &#x4F1A;&#x91CD;&#x65B0;&#x8C03;&#x5EA6; JobManager &#x5230;&#x5176;&#x4ED6;&#x673A;&#x5668;
   &#x25CB; &#x5982;&#x679C; TaskManager &#x8FDB;&#x7A0B;&#x5F02;&#x5E38;&#x9000;&#x51FA;&#xFF0C;JobManager &#x4F1A;&#x6536;&#x5230;&#x6D88;&#x606F;&#x5E76;&#x91CD;&#x65B0;&#x5411; Yarn ResourceManager &#x7533;&#x8BF7;&#x8D44;&#x6E90;&#xFF0C;&#x91CD;&#x65B0;&#x542F;&#x52A8; TaskManager</p>
+<h5 id="251&#x3001;&#x5728;-yarn-&#x4E0A;&#x542F;&#x52A8;-long-running-&#x7684;-flink-&#x96C6;&#x7FA4;&#xFF08;session-cluster-&#x6A21;&#x5F0F;&#xFF09;">2.5.1&#x3001;&#x5728; Yarn &#x4E0A;&#x542F;&#x52A8; Long Running &#x7684; Flink &#x96C6;&#x7FA4;&#xFF08;Session Cluster &#x6A21;&#x5F0F;&#xFF09;</h5>
+<p>&#x67E5;&#x770B;&#x547D;&#x4EE4;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-bash">./bin/yarn-session.sh -h
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A; Yarn &#x6A21;&#x5F0F;&#x7684; Flink &#x96C6;&#x7FA4;&#xFF1A;</p>
+<pre><code class="lang-bash">./bin/yarn-session.sh -n 4 -jm 1024m -tm 4096m
+</code></pre>
+<p>&#x5176;&#x4E2D;&#x7528;&#x5230;&#x7684;&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>-n&#xFF1A;TaskManager &#x7684;&#x5BB9;&#x5668;&#x6570;&#x91CF;</li>
+<li>-jm&#xFF1A;JobManager &#x5BB9;&#x5668;&#x7684; JobManager &#x5185;&#x5B58;&#xFF0C;&#x5355;&#x4F4D;&#x662F;&#x53EF;&#x9009;&#x7684;&#xFF0C;&#x9ED8;&#x8BA4; MB</li>
+<li>-tm&#xFF1A;&#x6BCF;&#x4E2A; TaskManager &#x5BB9;&#x5668;&#x7684; TaskManager &#x5185;&#x5B58;&#xFF0C;&#x5355;&#x4F4D;&#x662F;&#x53EF;&#x9009;&#x7684;&#xFF0C;&#x9ED8;&#x8BA4; MB</li>
+<li>-qu&#xFF1A;&#x6307;&#x5B9A; YARN &#x961F;&#x5217;</li>
+<li>-s&#xFF1A;&#x6BCF;&#x4E2A; TaskManager &#x7684; TaskSlot &#x6570;&#x91CF;</li>
+<li>-t&#xFF1A;&#x4E0A;&#x4F20;&#xFF08;transfer&#xFF09;&#x6307;&#x5B9A;&#x76EE;&#x5F55;&#x7684;&#x6587;&#x4EF6;</li>
+</ul>
+<p>&#x63D0;&#x4EA4; Flink job &#x5230; Flink &#x96C6;&#x7FA4;&#xFF1A;</p>
+<pre><code class="lang-bash">./bin/flink run examples/streaming/WordCount.jar --input hdfs:///<span class="hljs-built_in">test</span>_dir/input_dir/story --output hdfs:///<span class="hljs-built_in">test</span>_dir/output_dir/output
+</code></pre>
+<p>&#x867D;&#x7136;&#x6CA1;&#x6709;&#x6307;&#x5B9A; Yarn application &#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x4F46;&#x662F;&#x4E5F;&#x53EF;&#x4EE5;&#x63D0;&#x4EA4;&#x5230; Flink &#x96C6;&#x7FA4;&#xFF0C;&#x56E0;&#x4E3A; <code>/tmp/.yarn-properties-${user}</code> &#x6587;&#x4EF6;&#x4E2D;&#x4FDD;&#x5B58;&#x4E86;&#x4E0A;&#x6B21;&#x521B;&#x5EFA; Yarn session &#x7684;&#x96C6;&#x7FA4;&#x4FE1;&#x606F;&#x3002;&#x5982;&#x679C;&#x518D;&#x6B21;&#x521B;&#x5EFA; Yarn session &#x5219;&#x4E0A;&#x6B21;&#x521B;&#x5EFA;&#x7684;&#x6587;&#x4EF6;&#x4F1A;&#x88AB;&#x8986;&#x76D6;&#x3002;</p>
+<p>&#x5982;&#x679C; <code>/tmp/.yarn-properties-${user}</code> &#x88AB;&#x5220;&#x9664;&#x6216;&#x8005;&#x8981;&#x5728;&#x53E6;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x4E0A;&#x63D0;&#x4EA4;&#x4F5C;&#x4E1A;&#x5230;&#x8FD9;&#x4E2A; Yarn session&#xFF0C;&#x53EF;&#x4EE5;&#x914D;&#x7F6E; HA&#x2014;&#x2014;<code>high-availability.clusert-id</code> &#x53C2;&#x6570;&#xFF0C;&#x7528;&#x5B83;&#x6839;&#x636E; <code>cluster-id</code> &#x4ECE; Zookeeper &#x4E0A;&#x83B7;&#x53D6; JobManager &#x7684;&#x5730;&#x5740;&#x548C;&#x7AEF;&#x53E3;&#x4EE5;&#x63D0;&#x4EA4;&#x4F5C;&#x4E1A;&#x3002;</p>
+<p>&#x5982;&#x679C; Yarn session &#x6CA1;&#x6709;&#x914D;&#x7F6E; HA&#xFF0C;&#x90A3;&#x4E48;&#x5FC5;&#x987B;&#x5728;&#x63D0;&#x4EA4; Flink job &#x7684;&#x547D;&#x4EE4;&#x4E2D;&#x901A;&#x8FC7; <code>-yid</code> &#x53C2;&#x6570;&#x6307;&#x660E; Yarn &#x4E0A;&#x7684; Application ID&#xFF1A;</p>
+<pre><code class="lang-bash">/bin/flink run -yid application_1548056325049_0048 examples/streaming/WordCount.jar --input hdfs:///<span class="hljs-built_in">test</span>_dir/input_dir/story --output hdfs:///<span class="hljs-built_in">test</span>_dir/output_dir/output
+</code></pre>
+<p>&#x6BCF;&#x6B21;&#x8DD1;&#x5B8C;&#x4EFB;&#x52A1;&#x4E0D;&#x4E45;&#xFF0C;TaskManager &#x5C31;&#x4F1A;&#x88AB;&#x91CA;&#x653E;&#xFF0C;&#x4E0B;&#x6B21;&#x63D0;&#x4EA4;&#x4EFB;&#x52A1;&#x65F6;&#xFF0C;TaskManager &#x4F1A;&#x91CD;&#x65B0;&#x542F;&#x52A8;&#x3002;&#x5982;&#x679C;&#x5E0C;&#x671B;&#x5EF6;&#x957F;&#x7A7A;&#x95F2; TaskManager &#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x53EF;&#x4EE5;&#x5728; <code>conf/flink-conf.yaml</code> &#x6587;&#x4EF6;&#x4E2D;&#x914D;&#x7F6E;&#x4EE5;&#x4E0B;&#x53C2;&#x6570;&#xFF0C;&#x5355;&#x4F4D;&#x662F; millseconds&#xFF08;&#x9ED8;&#x8BA4; 30000L&#xFF0C;&#x5373; 30 &#x79D2;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-yaml">slotmanager.taskmanager-timeout: <span class="hljs-number">30000</span>L         <span class="hljs-comment"># deprecated, used in release-1.5</span>
+resourcemanager.taskmanager-timeout: <span class="hljs-number">30000</span>L
+</code></pre>
+<h5 id="252&#x3001;&#x5728;-yarn-&#x4E0A;&#x8FD0;&#x884C;&#x5355;&#x4E2A;-flink-job&#xFF08;job-cluster-&#x6A21;&#x5F0F;&#xFF09;">2.5.2&#x3001;&#x5728; Yarn &#x4E0A;&#x8FD0;&#x884C;&#x5355;&#x4E2A; Flink Job&#xFF08;Job Cluster &#x6A21;&#x5F0F;&#xFF09;</h5>
+<pre><code class="lang-bash">./bin/flink run -m yarn-cluster -yn 2 examples/streaming/WordCount.jar --input hdfs:///<span class="hljs-built_in">test</span>_dir/input_dir/story --output hdfs:///<span class="hljs-built_in">test</span>_dir/output_dir/output
+</code></pre>
+<p>Flink Job &#x8FD0;&#x884C;&#x7ED3;&#x675F;&#xFF0C;&#x5C31;&#x4F1A;&#x9000;&#x51FA;&#x3002;&#x5E38;&#x7528;&#x7684;&#x914D;&#x7F6E;&#x6709;&#xFF1A;</p>
+<ul>
+<li>-yn&#xFF1A;TaskManager &#x7684; Yarn &#x5BB9;&#x5668;&#x6570;&#x91CF;</li>
+<li>-yqu&#xFF1A;&#x6307;&#x5B9A; Yarn &#x961F;&#x5217;</li>
+<li>-ys&#xFF1A;&#x6BCF;&#x4E2A; TaskManager &#x7684; slots &#x6570;&#x91CF;</li>
+</ul>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7; help &#x547D;&#x4EE4;&#x67E5;&#x770B;&#x53EF;&#x7528;&#x7684;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-bash">./bin/flink run -h
+</code></pre>
+<h5 id="26&#x3001;yarn-&#x6A21;&#x5F0F;&#x4E0B;&#x7684;-highavailability-&#x914D;&#x7F6E;">2.6&#x3001;Yarn &#x6A21;&#x5F0F;&#x4E0B;&#x7684; HighAvailability &#x914D;&#x7F6E;</h5>
+<p>&#x9996;&#x5148;&#x8981;&#x786E;&#x4FDD;&#x542F;&#x52A8; Yarn &#x96C6;&#x7FA4;&#x7684; <code>yarn-site.xml</code> &#x4E2D;&#x7684;&#x5982;&#x4E0B;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre><code class="lang-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>yarn.resourcemanager.am.max-attempts<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">value</span>&gt;</span>100<span class="hljs-tag">&lt;/<span class="hljs-name">value</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span>
+</code></pre>
+<p>&#x8FD9;&#x662F; YARN &#x96C6;&#x7FA4;&#x7EA7;&#x522B; AM &#x91CD;&#x542F;&#x7684;&#x4E0A;&#x9650;&#x3002;</p>
+<p>&#x7136;&#x540E;&#xFF0C;<code>conf/flink-conf.yaml</code> &#x6587;&#x4EF6;&#x4E2D;&#x914D;&#x7F6E; Flink job &#x7684; JobManager &#x7684;&#x91CD;&#x542F;&#x6B21;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-yaml">yarn.application-attempts: <span class="hljs-number">10</span>     <span class="hljs-comment"># 1+ 9 retries</span>
+</code></pre>
+<p><code>conf/flink-conf.yaml</code> &#x6587;&#x4EF6;&#x4E2D;&#x8FD8;&#x8981;&#x914D;&#x7F6E; ZK &#x76F8;&#x5173;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># &#x914D;&#x7F6E; high-availability mode</span>
+<span class="hljs-attr">high-availability:</span> zookeeper
+
+<span class="hljs-comment"># &#x914D;&#x7F6E; zookeeper quorum&#xFF08;hostname &#x548C;&#x7AEF;&#x53E3;&#x9700;&#x8981;&#x4F9D;&#x636E;&#x5BF9;&#x5E94; zk &#x7684;&#x5B9E;&#x9645;&#x914D;&#x7F6E;&#xFF09;</span>
+high-availability.zookeeper.quorum: z05f02321.sqa.zth.tbsite.net:<span class="hljs-number">2181</span>,z05f10215.sqa.zth.tbsite.net:<span class="hljs-number">2181</span>
+
+<span class="hljs-comment"># &#xFF08;&#x53EF;&#x9009;&#xFF09;&#x8BBE;&#x7F6E; zookeeper &#x7684; root &#x76EE;&#x5F55;</span>
+high-availability.zookeeper.path.root: /test_dir/test_standalone2_root
+
+<span class="hljs-comment"># &#x5220;&#x9664;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;</span>
+<span class="hljs-comment"># high-availability.cluster-id: /test_dir/test_standalone2</span>
+
+<span class="hljs-comment"># JobManager &#x7684; meta &#x4FE1;&#x606F;&#x653E;&#x5728; dfs&#xFF0C;&#x5728; zk &#x4E0A;&#x4E3B;&#x8981;&#x4F1A;&#x4FDD;&#x5B58;&#x4E00;&#x4E2A;&#x6307;&#x5411; dfs &#x8DEF;&#x5F84;&#x7684;&#x6307;&#x9488;</span>
+high-availability.storageDir: hdfs:///test_dir/recovery2/
+</code></pre>
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF0C;<code>high-availability.cluster-id</code> &#x914D;&#x7F6E;&#x6700;&#x597D;&#x53BB;&#x6389;&#xFF0C;&#x5728; Yarn&#xFF08;&#x4EE5;&#x53CA; Mesos&#xFF09;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;<code>cluster-id</code> &#x5982;&#x679C;&#x4E0D;&#x8BBE;&#x7F6E;&#x7684;&#x8BDD;&#xFF0C;&#x4F1A;&#x914D;&#x7F6E;&#x4E3A; Yarn &#x4E0A;&#x7684; Application ID&#xFF0C;&#x4ECE;&#x800C;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x552F;&#x4E00;&#x6027;&#x3002;</p>
 
                                 
                                 </section>
@@ -475,7 +559,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Flink 环境搭建、配置、部署及运行","level":"1.3.1","depth":2,"next":{"title":"DataStream API","level":"1.3.2","depth":2,"path":"flink-china/datastream-api.md","ref":"flink-china/datastream-api.md","articles":[]},"previous":{"title":"Flink 中国社区文档","level":"1.3","depth":1,"path":"flink-china.md","ref":"flink-china.md","articles":[{"title":"Flink 环境搭建、配置、部署及运行","level":"1.3.1","depth":2,"path":"flink-china/setdeployrun.md","ref":"flink-china/setdeployrun.md","articles":[]},{"title":"DataStream API","level":"1.3.2","depth":2,"path":"flink-china/datastream-api.md","ref":"flink-china/datastream-api.md","articles":[]},{"title":"客户端操作","level":"1.3.3","depth":2,"path":"flink-china/client.md","ref":"flink-china/client.md","articles":[]},{"title":"Time&Window","level":"1.3.4","depth":2,"path":"flink-china/time-window.md","ref":"flink-china/time-window.md","articles":[]},{"title":"状态管理和容错机制","level":"1.3.5","depth":2,"path":"flink-china/state-fault-tolerance.md","ref":"flink-china/state-fault-tolerance.md","articles":[]},{"title":"Table API","level":"1.3.6","depth":2,"path":"flink-china/table-api.md","ref":"flink-china/table-api.md","articles":[]},{"title":"Flink SQL","level":"1.3.7","depth":2,"path":"flink-china/sql.md","ref":"flink-china/sql.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"flink-china/setdeployrun.md","mtime":"2021-12-09T02:55:35.297Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-09T05:41:27.488Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Flink 环境搭建、配置、部署及运行","level":"1.3.1","depth":2,"next":{"title":"DataStream API","level":"1.3.2","depth":2,"path":"flink-china/datastream-api.md","ref":"flink-china/datastream-api.md","articles":[]},"previous":{"title":"Flink 中国社区文档","level":"1.3","depth":1,"path":"flink-china.md","ref":"flink-china.md","articles":[{"title":"Flink 环境搭建、配置、部署及运行","level":"1.3.1","depth":2,"path":"flink-china/setdeployrun.md","ref":"flink-china/setdeployrun.md","articles":[]},{"title":"DataStream API","level":"1.3.2","depth":2,"path":"flink-china/datastream-api.md","ref":"flink-china/datastream-api.md","articles":[]},{"title":"客户端操作","level":"1.3.3","depth":2,"path":"flink-china/client.md","ref":"flink-china/client.md","articles":[]},{"title":"Time&Window","level":"1.3.4","depth":2,"path":"flink-china/time-window.md","ref":"flink-china/time-window.md","articles":[]},{"title":"状态管理和容错机制","level":"1.3.5","depth":2,"path":"flink-china/state-fault-tolerance.md","ref":"flink-china/state-fault-tolerance.md","articles":[]},{"title":"Table API","level":"1.3.6","depth":2,"path":"flink-china/table-api.md","ref":"flink-china/table-api.md","articles":[]},{"title":"Flink SQL","level":"1.3.7","depth":2,"path":"flink-china/sql.md","ref":"flink-china/sql.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"flink-china/setdeployrun.md","mtime":"2022-02-10T02:43:34.123Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-10T02:51:55.494Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
