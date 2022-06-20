@@ -1,0 +1,964 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>流概念 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="data-types.html" />
+    
+    
+    <link rel="prev" href="datastream-api.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../try-flink/local.html">
+            
+                <a href="../try-flink/local.html">
+            
+                    
+                    第一步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../try-flink/002.html">
+            
+                <a href="../try-flink/002.html">
+            
+                    
+                    基于DataStream API实现欺诈检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../try-flink/003.html">
+            
+                <a href="../try-flink/003.html">
+            
+                    
+                    基于Table API实现实时报表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../try-flink/004.html">
+            
+                <a href="../try-flink/004.html">
+            
+                    
+                    一个Flink操作操练场
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../practice.html">
+            
+                <a href="../practice.html">
+            
+                    
+                    动手练习 Flink
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../practice/001.html">
+            
+                <a href="../practice/001.html">
+            
+                    
+                    DataStream API 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../practice/002.html">
+            
+                <a href="../practice/002.html">
+            
+                    
+                    数据管道 & ETL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../practice/003.html">
+            
+                <a href="../practice/003.html">
+            
+                    
+                    流式分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../practice/event-driven.html">
+            
+                <a href="../practice/event-driven.html">
+            
+                    
+                    事件驱动应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../practice/fault-tolerance.html">
+            
+                <a href="../practice/fault-tolerance.html">
+            
+                    
+                    容错
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../table-api.html">
+            
+                <a href="../table-api.html">
+            
+                    
+                    Table API & SQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="concepts-common-api.html">
+            
+                <a href="concepts-common-api.html">
+            
+                    
+                    概念和通用 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="datastream-api.html">
+            
+                <a href="datastream-api.html">
+            
+                    
+                    集成 DataStream API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="streaming-concepts.html">
+            
+                <a href="streaming-concepts.html">
+            
+                    
+                    流概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="data-types.html">
+            
+                <a href="data-types.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="time-zone.html">
+            
+                <a href="time-zone.html">
+            
+                    
+                    时区
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="table-api.html">
+            
+                <a href="table-api.html">
+            
+                    
+                    时区
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../flink-china.html">
+            
+                <a href="../flink-china.html">
+            
+                    
+                    Flink 中国社区文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../flink-china/setdeployrun.html">
+            
+                <a href="../flink-china/setdeployrun.html">
+            
+                    
+                    Flink 环境搭建、配置、部署及运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../flink-china/datastream-api.html">
+            
+                <a href="../flink-china/datastream-api.html">
+            
+                    
+                    DataStream API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../flink-china/client.html">
+            
+                <a href="../flink-china/client.html">
+            
+                    
+                    客户端操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../flink-china/time-window.html">
+            
+                <a href="../flink-china/time-window.html">
+            
+                    
+                    Time&Window
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../flink-china/state-fault-tolerance.html">
+            
+                <a href="../flink-china/state-fault-tolerance.html">
+            
+                    
+                    状态管理和容错机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../flink-china/table-api.html">
+            
+                <a href="../flink-china/table-api.html">
+            
+                    
+                    Table API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../flink-china/sql.html">
+            
+                <a href="../flink-china/sql.html">
+            
+                    
+                    Flink SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../wai-lian.html">
+            
+                <a href="../wai-lian.html">
+            
+                    
+                    外链
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >流概念</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x6D41;&#x6982;&#x5FF5;">&#x6D41;&#x6982;&#x5FF5;<a href="https://nightlies.apache.org/flink/flink-docs-release-1.15/docs/dev/table/concepts/overview/" target="_blank">#</a></h3>
+<p>Flink &#x7684; Table API &#x548C; SQL &#x662F;&#x6D41;&#x5904;&#x7406;&#x548C;&#x6279;&#x5904;&#x7406;&#x7EDF;&#x4E00;&#x7684; APIs&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#xFF0C;Table API &#x548C; SQL &#x67E5;&#x8BE2;&#x6709;&#x76F8;&#x540C;&#x7684;&#x8BED;&#x4E49;&#x2014;&#x2014;&#x65E0;&#x8BBA;&#x5B83;&#x4EEC;&#x7684;&#x8F93;&#x5165;&#x662F;&#x6709;&#x8FB9;&#x754C;&#x7684;&#x6279;&#x8F93;&#x5165;&#x8FD8;&#x662F;&#x65E0;&#x8FB9;&#x754C;&#x7684;&#x6D41;&#x8F93;&#x5165;&#x3002;</p>
+<h4 id="1&#x3001;&#x72B6;&#x6001;&#x7BA1;&#x7406;">1&#x3001;&#x72B6;&#x6001;&#x7BA1;&#x7406;</h4>
+<p>&#x8868;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x7528;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#x540E;&#x7AEF;&#xFF08;state backend&#xFF09;&#x548C;&#x591A;&#x79CD;&#x68C0;&#x67E5;&#x70B9;&#x9009;&#x9879;&#x6765;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#xFF0C;&#x4EE5;&#x6839;&#x636E;&#x72B6;&#x6001;&#x5927;&#x5C0F;&#x548C;&#x5BB9;&#x9519;&#x6765;&#x5904;&#x7406;&#x4E0D;&#x540C;&#x7684;&#x9700;&#x6C42;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x8FD0;&#x884C;&#x4E2D;&#x7684; Table API &amp; SQL &#x7BA1;&#x9053;&#x7684; savepoint &#x6765;&#x5728;&#x4E4B;&#x540E;&#x7684;&#x65F6;&#x95F4;&#x91CC;&#x53CA;&#x65F6;&#x5730;&#x6062;&#x590D;&#x5E94;&#x7528;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+<h5 id="11&#x3001;&#x72B6;&#x6001;&#x4F7F;&#x7528;">1.1&#x3001;&#x72B6;&#x6001;&#x4F7F;&#x7528;</h5>
+<p>&#x7531;&#x4E8E; Table API &amp; SQL &#x7A0B;&#x5E8F;&#x7684;&#x58F0;&#x660E;&#x5F0F;&#x672C;&#x8D28;&#xFF0C;&#x5728;&#x7BA1;&#x9053;&#x4E2D;&#x4EC0;&#x4E48;&#x5730;&#x65B9;&#x3001;&#x4F7F;&#x7528;&#x4E86;&#x591A;&#x5C11;&#x72B6;&#x6001;&#x901A;&#x5E38;&#x4E0D;&#x660E;&#x663E;&#x3002;planner &#x51B3;&#x5B9A;&#x4E86;&#x662F;&#x5426;&#x9700;&#x8981;&#x72B6;&#x6001;&#x6765;&#x8BA1;&#x7B97;&#x6B63;&#x786E;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x6839;&#x636E;&#x5F53;&#x524D;&#x7684;&#x4F18;&#x5316;&#x5668;&#xFF08;optimizer&#xFF09;&#x89C4;&#x5219;&#x7BA1;&#x9053;&#x88AB;&#x4F18;&#x5316;&#x4E3A;&#x4F7F;&#x7528;&#x5C3D;&#x53EF;&#x80FD;&#x5C11;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+<blockquote>
+<p>&#x4ECE;&#x6982;&#x5FF5;&#x4E0A;&#x8BB2;&#xFF0C;&#x6E90;&#x8868;&#x4ECE;&#x4E0D;&#x6574;&#x4E2A;&#x5730;&#x4FDD;&#x5B58;&#x5728;&#x72B6;&#x6001;&#x4E2D;&#x3002;&#x5B9E;&#x73B0;&#x8005;&#x5904;&#x7406;&#x903B;&#x8F91;&#x8868;&#xFF08;&#x5373;&#xFF0C;&#x52A8;&#x6001;&#x8868;&#xFF09;&#x3002;&#x5B83;&#x4EEC;&#x7684;&#x72B6;&#x6001;&#x9700;&#x6C42;&#x7531;&#x4F7F;&#x7528;&#x7684;&#x64CD;&#x4F5C;&#x51B3;&#x5B9A;&#x3002;</p>
+</blockquote>
+<p>&#x50CF; <code>SELECT ... FROM ... WHERE</code> &#x8FD9;&#x6837;&#x7684;&#xFF0C;&#x53EA;&#x662F;&#x7531;&#x5B57;&#x6BB5;&#x6620;&#x5C04;&#x548C;&#x8FC7;&#x6EE4;&#x7EC4;&#x6210;&#x7684;&#x67E5;&#x8BE2;&#x901A;&#x5E38;&#x662F;&#x65E0;&#x72B6;&#x6001;&#x7684;&#x7BA1;&#x9053;&#x3002;&#x4F46;&#x662F;&#x50CF;&#x8FDE;&#x63A5;&#x3001;&#x805A;&#x5408;&#x3001;&#x6216;&#x8005;&#x53BB;&#x91CD;&#x8FD9;&#x7C7B;&#x64CD;&#x4F5C;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x4E2D;&#x95F4;&#x7ED3;&#x679C;&#x4FDD;&#x7559;&#x5230;&#x5BB9;&#x9519;&#x7684;&#x5B58;&#x50A8;&#x4E2D;&#xFF0C;&#x90FD;&#x7528;&#x5230;&#x4E86; Flink &#x7684;&#x72B6;&#x6001;&#x3002;</p>
+<blockquote>
+<p>&#x5BF9;&#x5E94;&#x7684;&#x7B97;&#x5B50;&#x6587;&#x6863;&#x4F1A;&#x4ECB;&#x7ECD;&#x9700;&#x8981;&#x591A;&#x5C11;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x9650;&#x5236;&#x6F5C;&#x5728;&#x7684;&#x4E0D;&#x65AD;&#x589E;&#x957F;&#x7684;&#x72B6;&#x6001;&#x5927;&#x5C0F;&#x3002;</p>
+</blockquote>
+<p>&#x6BD4;&#x5982;&#xFF0C;&#x5E38;&#x89C4;&#x7684; SQL &#x8FDE;&#x63A5;&#x9700;&#x8981;&#x5C06;&#x4E24;&#x4E2A;&#x8F93;&#x5165;&#x8868;&#x6574;&#x4E2A;&#x5730;&#x4FDD;&#x5B58;&#x5230;&#x72B6;&#x6001;&#x3002;&#x4E3A;&#x4E86;&#x6B63;&#x786E;&#x7684; SQL &#x8BED;&#x4E49;&#xFF0C;&#x8FD0;&#x884C;&#x65F6;&#x9700;&#x8981;&#x5047;&#x8BBE;&#x4E24;&#x4E2A;&#x8868;&#x7684;&#x5339;&#x914D;&#x4F1A;&#x5728;&#x4EFB;&#x4F55;&#x65F6;&#x95F4;&#x70B9;&#x53D1;&#x751F;&#x3002;Flink &#x5229;&#x7528;&#x6C34;&#x5370;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86; <a href="https://nightlies.apache.org/flink/flink-docs-release-1.15/docs/dev/table/sql/queries/joins/" target="_blank">optimized window and interval joins</a> &#x65E8;&#x5728;&#x4FDD;&#x5B58;&#x5728;&#x8F83;&#x5C0F;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+<p>&#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x4F1A;&#x8BDD;&#x70B9;&#x51FB;&#x6570;&#x91CF;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> sessionId, <span class="hljs-keyword">count</span>(*) <span class="hljs-keyword">FROM</span> clicks <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> sessionId;
+</code></pre>
+<p><code>sessionId</code> &#x5C5E;&#x6027;&#x88AB;&#x7528;&#x4F5C;&#x5206;&#x7EC4;&#x7684;&#x952E;&#xFF0C;&#x6301;&#x7EED;&#x7684;&#x67E5;&#x8BE2;&#x4E3A;&#x6BCF;&#x4E2A; <code>sessionId</code> &#x7EF4;&#x6301;&#x7740;&#x4E00;&#x4E2A;&#x8BA1;&#x6570;&#x3002;<code>sessionId</code> &#x5C5E;&#x6027;&#x968F;&#x7740;&#x65F6;&#x95F4;&#x589E;&#x957F;&#xFF0C;<code>sessionId</code> &#x5BF9;&#x5E94;&#x7684;&#x8BA1;&#x6570;&#x503C;&#x53EA;&#x5728;&#x4F1A;&#x8BDD;&#x6D3B;&#x8DC3;&#x65F6;&#x6709;&#x6548;&#xFF0C;&#x5373;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x7EF4;&#x6301;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x6301;&#x7EED;&#x7684;&#x67E5;&#x8BE2;&#x65E0;&#x6CD5;&#x77E5;&#x9053; <code>sessionId</code> &#x7684;&#x6D3B;&#x8DC3;&#x65F6;&#x95F4;&#xFF0C;&#x5E76;&#x4E14;&#x671F;&#x671B;&#x6BCF;&#x4E2A; <code>sessionId</code> &#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4F55;&#x65F6;&#x95F4;&#x70B9;&#x51FA;&#x73B0;&#x3002;&#x5B83;&#x4E3A;&#x6BCF;&#x4E2A;&#x89C2;&#x6D4B;&#x5230;&#x7684; <code>sessionId</code> &#x7EF4;&#x6301;&#x7740;&#x4E00;&#x4E2A;&#x8BA1;&#x6570;&#x503C;&#x3002;&#x6700;&#x540E;&#xFF0C;&#x968F;&#x7740;&#x89C2;&#x6D4B;&#x5230;&#x7684; <code>sessionId</code> &#x8D8A;&#x6765;&#x8D8A;&#x591A;&#xFF0C;&#x67E5;&#x8BE2;&#x7684;&#x603B;&#x72B6;&#x6001;&#x5927;&#x5C0F;&#x662F;&#x6301;&#x7EED;&#x589E;&#x957F;&#x7684;&#x3002;</p>
+<h5 id="111&#x3001;&#x7A7A;&#x95F2;&#x72B6;&#x6001;&#x7559;&#x5B58;&#x65F6;&#x95F4;&#xFF08;idle-state-retention-time">1.1.1&#x3001;&#x7A7A;&#x95F2;&#x72B6;&#x6001;&#x7559;&#x5B58;&#x65F6;&#x95F4;&#xFF08;Idle State Retention Time)</h5>
+<p><code>table.exec.state.ttl</code> &#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x952E;&#x7684;&#x72B6;&#x6001;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x88AB;&#x66F4;&#x65B0;&#xFF0C;&#x5B83;&#x5728;&#x591A;&#x4E45;&#x4E4B;&#x540E;&#x4F1A;&#x88AB;&#x79FB;&#x9664;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x4E4B;&#x524D;&#x7684;&#x67E5;&#x8BE2;&#x4F8B;&#x5B50;&#xFF0C;<code>sessionId</code> &#x5BF9;&#x5E94;&#x7684;&#x8BA1;&#x6570;&#x5982;&#x679C;&#x5728;&#x914D;&#x7F6E;&#x7684;&#x65F6;&#x957F;&#x5185;&#x6CA1;&#x6709;&#x88AB;&#x66F4;&#x65B0;&#xFF0C;&#x5B83;&#x5C31;&#x4F1A;&#x88AB;&#x79FB;&#x9664;&#x3002;</p>
+<h5 id="12&#x3001;&#x6709;&#x72B6;&#x6001;&#x7684;&#x5347;&#x7EA7;&#x548C;&#x6F14;&#x53D8;&#xFF08;stateful-&#xFF09;">1.2&#x3001;&#x6709;&#x72B6;&#x6001;&#x7684;&#x5347;&#x7EA7;&#x548C;&#x6F14;&#x53D8;&#xFF08;Stateful &#xFF09;</h5>
+<p>&#x4EE5;&#x6D41;&#x6A21;&#x5F0F;&#x8FD0;&#x884C;&#x7684;&#x8868;&#x7A0B;&#x5E8F;&#x662F;&#x65E8;&#x5728;&#x4F5C;&#x4E3A; <em>&#x957F;&#x671F;&#x67E5;&#x8BE2;</em>&#xFF08;standing queries&#xFF09;&#x7684;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x5B9A;&#x4E49;&#x4E00;&#x6B21;&#xFF0C;&#x7136;&#x540E;&#x4F5C;&#x4E3A;&#x9759;&#x6001;&#x7684;&#x7AEF;&#x5230;&#x7AEF;&#x7BA1;&#x9053;&#x6301;&#x7EED;&#x5730;&#x8FDB;&#x884C;&#x8FD0;&#x7B97;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x6709;&#x72B6;&#x6001;&#x7684;&#x7BA1;&#x9053;&#xFF0C;&#x67E5;&#x8BE2;&#x6216;&#x8005; Flink &#x7684; planner &#x7684;&#x4EFB;&#x4F55;&#x6539;&#x53D8;&#x90FD;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#x7684;&#x6267;&#x884C;&#x8BA1;&#x5212;&#x3002;&#x8FD9;&#x4F7F;&#x5F97;&#x8868;&#x7A0B;&#x5E8F;&#x7684;&#x6709;&#x72B6;&#x6001;&#x7684;&#x5347;&#x7EA7;&#x548C;&#x6F14;&#x53D8;&#x9762;&#x4E34;&#x6311;&#x6218;&#x3002;Flink &#x793E;&#x533A;&#x81F4;&#x529B;&#x4E8E;&#x6539;&#x5584;&#x8FD9;&#x4E9B;&#x7F3A;&#x70B9;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#xFF0C;&#x589E;&#x52A0;&#x4E86;&#x4E00;&#x4E2A;&#x8FC7;&#x6EE4;&#x64CD;&#x4F5C;&#x3001;&#x4F18;&#x5316;&#x5668;&#x53EF;&#x80FD;&#x4F1A;&#x51B3;&#x5B9A;&#x91CD;&#x65B0;&#x6392;&#x5E8F;&#x8FDE;&#x63A5;&#x6216;&#x8005;&#x6539;&#x53D8;&#x4E00;&#x4E2A;&#x4E2D;&#x95F4;&#x7B97;&#x5B50;&#x7684; schema&#x3002;&#x8FD9;&#x4F1A;&#x56E0;&#x4E3A;&#x7B97;&#x5B50;&#x72B6;&#x4F53;&#x7684;&#x62D3;&#x6251;&#x6539;&#x53D8;&#x6216;&#x8005;&#x4E0D;&#x540C;&#x7684;&#x5B57;&#x6BB5;&#x7ED3;&#x6784;&#xFF0C;&#x800C;&#x65E0;&#x6CD5;&#x4ECE;&#x4FDD;&#x5B58;&#x70B9;&#x6062;&#x590D;&#x3002;</p>
+<p>&#x67E5;&#x8BE2;&#x5B9E;&#x73B0;&#x8005;&#x5FC5;&#x987B;&#x4FDD;&#x8BC1;&#x5347;&#x7EA7;&#x6216;&#x6F14;&#x53D8;&#x524D;&#x540E;&#xFF0C;&#x4F18;&#x5316;&#x540E;&#x7684;&#x8BA1;&#x5212;&#xFF08;optimized plans&#xFF09;&#x662F;&#x76F8;&#x4E92;&#x517C;&#x5BB9;&#x7684;&#x3002;&#x4F7F;&#x7528; SQL &#x7684; <code>EXPLAIN</code> &#x547D;&#x4EE4;&#x6216;&#x8005; Table API &#x7684; <code>table.explain()</code> &#x6765;&#x8FDB;&#x884C;&#x68C0;&#x67E5;&#x3002;</p>
+<p>&#x7531;&#x4E8E;&#xFF0C;&#x65B0;&#x7684;&#x4F18;&#x5316;&#x5668;&#x89C4;&#x5219;&#x662F;&#x6301;&#x7EED;&#x5730;&#x52A0;&#x5165;&#x7684;&#xFF0C;&#x56E0;&#x800C;&#x7B97;&#x5B50;&#x53D8;&#x5F97;&#x66F4;&#x52A0;&#x9AD8;&#x6548;&#x548C;&#x4E13;&#x4E1A;&#x5316;&#xFF0C;&#x8FD9;&#x4E5F;&#x5BFC;&#x81F4;&#x65B0;&#x7684; Flink &#x7248;&#x672C;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x4F18;&#x5316;&#x540E;&#x7684;&#x8BA1;&#x5212;&#x4E0D;&#x517C;&#x5BB9;&#x3002;</p>
+<blockquote>
+<p>&#x76EE;&#x524D;&#xFF0C;&#x6846;&#x67B6;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x72B6;&#x6001;&#x53EF;&#x4EE5;&#x4ECE;&#x4E00;&#x4E2A;&#x4FDD;&#x5B58;&#x70B9;&#x6620;&#x5C04;&#x5230;&#x65B0;&#x7684;&#x8868;&#x7B97;&#x5B50;&#x62D3;&#x6251;&#x3002;</p>
+<p>&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x4EC5;&#x4EC5;&#x67E5;&#x8BE2;&#x548C; Flink &#x7248;&#x672C;&#x90FD;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x624D;&#x652F;&#x6301;&#x4FDD;&#x5B58;&#x70B9;&#x3002;</p>
+</blockquote>
+<p>&#x7531;&#x4E8E; Flink &#x793E;&#x533A;&#x62D2;&#x7EDD;&#x5728;&#x5C0F;&#x7248;&#x672C;&#x8FED;&#x4EE3;&#x4E2D;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;&#x4ECE; 1.13.1 &#x5230; 1.13.2&#xFF09;&#x4E2D;&#x4FEE;&#x6539;&#x4F18;&#x5316;&#x7684;&#x8BA1;&#x5212;&#x548C;&#x7B97;&#x5B50;&#x62D3;&#x6251;&#xFF0C;&#x5C0F;&#x7248;&#x672C;&#x5347;&#x7EA7;&#x5BF9; Table API &amp; SQL &#x7BA1;&#x9053;&#xFF08;&#x7684;&#x72B6;&#x6001;&#x6062;&#x590D;&#xFF09;&#x6765;&#x8BF4;&#x662F;&#x5B89;&#x5168;&#x7684;&#x3002;&#x53EF;&#x662F;&#xFF0C;&#x5927;&#x7248;&#x672C;&#x5347;&#x7EA7;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;&#x4ECE; 1.12 &#x5230; 1.13&#xFF09;&#x662F;&#x4E0D;&#x652F;&#x6301;&#x7684;&#x3002;</p>
+<p>&#x5BF9;&#x8FD9;&#x4E24;&#x4E2A;&#x7F3A;&#x70B9;&#xFF08;&#x5373;&#xFF0C;&#x4FEE;&#x6539;&#x67E5;&#x8BE2;&#x548C;&#x4FEE;&#x6539; Flink &#x7248;&#x672C;&#xFF09;&#xFF0C;&#x5EFA;&#x8BAE;&#x5728;&#x5F00;&#x59CB;&#x5C3D;&#x5FC3;&#x5B9E;&#x65F6;&#x6570;&#x636E;&#x5904;&#x7406;&#x4E4B;&#x524D;&#xFF0C;&#x4F7F;&#x7528;&#x5386;&#x53F2;&#x6570;&#x636E;&#x6765;&#x68C0;&#x9A8C;&#x66F4;&#x65B0;&#x540E;&#x7684;&#x8868;&#x7A0B;&#x5E8F;&#x7684;&#x72B6;&#x6001;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x201C;&#x70ED;&#x8EAB;&#x201D;&#xFF08;&#x5373;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#xFF09;&#x3002;Flink &#x793E;&#x533A;&#x5728;&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x6DF7;&#x5408;&#x6E90;&#xFF08;hybird source&#xFF09;&#x6765;&#x4F7F;&#x5F97;&#x8FD9;&#x79CD;&#x5207;&#x6362;&#x5C3D;&#x53EF;&#x80FD;&#x5730;&#x7B80;&#x4FBF;&#x3002;</p>
+<h4 id="2&#x3001;&#x52A8;&#x6001;&#x8868;&#xFF08;dynamic-tables&#xFF09;">2&#x3001;&#x52A8;&#x6001;&#x8868;&#xFF08;Dynamic Tables&#xFF09;</h4>
+<h5 id="21&#x3001;&#x6570;&#x636E;&#x6D41;&#x7684;&#x5173;&#x7CFB;&#x578B;&#x67E5;&#x8BE2;&#xFF08;relational-queries-on-data-streams&#xFF09;">2.1&#x3001;&#x6570;&#x636E;&#x6D41;&#x7684;&#x5173;&#x7CFB;&#x578B;&#x67E5;&#x8BE2;&#xFF08;Relational Queries on Data Streams&#xFF09;</h5>
+<p>&#x4F20;&#x7EDF;&#x5173;&#x7CFB;&#x4EE3;&#x6570;&#xFF08;relational algebra&#xFF09;&#x548C;&#x6D41;&#x5904;&#x7406;&#x4F5C;&#x4E3A;&#x8F93;&#x5165;&#x6570;&#x636E;&#x3001;&#x6267;&#x884C;&#x3001;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x65B9;&#x9762;&#x7684;&#x6BD4;&#x8F83;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5173;&#x7CFB;&#x4EE3;&#x6570; / SQL</th>
+<th>&#x6D41;&#x5904;&#x7406;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x5173;&#x7CFB;&#xFF08;Relations&#xFF0C;or tables&#xFF09;&#x662F;&#x6709;&#x9650;&#x7684;&#xFF08;&#x591A;&#x4E2A;&#xFF09;&#x5143;&#x7EC4;&#x96C6;&#x5408;</td>
+<td>&#x6D41;&#x662F;&#x5143;&#x7EC4;&#x7684;&#x65E0;&#x9650;&#x5E8F;&#x5217;</td>
+</tr>
+<tr>
+<td>&#x67E5;&#x8BE2;&#x662F;&#x5728;&#x6279;&#x6570;&#x636E;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x8868;&#xFF09;&#x4E0A;&#x8FDB;&#x884C;&#x7684;&#xFF0C;&#x80FD;&#x591F;&#x8BBF;&#x95EE;&#x6574;&#x4E2A;&#x7684;&#x8F93;&#x5165;&#x6570;&#x636E;</td>
+<td>&#x6D41;&#x67E5;&#x8BE2;&#x542F;&#x52A8;&#x4E4B;&#x540E;&#x65E0;&#x6CD5;&#x8BBF;&#x95EE;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x4E14;&#x5FC5;&#x987B;&#x201C;&#x7B49;&#x5F85;&#x201D;&#x6570;&#x636E;&#x6D41;&#x8FDB;&#x6765;</td>
+</tr>
+<tr>
+<td>&#x6279;&#x67E5;&#x8BE2;&#x5728;&#x4EA7;&#x751F;&#x4E86;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x5927;&#x5C0F;&#x7684;&#x7ED3;&#x679C;&#x4E4B;&#x540E;&#x5C31;&#x7ED3;&#x675F;&#x4E86;</td>
+<td>&#x6D41;&#x67E5;&#x8BE2;&#x57FA;&#x4E8E;&#x63A5;&#x6536;&#x5230;&#x7684;&#x8BB0;&#x5F55;&#x6301;&#x7EED;&#x5730;&#x66F4;&#x65B0;&#x5B83;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x4ECE;&#x4E0D;&#x7ED3;&#x675F;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5C3D;&#x7BA1;&#x5B58;&#x5728;&#x8FD9;&#x4E9B;&#x533A;&#x522B;&#xFF0C;&#x5173;&#x7CFB;&#x67E5;&#x8BE2;&#x548C; SQL &#x63D0;&#x4F9B;&#x4E86;&#x5904;&#x7406;&#x6D41;&#x7684;&#x5F3A;&#x5927;&#x5DE5;&#x5177;&#x96C6;&#x3002;&#x9AD8;&#x7EA7;&#x7684;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x53EB;&#x4F5C; <strong>&#x7269;&#x5316;&#x89C6;&#x56FE;</strong>&#xFF08;Materialized Views&#xFF09;&#x7684;&#x7279;&#x6027;&#x3002;&#x7269;&#x5316;&#x89C6;&#x56FE;&#x662F;&#x88AB;&#x5B9A;&#x4E49;&#x4E3A;&#x4E00;&#x4E2A; SQL &#x67E5;&#x8BE2;&#xFF0C;&#x5C31;&#x50CF;&#x4E00;&#x4E2A;&#x5E38;&#x89C4;&#x7684;&#x865A;&#x62DF;&#x89C6;&#x56FE;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x7269;&#x5316;&#x89C6;&#x56FE;&#x7F13;&#x5B58;&#x4E86;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#xFF0C;&#x88AB;&#x8BBF;&#x95EE;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x7528;&#x8FD0;&#x884C;&#x67E5;&#x8BE2;&#x3002;&#x7F13;&#x5B58;&#x7684;&#x6311;&#x6218;&#x662F;&#xFF0C;&#x9632;&#x6B62;&#x7F13;&#x5B58;&#x63D0;&#x4F9B;&#x8FC7;&#x671F;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x5F53;&#x89C6;&#x56FE;&#x67E5;&#x8BE2;&#x7684;&#x57FA;&#x7840;&#x8868;&#x88AB;&#x4FEE;&#x6539;&#xFF0C;&#x7269;&#x5316;&#x89C6;&#x56FE;&#x5C31;&#x53D8;&#x5F97;&#x8FC7;&#x65F6;&#x4E86;&#x3002;&#x6025;&#x5207;&#x89C6;&#x56FE;&#x7EF4;&#x62A4;&#xFF08;<em>Eager View Maintenance</em>&#xFF09;&#x662F;&#x89C6;&#x56FE;&#x57FA;&#x7840;&#x8868;&#x66F4;&#x65B0;&#x65F6;&#x9A6C;&#x4E0A;&#x66F4;&#x65B0;&#x7269;&#x5316;&#x89C6;&#x56FE;&#x7684;&#x8BA1;&#x672F;&#x3002;</p>
+<p>&#x8003;&#x8651;&#x5230;&#x5982;&#x4E0B;&#x51E0;&#x70B9;&#x65F6;&#xFF0C;&#x6025;&#x5207;&#x89C6;&#x56FE;&#x7EF4;&#x62A4;&#x4E0E;&#x6D41;&#x7684; SQL &#x67E5;&#x8BE2;&#x4E4B;&#x95F4;&#x7684;&#x8054;&#x7CFB;&#x5C31;&#x53D8;&#x5F97;&#x660E;&#x663E;&#x4E86;&#xFF1A;</p>
+<ul>
+<li><code>INSERT</code>&#x3001;<code>UPDATE</code>&#x3001;<code>DELETE</code> DML &#x8BED;&#x53E5;&#x7684;&#x6D41;&#x5904;&#x7406;&#x7684;&#x6570;&#x636E;&#x5E93;&#x8868;&#x7ED3;&#x679C;&#xFF0C;&#x901A;&#x5E38;&#x53EB;&#x4F5C; <em>changelog stream</em>&#x3002;</li>
+<li>&#x7269;&#x5316;&#x89C6;&#x56FE;&#x88AB;&#x5B9A;&#x4E49;&#x4E3A;&#x4E00;&#x4E2A; SQL &#x67E5;&#x8BE2;&#x3002;&#x8981;&#x66F4;&#x65B0;&#x89C6;&#x56FE;&#xFF0C;&#x67E5;&#x8BE2;&#x5FC5;&#x987B;&#x6301;&#x7EED;&#x5730;&#x5904;&#x7406;&#x89C6;&#x56FE;&#x7684;&#x57FA;&#x7840;&#x8868;&#x7684; changelog stream&#x3002;</li>
+<li>&#x7269;&#x5316;&#x89C6;&#x56FE;&#x662F;&#x6D41; SQL &#x67E5;&#x8BE2;&#x7684;&#x7ED3;&#x679C;&#x3002;</li>
+</ul>
+<h5 id="22&#x3001;&#x52A8;&#x6001;&#x8868;&#x548C;&#x6301;&#x7EED;&#x67E5;&#x8BE2;&#xFF08;dynamic-tables--continuous-queries&#xFF09;">2.2&#x3001;&#x52A8;&#x6001;&#x8868;&#x548C;&#x6301;&#x7EED;&#x67E5;&#x8BE2;&#xFF08;Dynamic Tables &amp; Continuous Queries&#xFF09;</h5>
+<p>&#x52A8;&#x6001;&#x8868;&#x662F; Flink &#x7684; Table API &#x548C; SQL &#x652F;&#x6301;&#x6D41;&#x6570;&#x636E;&#x7684;&#x6838;&#x5FC3;&#x6982;&#x5FF5;&#x3002;&#x4E0E;&#x4EE3;&#x8868;&#x6279;&#x6570;&#x636E;&#x7684;&#x9759;&#x6001;&#x8868;&#x4E0D;&#x540C;&#xFF0C;&#x52A8;&#x6001;&#x8868;&#x968F;&#x7740;&#x65F6;&#x95F4;&#x53D8;&#x5316;&#x3002;&#x4F46;&#x662F;&#x4E0E;&#x9759;&#x6001;&#x6279;&#x5904;&#x7406;&#x8868;&#x76F8;&#x4F3C;&#xFF0C;&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x5BF9;&#x52A8;&#x6001;&#x8868;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#x3002;&#x67E5;&#x8BE2;&#x52A8;&#x6001;&#x8868;&#x4EA7;&#x751F;&#x4E86;&#x6301;&#x7EED;&#x67E5;&#x8BE2;&#x3002;&#x6301;&#x7EED;&#x67E5;&#x8BE2;&#x4ECE;&#x4E0D;&#x7ED3;&#x675F;&#xFF0C;&#x5E76;&#x4E14;&#x4EA7;&#x751F;&#x53E6;&#x4E00;&#x4E2A;&#x52A8;&#x6001;&#x8868;&#x3002;&#x67E5;&#x8BE2;&#x6301;&#x7EED;&#x5730;&#x66F4;&#x65B0;&#x5B83;&#x7684;&#x52A8;&#x6001;&#x7ED3;&#x679C;&#x8868;&#x4EE5;&#x53CD;&#x6620;&#x5B83;&#x7684;&#x8F93;&#x5165;&#x8868;&#x7684;&#x53D8;&#x5316;&#x3002;&#x672C;&#x8D28;&#x4E0A;&#xFF0C;&#x52A8;&#x6001;&#x8868;&#x7684;&#x52A8;&#x6001;&#x67E5;&#x8BE2;&#x4E0E;&#x5B9A;&#x4E49;&#x7269;&#x5316;&#x89C6;&#x56FE;&#x7684;&#x67E5;&#x8BE2;&#x975E;&#x5E38;&#x7C7B;&#x4F3C;&#x3002;</p>
+<p>&#x6301;&#x7EED;&#x67E5;&#x8BE2;&#x8F93;&#x51FA;&#x603B;&#x662F;&#x5728;&#x8BED;&#x4E49;&#x4E0A;&#x7B49;&#x4EF7;&#x4E8E;&#x76F8;&#x540C;&#x67E5;&#x8BE2;&#x4EE5;&#x6279;&#x6A21;&#x5F0F;&#x5728;&#x8F93;&#x5165;&#x8868;&#x5FEB;&#x7167;&#x4E0A;&#x6267;&#x884C;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x4E0B;&#x56FE;&#x5C55;&#x793A;&#x4E86;&#x6D41;&#x3001;&#x52A8;&#x6001;&#x8868;&#x3001;&#x548C;&#x6301;&#x7EED;&#x67E5;&#x8BE2;&#x7684;&#x5173;&#x7CFB;&#xFF1A;</p>
+<p><img src="../assets/stream-query-stream.png" alt="Dynamic tables"></p>
+<ol>
+<li>&#x6D41;&#x8F6C;&#x6362;&#x4E3A;&#x52A8;&#x6001;&#x8868;</li>
+<li>&#x6301;&#x7EED;&#x67E5;&#x8BE2;&#x5728;&#x52A8;&#x6001;&#x8868;&#x4E0A;&#x6267;&#x884C;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x52A8;&#x6001;&#x8868;</li>
+<li>&#x7ED3;&#x679C;&#x52A8;&#x6001;&#x8868;&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x4E2A;&#x6D41;</li>
+</ol>
+<blockquote>
+<p>&#x52A8;&#x6001;&#x8868;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x903B;&#x8F91;&#x6982;&#x5FF5;&#xFF0C;&#x5728;&#x67E5;&#x8BE2;&#x6267;&#x884C;&#x671F;&#x95F4;&#x52A8;&#x6001;&#x8868;&#x4E0D;&#x5FC5;&#xFF08;&#x5B8C;&#x5168;&#x5730;&#xFF09;&#x7269;&#x5316;</p>
+</blockquote>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x5C06;&#x4F7F;&#x7528;&#x6709;&#x5982;&#x4E0B; schema &#x7684;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;&#x6D41;&#x6765;&#x89E3;&#x91CA;&#x52A8;&#x6001;&#x8868;&#x548C;&#x6301;&#x7EED;&#x67E5;&#x8BE2;&#x7684;&#x6982;&#x5FF5;&#xFF1A;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> clicks (
+  <span class="hljs-keyword">user</span>  <span class="hljs-built_in">VARCHAR</span>,     <span class="hljs-comment">-- the name of the user</span>
+  <span class="hljs-keyword">url</span>   <span class="hljs-built_in">VARCHAR</span>,     <span class="hljs-comment">-- the URL that was accessed by the user</span>
+  cTime <span class="hljs-keyword">TIMESTAMP</span>(<span class="hljs-number">3</span>) <span class="hljs-comment">-- the time when the URL was accessed</span>
+) <span class="hljs-keyword">WITH</span> (...);
+</code></pre>
+<h5 id="23&#x3001;&#x57FA;&#x4E8E;&#x6D41;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x8868;&#xFF08;defining-a-table-on-a-stream&#xFF09;">2.3&#x3001;&#x57FA;&#x4E8E;&#x6D41;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x8868;&#xFF08;Defining a Table on a Stream&#xFF09;</h5>
+<p>&#x4F7F;&#x7528;&#x5173;&#x7CFB;&#x6027;&#x67E5;&#x8BE2;&#x5904;&#x7406;&#x6D41;&#x9700;&#x8981;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x4E2A; <code>Table</code>&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x6D41;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x4F1A;&#x88AB;&#x89E3;&#x91CA;&#x4E3A;&#x5BF9;&#x7ED3;&#x679C;&#x8868;&#x7684;&#x4E00;&#x4E2A; <code>INSERT</code> &#x4FEE;&#x6539;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x57FA;&#x4E8E;&#x4E00;&#x4E2A;&#x4EC5; <code>INSERT</code> &#x7684; changelog &#x6D41;&#x6784;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x8868;&#x3002;</p>
+<p>&#x4E0B;&#x56FE;&#x5C55;&#x793A;&#x4E86;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;&#x6D41;&#xFF08;&#x5DE6;&#x4FA7;&#xFF09;&#x662F;&#x5982;&#x4F55;&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x4E2A;&#x8868;&#xFF08;&#x53F3;&#x4FA7;&#xFF09;&#x7684;&#x3002;&#x968F;&#x7740;&#x66F4;&#x591A;&#x7684;&#x8BB0;&#x5F55;&#x63D2;&#x5165;&#x5230;&#x70B9;&#x51FB;&#x6D41;&#x4E2D;&#xFF0C;&#x7ED3;&#x679C;&#x8868;&#x4E5F;&#x662F;&#x6301;&#x7EED;&#x589E;&#x957F;&#x7684;&#x3002;</p>
+<p><img src="../assets/append-mode.png" alt="Append mode"></p>
+<blockquote>
+<p>&#x8981;&#x8BB0;&#x4F4F;&#xFF0C;&#x57FA;&#x4E8E;&#x6D41;&#x5B9A;&#x4E49;&#x7684;&#x8868;&#x672C;&#x8D28;&#x4E0A;&#x4E0D;&#x662F;&#x7269;&#x5316;&#x7684;&#x3002;</p>
+</blockquote>
+<h5 id="231&#x3001;&#x6301;&#x7EED;&#x67E5;&#x8BE2;&#xFF08;continuous-queries&#xFF09;">2.3.1&#x3001;&#x6301;&#x7EED;&#x67E5;&#x8BE2;&#xFF08;Continuous Queries&#xFF09;</h5>
+<p>&#x6301;&#x7EED;&#x67E5;&#x8BE2;&#x5BF9;&#x52A8;&#x6001;&#x8868;&#x8FDB;&#x884C;&#x8FD0;&#x7B97;&#xFF0C;&#x5E76;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x52A8;&#x6001;&#x8868;&#x4F5C;&#x4E3A;&#x7ED3;&#x679C;&#x3002;&#x4E0E;&#x6279;&#x67E5;&#x8BE2;&#x4E0D;&#x540C;&#xFF0C;&#x6301;&#x7EED;&#x67E5;&#x8BE2;&#x4ECE;&#x4E0D;&#x7ED3;&#x675F;&#xFF0C;&#x5E76;&#x4E14;&#x6839;&#x636E;&#x8F93;&#x5165;&#x8868;&#x7684;&#x66F4;&#x65B0;&#x6765;&#x66F4;&#x65B0;&#x7ED3;&#x679C;&#x8868;&#x3002;&#x5728;&#x4EFB;&#x4E00;&#x65F6;&#x95F4;&#x70B9;&#xFF0C;&#x6301;&#x7EED;&#x67E5;&#x8BE2;&#x5728;&#x8BED;&#x4E49;&#x4E0A;&#x7B49;&#x4EF7;&#x4E8E;&#x4EE5;&#x6279;&#x6A21;&#x5F0F;&#x8FD0;&#x884C;&#x4E0E;&#x8F93;&#x5165;&#x8868;&#x5FEB;&#x7167;&#x4E0A;&#x7684;&#x76F8;&#x540C;&#x67E5;&#x8BE2;&#x3002;</p>
+<p><strong>&#x4F8B; 1</strong> &#x57FA;&#x4E8E; <code>user</code> &#x5C5E;&#x6027;&#x5BF9;&#x8868; <code>clicks</code> &#x8FDB;&#x884C;&#x5206;&#x7EC4;&#xFF0C;&#x7EDF;&#x8BA1;&#x8BBF;&#x95EE;&#x7684; URLs &#x7684;&#x6570;&#x91CF;&#x3002;&#x4E0B;&#x56FE;&#x5C55;&#x793A;&#x4E86;&#x968F;&#x7740; <code>clicks</code> &#x8868;&#x4E2D;&#x6570;&#x636E;&#x8BB0;&#x5F55;&#x7684;&#x589E;&#x52A0;&#x67E5;&#x8BE2;&#x662F;&#x5982;&#x4F55;&#x8FD0;&#x7B97;&#x7684;&#x3002;</p>
+<p><img src="../assets/query-groupBy-cnt.png" alt="Continuous Non-Windowed Query"></p>
+<p>&#x5F53;&#x67E5;&#x4E0B;&#x542F;&#x52A8;&#x65F6;&#xFF0C;<code>clicks</code> &#x8868;&#xFF08;&#x5DE6;&#x4FA7;&#xFF09;&#x662F;&#x7A7A;&#x7684;&#x3002;&#x5F53;&#x63D2;&#x5165;&#x7B2C;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x65F6;&#xFF0C;&#x67E5;&#x8BE2;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x8868;&#x3002;&#x7B2C;&#x4E00;&#x6761;&#x8BB0;&#x5F55; <code>[Mary, ./home]</code> &#x5230;&#x8FBE;&#xFF0C;&#x7ED3;&#x679C;&#x8868;&#xFF08;&#x53F3;&#x4FA7;&#xFF0C;&#x7B2C;&#x4E00;&#x884C;&#xFF09;&#x7531;&#x4E00;&#x884C; <code>[Mary, 1]</code> &#x6784;&#x6210;&#x3002;&#x5F53;&#x7B2C;&#x4E8C;&#x884C; <code>[Bob, ./cart]</code> &#x63D2;&#x5165;&#x5230; <code>clicks</code> &#x8868;&#x65F6;&#xFF0C;&#x67E5;&#x8BE2;&#x4F1A;&#x66F4;&#x65B0;&#x7ED3;&#x679C;&#x8868;&#x5E76;&#x63D2;&#x5165;&#x65B0;&#x7684;&#x4E00;&#x884C; <code>[Bob, 1]</code>&#x3002;&#x7B2C;&#x4E09;&#x884C;&#xFF0C;<code>[Mary, ./prod?id=1]</code> &#x5BFC;&#x81F4;&#x5BF9;&#x5DF2;&#x7ECF;&#x8BA1;&#x7B97;&#x8FC7;&#x7684;&#x7ED3;&#x679C;&#x7684;&#x66F4;&#x65B0;&#x2014;&#x2014;<code>[Mary, 1]</code> &#x88AB;&#x66F4;&#x65B0;&#x4E3A; <code>[Mary, 2]</code>&#x3002;&#x6700;&#x540E;&#xFF0C;&#x5F53;&#x7B2C;&#x56DB;&#x884C;&#x63D2;&#x5165;&#x5230; <code>clicks</code> &#x8868;&#x65F6;&#xFF0C;&#x67E5;&#x8BE2;&#x5F80;&#x7ED3;&#x679C;&#x8868;&#x63D2;&#x5165;&#x7B2C;&#x4E09;&#x884C; <code>[Liz, 1]</code>&#x3002;</p>
+<p><strong>&#x4F8B; 2</strong> &#x4E0E; &#x4F8B; 1 &#x7C7B;&#x4F3C;&#xFF0C;&#x591A;&#x4E86;&#x4E00;&#x4E2A;&#x6BCF;&#x5C0F;&#x65F6;&#x6EDA;&#x52A8;&#x7684;&#x7A97;&#x53E3;&#x4F5C;&#x4E3A;&#x5206;&#x7EC4;&#x6761;&#x4EF6;&#x3002;&#x4E0B;&#x56FE;&#x5C55;&#x73B0;&#x4E86;&#x4E0D;&#x540C;&#x65F6;&#x95F4;&#x70B9;&#x7684;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x6765;&#x5C06;&#x52A8;&#x6001;&#x8868;&#x53D8;&#x5316;&#x7684;&#x672C;&#x8D28;&#x5C55;&#x793A;&#x51FA;&#x6765;&#x3002;</p>
+<p><img src="../assets/query-groupBy-window-cnt.png" alt="Continuous Group-Window Query"></p>
+<p>&#x67E5;&#x8BE2;&#x6BCF;&#x4E2A;&#x5C0F;&#x65F6;&#x6301;&#x7EED;&#x5730;&#x66F4;&#x65B0;&#x7ED3;&#x679C;&#x8868;&#x3002;&#x5728; <code>12:00:00</code> &#x5230; <code>12:59:59</code> &#x4E4B;&#x95F4; <code>clicks</code> &#x8868;&#x5305;&#x542B;&#x56DB;&#x884C;&#x3002;&#x6839;&#x636E;&#x8F93;&#x5165;&#xFF0C;&#x67E5;&#x8BE2;&#x8BA1;&#x7B97;&#x51FA;&#x4E24;&#x6761;&#x7ED3;&#x679C;&#xFF08;&#x6BCF;&#x4E2A; <code>user</code> &#x4E00;&#x6761;&#xFF09;&#x5E76;&#x63D2;&#x5165;&#x5230;&#x7ED3;&#x679C;&#x8868;&#x3002;&#x5BF9;&#x4E8E;&#x4E0B;&#x4E00;&#x4E2A;&#x7A97;&#x53E3; <code>13:00:00</code> &#x81F3; <code>13:59:59</code>&#xFF0C;<code>clicks</code> &#x8868;&#x5305;&#x542B;&#x4E09;&#x884C;&#xFF0C;&#x7ED3;&#x679C;&#x662F;&#x53C8;&#x6709;&#x4E24;&#x6761;&#x8BB0;&#x5F55;&#x63D2;&#x5165;&#x5230;&#x7ED3;&#x679C;&#x8868;&#x3002;&#x968F;&#x7740;&#x65F6;&#x95F4;&#x53D8;&#x5316;&#xFF0C;&#x7ED3;&#x679C;&#x8868; <code>clicks</code> &#x4F1A;&#x88AB;&#x63D2;&#x5165;&#x66F4;&#x591A;&#x7684;&#x8BB0;&#x5F55;&#x3002;</p>
+<h5 id="232&#x3001;&#x66F4;&#x65B0;&#x548C;&#x8FFD;&#x52A0;&#x67E5;&#x8BE2;&#xFF08;update-and-append-queries&#xFF09;">2.3.2&#x3001;&#x66F4;&#x65B0;&#x548C;&#x8FFD;&#x52A0;&#x67E5;&#x8BE2;&#xFF08;Update and Append Queries&#xFF09;</h5>
+<p>&#x524D;&#x9762;&#x7684;&#x4E24;&#x4E2A;&#x4F8B;&#x5B50;&#x5C3D;&#x7BA1;&#x5F88;&#x76F8;&#x4F3C;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x4E00;&#x4E2A;&#x5173;&#x952E;&#x65B9;&#x9762;&#x8FD8;&#x662F;&#x4E0D;&#x540C;&#x7684;&#xFF1A;</p>
+<ul>
+<li>&#x4F8B; 1 &#x4F1A;&#x66F4;&#x65B0;&#x4E4B;&#x524D;&#x8F93;&#x51FA;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x5373;&#xFF0C;&#x5B9A;&#x4E49;&#x7ED3;&#x679C;&#x8868;&#x7684; changelog &#x6D41;&#x5305;&#x542B;&#x4E86; <code>INSERT</code> &#x548C; <code>UPDATE</code> &#x53D8;&#x5316;&#x3002;</li>
+<li>&#x4F8B; 2 &#x53EA;&#x4F1A;&#x5F80;&#x7ED3;&#x679C;&#x8868;&#x8FFD;&#x52A0;&#x6570;&#x636E;&#xFF0C;&#x5373;&#xFF0C;&#x7ED3;&#x679C;&#x6807;&#x7684; changelog &#x6D41;&#x4EC5;&#x5305;&#x542B; <code>INSERT</code> &#x53D8;&#x5316;&#x3002;</li>
+</ul>
+<p>&#x67E5;&#x8BE2;&#x4EA7;&#x751F;&#x4EC5;&#x8FFD;&#x52A0;&#x7684;&#x8868;&#xFF08;append-only table&#xFF09;&#x8FD8;&#x662F;&#x66F4;&#x65B0;&#x7684;&#x8868;&#xFF08;updated table&#xFF09;&#x6709;&#x5982;&#x4E0B;&#x542B;&#x4E49;&#xFF1A;</p>
+<ul>
+<li>&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#x6539;&#x53D8;&#x7684;&#x67E5;&#x8BE2;&#x901A;&#x5E38;&#x5FC5;&#x987B;&#x7EF4;&#x6301;&#x66F4;&#x591A;&#x7684;&#x72B6;&#x6001;&#x3002;</li>
+<li>&#x4EC5;&#x8FFD;&#x52A0;&#x8868;&#x5230;&#x6D41;&#x7684;&#x8F6C;&#x6362;&#x548C;&#x66F4;&#x65B0;&#x8868;&#x5230;&#x6D41;&#x7684;&#x8F6C;&#x6362;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x3002;</li>
+</ul>
+<h5 id="233&#x3001;&#x67E5;&#x8BE2;&#x9650;&#x5236;&#xFF08;query-restrictions&#xFF09;">2.3.3&#x3001;&#x67E5;&#x8BE2;&#x9650;&#x5236;&#xFF08;Query Restrictions&#xFF09;</h5>
+<p>&#x8BB8;&#x591A;&#xFF08;&#x4F46;&#x662F;&#x4E0D;&#x662F;&#x6240;&#x6709;&#xFF09;&#x8BED;&#x4E49;&#x4E0A;&#x5408;&#x6CD5;&#x7684;&#x67E5;&#x8BE2;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x5BF9;&#x6D41;&#x7684;&#x6301;&#x7EED;&#x67E5;&#x8BE2;&#x8FD0;&#x884C;&#x3002;&#x67D0;&#x4E9B;&#x67E5;&#x8BE2;&#x8FD0;&#x884C;&#x8D77;&#x6765;&#x5F00;&#x9500;&#x592A;&#x5927;&#xFF0C;&#x6BD4;&#x5982;&#x9700;&#x8981;&#x7EF4;&#x62A4;&#x7684;&#x72B6;&#x6001;&#x5927;&#x5C0F;&#x592A;&#x5927;&#x6216;&#x8005;&#x8FD0;&#x7B97;&#x66F4;&#x65B0;&#xFF08;computing updates&#xFF09;&#x5F00;&#x9500;&#x592A;&#x5927;&#x3002;</p>
+<ul>
+<li><p><strong>&#x72B6;&#x6001;&#x5927;&#x5C0F;&#xFF08;State Size&#xFF09;</strong>&#xFF1A;&#x6301;&#x7EED;&#x67E5;&#x8BE2;&#x662F;&#x5728;&#x65E0;&#x9650;&#x6D41;&#x4E0A;&#x8FD0;&#x884C;&#x7684;&#xFF0C;&#x901A;&#x5E38;&#x53EF;&#x80FD;&#x8FD0;&#x884C;&#x51E0;&#x5468;&#x6216;&#x51E0;&#x4E2A;&#x6708;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6301;&#x7EED;&#x67E5;&#x8BE2;&#x5904;&#x7406;&#x7684;&#x6570;&#x636E;&#x603B;&#x91CF;&#x53EF;&#x80FD;&#x975E;&#x5E38;&#x5DE8;&#x5927;&#x3002;&#x5FC5;&#x987B;&#x66F4;&#x65B0;&#x4E4B;&#x524D;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x7684;&#x67E5;&#x8BE2;&#x9700;&#x8981;&#x7EF4;&#x62A4;&#x6240;&#x6709;&#x8F93;&#x51FA;&#x7684;&#x884C;&#x624D;&#x80FD;&#x5BF9;&#x5B83;&#x4EEC;&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x4F8B; 1 &#x7684;&#x67E5;&#x8BE2;&#x9700;&#x8981;&#x4FDD;&#x5B58;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x7684; URL &#x6570;&#x91CF;&#xFF0C;&#x7136;&#x540E;&#x5F53;&#x8F93;&#x5165;&#x8868;&#x6536;&#x5230;&#x65B0;&#x7684;&#x884C;&#x65F6;&#x5C06;&#x65B0;&#x7684;&#x7ED3;&#x679C;&#x8F93;&#x51FA;&#x3002;&#x5982;&#x679C;&#x4EC5;&#x4EC5;&#x8FFD;&#x8E2A;&#x6CE8;&#x518C;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x7EF4;&#x62A4;&#x7684;&#x8BB0;&#x5F55;&#x6570;&#x91CF;&#x4E0D;&#x4F1A;&#x592A;&#x5927;&#xFF1B;&#x53EF;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x672A;&#x6CE8;&#x518C;&#x7528;&#x6237;&#x6709;&#x552F;&#x4E00;&#x7684;&#x7528;&#x6237;&#x540D;&#xFF0C;&#x9700;&#x8981;&#x7EF4;&#x62A4;&#x7684;&#x8BB0;&#x5F55;&#x6570;&#x91CF;&#x5C31;&#x4F1A;&#x968F;&#x7740;&#x65F6;&#x95F4;&#x589E;&#x957F;&#x5E76;&#x4E14;&#x53EF;&#x80FD;&#x6700;&#x540E;&#x4F1A;&#x5BFC;&#x81F4;&#x67E5;&#x8BE2;&#x5931;&#x8D25;&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">user</span>, <span class="hljs-keyword">COUNT</span>(<span class="hljs-keyword">url</span>)
+<span class="hljs-keyword">FROM</span> clicks
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> <span class="hljs-keyword">user</span>;
+</code></pre>
+</li>
+<li><p><strong>&#x8FD0;&#x7B97;&#x66F4;&#x65B0;&#xFF08;Computing Updates&#xFF09;</strong>&#xFF1A;&#x5BF9;&#x4E8E;&#x67D0;&#x4E9B;&#x67E5;&#x8BE2;&#xFF0C;&#x5373;&#x4F7F;&#x4EC5;&#x4EC5;&#x8F93;&#x5165;&#x8BB0;&#x5F55;&#x66F4;&#x65B0;&#x6216;&#x63D2;&#x5165;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#xFF0C;&#x4E5F;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x8FD0;&#x7B97;&#x5E76;&#x66F4;&#x65B0;&#x5DF2;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x7684;&#x4E00;&#x5927;&#x90E8;&#x5206;&#x3002;&#x8FD9;&#x4E9B;&#x67E5;&#x8BE2;&#x4E0D;&#x592A;&#x9002;&#x5408;&#x4F5C;&#x4E3A;&#x6301;&#x7EED;&#x67E5;&#x8BE2;&#x8FD0;&#x884C;&#x3002;&#x6BD4;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x67E5;&#x8BE2;&#xFF0C;&#x6839;&#x636E;&#x7528;&#x6237;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x70B9;&#x51FB;&#x7684;&#x65F6;&#x95F4;&#x8BA1;&#x7B97;&#x7528;&#x6237;&#x7684; <code>RANK</code>&#x3002;&#x53EA;&#x8981; <code>clicks</code> &#x8868;&#x6536;&#x5230;&#x4E00;&#x6761;&#x65B0;&#x7684;&#x8BB0;&#x5F55;&#xFF0C;&#x7528;&#x6237;&#x7684; <code>lastAction</code> &#x5C31;&#x4F1A;&#x66F4;&#x65B0;&#x5E76;&#x8BA1;&#x7B97;&#x4E00;&#x4E2A;&#x65B0;&#x7684; <code>RANK</code>&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x4E24;&#x6761;&#x4E0D;&#x53EF;&#x80FD;&#x6709;&#x76F8;&#x540C;&#x7684; <code>RANK</code>&#xFF0C;&#x6240;&#x6709; <code>RANK</code> &#x8F83;&#x5C0F;&#x7684;&#x8BB0;&#x5F55;&#x90FD;&#x9700;&#x8981;&#x88AB;&#x66F4;&#x65B0;&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">user</span>, <span class="hljs-keyword">RANK</span>() <span class="hljs-keyword">OVER</span> (<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> lastAction)
+<span class="hljs-keyword">FROM</span> (
+  <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">user</span>, <span class="hljs-keyword">MAX</span>(cTime) <span class="hljs-keyword">AS</span> lastAction <span class="hljs-keyword">FROM</span> clicks <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> <span class="hljs-keyword">user</span>
+);
+</code></pre>
+</li>
+</ul>
+<p><a href="https://nightlies.apache.org/flink/flink-docs-release-1.15/docs/dev/table/config/" target="_blank">&#x67E5;&#x8BE2;&#x914D;&#x7F6E;</a> &#x4ECB;&#x7ECD;&#x4E86;&#x63A7;&#x5236;&#x6301;&#x7EED;&#x67E5;&#x8BE2;&#x8FD0;&#x884C;&#x7684;&#x53C2;&#x6570;&#x3002;&#x67D0;&#x4E9B;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x4EE5;&#x7EF4;&#x62A4;&#x7684;&#x72B6;&#x6001;&#x7684;&#x5927;&#x5C0F;&#x6765;&#x6362;&#x53D6;&#x7ED3;&#x679C;&#x7684;&#x7CBE;&#x786E;&#x3002;</p>
+<h5 id="24&#x3001;&#x8868;&#x5230;&#x6D41;&#x7684;&#x8F6C;&#x6362;">2.4&#x3001;&#x8868;&#x5230;&#x6D41;&#x7684;&#x8F6C;&#x6362;</h5>
+<p>&#x52A8;&#x6001;&#x8868;&#x53EF;&#x4EE5;&#x50CF;&#x5E38;&#x89C4;&#x7684;&#x6570;&#x636E;&#x5E93;&#x8868;&#x4E00;&#x6837;&#x88AB;&#x6301;&#x7EED;&#x5730; <code>INSERT</code>&#x3001;<code>UPDATE</code>&#x3001;<code>DELETE</code>&#x3002;&#x5F53;&#x5C06;&#x4E00;&#x4E2A;&#x52A8;&#x6001;&#x8868;&#x8F6C;&#x6362;&#x4E3A;&#x6D41;&#x6216;&#x8005;&#x5199;&#x5230;&#x5916;&#x90E8;&#x7CFB;&#x7EDF;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5BF9;&#x8FD9;&#x4E9B;&#x53D8;&#x5316;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#xFF08;encode&#xFF09;&#x3002;Flink &#x7684; Table API &#x548C; SQL &#x652F;&#x6301;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#x7F16;&#x7801;&#x52A8;&#x6001;&#x8868;&#x7684;&#x53D8;&#x5316;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#xFF1A;</p>
+<ul>
+<li><strong>Append-only stream</strong>&#xFF1A;&#x5BF9;&#x4E8E;&#x53EA;&#x4F1A;&#x88AB; <code>INSERT</code> &#x53D8;&#x5316;&#x4FEE;&#x6539;&#x7684;&#x52A8;&#x6001;&#x8868;&#xFF0C;&#x901A;&#x8FC7;&#x8F93;&#x51FA;&#x63D2;&#x5165;&#x7684;&#x884C;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x4F4D;&#x6D41;&#x3002;</li>
+<li><strong>Retract stream</strong>&#xFF1A;&#x64A4;&#x56DE;&#x6D41;&#x6709;&#x4E24;&#x79CD;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#xFF0C;<em>&#x589E;&#x52A0;&#x6D88;&#x606F;&#xFF08;add messages&#xFF09;</em> &#x548C; <em>&#x64A4;&#x56DE;&#x6D88;&#x606F;&#xFF08;retract messages&#xFF09;</em>&#x3002;&#x52A8;&#x6001;&#x8868;&#x8F6C;&#x6362;&#x4E3A;&#x64A4;&#x56DE;&#x6D41;&#x65F6;&#xFF0C;<code>INSERT</code> &#x53D8;&#x5316;&#x88AB;&#x7F16;&#x7801;&#x4E3A;&#x589E;&#x52A0;&#x6D88;&#x606F;&#xFF0C;<code>DELETE</code> &#x53D8;&#x5316;&#x88AB;&#x7F16;&#x7801;&#x4E3A;&#x64A4;&#x56DE;&#x6D88;&#x606F;&#xFF0C; <code>UPDATE</code> &#x53D8;&#x5316;&#x88AB;&#x7F16;&#x7801;&#x4E3A;&#x4E00;&#x4E2A;&#x66F4;&#x65B0;&#xFF08;&#x4E4B;&#x524D;&#xFF09;&#x8BB0;&#x5F55;&#x7684;&#x64A4;&#x56DE;&#x6D88;&#x606F;&#x548C;&#x4E00;&#x4E2A;&#x66F4;&#x65B0;&#xFF08;&#x65B0;&#x7684;&#xFF09;&#x8BB0;&#x5F55;&#x7684;&#x589E;&#x52A0;&#x6D88;&#x606F;&#xFF08;additional message&#xFF0C;&#x5E94;&#x8BE5;&#x7B49;&#x4EF7;&#x4E8E; add message&#xFF09;&#x3002;&#x4E0B;&#x56FE;&#x5C55;&#x793A;&#x4E86;&#x52A8;&#x6001;&#x8868;&#x5230;&#x64A4;&#x56DE;&#x6D41;&#x7684;&#x8F6C;&#x6362;&#x3002;<img src="../assets/undo-redo-mode.png" alt="Dynamic tables"></li>
+<li><strong>Upsert stream</strong>&#xFF1A;&#x4E0A;&#x63D2;&#x6D41;&#x662F;&#x6709; <em>&#x4E0A;&#x63D2;&#x6D88;&#x606F;&#xFF08;upsert messages&#xFF09;</em> &#x548C; <em>&#x5220;&#x9664;&#x6D88;&#x606F;&#xFF08;delete messages&#xFF09;</em> &#x4E24;&#x79CD;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x7684;&#x6D41;&#x3002;&#x88AB;&#x8F6C;&#x6362;&#x4E3A;&#x4E0A;&#x63D2;&#x6D41;&#x7684;&#x52A8;&#x6001;&#x8868;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#xFF08;&#x53EF;&#x80FD;&#x662F;&#x7EC4;&#x5408;&#x7684;&#xFF09;&#x552F;&#x4E00;&#x952E;&#xFF08;unique key&#xFF09;&#x3002;&#x5177;&#x6709;&#x552F;&#x4E00;&#x952E;&#x7684;&#x52A8;&#x6001;&#x8868;&#x88AB;&#x8F6C;&#x6362;&#x4E3A;&#x6D41;&#x65F6;&#xFF0C;<code>INSERT</code> &#x548C; <code>UPDATE</code> &#x53D8;&#x5316;&#x88AB;&#x7F16;&#x7801;&#x4E3A;&#x4E0A;&#x63D2;&#x6D88;&#x606F;&#xFF0C;<code>DELETE</code> &#x53D8;&#x5316;&#x88AB;&#x7F16;&#x7801;&#x4E3A;&#x5220;&#x9664;&#x6D88;&#x606F;&#x3002;&#x6D41;&#x6D88;&#x8D39;&#x7B97;&#x5B50;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x552F;&#x4E00;&#x952E;&#x5C5E;&#x6027;&#x4EE5;&#x6B63;&#x786E;&#x7684;&#x6D88;&#x8D39;&#x6D88;&#x606F;&#x3002;&#x4E0E;&#x64A4;&#x56DE;&#x6D41;&#x7684;&#x4E3B;&#x8981;&#x4E0D;&#x540C;&#x662F; <code>UPDATE</code> &#x53D8;&#x5316;&#x88AB;&#x7F16;&#x7801;&#x4E3A;&#x4E00;&#x6761;&#x6D88;&#x606F;&#x6240;&#x4EE5;&#x66F4;&#x9AD8;&#x6548;&#x3002;&#x4E0B;&#x56FE;&#x5C55;&#x793A;&#x4E86;&#x52A8;&#x6001;&#x8868;&#x5230;&#x4E0A;&#x63D2;&#x6D41;&#x7684;&#x8F6C;&#x6362;&#x3002;<img src="https://nightlies.apache.org/flink/flink-docs-release-1.15/fig/table-streaming/redo-mode.png" alt="Dynamic tables"></li>
+</ul>
+<p>&#x5C06;&#x52A8;&#x6001;&#x8868;&#x8F6C;&#x6362;&#x4E3A; <code>DataStream</code> &#x7684; API&#xFF0C;&#x5728;&#x4E4B;&#x524D;&#x7684;&#x7AE0;&#x8282; <a href="https://nightlies.apache.org/flink/flink-docs-release-1.15/docs/dev/table/common/#convert-a-table-into-a-datastream" target="_blank">&#x6982;&#x5FF5;&#x548C;&#x901A;&#x7528; API</a> &#x4E2D;&#x5DF2;&#x7ECF;&#x4ECB;&#x7ECD;&#x8FC7;&#x3002;&#x8981;&#x6CE8;&#x610F;&#xFF0C;&#x5F53;&#x5C06;&#x52A8;&#x6001;&#x8868;&#x8F6C;&#x6362;&#x4E3A; <code>DataStream</code> &#x65F6;&#x53EA;&#x652F;&#x6301;&#x8FFD;&#x52A0;&#x6D41;&#x548C;&#x64A4;&#x56DE;&#x6D41;&#x3002;&#x5C06;&#x52A8;&#x6001;&#x8868;&#x53D1;&#x51FA;&#x5230;&#x5916;&#x90E8;&#x7CFB;&#x7EDF;&#x7684; <code>TableSink</code> &#x63A5;&#x53E3;&#x5C06;&#x5728; <a href="https://nightlies.apache.org/flink/flink-docs-release-1.15/docs/dev/table/sourcessinks/#dynamic-table-sink" target="_blank">&#x8868;&#x6E90;&#x548C;&#x8868;&#x6C47;</a> &#x4E00;&#x7AE0;&#x4ECB;&#x7ECD;&#x3002;</p>
+<h4 id="3&#x3001;&#x65F6;&#x95F4;&#x5C5E;&#x6027;">3&#x3001;&#x65F6;&#x95F4;&#x5C5E;&#x6027;</h4>
+<p>Flink &#x53EF;&#x4EE5;&#x57FA;&#x4E8E;&#x4E0D;&#x540C;&#x7684;&#x65F6;&#x95F4;&#x6982;&#x5FF5;&#x5904;&#x7406;&#x6570;&#x636E;&#xFF1A;&#x5904;&#x7406;&#x4E8B;&#x4EF6;&#xFF08;Processing time&#xFF09;&#x548C;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#xFF08;Event time&#xFF09;&#x3002;</p>
+<h5 id="31&#x3001;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x7B80;&#x4ECB;">3.1&#x3001;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x7B80;&#x4ECB;</h5>
+<p>&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x662F;&#x6BCF;&#x4E2A;&#x8868; schema &#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;&#x5B83;&#x4EEC;&#x662F;&#x5728;&#x901A;&#x8FC7; <code>CREATE TABLE</code> DDL &#x6216; <code>DataStream</code> &#x521B;&#x5EFA;&#x8868;&#x65F6;&#x5B9A;&#x4E49;&#x7684;&#x3002;&#x4E00;&#x65E6;&#x5B9A;&#x4E49;&#x4E86;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;&#x6765;&#x5F15;&#x7528;&#xFF0C;&#x5E76;&#x53EF;&#x4EE5;&#x5728;&#x57FA;&#x4E8E;&#x65F6;&#x95F4;&#x7684;&#x64CD;&#x4F5C;&#x4E2D;&#x4F7F;&#x7528;&#x3002;&#x53EA;&#x8981;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x4E0D;&#x88AB;&#x4FEE;&#x6539;&#xFF0C;&#x53EA;&#x662F;&#x7B80;&#x5355;&#x5730;&#x4ECE;&#x67E5;&#x8BE2;&#x7684;&#x4E00;&#x4E2A;&#x90E8;&#x5206;&#x8F6C;&#x79FB;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x90E8;&#x5206;&#xFF0C;&#x5B83;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x6709;&#x6548;&#x7684;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x3002;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x884C;&#x4E3A;&#x4E0E;&#x5E38;&#x89C4;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x7C7B;&#x4F3C;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x8FD0;&#x7B97;&#x3002;&#x5F53;&#x5728;&#x8FD0;&#x7B97;&#x4E2D;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x4F1A;&#x88AB;&#x7269;&#x5316;&#x5E76;&#x4F5C;&#x4E3A;&#x6807;&#x51C6;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x666E;&#x901A;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x4E0D;&#x80FD;&#x7528;&#x6765;&#x66FF;&#x6362;&#x6216;&#x8005;&#x8F6C;&#x6362;&#x4E3A;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x3002;</p>
+<h5 id="32&#x3001;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;">3.2&#x3001;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;</h5>
+<p>&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5141;&#x8BB8;&#x8868;&#x7ED3;&#x6784;&#x57FA;&#x4E8E;&#x6BCF;&#x6761;&#x8BB0;&#x5F55;&#x4E2D;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x6765;&#x4EA7;&#x751F;&#x7ED3;&#x679C;&#xFF0C;&#x5373;&#x4F7F;&#x8BB0;&#x5F55;&#x987A;&#x5E8F;&#x6DF7;&#x4E71;&#x6216;&#x8005;&#x6709;&#x8FDF;&#x5230;&#x4E8B;&#x4EF6;&#xFF0C;&#x4E5F;&#x80FD;&#x4EA7;&#x751F;&#x4E00;&#x81F4;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x5F53;&#x4ECE;&#x6301;&#x4E45;&#x6027;&#x5B58;&#x50A8;&#x4E2D;&#x8BFB;&#x53D6;&#x8BB0;&#x5F55;&#x65F6;&#xFF0C;&#x5B83;&#x8FD8;&#x80FD;&#x786E;&#x4FDD;&#x8868;&#x7A0B;&#x5E8F;&#x7ED3;&#x679C;&#x7684;&#x53EF;&#x91CD;&#x64AD;&#x6027;&#x3002;</p>
+<p>&#x6B64;&#x5916;&#xFF0C;&#x5C31;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x800C;&#x8A00;&#xFF0C;&#x6279;&#x73AF;&#x5883;&#x548C;&#x6D41;&#x73AF;&#x5883;&#x4E2D;&#x7684;&#x8868;&#x7A0B;&#x5E8F;&#x8BED;&#x6CD5;&#x662F;&#x7EDF;&#x4E00;&#x7684;&#x3002;&#x6D41;&#x73AF;&#x5883;&#x4E2D;&#x7684;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x662F;&#x6279;&#x73AF;&#x5883;&#x4E2D;&#x884C;&#x7684;&#x5E38;&#x89C4;&#x5217;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x5904;&#x7406;&#x6D41;&#x4E2D;&#x7684;&#x4E71;&#x5E8F;&#x4E8B;&#x4EF6;&#x3001;&#x533A;&#x5206;&#x51C6;&#x65F6;&#x548C;&#x8FDF;&#x5230;&#x4E8B;&#x4EF6;&#xFF0C;Flink &#x9700;&#x8981;&#x77E5;&#x9053;&#x6BCF;&#x884C;&#x7684;&#x65F6;&#x95F4;&#x6233;&#xFF0C;and it also needs regular indications of how far along in event time the processing has processed so far(via so-called watermarks).</p>
+<p>&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x5728; <code>CREATE</code> &#x8868;&#x7684; DDL &#x4E2D;&#x5B9A;&#x4E49;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728; DataStream &#x5230;&#x8868;&#x7684;&#x8F6C;&#x6362;&#x4E2D;&#x5B9A;&#x4E49;&#x3002;</p>
+<h5 id="321&#x3001;&#x5728;-ddl-&#x4E2D;&#x5B9A;&#x4E49;">3.2.1&#x3001;&#x5728; DDL &#x4E2D;&#x5B9A;&#x4E49;</h5>
+<p>&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x662F;&#x5728; <code>CREATE</code> &#x8868;&#x7684; DDL &#x4E2D;&#xFF0C;&#x7528;&#x4E00;&#x4E2A; <code>WATERMARK</code> &#x8BED;&#x53E5;&#x6765;&#x5B9A;&#x4E49;&#x7684;&#x3002;&#x6C34;&#x5370;&#x8BED;&#x53E5;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5B57;&#x6BB5;&#x6C34;&#x5370;&#x751F;&#x6210;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x5B83;&#x5C06;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5B57;&#x6BB5;&#x6807;&#x8BB0;&#x4E3A;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x3002;&#x6C34;&#x5370;&#x8BED;&#x53E5;&#x548C;&#x6C34;&#x5370;&#x7B56;&#x7565;&#x7684;&#x8BE6;&#x60C5;&#x53C2;&#x8003; <a href="https://nightlies.apache.org/flink/flink-docs-release-1.15/docs/dev/table/sql/create/#create-table" target="_blank">CREATE TABLE DDL</a>&#x3002;</p>
+<p>Flink &#x652F;&#x6301;&#x57FA;&#x4E8E; TIMESTAMP &#x5217;&#x548C; TIMESTAMP_LIZ &#x5217;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x3002;&#x5982;&#x679C;&#x6E90;&#x4E2D;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x6570;&#x636E;&#x662F;&#x8868;&#x793A;&#x4E3A;&#x5E74;-&#x6708;-&#x65E5;-&#x65F6;-&#x5206;-&#x79D2;&#x5F62;&#x5F0F;&#x2014;&#x2014;&#x901A;&#x5E38;&#x662F;&#x6CA1;&#x6709;&#x65F6;&#x533A;&#x4FE1;&#x606F;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;2020-05-20 22:20:40.567&#xFF0C;&#x90A3;&#x4E48;&#x5EFA;&#x8BAE;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x4E3A;&#x4E00;&#x4E2A; TIMESTAMP &#x5217;&#xFF1A;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> user_actions (
+  user_name <span class="hljs-keyword">STRING</span>,
+  <span class="hljs-keyword">data</span> <span class="hljs-keyword">STRING</span>,
+  user_action_time <span class="hljs-keyword">TIMESTAMP</span>(<span class="hljs-number">3</span>),
+  <span class="hljs-comment">-- declare user_action_time as event time attribute and use 5 seconds delayed watermark strategy</span>
+  WATERMARK <span class="hljs-keyword">FOR</span> user_action_time <span class="hljs-keyword">AS</span> user_action_time - <span class="hljs-built_in">INTERVAL</span> <span class="hljs-string">&apos;5&apos;</span> <span class="hljs-keyword">SECOND</span>
+) <span class="hljs-keyword">WITH</span> (
+  ...
+);
+
+<span class="hljs-keyword">SELECT</span> TUMBLE_START(user_action_time, <span class="hljs-built_in">INTERVAL</span> <span class="hljs-string">&apos;10&apos;</span> <span class="hljs-keyword">MINUTE</span>), <span class="hljs-keyword">COUNT</span>(<span class="hljs-keyword">DISTINCT</span> user_name)
+<span class="hljs-keyword">FROM</span> user_actions
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> TUMBLE(user_action_time, <span class="hljs-built_in">INTERVAL</span> <span class="hljs-string">&apos;10&apos;</span> <span class="hljs-keyword">MINUTE</span>);
+</code></pre>
+<p>&#x5982;&#x679C;&#x6E90;&#x4E2D;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x6570;&#x636E;&#x662F;&#x7531;&#x4E00;&#x4E2A;&#x7EAA;&#x5143;&#x65F6;&#x95F4;&#xFF08;epoch time&#xFF09;&#x8868;&#x793A;&#x7684;&#x2014;&#x2014;&#x901A;&#x5E38;&#x662F;&#x4E00;&#x4E2A; long &#x503C;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;1618989564564&#xFF0C;&#x90A3;&#x4E48;&#x63A8;&#x8350;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x4E3A;&#x4E00;&#x4E2A; TIMESTAMP_LIZ &#x5217;&#xFF1A;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> user_actions (
+  user_name <span class="hljs-keyword">STRING</span>,
+  <span class="hljs-keyword">data</span> <span class="hljs-keyword">STRING</span>,
+  ts <span class="hljs-built_in">BIGINT</span>,
+  time_ltz <span class="hljs-keyword">AS</span> TO_TIMESTAMP_LTZ(ts, <span class="hljs-number">3</span>),
+  <span class="hljs-comment">-- declare time_ltz as event time attribute and use 5 seconds delayed watermark strategy</span>
+  WATERMARK <span class="hljs-keyword">FOR</span> time_ltz <span class="hljs-keyword">AS</span> time_ltz - <span class="hljs-built_in">INTERVAL</span> <span class="hljs-string">&apos;5&apos;</span> <span class="hljs-keyword">SECOND</span>
+) <span class="hljs-keyword">WITH</span> (
+  ...
+);
+
+<span class="hljs-keyword">SELECT</span> TUMBLE_START(time_ltz, <span class="hljs-built_in">INTERVAL</span> <span class="hljs-string">&apos;10&apos;</span> <span class="hljs-keyword">MINUTE</span>), <span class="hljs-keyword">COUNT</span>(<span class="hljs-keyword">DISTINCT</span> user_name)
+<span class="hljs-keyword">FROM</span> user_actions
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> TUMBLE(time_ltz, <span class="hljs-built_in">INTERVAL</span> <span class="hljs-string">&apos;10&apos;</span> <span class="hljs-keyword">MINUTE</span>);
+</code></pre>
+<h5 id="322&#x3001;&#x5728;-datastream-&#x5230;-table-&#x8F6C;&#x6362;&#x671F;&#x95F4;&#x5B9A;&#x4E49;">3.2.2&#x3001;&#x5728; DataStream &#x5230; Table &#x8F6C;&#x6362;&#x671F;&#x95F4;&#x5B9A;&#x4E49;</h5>
+<p>&#x5F53;&#x8F6C;&#x6362; <code>DataStream</code> &#x4E3A;&#x8868;&#x65F6;&#xFF0C;&#x5728; schema &#x5B9A;&#x4E49;&#x671F;&#x95F4;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>.rowtime</code> &#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x3002;&#x88AB;&#x8F6C;&#x6362;&#x7684; <code>DataStream</code> &#x4E2D;&#x5FC5;&#x987B;&#x5DF2;&#x7ECF;&#x5206;&#x914D;&#x8FC7;&#x65F6;&#x95F4;&#x6233;&#x548C;&#x6C34;&#x5370;&#x3002;&#x5728;&#x8F6C;&#x6362;&#x671F;&#x95F4;&#xFF0C;Flink &#x603B;&#x662F;&#x83B7;&#x53D6; rowtime &#x5C5E;&#x6027;&#x4E3A; TIMESTAMP WITHOUT TIME ZONE&#xFF0C;&#x56E0;&#x4E3A; <strong>DataStream &#x6CA1;&#x6709;&#x65F6;&#x533A;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x5E76;&#x4E14;&#x4EE5; UTC &#x65F6;&#x533A;&#x5BF9;&#x5F85;&#x6240;&#x6709;&#x7684;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;</strong>&#x3002;</p>
+<p>&#x5F53;&#x8F6C;&#x6362; <code>DataStream</code> &#x4E3A;&#x8868;&#x65F6;&#xFF0C;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x5B9A;&#x4E49;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x3002;&#x6839;&#x636E;&#x5728; <code>DataStream</code> &#x7684; schema &#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728;&#x6307;&#x5B9A;&#x7684; <code>.rowtime</code> &#x5B57;&#x6BB5;&#x540D;&#xFF0C;&#x65F6;&#x95F4;&#x6233;&#x8981;&#x4E48;&#x4F5C;&#x4E3A;&#x65B0;&#x5217;&#x8FFD;&#x52A0;&#xFF0C;&#x8981;&#x4E48;&#x66FF;&#x6362;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x5217;&#x3002;</p>
+<p>&#x4E0D;&#x7BA1;&#x54EA;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x65F6;&#x95F4;&#x6233;&#x5B57;&#x6BB5;&#x90FD;&#x4F1A;&#x6301;&#x6709; <code>DataStream</code> &#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x65F6;&#x95F4;&#x6233;&#x7684;&#x503C;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-comment">// &#x65B9;&#x5F0F; 1:</span>
+
+<span class="hljs-comment">// extract timestamp and assign watermarks based on knowledge of the stream</span>
+<span class="hljs-keyword">val</span> stream: <span class="hljs-type">DataStream</span>[(<span class="hljs-type">String</span>, <span class="hljs-type">String</span>)] = inputStream.assignTimestampsAndWatermarks(...)
+
+<span class="hljs-comment">// declare an additional logical field as an event time attribute</span>
+<span class="hljs-keyword">val</span> table = tEnv.fromDataStream(stream, $<span class="hljs-string">&quot;user_name&quot;</span>, $<span class="hljs-string">&quot;data&quot;</span>, $<span class="hljs-string">&quot;user_action_time&quot;</span>.rowtime)
+
+
+<span class="hljs-comment">// &#x65B9;&#x5F0F; 2:</span>
+
+<span class="hljs-comment">// extract timestamp from first field, and assign watermarks based on knowledge of the stream</span>
+<span class="hljs-keyword">val</span> stream: <span class="hljs-type">DataStream</span>[(<span class="hljs-type">Long</span>, <span class="hljs-type">String</span>, <span class="hljs-type">String</span>)] = inputStream.assignTimestampsAndWatermarks(...)
+
+<span class="hljs-comment">// the first field has been used for timestamp extraction, and is no longer necessary</span>
+<span class="hljs-comment">// replace first field with a logical event time attribute</span>
+<span class="hljs-keyword">val</span> table = tEnv.fromDataStream(stream, $<span class="hljs-string">&quot;user_action_time&quot;</span>.rowtime, $<span class="hljs-string">&quot;user_name&quot;</span>, $<span class="hljs-string">&quot;data&quot;</span>)
+
+<span class="hljs-comment">// Usage:</span>
+
+<span class="hljs-keyword">val</span> windowedTable = table.window(<span class="hljs-type">Tumble</span> over <span class="hljs-number">10.</span>minutes on $<span class="hljs-string">&quot;user_action_time&quot;</span> as <span class="hljs-string">&quot;userActionWindow&quot;</span>)
+</code></pre>
+<h5 id="33&#x3001;&#x5904;&#x7406;&#x65F6;&#x95F4;">3.3&#x3001;&#x5904;&#x7406;&#x65F6;&#x95F4;</h5>
+<p>&#x4F7F;&#x7528;&#x5904;&#x7406;&#x65F6;&#x95F4;&#x65F6;&#xFF0C;&#x8868;&#x7A0B;&#x5E8F;&#x57FA;&#x4E8E;&#x672C;&#x5730;&#x673A;&#x5668;&#x7684;&#x65F6;&#x95F4;&#x4EA7;&#x751F;&#x7ED3;&#x679C;&#x3002;&#x662F;&#x6700;&#x7B80;&#x5355;&#x7684;&#x65F6;&#x95F4;&#x6982;&#x5FF5;&#xFF0C;&#x4F46;&#x662F;&#x4EA7;&#x751F;&#x7684;&#x7ED3;&#x679C;&#x4E0D;&#x786E;&#x5B9A;&#x3002;&#x5904;&#x7406;&#x65F6;&#x95F4;&#x4E0D;&#x9700;&#x8981;&#x65F6;&#x95F4;&#x6233;&#x63D0;&#x53D6;&#x6216;&#x8005;&#x6C34;&#x5370;&#x7684;&#x751F;&#x6210;&#x3002;</p>
+<h5 id="331&#x3001;ddl-&#x4E2D;&#x5B9A;&#x4E49;">3.3.1&#x3001;DDL &#x4E2D;&#x5B9A;&#x4E49;</h5>
+<p>&#x5728; <code>CREATE</code> &#x8868;&#x7684; DDL &#x4E2D;&#xFF0C;&#x4F7F;&#x7528;&#x7CFB;&#x7EDF;&#x51FD;&#x6570; <code>PROCTIME()</code> &#x5B9A;&#x4E49;&#x5904;&#x7406;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x4E3A;&#x4E00;&#x4E2A;&#x8FD0;&#x7B97;&#x5B57;&#x6BB5;&#xFF08;computed column&#xFF09;&#xFF0C;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7C7B;&#x578B;&#x662F; TIMESTAMP_LIZ&#x3002;&#x8FD0;&#x7B97;&#x5B57;&#x6BB5;&#x7684;&#x8BE6;&#x60C5;&#x53C2;&#x8003; <a href="https://nightlies.apache.org/flink/flink-docs-release-1.15/docs/dev/table/sql/create/#create-table" target="_blank">CREATE TABLE DDL</a>&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> user_actions (
+  user_name <span class="hljs-keyword">STRING</span>,
+  <span class="hljs-keyword">data</span> <span class="hljs-keyword">STRING</span>,
+  user_action_time <span class="hljs-keyword">AS</span> PROCTIME() <span class="hljs-comment">-- declare an additional field as a processing time attribute</span>
+) <span class="hljs-keyword">WITH</span> (
+  ...
+);
+
+<span class="hljs-keyword">SELECT</span> TUMBLE_START(user_action_time, <span class="hljs-built_in">INTERVAL</span> <span class="hljs-string">&apos;10&apos;</span> <span class="hljs-keyword">MINUTE</span>), <span class="hljs-keyword">COUNT</span>(<span class="hljs-keyword">DISTINCT</span> user_name)
+<span class="hljs-keyword">FROM</span> user_actions
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> TUMBLE(user_action_time, <span class="hljs-built_in">INTERVAL</span> <span class="hljs-string">&apos;10&apos;</span> <span class="hljs-keyword">MINUTE</span>);
+</code></pre>
+<h5 id="332&#x3001;&#x5728;-datastream-&#x5230;-table-&#x8F6C;&#x6362;&#x671F;&#x95F4;&#x5B9A;&#x4E49;">3.3.2&#x3001;&#x5728; DataStream &#x5230; Table &#x8F6C;&#x6362;&#x671F;&#x95F4;&#x5B9A;&#x4E49;</h5>
+<p>&#x5728; schema &#x5B9A;&#x4E49;&#x671F;&#x95F4;&#x4F7F;&#x7528; <code>.proctime</code> &#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x5904;&#x7406;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x3002;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x5FC5;&#x987B;&#x4EC5;&#x4EC5;&#x662F;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x989D;&#x5916;&#x7684;&#x903B;&#x8F91;&#x5B57;&#x6BB5;&#x6269;&#x5C55;&#x7269;&#x7406; schema&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x53EA;&#x80FD;&#x5728; schema &#x5B9A;&#x4E49;&#x7684;&#x672B;&#x5C3E;&#x5B9A;&#x4E49;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> stream: <span class="hljs-type">DataStream</span>[(<span class="hljs-type">String</span>, <span class="hljs-type">String</span>)] = ...
+
+<span class="hljs-comment">// declare an additional logical field as a processing time attribute</span>
+<span class="hljs-keyword">val</span> table = tEnv.fromDataStream(stream, $<span class="hljs-string">&quot;UserActionTimestamp&quot;</span>, $<span class="hljs-string">&quot;user_name&quot;</span>, $<span class="hljs-string">&quot;data&quot;</span>, $<span class="hljs-string">&quot;user_action_time&quot;</span>.proctime)
+
+<span class="hljs-keyword">val</span> windowedTable = table.window(<span class="hljs-type">Tumble</span> over <span class="hljs-number">10.</span>minutes on $<span class="hljs-string">&quot;user_action_time&quot;</span> as <span class="hljs-string">&quot;userActionWindow&quot;</span>)
+</code></pre>
+<h4 id="4&#x3001;&#x7248;&#x672C;&#x5316;&#x7684;&#x8868;&#xFF08;versioned-tables&#xFF09;">4&#x3001;&#x7248;&#x672C;&#x5316;&#x7684;&#x8868;&#xFF08;Versioned Tables&#xFF09;</h4>
+<p>Flink SQL &#x64CD;&#x4F5C;&#x7684;&#x52A8;&#x6001;&#x8868;&#x53EF;&#x80FD;&#x4F1A;&#x88AB;&#x8FFD;&#x52A0;&#x6216;&#x8005;&#x66F4;&#x65B0;&#x3002;&#x7248;&#x672C;&#x5316;&#x8868;&#x4EE3;&#x8868;&#x4E86;&#x4E00;&#x4E2A;&#x7279;&#x522B;&#x7C7B;&#x578B;&#x7684;&#x66F4;&#x65B0;&#x8868;&#x2014;&#x2014;&#x8BB0;&#x5F97;&#x6BCF;&#x4E2A;&#x952E;&#x7684;&#x8FC7;&#x5F80;&#x503C;&#x3002;</p>
+<h5 id="41&#x3001;&#x6982;&#x5FF5;">4.1&#x3001;&#x6982;&#x5FF5;</h5>
+<p>&#x52A8;&#x6001;&#x8868;&#x5B9A;&#x4E49;&#x4E86;&#x968F;&#x65F6;&#x95F4;&#x53D8;&#x5316;&#x7684;&#x5173;&#x7CFB;&#x3002;&#x901A;&#x5E38;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x5F53;&#x4F7F;&#x7528;&#x5143;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x4E00;&#x4E2A;&#x952E;&#x7684;&#x503C;&#x6539;&#x53D8;&#x65F6;&#xFF0C;&#x65E7;&#x503C;&#x4E0D;&#x4F1A;&#x53D8;&#x5F97;&#x4E0D;&#x76F8;&#x5173;&#x3002;</p>
+<p>Flink SQL &#x53EF;&#x4EE5;&#x57FA;&#x4E8E;&#x52A8;&#x6001;&#x8868;&#x7528;&#x4E00;&#x4E2A; <code>PRIMARY KEY</code> &#x9650;&#x5236;&#x548C;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x6765;&#x5B9A;&#x4E49;&#x7248;&#x672C;&#x5316;&#x8868;&#x3002;</p>
+<p>Flink &#x4E2D;&#x7684;&#x4E3B;&#x952E;&#x9650;&#x5236;&#x610F;&#x5473;&#x7740;&#xFF0C;&#x8868;&#x6216;&#x89C6;&#x56FE;&#x7684;&#x4E00;&#x5217;&#x6216;&#x8005;&#x4E00;&#x7EC4;&#x5217;&#x662F;&#x552F;&#x4E00;&#x4E14;&#x975E; NULL &#x7684;&#x3002;&#x4E0A;&#x63D2;&#x8868;&#xFF08;upserting table&#xFF09;&#x7684;&#x4E3B;&#x952E;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x4EE3;&#x8868;&#x67D0;&#x4E00;&#x884C;&#x968F;&#x7740;&#x65F6;&#x95F4;&#x63A8;&#x79FB;&#x53D8;&#x5316;&#x7684;&#xFF0C;&#x67D0;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x952E;&#xFF08;INSERT/UPDATE/DELETE&#xFF09;&#x7684;&#x5177;&#x4F53;&#x53D8;&#x5316;&#x3002;&#x4E0A;&#x63D2;&#x8868;&#x7684;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x4E86;&#x6BCF;&#x4E2A;&#x53D8;&#x5316;&#x53D1;&#x751F;&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
+<p>&#x7EFC;&#x5408;&#x5728;&#x4E00;&#x8D77;&#xFF0C;Flink &#x53EF;&#x4EE5;&#x8FFD;&#x8E2A;&#x67D0;&#x4E00;&#x884C;&#x968F;&#x7740;&#x65F6;&#x95F4;&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x5E76;&#x7EF4;&#x62A4;&#x67D0;&#x4E2A;&#x952E;&#x67D0;&#x6BB5;&#x65F6;&#x95F4;&#x54EA;&#x4E2A;&#x503C;&#x662F;&#x6709;&#x6548;&#x7684;&#x3002;</p>
+<p>&#x5047;&#x8BBE;&#x6709;&#x4E00;&#x5F20;&#x8868;&#x8FFD;&#x8E2A;&#x5546;&#x5E97;&#x91CC;&#x4E0D;&#x540C;&#x4EA7;&#x54C1;&#x7684;&#x4EF7;&#x683C;&#xFF1A;</p>
+<pre><code class="lang-sql">(changelog kind)  update_time  product_id product_name price
+================= ===========  ========== ============ ===== 
++(<span class="hljs-keyword">INSERT</span>)         <span class="hljs-number">00</span>:<span class="hljs-number">01</span>:<span class="hljs-number">00</span>     p_001      scooter      <span class="hljs-number">11.11</span>
++(<span class="hljs-keyword">INSERT</span>)         <span class="hljs-number">00</span>:<span class="hljs-number">02</span>:<span class="hljs-number">00</span>     p_002      basketball   <span class="hljs-number">23.11</span>
+-(UPDATE_BEFORE)  <span class="hljs-number">12</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>     p_001      scooter      <span class="hljs-number">11.11</span>
++(UPDATE_AFTER)   <span class="hljs-number">12</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>     p_001      scooter      <span class="hljs-number">12.99</span>
+-(UPDATE_BEFORE)  <span class="hljs-number">12</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>     p_002      basketball   <span class="hljs-number">23.11</span> 
++(UPDATE_AFTER)   <span class="hljs-number">12</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>     p_002      basketball   <span class="hljs-number">19.99</span>
+-(<span class="hljs-keyword">DELETE</span>)         <span class="hljs-number">18</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>     p_001      scooter      <span class="hljs-number">12.99</span>
+</code></pre>
+<p>&#x6839;&#x636E;&#x8FD9;&#x4E00;&#x7EC4;&#x53D8;&#x5316;&#xFF0C;&#x8FFD;&#x8E2A; scooter &#x4EF7;&#x683C;&#x968F;&#x7740;&#x65F6;&#x95F4;&#x5982;&#x4F55;&#x53D8;&#x5316;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x67E5;&#x8BE2;&#x8FD9;&#x4E2A;&#x8868;&#x4E0D;&#x540C;&#x65F6;&#x95F4;&#x4E0D;&#x540C;&#x4EA7;&#x54C1;&#x7684;&#x4EF7;&#x683C;&#xFF0C;&#x4F1A;&#x5F97;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x5728; 10:00:00 &#x67E5;&#x8BE2;&#x7684;&#x7ED3;&#x679C;&#x662F;&#xFF1A;</p>
+<pre><code class="lang-sql">update_time  product_id product_name price
+===========  ========== ============ ===== 
+00:01:00     p_001      scooter      11.11
+00:02:00     p_002      basketball   23.11
+</code></pre>
+<p>&#x800C; 13:00:00 &#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x662F;&#xFF1A;</p>
+<pre><code class="lang-sql">update_time  product_id product_name price
+===========  ========== ============ ===== 
+12:00:00     p_001      scooter      12.99
+12:00:00     p_002      basketball   19.99
+</code></pre>
+<h5 id="42&#x3001;&#x7248;&#x672C;&#x5316;&#x8868;&#x6E90;">4.2&#x3001;&#x7248;&#x672C;&#x5316;&#x8868;&#x6E90;</h5>
+<p>&#x7248;&#x672C;&#x5316;&#x8868;&#x5BF9;&#x6240;&#x6709;&#xFF08;&#x5E95;&#x5C42;&#x6E90;&#x6216;&#x8005;&#x683C;&#x5F0F;&#x76F4;&#x63A5;&#x5B9A;&#x4E49;&#x4E86; changelogs &#x7684;&#xFF09;&#x8868;&#x90FD;&#x662F;&#x9690;&#x5F0F;&#x5730;&#x5B9A;&#x4E49;&#x7684;&#x3002;&#x4F8B;&#x5B50;&#x5305;&#x62EC;&#xFF0C;upsert Kafka &#x6E90;&#x4EE5;&#x53CA;&#x6570;&#x636E;&#x5E93; changelog &#x683C;&#x5F0F;&#x2014;&#x2014;&#x6BD4;&#x5982; debezium &#x548C; canal&#x3002;&#x4E4B;&#x524D;&#x5DF2;&#x7ECF;&#x63D0;&#x5230;&#xFF0C;&#x552F;&#x4E00;&#x7684;&#x989D;&#x5916;&#x9700;&#x8981;&#x662F; <code>CREATE</code> &#x8868;&#x8BED;&#x53E5;&#x5FC5;&#x987B;&#x5305;&#x542B;&#x4E00;&#x4E2A; <code>PRIMARY KEY</code> &#x548C;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> products (
+    product_id    <span class="hljs-keyword">STRING</span>,
+    product_name  <span class="hljs-keyword">STRING</span>,
+    price         <span class="hljs-built_in">DECIMAL</span>(<span class="hljs-number">32</span>, <span class="hljs-number">2</span>),
+    update_time   <span class="hljs-keyword">TIMESTAMP</span>(<span class="hljs-number">3</span>) METADATA <span class="hljs-keyword">FROM</span> <span class="hljs-string">&apos;value.source.timestamp&apos;</span> <span class="hljs-keyword">VIRTUAL</span>,
+    PRIMARY <span class="hljs-keyword">KEY</span> (product_id) <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">ENFORCED</span>,
+    WATERMARK <span class="hljs-keyword">FOR</span> update_time <span class="hljs-keyword">AS</span> update_time
+) <span class="hljs-keyword">WITH</span> (...);
+</code></pre>
+<h5 id="43&#x3001;&#x7248;&#x672C;&#x5316;&#x8868;&#x89C6;&#x56FE;">4.3&#x3001;&#x7248;&#x672C;&#x5316;&#x8868;&#x89C6;&#x56FE;</h5>
+<p>&#x5982;&#x679C;&#x5E95;&#x5C42;&#x67E5;&#x8BE2;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x952E;&#x9650;&#x5236;&#x548C;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#xFF0C; Flink &#x4E5F;&#x652F;&#x6301;&#x5B9A;&#x4E49;&#x7248;&#x672C;&#x5316;&#x7684;&#x89C6;&#x56FE;&#x3002;&#x5047;&#x8BBE;&#x6709;&#x4E00;&#x5F20;&#x4EC5;&#x8FFD;&#x52A0;&#x7684;&#x6C47;&#x7387;&#x8868; <code>currency_rates</code>&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> currency_rates (
+    currency      <span class="hljs-keyword">STRING</span>,
+    rate          <span class="hljs-built_in">DECIMAL</span>(<span class="hljs-number">32</span>, <span class="hljs-number">10</span>),
+    update_time   <span class="hljs-keyword">TIMESTAMP</span>(<span class="hljs-number">3</span>),
+    WATERMARK <span class="hljs-keyword">FOR</span> update_time <span class="hljs-keyword">AS</span> update_time
+) <span class="hljs-keyword">WITH</span> (
+    <span class="hljs-string">&apos;connector&apos;</span> = <span class="hljs-string">&apos;kafka&apos;</span>,
+    <span class="hljs-string">&apos;topic&apos;</span>        = <span class="hljs-string">&apos;rates&apos;</span>,
+    <span class="hljs-string">&apos;properties.bootstrap.servers&apos;</span> = <span class="hljs-string">&apos;localhost:9092&apos;</span>,
+    <span class="hljs-string">&apos;format&apos;</span>    = <span class="hljs-string">&apos;json&apos;</span>
+);
+</code></pre>
+<p><code>currency_rates</code> &#x8868;&#x4E2D;&#x6BCF;&#x79CD;&#x76F8;&#x5BF9;&#x4E8E; USD &#x7684;&#x6C47;&#x7387;&#x4E00;&#x884C;&#xFF0C;&#x6BCF;&#x5F53;&#x6C47;&#x7387;&#x53D8;&#x5316;&#x662F;&#x6536;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x884C;&#x3002;<code>JSON</code> &#x683C;&#x5F0F;&#x672C;&#x8EAB;&#x4E0D;&#x652F;&#x6301; changelog &#x8BED;&#x4E49;&#xFF0C;&#x6240;&#x4EE5; Flink &#x53EA;&#x80FD;&#x4EE5;&#x4EC5;&#x8FFD;&#x52A0;&#x7684;&#x5F62;&#x5F0F;&#x8BFB;&#x8FD9;&#x4E2A;&#x8868;&#x3002;</p>
+<pre><code class="lang-sql">(changelog kind) update_time   currency   rate
+================ ============= =========  ====
++(<span class="hljs-keyword">INSERT</span>)        <span class="hljs-number">09</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>      Yen        <span class="hljs-number">102</span>
++(<span class="hljs-keyword">INSERT</span>)        <span class="hljs-number">09</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>      Euro       <span class="hljs-number">114</span>
++(<span class="hljs-keyword">INSERT</span>)        <span class="hljs-number">09</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>      USD        <span class="hljs-number">1</span>
++(<span class="hljs-keyword">INSERT</span>)        <span class="hljs-number">11</span>:<span class="hljs-number">15</span>:<span class="hljs-number">00</span>      Euro       <span class="hljs-number">119</span>
++(<span class="hljs-keyword">INSERT</span>)        <span class="hljs-number">11</span>:<span class="hljs-number">49</span>:<span class="hljs-number">00</span>      Pounds     <span class="hljs-number">108</span>
+</code></pre>
+<p>Flink &#x5C06;&#x6BCF;&#x4E00;&#x884C;&#x7FFB;&#x8BD1;&#x4E3A;&#x5BF9;&#x8868;&#x7684; <code>INSERT</code>&#xFF0C;&#x610F;&#x5473;&#x7740;&#x4E0D;&#x80FD;&#x5BF9;&#x6C47;&#x7387;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A; <code>PRIMARY KEY</code>&#x3002;&#x53EF;&#x662F;&#xFF0C;&#x4E3B;&#x952E;&#x5BF9;&#x4E8E;&#x5B9A;&#x4E49;&#x7248;&#x672C;&#x5316;&#x7684;&#x8868;&#x662F;&#x5FC5;&#x987B;&#x7684;&#x3002;&#x901A;&#x8FC7;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A; <a href="https://nightlies.apache.org/flink/flink-docs-release-1.15/docs/dev/table/sql/queries/deduplication/#deduplication" target="_blank">&#x53BB;&#x91CD;&#x67E5;&#x8BE2;</a>&#xFF08;&#x7528;&#x63A8;&#x65AD;&#x7684;&#x4E3B;&#x952E;&#xFF08;currency&#xFF09;&#x548C;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#xFF08;update_time&#xFF09;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x6709;&#x5E8F;&#x7684; changelog &#x6D41;&#xFF09; Flink &#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E2A;&#x8868;&#x7FFB;&#x8BD1;&#x4E3A;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x5316;&#x8868;&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-comment">-- Define a versioned view</span>
+<span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">VIEW</span> versioned_rates <span class="hljs-keyword">AS</span>              
+<span class="hljs-keyword">SELECT</span> currency, rate, update_time              <span class="hljs-comment">-- (1) `update_time` keeps the event time</span>
+  <span class="hljs-keyword">FROM</span> (
+      <span class="hljs-keyword">SELECT</span> *,
+      ROW_NUMBER() <span class="hljs-keyword">OVER</span> (<span class="hljs-keyword">PARTITION</span> <span class="hljs-keyword">BY</span> currency  <span class="hljs-comment">-- (2) the inferred unique key `currency` can be a primary key</span>
+         <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> update_time <span class="hljs-keyword">DESC</span>) <span class="hljs-keyword">AS</span> <span class="hljs-keyword">rownum</span> 
+      <span class="hljs-keyword">FROM</span> currency_rates)
+<span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">rownum</span> = <span class="hljs-number">1</span>; 
+
+<span class="hljs-comment">-- the view `versioned_rates` will produce a changelog as the following.</span>
+(changelog kind) update_time currency   rate
+================ ============= =========  ====
++(<span class="hljs-keyword">INSERT</span>)        <span class="hljs-number">09</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>      Yen        <span class="hljs-number">102</span>
++(<span class="hljs-keyword">INSERT</span>)        <span class="hljs-number">09</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>      Euro       <span class="hljs-number">114</span>
++(<span class="hljs-keyword">INSERT</span>)        <span class="hljs-number">09</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>      USD        <span class="hljs-number">1</span>
++(UPDATE_AFTER)  <span class="hljs-number">10</span>:<span class="hljs-number">45</span>:<span class="hljs-number">00</span>      Euro       <span class="hljs-number">116</span>
++(UPDATE_AFTER)  <span class="hljs-number">11</span>:<span class="hljs-number">15</span>:<span class="hljs-number">00</span>      Euro       <span class="hljs-number">119</span>
++(<span class="hljs-keyword">INSERT</span>)        <span class="hljs-number">11</span>:<span class="hljs-number">49</span>:<span class="hljs-number">00</span>      Pounds     <span class="hljs-number">108</span>
+</code></pre>
+<p>Flink &#x6709;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x4F18;&#x5316;&#x6B65;&#x9AA4;&#xFF0C;&#x80FD;&#x591F;&#x9AD8;&#x6548;&#x5730;&#x5C06;&#x8FD9;&#x4E2A;&#x67E5;&#x8BE2;&#x8F6C;&#x6362;&#x4E3A;&#x53EF;&#x4EE5;&#x5728;&#x540E;&#x7EED;&#x67E5;&#x8BE2;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x7248;&#x672C;&#x5316;&#x7684;&#x8868;&#x3002;&#x901A;&#x5E38;&#xFF0C;&#x5982;&#x4E0B;&#x683C;&#x5F0F;&#x7684;&#x67E5;&#x8BE2;&#x7684;&#x7ED3;&#x679C;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x5316;&#x7684;&#x8868;&#xFF1A;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> [column_list]
+<span class="hljs-keyword">FROM</span> (
+   <span class="hljs-keyword">SELECT</span> [column_list],
+     ROW_NUMBER() <span class="hljs-keyword">OVER</span> ([<span class="hljs-keyword">PARTITION</span> <span class="hljs-keyword">BY</span> col1[, col2...]]
+       <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> time_attr <span class="hljs-keyword">DESC</span>) <span class="hljs-keyword">AS</span> <span class="hljs-keyword">rownum</span>
+   <span class="hljs-keyword">FROM</span> table_name)
+<span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">rownum</span> = <span class="hljs-number">1</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong>&#xFF1A;</p>
+<ul>
+<li><code>ROW_NUMBER()</code>&#xFF1A;&#x4E3A;&#x6BCF;&#x4E00;&#x884C;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7684;&#x3001;&#x4ECE; 1 &#x5F00;&#x59CB;&#x7684;&#x3001;&#x8FDE;&#x7EED;&#x7684;&#x53F7;&#x7801;</li>
+<li><code>PARTITION BY col1[, col2...]</code>&#xFF1A;&#x6307;&#x5B9A;&#x5206;&#x533A;&#x5217;&#xFF0C;&#x5373;&#xFF0C;&#x53BB;&#x91CD;&#x7684;&#x952E;&#x3002;&#x8FD9;&#x4E9B;&#x5217;&#x7EC4;&#x6210;&#x4E86;&#x540E;&#x7EED;&#x7684;&#x7248;&#x672C;&#x5316;&#x8868;&#x7684;&#x4E3B;&#x952E;&#x3002;</li>
+<li><code>ORDER BY time_attr DESC</code>&#xFF1A;&#x6307;&#x5B9A;&#x6392;&#x5E8F;&#x5217;&#xFF0C;&#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x5C5E;&#x6027;</li>
+<li><code>WHERE rownum = 1</code>&#xFF1A;<code>rownum = 1</code> &#x5BF9;&#x4E8E; Flink &#x8BC6;&#x522B;&#x8FD9;&#x4E2A;&#x67E5;&#x8BE2;&#x4EE5;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x5316;&#x8868;&#x6765;&#x8BF4;&#x662F;&#x5FC5;&#x987B;&#x7684;&#x3002;</li>
+</ul>
+<h4 id="5&#x3001;&#x4E34;&#x65F6;&#x8868;&#x51FD;&#x6570;&#xFF08;temporal-table-function&#xFF09;">5&#x3001;&#x4E34;&#x65F6;&#x8868;&#x51FD;&#x6570;&#xFF08;Temporal Table Function&#xFF09;</h4>
+<p>&#x4F7F;&#x7528;&#x4E34;&#x65F6;&#x8868;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;&#x4E34;&#x65F6;&#x8868;&#x67D0;&#x4E00;&#x7279;&#x5B9A;&#x65F6;&#x95F4;&#x70B9;&#x7684;&#x7248;&#x672C;&#x3002;&#x4E3A;&#x4E86;&#x8BBF;&#x95EE;&#x4E34;&#x65F6;&#x8868;&#x4E2D;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5FC5;&#x987B;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x51B3;&#x5B9A;&#x8FD4;&#x56DE;&#x8868;&#x7684;&#x7248;&#x672C;&#x7684;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x3002;Flink &#x4F7F;&#x7528; <a href="https://nightlies.apache.org/flink/flink-docs-release-1.15/docs/dev/table/functions/udfs/#table-functions" target="_blank">&#x8868;&#x51FD;&#x6570;</a> &#x7684; SQL &#x8BED;&#x6CD5;&#x4F5C;&#x4E3A;&#x8868;&#x793A;&#x5B83;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x4E0E;&#x7248;&#x672C;&#x5316;&#x8868;&#x4E0D;&#x540C;&#xFF0C;&#x4E34;&#x65F6;&#x8868;&#x51FD;&#x6570;&#x53EA;&#x80FD;&#x57FA;&#x4E8E;&#x4EC5;&#x8FFD;&#x52A0;&#x7684;&#x6D41;&#x5B9A;&#x4E49;&#x2014;&#x2014;&#x4E0D;&#x652F;&#x6301; changelog &#x8F93;&#x5165;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x4E34;&#x65F6;&#x8868;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x7528;&#x7EAF;&#x7CB9;&#x7684; SQL DDL &#x5B9A;&#x4E49;&#x3002;</p>
+<h5 id="51&#x3001;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x4E34;&#x65F6;&#x8868;&#x51FD;&#x6570;">5.1&#x3001;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x4E34;&#x65F6;&#x8868;&#x51FD;&#x6570;</h5>
+<p>&#x4F7F;&#x7528; Table API &#x53EF;&#x4EE5;&#x57FA;&#x4E8E;&#x4EC5;&#x8FFD;&#x52A0;&#x6D41;&#x5B9A;&#x4E49;&#x4E34;&#x65F6;&#x8868;&#x51FD;&#x6570;&#x3002;&#x7528;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;&#x4E3B;&#x8981;&#x5217;&#xFF08;key columns&#xFF09;&#x548C;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x7248;&#x672C;&#x5212;&#x5206;&#x7684;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x6765;&#x6CE8;&#x518C;&#x4E34;&#x65F6;&#x8868;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x5047;&#x8BBE;&#x6709;&#x4E00;&#x4E2A;&#x4EC5;&#x8FFD;&#x52A0;&#x8868; <code>currency_rates</code>&#xFF0C;&#xFF1A;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> currency_rates;
+
+update_time   currency   rate
+============= =========  ====
+09:00:00      Yen        102
+09:00:00      Euro       114
+09:00:00      USD        1
+11:15:00      Euro       119
+11:49:00      Pounds     108
+</code></pre>
+<p>&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Table API &#x6CE8;&#x518C;&#x4E34;&#x65F6;&#x8868;&#x51FD;&#x6570;&#xFF0C;&#x7528; <code>currency</code> &#x4F5C;&#x4E3A;&#x952E;&#x3001;<code>update_time</code> &#x4F5C;&#x4E3A;&#x5212;&#x5206;&#x7248;&#x672C;&#x7684;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code class="lang-scala">rates = tEnv
+    .from(<span class="hljs-string">&quot;currency_rates&quot;</span>).
+    .createTemporalTableFunction(<span class="hljs-string">&quot;update_time&quot;</span>, <span class="hljs-string">&quot;currency&quot;</span>)
+
+tEnv.registerFunction(<span class="hljs-string">&quot;rates&quot;</span>, rates)
+</code></pre>
+<h5 id="52&#x3001;&#x4E34;&#x65F6;&#x8868;&#x51FD;&#x6570;&#x8FDE;&#x63A5;&#xFF08;temporal-table-function-join&#xFF09;">5.2&#x3001;&#x4E34;&#x65F6;&#x8868;&#x51FD;&#x6570;&#x8FDE;&#x63A5;&#xFF08;Temporal Table Function Join&#xFF09;</h5>
+<p>&#x5B9A;&#x4E49;&#x8FC7;&#x4E34;&#x65F6;&#x8868;&#x51FD;&#x6570;&#x4E4B;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x4F5C;&#x4E3A;&#x6807;&#x51C6;&#x7684;&#x8868;&#x51FD;&#x6570;&#x4F7F;&#x7528;&#x3002;&#x4EC5;&#x8FFD;&#x52A0;&#x8868;&#xFF08;left input/probe side&#xFF09;&#x53EF;&#x4EE5;&#x548C;&#x4E34;&#x65F6;&#x8868;&#xFF08;right input/build side&#xFF09;&#x8FDE;&#x63A5;&#x3002;</p>
+<p>&#x5047;&#x8BBE;&#x6709;&#x4E00;&#x5F20;&#x8FFD;&#x8E2A;&#x987E;&#x5BA2;&#x4E0D;&#x540C;&#x8D27;&#x5E01;&#x8BA2;&#x5355;&#x7684;&#x4EC5;&#x8FFD;&#x52A0;&#x8868; <code>orders</code>&#xFF1A;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> orders;
+
+order_time amount currency
+========== ====== =========
+10:15        2    Euro
+10:30        1    USD
+10:32       50    Yen
+10:52        3    Euro
+11:04        5    USD
+</code></pre>
+<p>&#x7528;&#x8FD9;&#x4E24;&#x5F20;&#x8868;&#xFF0C;&#x5C06;&#x8BA2;&#x5355;&#x8D27;&#x5E01;&#x7EDF;&#x4E00;&#x4E3A;&#x2014;&#x2014;USD&#xFF1A;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> result = orders
+    .joinLateral($<span class="hljs-string">&quot;rates(order_time)&quot;</span>, $<span class="hljs-string">&quot;orders.currency = rates.currency&quot;</span>)
+    .select($<span class="hljs-string">&quot;(o_amount * r_rate).sum as amount&quot;</span>))
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="datastream-api.html" class="navigation navigation-prev " aria-label="Previous page: 集成 DataStream API">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="data-types.html" class="navigation navigation-next " aria-label="Next page: 数据类型">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"流概念","level":"1.3.3","depth":2,"next":{"title":"数据类型","level":"1.3.4","depth":2,"path":"table-sql/data-types.md","ref":"table-sql/data-types.md","articles":[]},"previous":{"title":"集成 DataStream API","level":"1.3.2","depth":2,"path":"table-sql/datastream-api.md","ref":"table-sql/datastream-api.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"table-sql/streaming-concepts.md","mtime":"2022-05-27T09:47:58.603Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-20T02:10:49.782Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

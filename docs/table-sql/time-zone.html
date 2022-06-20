@@ -1,0 +1,993 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>时区 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="table-api.html" />
+    
+    
+    <link rel="prev" href="data-types.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../try-flink/local.html">
+            
+                <a href="../try-flink/local.html">
+            
+                    
+                    第一步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../try-flink/002.html">
+            
+                <a href="../try-flink/002.html">
+            
+                    
+                    基于DataStream API实现欺诈检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../try-flink/003.html">
+            
+                <a href="../try-flink/003.html">
+            
+                    
+                    基于Table API实现实时报表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../try-flink/004.html">
+            
+                <a href="../try-flink/004.html">
+            
+                    
+                    一个Flink操作操练场
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../practice.html">
+            
+                <a href="../practice.html">
+            
+                    
+                    动手练习 Flink
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../practice/001.html">
+            
+                <a href="../practice/001.html">
+            
+                    
+                    DataStream API 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../practice/002.html">
+            
+                <a href="../practice/002.html">
+            
+                    
+                    数据管道 & ETL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../practice/003.html">
+            
+                <a href="../practice/003.html">
+            
+                    
+                    流式分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../practice/event-driven.html">
+            
+                <a href="../practice/event-driven.html">
+            
+                    
+                    事件驱动应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../practice/fault-tolerance.html">
+            
+                <a href="../practice/fault-tolerance.html">
+            
+                    
+                    容错
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../table-api.html">
+            
+                <a href="../table-api.html">
+            
+                    
+                    Table API & SQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="concepts-common-api.html">
+            
+                <a href="concepts-common-api.html">
+            
+                    
+                    概念和通用 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="datastream-api.html">
+            
+                <a href="datastream-api.html">
+            
+                    
+                    集成 DataStream API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="streaming-concepts.html">
+            
+                <a href="streaming-concepts.html">
+            
+                    
+                    流概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="data-types.html">
+            
+                <a href="data-types.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.5" data-path="time-zone.html">
+            
+                <a href="time-zone.html">
+            
+                    
+                    时区
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="table-api.html">
+            
+                <a href="table-api.html">
+            
+                    
+                    时区
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../flink-china.html">
+            
+                <a href="../flink-china.html">
+            
+                    
+                    Flink 中国社区文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../flink-china/setdeployrun.html">
+            
+                <a href="../flink-china/setdeployrun.html">
+            
+                    
+                    Flink 环境搭建、配置、部署及运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../flink-china/datastream-api.html">
+            
+                <a href="../flink-china/datastream-api.html">
+            
+                    
+                    DataStream API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../flink-china/client.html">
+            
+                <a href="../flink-china/client.html">
+            
+                    
+                    客户端操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../flink-china/time-window.html">
+            
+                <a href="../flink-china/time-window.html">
+            
+                    
+                    Time&Window
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../flink-china/state-fault-tolerance.html">
+            
+                <a href="../flink-china/state-fault-tolerance.html">
+            
+                    
+                    状态管理和容错机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../flink-china/table-api.html">
+            
+                <a href="../flink-china/table-api.html">
+            
+                    
+                    Table API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../flink-china/sql.html">
+            
+                <a href="../flink-china/sql.html">
+            
+                    
+                    Flink SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../wai-lian.html">
+            
+                <a href="../wai-lian.html">
+            
+                    
+                    外链
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >时区</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x65F6;&#x533A;">&#x65F6;&#x533A;</h3>
+<p>Flink &#x63D0;&#x4F9B;&#x4E86;&#x4E30;&#x5BCC;&#x7684;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;Flink &#x652F;&#x6301;&#x4EE5; session &#x4E3A;&#x7EA7;&#x522B;&#x8BBE;&#x7F6E;&#x65F6;&#x533A;&#x3002;&#x8FD9;&#x4E9B;&#x65F6;&#x95F4;&#x6233;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x548C; Flink &#x7684;&#x65F6;&#x533A;&#x652F;&#x6301;&#x4F7F;&#x5F97;&#x8DE8;&#x65F6;&#x533A;&#x5904;&#x7406;&#x4E1A;&#x52A1;&#x6570;&#x636E;&#x53D8;&#x5F97;&#x7B80;&#x5355;&#x3002;</p>
+<h4 id="1&#x3001;timestamp-vs-timestampltz">1&#x3001;TIMESTAMP vs TIMESTAMP_LTZ</h4>
+<h5 id="11&#x3001;timestamp-&#x7C7B;&#x578B;">1.1&#x3001;TIMESTAMP &#x7C7B;&#x578B;</h5>
+<ul>
+<li><p><code>TIMESTAMP(p)</code> &#x662F; <code>TIMESTAMP(p) WITHOUT TIME ZONE</code> &#x7684;&#x7F29;&#x5199;&#xFF0C;&#x7CBE;&#x5EA6; <code>p</code> &#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x662F;&#x95ED;&#x533A;&#x95F4; <code>0</code> ~ <code>9</code>&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F; <code>6</code>&#x3002;</p>
+</li>
+<li><p><code>TIMESTAMP</code> &#x63CF;&#x8FF0;&#x4E86;&#x4E00;&#x4E2A;&#x4EE3;&#x8868;&#x5E74;&#x3001;&#x6708;&#x3001;&#x65E5;&#x3001;&#x65F6;&#x3001;&#x5206;&#x3001;&#x79D2;&#x4EE5;&#x53CA;&#x5C0F;&#x6570;&#x79D2;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x3002;</p>
+</li>
+<li><p><code>TIMESTAMP</code> &#x53EF;&#x4EE5;&#x7528;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5B57;&#x9762;&#x91CF;&#x6765;&#x6307;&#x5B9A;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-sql">Flink SQL&gt; SELECT TIMESTAMP &apos;1970-01-01 00:00:04.001&apos;;
++-------------------------+
+| 1970-01-01 00:00:04.001 |
++-------------------------+
+</code></pre>
+</li>
+</ul>
+<h5 id="12&#x3001;timestampltz-&#x7C7B;&#x578B;">1.2&#x3001;TIMESTAMP_LTZ &#x7C7B;&#x578B;</h5>
+<ul>
+<li><p><code>TIMESTAMP_LTZ(p)</code> &#x662F; <code>TIMESTAMP(p) WITH LOCAL TIME ZONE</code> &#x7684;&#x7F29;&#x5199;&#xFF0C;&#x7CBE;&#x5EA6; <code>p</code> &#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x662F;&#x95ED;&#x533A;&#x95F4; <code>0</code> ~ <code>9</code>&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F; <code>6</code>&#x3002;</p>
+</li>
+<li><p><code>TIMESTAMP_LTZ</code> &#x63CF;&#x8FF0;&#x4E86;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x7EBF;&#xFF08;time-line&#xFF09;&#x4E0A;&#x7684;&#x7EDD;&#x5BF9;&#x65F6;&#x95F4;&#x70B9;&#xFF0C;&#x5B83;&#x4FDD;&#x5B58;&#x4E86;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x7EAA;&#x5143;&#x6BEB;&#x79D2;&#x7684; long &#x503C;&#x548C;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x7EB3;&#x79D2;&#x6BEB;&#x79D2;&#xFF08;nanosecond-of-millisecond&#xFF09;&#x7684; int &#x503C;&#x3002;&#x7EAA;&#x5143;&#x65F6;&#x95F4;&#x662F;&#x4EE5;&#x6807;&#x51C6;&#x7684; Java &#x7EAA;&#x5143; <code>1970-01-01T00:00:00Z</code> &#x4E3A;&#x57FA;&#x51C6;&#x7684;&#x3002;&#x6BCF;&#x4E2A;&#x6570;&#x636E;&#x90FD;&#x88AB;&#x7F16;&#x8BD1;&#x4E3A;&#x5F53;&#x524D;&#x4F1A;&#x8BDD;&#x7684;&#x672C;&#x5730;&#x65F6;&#x533A;&#x65F6;&#x95F4;&#xFF0C;&#x4EE5;&#x8FDB;&#x884C;&#x8FD0;&#x7B97;&#x548C;&#x5C55;&#x793A;&#x3002;</p>
+</li>
+<li><p><code>TIMESTAMP_LTZ</code> &#x53EF;&#x4EE5;&#x4E0D;&#x80FD;&#x7528;&#x5B57;&#x9762;&#x91CF;&#x6765;&#x6307;&#x5B9A;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x4EE5;&#x4ECE;&#x4E00;&#x4E2A; long &#x7C7B;&#x578B;&#x7684;&#x7EAA;&#x5143;&#x65F6;&#x95F4;&#x83B7;&#x53D6;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;Java <code>System.currentTimeMillis()</code> &#x4EA7;&#x751F;&#x7684; long &#x65F6;&#x95F4;&#xFF09;&#x3002;</p>
+<pre><code class="lang-sql">Flink SQL&gt; CREATE VIEW T1 AS SELECT TO_TIMESTAMP_LTZ(4001, 3);
+Flink SQL&gt; SET &apos;table.local-time-zone&apos; = &apos;UTC&apos;;
+Flink SQL&gt; SELECT * FROM T1;
++---------------------------+
+| TO_TIMESTAMP_LTZ(4001, 3) |
++---------------------------+
+|   1970-01-01 00:00:04.001 |
++---------------------------+
+
+Flink SQL&gt; SET &apos;table.local-time-zone&apos; = &apos;Asia/Shanghai&apos;;
+Flink SQL&gt; SELECT * FROM T1;
++---------------------------+
+| TO_TIMESTAMP_LTZ(4001, 3) |
++---------------------------+
+|   1970-01-01 08:00:04.001 |
++---------------------------+
+</code></pre>
+</li>
+<li><p><code>TIMESTAMP_LTZ</code> &#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x8DE8;&#x65F6;&#x533A;&#x7684;&#x4E1A;&#x52A1;&#xFF0C;&#x56E0;&#x4E3A;&#x7EDD;&#x5BF9;&#x65F6;&#x95F4;&#x70B9;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;&#x4E0A;&#x9762;&#x4F8B;&#x5B50;&#x4E2D;&#x7684; 4001 &#x6BEB;&#x79D2;&#xFF09;&#x63CF;&#x8FF0;&#x7684;&#x662F;&#x4E0D;&#x540C;&#x65F6;&#x533A;&#x4E2D;&#x76F8;&#x540C;&#x7684;&#x65F6;&#x95F4;&#x70B9;&#x3002;&#x5728;&#x76F8;&#x540C;&#x65F6;&#x95F4;&#x70B9;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#xFF0C;&#x4E16;&#x754C;&#x4E0A;&#x6240;&#x6709;&#x673A;&#x5668; <code>System.currentTimeMillis()</code> &#x8FD4;&#x56DE;&#x7684;&#x90FD;&#x662F;&#x76F8;&#x540C;&#x7684;&#x503C;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x7EDD;&#x5BF9;&#x65F6;&#x95F4;&#x7684;&#x542B;&#x4E49;&#x3002;</p>
+</li>
+</ul>
+<h4 id="2&#x3001;&#x65F6;&#x533A;&#x4F7F;&#x7528;">2&#x3001;&#x65F6;&#x533A;&#x4F7F;&#x7528;</h4>
+<p>&#x672C;&#x5730;&#x65F6;&#x533A;&#x5B9A;&#x4E49;&#x4E86;&#x5F53;&#x524D;&#x4F1A;&#x8BDD;&#x7684;&#x65F6;&#x533A; id&#x3002;</p>
+<p>SQL &#x5BA2;&#x6237;&#x7AEF;&#x5B9A;&#x4E49;&#x65F6;&#x533A;&#xFF1A;</p>
+<pre><code class="lang-sql">-- set to UTC time zone
+Flink SQL&gt; SET &apos;table.local-time-zone&apos; = &apos;UTC&apos;;
+
+-- set to Shanghai time zone
+Flink SQL&gt; SET &apos;table.local-time-zone&apos; = &apos;Asia/Shanghai&apos;;
+
+-- set to Los_Angeles time zone
+Flink SQL&gt; SET &apos;table.local-time-zone&apos; = &apos;America/Los_Angeles&apos;;
+</code></pre>
+<p>Scala &#x5B9A;&#x4E49;&#x65F6;&#x533A;&#xFF1A;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> envSetting = <span class="hljs-type">EnvironmentSettings</span>.inStreamingMode()
+<span class="hljs-keyword">val</span> tEnv = <span class="hljs-type">TableEnvironment</span>.create(envSetting)
+
+<span class="hljs-comment">// set to UTC time zone</span>
+tEnv.getConfig.setLocalTimeZone(<span class="hljs-type">ZoneId</span>.of(<span class="hljs-string">&quot;UTC&quot;</span>))
+
+<span class="hljs-comment">// set to Shanghai time zone</span>
+tEnv.getConfig.setLocalTimeZone(<span class="hljs-type">ZoneId</span>.of(<span class="hljs-string">&quot;Asia/Shanghai&quot;</span>))
+
+<span class="hljs-comment">// set to Los_Angeles time zone</span>
+tEnv.getConfig.setLocalTimeZone(<span class="hljs-type">ZoneId</span>.of(<span class="hljs-string">&quot;America/Los_Angeles&quot;</span>))
+</code></pre>
+<p>Flink SQL &#x4E2D;&#x4F1A;&#x8BDD;&#x65F6;&#x533A;&#x5F88;&#x6709;&#x7528;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x9014;&#x6709;&#xFF1A;</p>
+<h5 id="21&#x3001;&#x51B3;&#x5B9A;&#x65F6;&#x95F4;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;">2.1&#x3001;&#x51B3;&#x5B9A;&#x65F6;&#x95F4;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;</h5>
+<p>&#x5982;&#x4E0B;&#x51FD;&#x6570;&#x662F;&#x53D7;&#x914D;&#x7F6E;&#x7684;&#x65F6;&#x533A;&#x5F71;&#x54CD;&#x7684;&#xFF1A;</p>
+<ul>
+<li>LOCALTIME</li>
+<li>LOCALTIMESTAMP</li>
+<li>CURRENT_DATE</li>
+<li>CURRENT_TIME</li>
+<li>CURRENT_TIMESTAMP</li>
+<li>CURRENT_ROW_TIMESTAMP()</li>
+<li>NOW()</li>
+<li>PROCTIME()</li>
+</ul>
+<pre><code class="lang-sql">Flink SQL&gt; SET &apos;sql-client.execution.result-mode&apos; = &apos;tableau&apos;;
+Flink SQL&gt; CREATE VIEW MyView1 AS SELECT LOCALTIME, LOCALTIMESTAMP, CURRENT_DATE, CURRENT_TIME, CURRENT_TIMESTAMP, CURRENT_ROW_TIMESTAMP(), NOW(), PROCTIME();
+Flink SQL&gt; DESC MyView1;
+</code></pre>
+<pre><code>+------------------------+-----------------------------+-------+-----+--------+-----------+
+|                   name |                        type |  null | key | extras | watermark |
++------------------------+-----------------------------+-------+-----+--------+-----------+
+|              LOCALTIME |                     TIME(0) | false |     |        |           |
+|         LOCALTIMESTAMP |                TIMESTAMP(3) | false |     |        |           |
+|           CURRENT_DATE |                        DATE | false |     |        |           |
+|           CURRENT_TIME |                     TIME(0) | false |     |        |           |
+|      CURRENT_TIMESTAMP |            TIMESTAMP_LTZ(3) | false |     |        |           |
+|CURRENT_ROW_TIMESTAMP() |            TIMESTAMP_LTZ(3) | false |     |        |           |
+|                  NOW() |            TIMESTAMP_LTZ(3) | false |     |        |           |
+|             PROCTIME() | TIMESTAMP_LTZ(3) *PROCTIME* | false |     |        |           |
++------------------------+-----------------------------+-------+-----+--------+-----------+
+</code></pre><pre><code class="lang-sql">Flink SQL&gt; SET &apos;table.local-time-zone&apos; = &apos;UTC&apos;;
+Flink SQL&gt; SELECT * FROM MyView1;
+</code></pre>
+<pre><code>+-----------+-------------------------+--------------+--------------+-------------------------+-------------------------+-------------------------+-------------------------+
+| LOCALTIME |          LOCALTIMESTAMP | CURRENT_DATE | CURRENT_TIME |       CURRENT_TIMESTAMP | CURRENT_ROW_TIMESTAMP() |                   NOW() |              PROCTIME() |
++-----------+-------------------------+--------------+--------------+-------------------------+-------------------------+-------------------------+-------------------------+
+|  15:18:36 | 2021-04-15 15:18:36.384 |   2021-04-15 |     15:18:36 | 2021-04-15 15:18:36.384 | 2021-04-15 15:18:36.384 | 2021-04-15 15:18:36.384 | 2021-04-15 15:18:36.384 |
++-----------+-------------------------+--------------+--------------+-------------------------+-------------------------+-------------------------+-------------------------+
+</code></pre><pre><code class="lang-sql">Flink SQL&gt; SET &apos;table.local-time-zone&apos; = &apos;Asia/Shanghai&apos;;
+Flink SQL&gt; SELECT * FROM MyView1;
+</code></pre>
+<pre><code>+-----------+-------------------------+--------------+--------------+-------------------------+-------------------------+-------------------------+-------------------------+
+| LOCALTIME |          LOCALTIMESTAMP | CURRENT_DATE | CURRENT_TIME |       CURRENT_TIMESTAMP | CURRENT_ROW_TIMESTAMP() |                   NOW() |              PROCTIME() |
++-----------+-------------------------+--------------+--------------+-------------------------+-------------------------+-------------------------+-------------------------+
+|  23:18:36 | 2021-04-15 23:18:36.384 |   2021-04-15 |     23:18:36 | 2021-04-15 23:18:36.384 | 2021-04-15 23:18:36.384 | 2021-04-15 23:18:36.384 | 2021-04-15 23:18:36.384 |
++-----------+-------------------------+--------------+--------------+-------------------------+-------------------------+-------------------------+-------------------------+
+</code></pre><h5 id="22&#x3001;timestampltz-&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8868;&#x793A;">2.2&#x3001;<code>TIMESTAMP_LTZ</code> &#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8868;&#x793A;</h5>
+<p><code>TIMESTAMP_LTZ</code> &#x503C;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x683C;&#x5F0F;&#x3001;&#x8F6C;&#x6362;&#x4E3A; <code>STRING</code> &#x7C7B;&#x578B;&#x3001;<code>TIMESTAMP</code>&#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x6216;&#x8005; <code>TIMESTAMP</code> &#x8F6C;&#x6362;&#x4E3A; <code>TIMESTAMP_LTZ</code>&#x65F6;&#xFF0C;&#x4E5F;&#x7528;&#x5230;&#x4F1A;&#x8BDD;&#x65F6;&#x533A;&#x3002;</p>
+<pre><code class="lang-sql">Flink SQL&gt; CREATE VIEW MyView2 AS SELECT TO_TIMESTAMP_LTZ(4001, 3) AS ltz, TIMESTAMP &apos;1970-01-01 00:00:01.001&apos;  AS ntz;
+Flink SQL&gt; DESC MyView2;
+</code></pre>
+<pre><code>+------+------------------+-------+-----+--------+-----------+
+| name |             type |  null | key | extras | watermark |
++------+------------------+-------+-----+--------+-----------+
+|  ltz | TIMESTAMP_LTZ(3) |  true |     |        |           |
+|  ntz |     TIMESTAMP(3) | false |     |        |           |
++------+------------------+-------+-----+--------+-----------+
+</code></pre><pre><code class="lang-sql">Flink SQL&gt; SET &apos;table.local-time-zone&apos; = &apos;UTC&apos;;
+Flink SQL&gt; SELECT * FROM MyView2;
+</code></pre>
+<pre><code>+-------------------------+-------------------------+
+|                     ltz |                     ntz |
++-------------------------+-------------------------+
+| 1970-01-01 00:00:04.001 | 1970-01-01 00:00:01.001 |
++-------------------------+-------------------------+
+</code></pre><pre><code class="lang-sql">Flink SQL&gt; SET &apos;table.local-time-zone&apos; = &apos;Asia/Shanghai&apos;;
+Flink SQL&gt; SELECT * FROM MyView2;
+</code></pre>
+<pre><code>+-------------------------+-------------------------+
+|                     ltz |                     ntz |
++-------------------------+-------------------------+
+| 1970-01-01 08:00:04.001 | 1970-01-01 00:00:01.001 |
++-------------------------+-------------------------+
+</code></pre><pre><code class="lang-sql">Flink SQL&gt; CREATE VIEW MyView3 AS SELECT ltz, CAST(ltz AS TIMESTAMP(3)), CAST(ltz AS STRING), ntz, CAST(ntz AS TIMESTAMP_LTZ(3)) FROM MyView2;
+</code></pre>
+<pre><code>Flink SQL&gt; DESC MyView3;
++-------------------------------+------------------+-------+-----+--------+-----------+
+|                          name |             type |  null | key | extras | watermark |
++-------------------------------+------------------+-------+-----+--------+-----------+
+|                           ltz | TIMESTAMP_LTZ(3) |  true |     |        |           |
+|     CAST(ltz AS TIMESTAMP(3)) |     TIMESTAMP(3) |  true |     |        |           |
+|           CAST(ltz AS STRING) |           STRING |  true |     |        |           |
+|                           ntz |     TIMESTAMP(3) | false |     |        |           |
+| CAST(ntz AS TIMESTAMP_LTZ(3)) | TIMESTAMP_LTZ(3) | false |     |        |           |
++-------------------------------+------------------+-------+-----+--------+-----------+
+</code></pre><pre><code class="lang-sql">Flink SQL&gt; SELECT * FROM MyView3;
+</code></pre>
+<pre><code>+-------------------------+---------------------------+-------------------------+-------------------------+-------------------------------+
+|                     ltz | CAST(ltz AS TIMESTAMP(3)) |     CAST(ltz AS STRING) |                     ntz | CAST(ntz AS TIMESTAMP_LTZ(3)) |
++-------------------------+---------------------------+-------------------------+-------------------------+-------------------------------+
+| 1970-01-01 08:00:04.001 |   1970-01-01 08:00:04.001 | 1970-01-01 08:00:04.001 | 1970-01-01 00:00:01.001 |       1970-01-01 00:00:01.001 |
++-------------------------+---------------------------+-------------------------+-------------------------+-------------------------------+
+</code></pre><h4 id="3&#x3001;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x548C;&#x65F6;&#x533A;">3&#x3001;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x548C;&#x65F6;&#x533A;</h4>
+<h5 id="31&#x3001;&#x5904;&#x7406;&#x65F6;&#x95F4;&#x548C;&#x65F6;&#x533A;">3.1&#x3001;&#x5904;&#x7406;&#x65F6;&#x95F4;&#x548C;&#x65F6;&#x533A;</h5>
+<p>Flink SQL &#x4F7F;&#x7528; <code>PROCTIME()</code> &#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x5904;&#x7406;&#x4E8B;&#x4EF6;&#x5C5E;&#x6027;&#xFF0C;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7C7B;&#x578B;&#x662F; <code>TIMESTAMP_LTZ</code>&#x3002;</p>
+<blockquote>
+<p>&#x5728; Flink 1.13&#x4E4B;&#x524D;&#xFF0C;<code>PROCTIME()</code> &#x7684;&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;&#x662F; <code>TIMESTAMP</code>&#xFF0C;&#x5E76;&#x4E14;&#x662F; UTC &#x65F6;&#x533A;&#x7684; <code>TIMESTAMP</code>&#xFF0C;&#x6BD4;&#x5982;&#xFF0C;&#x4E0A;&#x6D77;&#x65F6;&#x95F4;&#x662F;  <code>2021-03-01 12:00:00</code> &#x800C; <code>PROCTIME()</code> &#x8FD4;&#x56DE;&#x7684;&#x65F6;&#x95F4;&#x662F;  <code>2021-03-01 04:00:00</code> &#x3002;Flink 1.13 &#x4FEE;&#x590D;&#x4E86;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x7528; <code>TIMESTAMP_LTZ</code> &#x4F5C;&#x4E3A; <code>PROCTIME()</code> &#x7684;&#x8FD4;&#x56DE;&#x65F6;&#x95F4;&#x7C7B;&#x578B;&#xFF0C;&#x7528;&#x6237;&#x4E0D;&#x7528;&#x518D;&#x5904;&#x7406;&#x65F6;&#x533A;&#x95EE;&#x9898;&#x4E86;&#x3002;</p>
+</blockquote>
+<p><code>PROCTIME()</code> &#x603B;&#x662F;&#x8868;&#x793A;&#x672C;&#x5730;&#x65F6;&#x95F4;&#x6233;&#x7684;&#x503C;&#xFF0C;&#x4F7F;&#x7528; <code>TIMESTAMP_LTZ</code> &#x7C7B;&#x578B;&#x4E5F;&#x80FD;&#x5F88;&#x597D;&#x7684;&#x652F;&#x6301;&#x590F;&#x4EE4;&#x65F6;&#xFF08;DayLight Saving Time&#xFF09;&#x3002;</p>
+<pre><code class="lang-sql">Flink SQL&gt; SET &apos;table.local-time-zone&apos; = &apos;UTC&apos;;
+Flink SQL&gt; SELECT PROCTIME();
+</code></pre>
+<pre><code>+-------------------------+
+|              PROCTIME() |
++-------------------------+
+| 2021-04-15 14:48:31.387 |
++-------------------------+
+</code></pre><pre><code class="lang-sql">Flink SQL&gt; SET &apos;table.local-time-zone&apos; = &apos;Asia/Shanghai&apos;;
+Flink SQL&gt; SELECT PROCTIME();
+</code></pre>
+<pre><code>+-------------------------+
+|              PROCTIME() |
++-------------------------+
+| 2021-04-15 22:48:31.387 |
++-------------------------+
+</code></pre><pre><code class="lang-sql">Flink SQL&gt; CREATE TABLE MyTable1 (
+                  item STRING,
+                  price DOUBLE,
+                  proctime as PROCTIME()
+            ) WITH (
+                &apos;connector&apos; = &apos;socket&apos;,
+                &apos;hostname&apos; = &apos;127.0.0.1&apos;,
+                &apos;port&apos; = &apos;9999&apos;,
+                &apos;format&apos; = &apos;csv&apos;
+           );
+
+Flink SQL&gt; CREATE VIEW MyView3 AS
+            SELECT
+                TUMBLE_START(proctime, INTERVAL &apos;10&apos; MINUTES) AS window_start,
+                TUMBLE_END(proctime, INTERVAL &apos;10&apos; MINUTES) AS window_end,
+                TUMBLE_PROCTIME(proctime, INTERVAL &apos;10&apos; MINUTES) as window_proctime,
+                item,
+                MAX(price) as max_price
+            FROM MyTable1
+                GROUP BY TUMBLE(proctime, INTERVAL &apos;10&apos; MINUTES), item;
+
+Flink SQL&gt; DESC MyView3;
+</code></pre>
+<pre><code>+-----------------+-----------------------------+-------+-----+--------+-----------+
+|           name  |                        type |  null | key | extras | watermark |
++-----------------+-----------------------------+-------+-----+--------+-----------+
+|    window_start |                TIMESTAMP(3) | false |     |        |           |
+|      window_end |                TIMESTAMP(3) | false |     |        |           |
+| window_proctime | TIMESTAMP_LTZ(3) *PROCTIME* | false |     |        |           |
+|            item |                      STRING | true  |     |        |           |
+|       max_price |                      DOUBLE |  true |     |        |           |
++-----------------+-----------------------------+-------+-----+--------+-----------+
+</code></pre><p>&#x5728;&#x7EC8;&#x7AEF;&#x4E2D;&#x4E3A; <code>MyTable1</code> &#x6CE8;&#x5165;&#x6570;&#x636E;&#xFF1A;</p>
+<pre><code>&gt; nc -lk 9999
+A,1.1
+B,1.2
+A,1.8
+B,2.5
+C,3.8
+</code></pre><pre><code class="lang-sql">Flink SQL&gt; SET &apos;table.local-time-zone&apos; = &apos;UTC&apos;;
+Flink SQL&gt; SELECT * FROM MyView3;
+</code></pre>
+<pre><code class="lang-sql">Flink SQL&gt; SET &apos;table.local-time-zone&apos; = &apos;Asia/Shanghai&apos;;
+Flink SQL&gt; SELECT * FROM MyView3;
+</code></pre>
+<p>&#x4E0E;&#x4F7F;&#x7528; UTC &#x65F6;&#x533A;&#x76F8;&#x6BD4;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x7A97;&#x53E3;&#x5F00;&#x59CB;&#x65F6;&#x95F4;&#x3001;&#x7A97;&#x53E3;&#x7ED3;&#x675F;&#x65F6;&#x95F4;&#x3001;&#x548C;&#x7A97;&#x53E3;&#x5904;&#x7406;&#x65F6;&#x95F4;&#xFF1A;</p>
+<pre><code>+-------------------------+-------------------------+-------------------------+------+-----------+
+|            window_start |              window_end |          window_procime | item | max_price |
++-------------------------+-------------------------+-------------------------+------+-----------+
+| 2021-04-15 22:00:00.000 | 2021-04-15 22:10:00.000 | 2021-04-15 22:10:00.005 |    A |       1.8 |
+| 2021-04-15 22:00:00.000 | 2021-04-15 22:10:00.000 | 2021-04-15 22:10:00.007 |    B |       2.5 |
+| 2021-04-15 22:00:00.000 | 2021-04-15 22:10:00.000 | 2021-04-15 22:10:00.007 |    C |       3.8 |
++-------------------------+-------------------------+-------------------------+------+-----------+
+</code></pre><blockquote>
+<p>&#x5904;&#x7406;&#x65F6;&#x95F4;&#x7A97;&#x53E3;&#x662F;&#x4E0D;&#x786E;&#x5B9A;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6BCF;&#x6B21;&#x8FD0;&#x884C;&#x4F1A;&#x5F97;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x7A97;&#x53E3;&#x548C;&#x4E0D;&#x540C;&#x7684;&#x805A;&#x5408;&#x7ED3;&#x679C;&#x3002;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x53EA;&#x662F;&#x7528;&#x6765;&#x5C55;&#x793A;&#x65F6;&#x533A;&#x662F;&#x5982;&#x4F55;&#x8425;&#x9500;&#x5904;&#x7406;&#x65F6;&#x95F4;&#x7A97;&#x53E3;&#x7684;&#x3002;</p>
+</blockquote>
+<h5 id="32&#x3001;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x548C;&#x65F6;&#x533A;">3.2&#x3001;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x548C;&#x65F6;&#x533A;</h5>
+<p>Flink &#x652F;&#x6301;&#x57FA;&#x4E8E; TIMESTAMP &#x5217;&#x548C; TIMESTAMP_LTZ &#x5217;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x3002;</p>
+<h5 id="321&#x3001;&#x57FA;&#x4E8E;-timestamp-&#x7684;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5C5E;&#x6027;">3.2.1&#x3001;&#x57FA;&#x4E8E; TIMESTAMP &#x7684;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5C5E;&#x6027;</h5>
+<p>&#x5982;&#x679C;&#x6570;&#x636E;&#x6E90;&#x4E2D;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x6570;&#x636E;&#x662F;&#x8868;&#x793A;&#x4E3A;&#x5E74;&#x3001;&#x6708;&#x3001;&#x65E5;&#x3001;&#x65F6;&#x3001;&#x5206;&#x3001;&#x79D2;&#x7684;&#xFF0C;&#x901A;&#x5E38;&#x662F;&#x6CA1;&#x6709;&#x65F6;&#x533A;&#x4FE1;&#x606F;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#xFF0C;&#x6BD4;&#x5982; <code>2020-04-15 20:13:40.564</code>&#xFF0C;&#x63A8;&#x8350;&#x5C06;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x4E3A;&#x4E00;&#x4E2A; <code>TIMESTAMP</code> &#x5217;&#x3002;</p>
+<pre><code class="lang-sql">Flink SQL&gt; CREATE TABLE MyTable2 (
+                  item STRING,
+                  price DOUBLE,
+                  ts TIMESTAMP(3), -- TIMESTAMP data type
+                  WATERMARK FOR ts AS ts - INTERVAL &apos;10&apos; SECOND
+            ) WITH (
+                &apos;connector&apos; = &apos;socket&apos;,
+                &apos;hostname&apos; = &apos;127.0.0.1&apos;,
+                &apos;port&apos; = &apos;9999&apos;,
+                &apos;format&apos; = &apos;csv&apos;
+           );
+
+Flink SQL&gt; CREATE VIEW MyView4 AS
+            SELECT
+                TUMBLE_START(ts, INTERVAL &apos;10&apos; MINUTES) AS window_start,
+                TUMBLE_END(ts, INTERVAL &apos;10&apos; MINUTES) AS window_end,
+                TUMBLE_ROWTIME(ts, INTERVAL &apos;10&apos; MINUTES) as window_rowtime,
+                item,
+                MAX(price) as max_price
+            FROM MyTable2
+                GROUP BY TUMBLE(ts, INTERVAL &apos;10&apos; MINUTES), item;
+
+Flink SQL&gt; DESC MyView4;
+</code></pre>
+<pre><code>+----------------+------------------------+------+-----+--------+-----------+
+|           name |                   type | null | key | extras | watermark |
++----------------+------------------------+------+-----+--------+-----------+
+|   window_start |           TIMESTAMP(3) | true |     |        |           |
+|     window_end |           TIMESTAMP(3) | true |     |        |           |
+| window_rowtime | TIMESTAMP(3) *ROWTIME* | true |     |        |           |
+|           item |                 STRING | true |     |        |           |
+|      max_price |                 DOUBLE | true |     |        |           |
++----------------+------------------------+------+-----+--------+-----------+
+</code></pre><p>&#x4ECE;&#x7EC8;&#x7AEF;&#x5F80; <code>MyTable2</code> &#x4E2D;&#x5BFC;&#x5165;&#x6570;&#x636E;&#xFF1A;</p>
+<pre><code>&gt; nc -lk 9999
+A,1.1,2021-04-15 14:01:00
+B,1.2,2021-04-15 14:02:00
+A,1.8,2021-04-15 14:03:00
+B,2.5,2021-04-15 14:04:00
+C,3.8,2021-04-15 14:05:00
+C,3.8,2021-04-15 14:11:00
+</code></pre><pre><code class="lang-sql">Flink SQL&gt; SET &apos;table.local-time-zone&apos; = &apos;UTC&apos;;
+Flink SQL&gt; SELECT * FROM MyView4;
+</code></pre>
+<pre><code>+-------------------------+-------------------------+-------------------------+------+-----------+
+|            window_start |              window_end |          window_rowtime | item | max_price |
++-------------------------+-------------------------+-------------------------+------+-----------+
+| 2021-04-15 14:00:00.000 | 2021-04-15 14:10:00.000 | 2021-04-15 14:09:59.999 |    A |       1.8 |
+| 2021-04-15 14:00:00.000 | 2021-04-15 14:10:00.000 | 2021-04-15 14:09:59.999 |    B |       2.5 |
+| 2021-04-15 14:00:00.000 | 2021-04-15 14:10:00.000 | 2021-04-15 14:09:59.999 |    C |       3.8 |
++-------------------------+-------------------------+-------------------------+------+-----------+
+</code></pre><pre><code class="lang-sql">Flink SQL&gt; SET &apos;table.local-time-zone&apos; = &apos;Asia/Shanghai&apos;;
+Flink SQL&gt; SELECT * FROM MyView4;
+</code></pre>
+<p>&#x5373;&#x4F7F;&#x6539;&#x53D8;&#x4F1A;&#x8BDD;&#x65F6;&#x533A;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E5F;&#x662F;&#x548C; UTC &#x65F6;&#x533A;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x76F8;&#x540C;&#xFF1A;</p>
+<pre><code>+-------------------------+-------------------------+-------------------------+------+-----------+
+|            window_start |              window_end |          window_rowtime | item | max_price |
++-------------------------+-------------------------+-------------------------+------+-----------+
+| 2021-04-15 14:00:00.000 | 2021-04-15 14:10:00.000 | 2021-04-15 14:09:59.999 |    A |       1.8 |
+| 2021-04-15 14:00:00.000 | 2021-04-15 14:10:00.000 | 2021-04-15 14:09:59.999 |    B |       2.5 |
+| 2021-04-15 14:00:00.000 | 2021-04-15 14:10:00.000 | 2021-04-15 14:09:59.999 |    C |       3.8 |
++-------------------------+-------------------------+-------------------------+------+-----------+
+</code></pre><h5 id="322&#x3001;&#x57FA;&#x4E8E;-timestampltz-&#x7684;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5C5E;&#x6027;">3.2.2&#x3001;&#x57FA;&#x4E8E; TIMESTAMP_LTZ &#x7684;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5C5E;&#x6027;</h5>
+<p>&#x5982;&#x679C;&#x6570;&#x636E;&#x6E90;&#x4E2D;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x6570;&#x636E;&#x662F;&#x8868;&#x793A;&#x4E3A;&#x4E00;&#x4E2A;&#x7EAA;&#x5143;&#x65F6;&#x95F4;&#x7684;&#xFF0C;&#x901A;&#x5E38;&#x662F;&#x4E00;&#x4E2A; long &#x503C;&#xFF0C;&#x6BD4;&#x5982;&#xFF0C;<code>1618989564564</code>&#xFF0C;&#x63A8;&#x8350;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x4E3A; <code>TIMESTAMP_LTZ</code> &#x5B57;&#x6BB5;&#x3002;</p>
+<pre><code class="lang-sql">Flink SQL&gt; CREATE TABLE MyTable3 (
+                  item STRING,
+                  price DOUBLE,
+                  ts BIGINT, -- long time value in epoch milliseconds
+                  ts_ltz AS TO_TIMESTAMP_LTZ(ts, 3),
+                  WATERMARK FOR ts_ltz AS ts_ltz - INTERVAL &apos;10&apos; SECOND
+            ) WITH (
+                &apos;connector&apos; = &apos;socket&apos;,
+                &apos;hostname&apos; = &apos;127.0.0.1&apos;,
+                &apos;port&apos; = &apos;9999&apos;,
+                &apos;format&apos; = &apos;csv&apos;
+           );
+
+Flink SQL&gt; CREATE VIEW MyView5 AS
+            SELECT
+                TUMBLE_START(ts_ltz, INTERVAL &apos;10&apos; MINUTES) AS window_start,
+                TUMBLE_END(ts_ltz, INTERVAL &apos;10&apos; MINUTES) AS window_end,
+                TUMBLE_ROWTIME(ts_ltz, INTERVAL &apos;10&apos; MINUTES) as window_rowtime,
+                item,
+                MAX(price) as max_price
+            FROM MyTable3
+                GROUP BY TUMBLE(ts_ltz, INTERVAL &apos;10&apos; MINUTES), item;
+
+Flink SQL&gt; DESC MyView5;
+</code></pre>
+<pre><code>+----------------+----------------------------+-------+-----+--------+-----------+
+|           name |                       type |  null | key | extras | watermark |
++----------------+----------------------------+-------+-----+--------+-----------+
+|   window_start |               TIMESTAMP(3) | false |     |        |           |
+|     window_end |               TIMESTAMP(3) | false |     |        |           |
+| window_rowtime | TIMESTAMP_LTZ(3) *ROWTIME* |  true |     |        |           |
+|           item |                     STRING |  true |     |        |           |
+|      max_price |                     DOUBLE |  true |     |        |           |
++----------------+----------------------------+-------+-----+--------+-----------+
+</code></pre><p>&#x8F93;&#x5165;&#x6570;&#x636E;&#xFF1A;</p>
+<pre><code>A,1.1,1618495260000  # The corresponding utc timestamp is 2021-04-15 14:01:00
+B,1.2,1618495320000  # The corresponding utc timestamp is 2021-04-15 14:02:00
+A,1.8,1618495380000  # The corresponding utc timestamp is 2021-04-15 14:03:00
+B,2.5,1618495440000  # The corresponding utc timestamp is 2021-04-15 14:04:00
+C,3.8,1618495500000  # The corresponding utc timestamp is 2021-04-15 14:05:00
+C,3.8,1618495860000  # The corresponding utc timestamp is 2021-04-15 14:11:00
+</code></pre><pre><code class="lang-sql">Flink SQL&gt; SET &apos;table.local-time-zone&apos; = &apos;UTC&apos;;
+Flink SQL&gt; SELECT * FROM MyView5;
+</code></pre>
+<pre><code>+-------------------------+-------------------------+-------------------------+------+-----------+
+|            window_start |              window_end |          window_rowtime | item | max_price |
++-------------------------+-------------------------+-------------------------+------+-----------+
+| 2021-04-15 14:00:00.000 | 2021-04-15 14:10:00.000 | 2021-04-15 14:09:59.999 |    A |       1.8 |
+| 2021-04-15 14:00:00.000 | 2021-04-15 14:10:00.000 | 2021-04-15 14:09:59.999 |    B |       2.5 |
+| 2021-04-15 14:00:00.000 | 2021-04-15 14:10:00.000 | 2021-04-15 14:09:59.999 |    C |       3.8 |
++-------------------------+-------------------------+-------------------------+------+-----------+
+</code></pre><pre><code class="lang-sql">Flink SQL&gt; SET &apos;table.local-time-zone&apos; = &apos;Asia/Shanghai&apos;;
+Flink SQL&gt; SELECT * FROM MyView5;
+</code></pre>
+<pre><code>+-------------------------+-------------------------+-------------------------+------+-----------+
+|            window_start |              window_end |          window_rowtime | item | max_price |
++-------------------------+-------------------------+-------------------------+------+-----------+
+| 2021-04-15 22:00:00.000 | 2021-04-15 22:10:00.000 | 2021-04-15 22:09:59.999 |    A |       1.8 |
+| 2021-04-15 22:00:00.000 | 2021-04-15 22:10:00.000 | 2021-04-15 22:09:59.999 |    B |       2.5 |
+| 2021-04-15 22:00:00.000 | 2021-04-15 22:10:00.000 | 2021-04-15 22:09:59.999 |    C |       3.8 |
++-------------------------+-------------------------+-------------------------+------+-----------+
+</code></pre><p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E5F;&#x662F;&#x548C; UTC &#x65F6;&#x533A;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x4E0D;&#x540C;&#xFF1A;</p>
+<pre><code>+-------------------------+-------------------------+-------------------------+------+-----------+
+|            window_start |              window_end |          window_rowtime | item | max_price |
++-------------------------+-------------------------+-------------------------+------+-----------+
+| 2021-04-15 22:00:00.000 | 2021-04-15 22:10:00.000 | 2021-04-15 22:09:59.999 |    A |       1.8 |
+| 2021-04-15 22:00:00.000 | 2021-04-15 22:10:00.000 | 2021-04-15 22:09:59.999 |    B |       2.5 |
+| 2021-04-15 22:00:00.000 | 2021-04-15 22:10:00.000 | 2021-04-15 22:09:59.999 |    C |       3.8 |
++-------------------------+-------------------------+-------------------------+------+-----------+
+</code></pre><h4 id="4&#x3001;&#x590F;&#x4EE4;&#x65F6;&#xFF08;dst&#xFF09;&#x7684;&#x652F;&#x6301;">4&#x3001;&#x590F;&#x4EE4;&#x65F6;&#xFF08;DST&#xFF09;&#x7684;&#x652F;&#x6301;</h4>
+<p>Flink SQL &#x652F;&#x6301;&#x57FA;&#x4E8E; <code>TIMESTAMP_LTZ</code> &#x5B57;&#x6BB5;&#x5B9A;&#x4E49;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#xFF0C;&#x57FA;&#x4E8E;&#x6B64;&#xFF0C;Flink SQL &#x53EF;&#x4EE5;&#x5728;&#x7A97;&#x53E3;&#x5904;&#x7406;&#x4E2D;&#x4F18;&#x96C5;&#x5730;&#x4F7F;&#x7528; <code>TIMESTAMP</code> &#x548C; <code>TIMESTAMP_LTZ</code> &#x7C7B;&#x578B;&#x4EE5;&#x652F;&#x6301;&#x590F;&#x4EE4;&#x65F6;&#x3002;</p>
+<p>Flink &#x4F7F;&#x7528;&#x65F6;&#x95F4;&#x6233;&#x5B57;&#x9762;&#x91CF;&#x6765;&#x5212;&#x5206;&#x7A97;&#x53E3;&#xFF0C;&#x6839;&#x636E;&#x6BCF;&#x884C;&#x7684;&#x7EAA;&#x5143;&#x65F6;&#x95F4;&#x4E3A;&#x7A97;&#x53E3;&#x5206;&#x914D;&#x6570;&#x636E;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#xFF0C;Flink &#x7684;&#x7A97;&#x53E3;&#x5F00;&#x59CB;&#x548C;&#x7A97;&#x53E3;&#x7ED3;&#x675F;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;<code>TUMBLE_START</code> &#x548C; <code>TUMBLE_END</code>&#xFF09;&#x4F7F;&#x7528; <code>TIMESTAMP</code> &#x7C7B;&#x578B;&#xFF0C;&#x7A97;&#x53E3;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x4F7F;&#x7528; <code>TIMESTAMP_LTZ</code> &#x7C7B;&#x578B;&#x3002;&#x5982;&#x4E0B;&#xFF0C;&#x7FFB;&#x6EDA;&#x7A97;&#x53E3;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x6D1B;&#x6749;&#x77F6;&#x7684;&#x590F;&#x4EE4;&#x65F6;&#x4ECE; <code>2021-03-14 02:00:00</code> &#x5F00;&#x59CB;&#xFF1A;</p>
+<pre><code>long epoch1 = 1615708800000L; // 2021-03-14 00:00:00
+long epoch2 = 1615712400000L; // 2021-03-14 01:00:00
+long epoch3 = 1615716000000L; // 2021-03-14 03:00:00, skip one hour (2021-03-14 02:00:00)
+long epoch4 = 1615719600000L; // 2021-03-14 04:00:00
+</code></pre><p>&#x7FFB;&#x6EDA;&#x7A97;&#x53E3;  [2021-03-14 00:00:00, 2021-03-14 00:04:00] &#x4F1A;&#x6536;&#x96C6;&#x5230;&#x6D1B;&#x6749;&#x77F6;&#x65F6;&#x533A; 3 &#x4E2A;&#x5C0F;&#x65F6;&#x7684;&#x6570;&#x636E;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5728;&#x53E6;&#x4E00;&#x4E2A;&#x975E;&#x590F;&#x4EE4;&#x65F6;&#x65F6;&#x533A;&#x4F1A;&#x6536;&#x96C6;&#x5230; 4 &#x4E2A;&#x5C0F;&#x65F6;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x7528;&#x6237;&#x8981;&#x505A;&#x7684;&#x53EA;&#x662F;&#x57FA;&#x4E8E; <code>TIMESTAMP_LTZ</code> &#x5217;&#x5B9A;&#x4E49;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x3002;</p>
+<p>Flink &#x7684;&#x6240;&#x6709;&#x7A97;&#x53E3;&#x90FD;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF0C;Flink SQL &#x4E2D;&#x7684;&#x6240;&#x6709;&#x64CD;&#x4F5C;&#x90FD;&#x5F88;&#x597D;&#x5730;&#x652F;&#x6301; <code>TIMESTAMP_LTZ</code>&#xFF0C;&#x56E0;&#x6B64; Flink &#x53EF;&#x4EE5;&#x5F88;&#x597D;&#x5730;&#x652F;&#x6301;&#x590F;&#x4EE4;&#x65F6;&#x65F6;&#x533A;&#x3002;</p>
+<h4 id="5&#x3001;&#x6279;&#x6A21;&#x5F0F;&#x548C;&#x6D41;&#x6A21;&#x5F0F;&#x7684;&#x4E0D;&#x540C;">5&#x3001;&#x6279;&#x6A21;&#x5F0F;&#x548C;&#x6D41;&#x6A21;&#x5F0F;&#x7684;&#x4E0D;&#x540C;</h4>
+<p>&#x5982;&#x4E0B;&#x65F6;&#x95F4;&#x51FD;&#x6570;&#xFF1A;</p>
+<ul>
+<li>LOCALTIME</li>
+<li>LOCALTIMESTAMP</li>
+<li>CURRENT_DATE</li>
+<li>CURRENT_TIME</li>
+<li>CURRENT_TIMESTAMP</li>
+<li>NOW()</li>
+</ul>
+<p>Flink &#x4F1A;&#x6839;&#x636E;&#x6267;&#x884C;&#x6A21;&#x5F0F;&#x8BA1;&#x7B97;&#x5B83;&#x4EEC;&#x7684;&#x503C;&#x3002;&#x5728;&#x6D41;&#x6A21;&#x5F0F;&#x4E2D;&#xFF0C;&#x5B83;&#x4EEC;&#x662F;&#x6BCF;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x5206;&#x522B;&#x8BA1;&#x7B97;&#x7684;&#x503C;&#x5F97;&#xFF0C;&#x4F46;&#x662F;&#x6279;&#x6A21;&#x5F0F;&#x4E2D;&#xFF0C;&#x662F;&#x67E5;&#x8BE2;&#x5F00;&#x59CB;&#x65F6;&#x8BA1;&#x7B97;&#x503C;&#xFF0C;&#x5E76;&#x4E14;&#x6BCF;&#x4E00;&#x884C;&#x90FD;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x503C;&#x3002;&#x3002;</p>
+<p>&#x5982;&#x4E0B;&#x51FD;&#x6570;&#xFF0C;&#x65E0;&#x8BBA;&#x90A3;&#x79CD;&#x6A21;&#x5F0F;&#xFF0C;&#x90FD;&#x662F;&#x5206;&#x522B;&#x4E3A;&#x6BCF;&#x4E00;&#x884C;&#x8BA1;&#x7B97;&#x503C;&#x7684;&#xFF1A;</p>
+<ul>
+<li>CURRENT_ROW_TIMESTAMP()</li>
+<li>PROCTIME()</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="data-types.html" class="navigation navigation-prev " aria-label="Previous page: 数据类型">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="table-api.html" class="navigation navigation-next " aria-label="Next page: 时区">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"时区","level":"1.3.5","depth":2,"next":{"title":"时区","level":"1.3.6","depth":2,"path":"table-sql/table-api.md","ref":"table-sql/table-api.md","articles":[]},"previous":{"title":"数据类型","level":"1.3.4","depth":2,"path":"table-sql/data-types.md","ref":"table-sql/data-types.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"table-sql/time-zone.md","mtime":"2022-05-31T08:43:07.673Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-20T02:10:49.782Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

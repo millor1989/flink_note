@@ -22,6 +22,12 @@ $flink-1.7.2 bin/flink run -h
 
 ##### 1.1、Standalone 模式
 
+启动 standalone 集群：
+
+```bash
+$flink-1.7.2 bin/start-cluster.sh
+```
+
 ##### 1.1.1、`run` 运行任务
 
 运行任务，以 Flink 自带的 `TopSpeedWindowing` 为例：
@@ -186,6 +192,8 @@ Yarn 资源管理器 Web UI 可以看到名为 `Flink session cluster` 的应用
 $./bin/flink run -m yarn-cluster ./examples/streaming/TopSpeedWindowing.jar
 ```
 
+客户端可以看到结果输出。
+
 ##### 1.2.2、单任务 Detached 模式
 
 Detached 模式下，客户端在提交完任务后就会退出：
@@ -194,7 +202,7 @@ Detached 模式下，客户端在提交完任务后就会退出：
 $./bin/flink run -yd -m yarn-cluster ./examples/streaming/TopSpeedWindowing.jar
 ```
 
-Yarn 资源管理器中任务的名称为 per-job cluster。
+Yarn 资源管理器中任务的名称为 Flink per-job cluster。
 
 ##### 1.3、Yarn session
 
@@ -418,7 +426,27 @@ RESET    Resets all session configuration properties.
 Hint: Make sure that a statement ends with ';' for finalizing (multi-line) statements.
 ```
 
-可以在 Flink SQL 模式下交互式的执行 SQL，使用 `EXPLAN` 命令可以查看 SQL 的执行计划。
+可以在 Flink SQL 模式下交互式的执行 SQL，使用 `EXPLAN` 命令可以查看 SQL 的执行计划：
+
+```bash
+Flink SQL> explain SELECT name, COUNT(*) AS cnt FROM (VALUES ('Bob'), ('Alice'), ('Greg'), ('Bob')) AS NameTable(name) GROUP BY name;
+
+== Abstract Syntax Tree == // 抽象语法树
+LogicalAggregate(group=[{0}], cnt=[COUNT()])
+ LogicalValues(tuples=[[{ _UTF-16LE'Bob ' }, { _UTF-16LE'Alice' }, { _UTF-16LE'Greg ' }, { _UTF-16LE'Bob ' }]])
+
+== Optimized Logical Plan == // 优化后的逻辑执行计划
+DataStreamGroupAggregate(groupBy=[name], select=[name, COUNT(*) AS cnt])
+ DataStreamValues(tuples=[[{ _UTF-16LE'Bob ' }, { _UTF-16LE'Alice' }, { _UTF-16LE'Greg ' }, { _UTF-16LE'Bob ' }]])
+
+== Physical Execution Plan == // 物理执行计划
+Stage 3 : Data Source
+	content : collect elements with CollectionInputFormat
+
+	Stage 5 : Operator
+		content : groupBy: (name), select: (name, COUNT(*) AS cnt)
+		ship_strategy : HASH
+```
 
 ##### 3.2、结果展示
 
@@ -430,7 +458,7 @@ SQL Client 支持两种模式来维护并展示查询结果：
   SET execution.result-mode=table
   ```
 
-- changelog mode：不会物化查询结果，直接对 continuous query 差生的添加和撤回（retractions）结果进行展示。通过下面命令启用：
+- changelog mode：不会物化查询结果，直接对 continuous query 产生的添加和撤回（retractions）结果进行展示。通过下面命令启用：
 
   ```
   SET execution.result-mode=changelog

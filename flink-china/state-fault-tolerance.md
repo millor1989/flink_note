@@ -198,7 +198,7 @@ env.getCheckpointConfig().enableExternalizedCheckpoints(ExternalizedCheckpointCl
 
 ![1644204847999](/assets/1644204847999.png)
 
-Savepoint 与 Checkpoint 类似，都是把状态存储到外部介质。当做月失败时，可以从外部恢复。二者的区别：
+Savepoint 与 Checkpoint 类似，都是把状态存储到外部介质。当作业失败时，可以从外部恢复。二者的区别：
 
 - 触发管理方式上，Checkpoint 由 Flink 自动触发并管理，Savepoint 由用户手动触发和管理
 - 用途上，Checkpoint 在 task 发生异常时可快速恢复，比如网络波动或超时异常时；Savepoint 则是有计划地进行备份，使作业停止后再恢复——比如在修改代码、调整并发时。

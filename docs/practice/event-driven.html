@@ -1,0 +1,755 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>事件驱动应用 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="fault-tolerance.html" />
+    
+    
+    <link rel="prev" href="003.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../try-flink/local.html">
+            
+                <a href="../try-flink/local.html">
+            
+                    
+                    第一步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../try-flink/002.html">
+            
+                <a href="../try-flink/002.html">
+            
+                    
+                    基于DataStream API实现欺诈检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../try-flink/003.html">
+            
+                <a href="../try-flink/003.html">
+            
+                    
+                    基于Table API实现实时报表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../try-flink/004.html">
+            
+                <a href="../try-flink/004.html">
+            
+                    
+                    一个Flink操作操练场
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../practice.html">
+            
+                <a href="../practice.html">
+            
+                    
+                    动手练习 Flink
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="001.html">
+            
+                <a href="001.html">
+            
+                    
+                    DataStream API 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="002.html">
+            
+                <a href="002.html">
+            
+                    
+                    数据管道 & ETL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="003.html">
+            
+                <a href="003.html">
+            
+                    
+                    流式分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="event-driven.html">
+            
+                <a href="event-driven.html">
+            
+                    
+                    事件驱动应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="fault-tolerance.html">
+            
+                <a href="fault-tolerance.html">
+            
+                    
+                    容错
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../table-api.html">
+            
+                <a href="../table-api.html">
+            
+                    
+                    Table API & SQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../table-sql/concepts-common-api.html">
+            
+                <a href="../table-sql/concepts-common-api.html">
+            
+                    
+                    概念和通用 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../table-sql/datastream-api.html">
+            
+                <a href="../table-sql/datastream-api.html">
+            
+                    
+                    集成 DataStream API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../table-sql/streaming-concepts.html">
+            
+                <a href="../table-sql/streaming-concepts.html">
+            
+                    
+                    流概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../table-sql/data-types.html">
+            
+                <a href="../table-sql/data-types.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../table-sql/time-zone.html">
+            
+                <a href="../table-sql/time-zone.html">
+            
+                    
+                    时区
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../table-sql/table-api.html">
+            
+                <a href="../table-sql/table-api.html">
+            
+                    
+                    时区
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../flink-china.html">
+            
+                <a href="../flink-china.html">
+            
+                    
+                    Flink 中国社区文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../flink-china/setdeployrun.html">
+            
+                <a href="../flink-china/setdeployrun.html">
+            
+                    
+                    Flink 环境搭建、配置、部署及运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../flink-china/datastream-api.html">
+            
+                <a href="../flink-china/datastream-api.html">
+            
+                    
+                    DataStream API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../flink-china/client.html">
+            
+                <a href="../flink-china/client.html">
+            
+                    
+                    客户端操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../flink-china/time-window.html">
+            
+                <a href="../flink-china/time-window.html">
+            
+                    
+                    Time&Window
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../flink-china/state-fault-tolerance.html">
+            
+                <a href="../flink-china/state-fault-tolerance.html">
+            
+                    
+                    状态管理和容错机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../flink-china/table-api.html">
+            
+                <a href="../flink-china/table-api.html">
+            
+                    
+                    Table API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../flink-china/sql.html">
+            
+                <a href="../flink-china/sql.html">
+            
+                    
+                    Flink SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../wai-lian.html">
+            
+                <a href="../wai-lian.html">
+            
+                    
+                    外链
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >事件驱动应用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#xFF08;event-driven&#xFF09;&#x5E94;&#x7528;">&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#xFF08;Event-driven&#xFF09;&#x5E94;&#x7528;</h3>
+<h4 id="1&#x3001;&#x5904;&#x7406;&#x51FD;&#x6570;&#xFF08;process-functions&#xFF09;">1&#x3001;&#x5904;&#x7406;&#x51FD;&#x6570;&#xFF08;Process Functions&#xFF09;</h4>
+<h5 id="11&#x3001;&#x7B80;&#x4ECB;">1.1&#x3001;&#x7B80;&#x4ECB;</h5>
+<p><code>ProcessFucntion</code>  &#x5C06;&#x4E8B;&#x4EF6;&#x7684;&#x5904;&#x7406;&#x4E0E;&#x8BA1;&#x65F6;&#x5668;&#xFF08;timers&#xFF09;&#x548C;&#x72B6;&#x6001;&#xFF08;state&#xFF09;&#x7ED3;&#x5408;&#x8D77;&#x6765;&#xFF0C;&#x6784;&#x6210;&#x4E86;&#x7528;&#x4E8E;&#x6784;&#x5EFA;&#x6D41;&#x5904;&#x7406;&#x5E94;&#x7528;&#x7684;&#x5F3A;&#x5927;&#x7684;&#x57FA;&#x7840;&#x5355;&#x5143;&#x3002;&#x8FD9;&#x662F;&#x4F7F;&#x7528; Flink &#x6784;&#x5EFA;&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#x5E94;&#x7528;&#x7684;&#x57FA;&#x7840;&#x3002;&#x5B83;&#x4E0E; <code>RichFlatMapFunction</code> &#x975E;&#x5E38;&#x50CF;&#xFF0C;&#x53EA;&#x662F;&#x591A;&#x4E86;&#x8BA1;&#x65F6;&#x5668;&#x3002;</p>
+<h5 id="12&#x3001;&#x4F8B;&#x5B50;">1.2&#x3001;&#x4F8B;&#x5B50;</h5>
+<p>&#x4F7F;&#x7528; <code>TumblingEventTimeWindow</code> &#x6765;&#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x53F8;&#x673A;&#x6BCF;&#x4E2A;&#x5C0F;&#x65F6;&#x5C0F;&#x8D39;&#x7684;&#x603B;&#x548C;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-comment">// compute the sum of the tips per hour for each driver</span>
+DataStream&lt;Tuple3&lt;Long, Long, Float&gt;&gt; hourlyTips = fares
+        .keyBy((TaxiFare fare) -&gt; fare.driverId)
+        .window(TumblingEventTimeWindows.of(Time.hours(<span class="hljs-number">1</span>)))
+        .process(<span class="hljs-keyword">new</span> AddTips());
+</code></pre>
+<p>&#x4F7F;&#x7528; <code>KeyedProcessFunction</code> &#x505A;&#x540C;&#x6837;&#x7684;&#x4E8B;&#x60C5;&#x4E5F;&#x662F;&#x76F8;&#x5F53;&#x7B80;&#x5355;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-comment">// compute the sum of the tips per hour for each driver</span>
+DataStream&lt;Tuple3&lt;Long, Long, Float&gt;&gt; hourlyTips = fares
+        .keyBy((TaxiFare fare) -&gt; fare.driverId)
+        .process(<span class="hljs-keyword">new</span> PseudoWindow(Time.hours(<span class="hljs-number">1</span>)));
+</code></pre>
+<p>&#x5176;&#x4E2D;&#x88AB;&#x5E94;&#x7528;&#x5230;&#x952E;&#x63A7;&#x6D41;&#x4E0A;&#x7684; <code>PseudoWindow</code> &#x662F;&#x4E00;&#x4E2A; <code>KeyedProcessFunction</code>&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x662F;  <code>DataStream&lt;Tuple3&lt;Long, Long, Float&gt;&gt;</code>&#xFF08;&#x4E0E;&#x4F7F;&#x7528; Flink &#x7684;&#x5185;&#x7F6E;&#x4E8B;&#x4EF6;&#x7A97;&#x53E3;&#x7684;&#x5B9E;&#x73B0;&#x4EA7;&#x751F;&#x7684;&#x6D41;&#x662F;&#x76F8;&#x540C;&#x7C7B;&#x578B;&#xFF09;&#x3002;</p>
+<p><code>PseudoWindow</code> &#x4EE3;&#x7801;&#x6982;&#x8981;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-comment">// Compute the sum of the tips for each driver in hour-long windows.</span>
+<span class="hljs-comment">// The keys are driverIds.</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PseudoWindow</span> <span class="hljs-keyword">extends</span> 
+        <span class="hljs-title">KeyedProcessFunction</span>&lt;<span class="hljs-title">Long</span>, <span class="hljs-title">TaxiFare</span>, <span class="hljs-title">Tuple3</span>&lt;<span class="hljs-title">Long</span>, <span class="hljs-title">Long</span>, <span class="hljs-title">Float</span>&gt;&gt; </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> durationMsec;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">PseudoWindow</span><span class="hljs-params">(Time duration)</span> </span>{
+        <span class="hljs-keyword">this</span>.durationMsec = duration.toMilliseconds();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-comment">// Called once during initialization.</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">(Configuration conf)</span> </span>{
+        . . .
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-comment">// Called as each fare arrives to be processed.</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">processElement</span><span class="hljs-params">(
+            TaxiFare fare,
+            Context ctx,
+            Collector&lt;Tuple3&lt;Long, Long, Float&gt;&gt; out)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+
+        . . .
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-comment">// Called when the current watermark indicates that a window is now complete.</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onTimer</span><span class="hljs-params">(<span class="hljs-keyword">long</span> timestamp, 
+            OnTimerContext context, 
+            Collector&lt;Tuple3&lt;Long, Long, Float&gt;&gt; out)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+
+        . . .
+    }
+}
+</code></pre>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#xFF1A;</p>
+<ul>
+<li>&#x6709;&#x591A;&#x79CD;&#x7C7B;&#x578B;&#x7684; ProcessFunctions &#x2014;&#x2014; &#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x7684;&#x662F; <code>KeyedProcessFunction</code>&#xFF0C;&#x8FD8;&#x6709; <code>CoProcessFunctions</code>&#x3001;<code>BroadcastProcessFunctions</code> &#x7B49;&#x7B49;&#x3002;</li>
+<li><code>KeyedProcessFunction</code> &#x662F; <code>RichFunction</code> &#x7684;&#x4E00;&#x79CD;&#x3002;<code>RichFunction</code> &#x8BBF;&#x95EE; <code>open</code> &#x548C; <code>getRuntimeContext</code> &#x65B9;&#x6CD5;&#x9700;&#x8981;&#x642D;&#x914D;&#x6258;&#x7BA1;&#x7684;&#x952E;&#x63A7;&#x72B6;&#x6001;&#xFF08;managed keyed state&#xFF09;&#x4F7F;&#x7528;&#x3002;</li>
+<li>&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x4E24;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;callbacks&#xFF09;&#xFF1A;<code>processElement</code> &#x548C; <code>onTimer</code>&#x3002;&#x6BCF;&#x4E00;&#x6761;&#x8FDB;&#x5165;&#x7B97;&#x5B50;&#x7684;&#x4E8B;&#x4EF6;&#x90FD;&#x4F1A;&#x8C03;&#x7528; <code>processElement</code> &#xFF1B;&#x8BA1;&#x65F6;&#x5668;&#xFF08;timers&#xFF09;&#x89E6;&#x53D1;&#x65F6;&#x4F1A;&#x8C03;&#x7528; <code>onTimer</code>&#x3002;&#x8FD9;&#x4E9B;&#x8BA1;&#x65F6;&#x5668;&#x53EF;&#x4EE5;&#x662F;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x8BA1;&#x65F6;&#x5668;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x5904;&#x7406;&#x65F6;&#x95F4;&#x8BA1;&#x65F6;&#x5668;&#x3002;<code>processElement</code> &#x548C; <code>onTimer</code> &#x90FD;&#x5305;&#x542B;&#x4E00;&#x4E2A; <code>context</code> &#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x4E0E; <code>TimerService</code> &#x4EA4;&#x4E92;&#x3002;&#x8FD9;&#x4E24;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x8FD8;&#x6709;&#x4E00;&#x4E2A; <code>Collector</code> &#x53EF;&#x4EE5;&#x7528;&#x6765;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x3002;</li>
+</ul>
+<h5 id="121&#x3001;open-&#x65B9;&#x6CD5;">1.2.1&#x3001;<code>open()</code> &#x65B9;&#x6CD5;</h5>
+<pre><code class="lang-java"><span class="hljs-comment">// Keyed, managed state, with an entry for each window, keyed by the window&apos;s end time.</span>
+<span class="hljs-comment">// There is a separate MapState object for each driver.</span>
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">transient</span> MapState&lt;Long, Float&gt; sumOfTips;
+
+<span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">(Configuration conf)</span> </span>{
+
+    MapStateDescriptor&lt;Long, Float&gt; sumDesc =
+            <span class="hljs-keyword">new</span> MapStateDescriptor&lt;&gt;(<span class="hljs-string">&quot;sumOfTips&quot;</span>, Long.class, Float.class);
+    sumOfTips = getRuntimeContext().getMapState(sumDesc);
+}
+</code></pre>
+<p>&#x7531;&#x4E8E;&#x6536;&#x8D39;&#x4E8B;&#x4EF6;&#x53EF;&#x80FD;&#x4E0D;&#x662F;&#x6709;&#x5E8F;&#x8FDB;&#x5165;&#x7B97;&#x5B50;&#x7684;&#xFF0C;&#x6709;&#x65F6;&#x5019;&#x5728;&#x4E0A;&#x4E00;&#x4E2A;&#x5C0F;&#x65F6;&#x7684;&#x7ED3;&#x679C;&#x8FD8;&#x6CA1;&#x5904;&#x7406;&#x5B8C;&#x6210;&#x4E4B;&#x524D;&#x6709;&#x5FC5;&#x8981;&#x5904;&#x7406;&#x8FD9;&#x4E2A;&#x5C0F;&#x65F6;&#x7684;&#x6570;&#x636E;&#x3002;&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x5982;&#x679C;&#x6C34;&#x5370;&#x5EF6;&#x8FDF;&#x6BD4;&#x7A97;&#x53E3;&#x957F;&#x5EA6;&#x957F;&#x5F88;&#x591A;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x80FD;&#x4F1A;&#x540C;&#x65F6;&#x5B58;&#x5728;&#x8BB8;&#x591A;&#x7A97;&#x53E3;&#x3002;&#x8FD9;&#x91CC;&#x7684; <code>open()</code> &#x5B9E;&#x73B0;&#x901A;&#x8FC7;&#x4F7F;&#x7528; <code>MapState</code>&#xFF08;&#x6BCF;&#x4E2A;&#x7A97;&#x53E3;&#x7ED3;&#x675F;&#x65F6;&#x95F4;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x4E0E;&#x8BE5;&#x7A97;&#x53E3;&#x5C0F;&#x8D39;&#xFF09; &#x5BF9;&#x6B64;&#x591A;&#x7A97;&#x53E3;&#x8BA1;&#x7B97;&#x8FDB;&#x884C;&#x4E86;&#x652F;&#x6301;&#x3002;</p>
+<h5 id="122&#x3001;processelement-&#x65B9;&#x6CD5;">1.2.2&#x3001;<code>processElement()</code> &#x65B9;&#x6CD5;</h5>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">processElement</span><span class="hljs-params">(
+        TaxiFare fare,
+        Context ctx,
+        Collector&lt;Tuple3&lt;Long, Long, Float&gt;&gt; out)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+
+    <span class="hljs-keyword">long</span> eventTime = fare.getEventTime();
+    TimerService timerService = ctx.timerService();
+
+    <span class="hljs-keyword">if</span> (eventTime &lt;= timerService.currentWatermark()) {
+        <span class="hljs-comment">// This event is late; its window has already been triggered.</span>
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">// Round up eventTime to the end of the window containing this event.</span>
+        <span class="hljs-keyword">long</span> endOfWindow = (eventTime - (eventTime % durationMsec) + durationMsec - <span class="hljs-number">1</span>);
+
+        <span class="hljs-comment">// Schedule a callback for when the window has been completed.</span>
+        timerService.registerEventTimeTimer(endOfWindow);
+
+        <span class="hljs-comment">// Add this fare&apos;s tip to the running total for that window.</span>
+        Float sum = sumOfTips.get(endOfWindow);
+        <span class="hljs-keyword">if</span> (sum == <span class="hljs-keyword">null</span>) {
+            sum = <span class="hljs-number">0.0F</span>;
+        }
+        sum += fare.tip;
+        sumOfTips.put(endOfWindow, sum);
+    }
+}
+</code></pre>
+<p>&#x9700;&#x8981;&#x8003;&#x8651;&#x7684;&#x4E8B;&#x60C5;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x600E;&#x4E48;&#x5904;&#x7406;&#x8FDF;&#x5230;&#x4E8B;&#x4EF6;&#xFF08;late events&#xFF09;&#xFF1F;&#x8FDF;&#x5230;&#xFF08;&#x5373;&#x6C34;&#x5370;&#x4E4B;&#x540E;&#xFF09;&#x7684;&#x4E8B;&#x4EF6;&#x4F1A;&#x88AB;&#x5220;&#x9664;&#x3002;&#x5982;&#x679C;&#x60F3;&#x8981;&#x5BF9;&#x8FDF;&#x5230;&#x4E8B;&#x4EF6;&#x8FDB;&#x884C;&#x66F4;&#x597D;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x4F7F;&#x7528;&#x65C1;&#x8DEF;&#x8F93;&#x51FA;&#xFF08;side output&#xFF09;&#x3002;</li>
+<li>&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4F7F;&#x7528;&#x4E86;&#x4E00;&#x4E2A; <code>MapState</code> &#x2014;&#x2014; &#x5B83;&#x7684;&#x952E;&#x662F;&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x5E76;&#x4E3A;&#x76F8;&#x540C;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x8BBE;&#x7F6E;&#x4E86;&#x4E00;&#x4E2A; <code>Timer</code>&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x6A21;&#x5F0F;&#xFF08;common pattern&#xFF09;&#xFF1B;&#x5F53;&#x8BA1;&#x65F6;&#x5668;&#x89E6;&#x53D1;&#x65F6;&#xFF0C;&#x67E5;&#x627E;&#x76F8;&#x5173;&#x7684;&#x4FE1;&#x606F;&#x5F88;&#x5BB9;&#x6613;&#x3002;</li>
+</ul>
+<h5 id="123&#x3001;ontimer-&#x65B9;&#x6CD5;">1.2.3&#x3001;<code>onTimer()</code> &#x65B9;&#x6CD5;</h5>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onTimer</span><span class="hljs-params">(
+        <span class="hljs-keyword">long</span> timestamp, 
+        OnTimerContext context, 
+        Collector&lt;Tuple3&lt;Long, Long, Float&gt;&gt; out)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+
+    <span class="hljs-keyword">long</span> driverId = context.getCurrentKey();
+    <span class="hljs-comment">// Look up the result for the hour that just ended.</span>
+    Float sumOfTips = <span class="hljs-keyword">this</span>.sumOfTips.get(timestamp);
+
+    Tuple3&lt;Long, Long, Float&gt; result = Tuple3.of(driverId, timestamp, sumOfTips);
+    out.collect(result);
+    <span class="hljs-keyword">this</span>.sumOfTips.remove(timestamp);
+}
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF1A;</p>
+<ul>
+<li>&#x4F20;&#x9012;&#x7ED9; <code>onTimer</code> &#x7684; <code>OnTimerContext context</code> &#x53EF;&#x4EE5;&#x7528;&#x6765;&#x786E;&#x5B9A;&#x5F53;&#x524D;&#x7684;&#x952E;&#x3002;</li>
+<li>&#x5F53;&#x524D;&#x6C34;&#x5370;&#x5230;&#x8FBE;&#x6BCF;&#x4E2A;&#x5C0F;&#x65F6;&#x7684;&#x7ED3;&#x5C3E;&#x65F6;&#xFF0C;&#x4F2A;&#x7A97;&#x53E3;&#xFF08;pseudo-window&#xFF09;&#x4F1A;&#x88AB;&#x89E6;&#x53D1;&#xFF0C;&#x6B64;&#x65F6; <code>onTimer</code> &#x88AB;&#x8C03;&#x7528;&#x3002;&#x8FD9;&#x91CC;&#x7684; <code>onTimer</code> &#x5B9E;&#x73B0;&#x5C06;&#x76F8;&#x5173;&#x7684;&#x6761;&#x76EE;&#x4ECE; <code>sumOfTips</code> &#x5220;&#x9664;&#x4E86;&#xFF0C;&#x8FD9;&#x4F1A;&#x5BFC;&#x81F4;&#x5B83;&#x4E0D;&#x80FD;&#x5E94;&#x5BF9;&#x8FDF;&#x5230;&#x7684;&#x4E8B;&#x4EF6;&#x3002;&#x8FD9;&#x4E0E;&#x4F7F;&#x7528; Flink &#x65F6;&#x95F4;&#x7A97;&#x53E3;&#x65F6;&#x5C06; allowedLateness &#x8BBE;&#x7F6E;&#x4E3A; 0 &#x662F;&#x7B49;&#x4EF7;&#x7684;&#x3002;</li>
+</ul>
+<h5 id="13&#x3001;&#x6027;&#x80FD;&#x8003;&#x8651;">1.3&#x3001;&#x6027;&#x80FD;&#x8003;&#x8651;</h5>
+<p>Flink &#x63D0;&#x4F9B;&#x7684; <code>MapState</code> &#x548C; <code>ListState</code> &#x7C7B;&#x578B;&#x662F;&#x9488;&#x5BF9; RocksDB &#x8FDB;&#x884C;&#x4E86;&#x4F18;&#x5316;&#x7684;&#x3002;&#x5728;&#x53EF;&#x80FD;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5E94;&#x8BE5;&#x4F18;&#x5148;&#x4F7F;&#x7528;&#x5B83;&#x4EEC;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4F7F;&#x7528;&#x4FDD;&#x5B58;&#x67D0;&#x79CD;&#x96C6;&#x5408;&#x7684; <code>ValueState</code> &#x5BF9;&#x8C61;&#x3002;RocksDB &#x72B6;&#x6001;&#x540E;&#x7AEF;&#x5728;&#x4E0D;&#x8FDB;&#x884C;&#x5E8F;&#x5217;&#x5316;&#xFF08;&#x6216;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#xFF09;&#x5C31;&#x53EF;&#x4EE5;&#x5F80; <code>ListState</code> &#x8FFD;&#x52A0;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x4E14;&#x5BF9;&#x4E8E; <code>MapState</code>&#xFF0C;&#x6BCF;&#x4E2A;&#x952E;/&#x503C;&#x5BF9;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684; RocksDB &#x5BF9;&#x8C61;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x9AD8;&#x6548;&#x5730;&#x8BBF;&#x95EE;&#x548C;&#x66F4;&#x65B0; <code>MapState</code>&#x3002;</p>
+<h4 id="2&#x3001;&#x65C1;&#x8DEF;&#x8F93;&#x51FA;&#xFF08;side-outputs&#xFF09;">2&#x3001;&#x65C1;&#x8DEF;&#x8F93;&#x51FA;&#xFF08;Side Outputs&#xFF09;</h4>
+<h5 id="21&#x3001;&#x7B80;&#x4ECB;">2.1&#x3001;&#x7B80;&#x4ECB;</h5>
+<p>&#x53EF;&#x80FD;&#x9700;&#x8981;&#x4ECE;&#x4E00;&#x4E2A; Flink &#x7B97;&#x5B50;&#x83B7;&#x53D6;&#x591A;&#x4E8E;&#x4E00;&#x4E2A;&#x7684;&#x8F93;&#x51FA;&#x6D41;&#x7684;&#x573A;&#x5408;&#xFF1A;</p>
+<ul>
+<li>&#x62A5;&#x544A;&#x5F02;&#x5E38;</li>
+<li>&#x62A5;&#x544A;&#x7578;&#x5F62;&#xFF08;malformed&#xFF09;&#x4E8B;&#x4EF6;</li>
+<li>&#x62A5;&#x544A;&#x8FDF;&#x5230;&#x4E8B;&#x4EF6;</li>
+<li>&#x62A5;&#x544A;&#x64CD;&#x4F5C;&#x8B66;&#x544A;&#x2014;&#x2014;&#x6BD4;&#x5982;&#x8D85;&#x65F6;&#x7684;&#x4E0E;&#x5916;&#x90E8;&#x670D;&#x52A1;&#x7684;&#x8FDE;&#x63A5;</li>
+</ul>
+<h5 id="22&#x3001;&#x4F8B;&#x5B50;">2.2&#x3001;&#x4F8B;&#x5B50;</h5>
+<p>&#x65C1;&#x8DEF;&#x8F93;&#x51FA;&#x662F;&#x4E0E; <code>OutputTag&lt;T&gt;</code> &#x76F8;&#x5173;&#x8054;&#x7684;&#x3002;&#x8FD9;&#x4E9B;&#x6807;&#x7B7E;&#xFF08;tags&#xFF09;&#x5177;&#x6709;&#x4E0E;&#x65C1;&#x8DEF;&#x8F93;&#x51FA;&#x7684; <code>DataStream</code> &#x7C7B;&#x578B;&#x76F8;&#x540C;&#x7684;&#x6CDB;&#x578B;&#xFF0C;&#x5E76;&#x4E14;&#x5B83;&#x4EEC;&#x662F;&#x6709;&#x540D;&#x5B57;&#x7684;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> OutputTag&lt;TaxiFare&gt; lateFares = <span class="hljs-keyword">new</span> OutputTag&lt;TaxiFare&gt;(<span class="hljs-string">&quot;lateFares&quot;</span>) {};
+</code></pre>
+<p>&#x9759;&#x6001;&#x53D8;&#x91CF; <code>lateFares</code> &#x53EF;&#x4EE5;&#x5728; <code>PseudoWindow</code> &#x7684; <code>processElement</code> &#x65B9;&#x6CD5;&#x8F93;&#x51FA;&#x8FDF;&#x5230;&#x4E8B;&#x4EF6;&#x65F6;&#x5F15;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">if</span> (eventTime &lt;= timerService.currentWatermark()) {
+    <span class="hljs-comment">// This event is late; its window has already been triggered.</span>
+    ctx.output(lateFares, fare);
+} <span class="hljs-keyword">else</span> {
+    . . .
+}
+</code></pre>
+<p>&#x8FD8;&#x53EF;&#x4EE5;&#x5728; job &#x7684; <code>main</code> &#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x8BBF;&#x95EE;&#x8FD9;&#x4E2A;&#x65C1;&#x8DEF;&#x8F93;&#x51FA;&#x7684;&#x6D41;&#x65F6;&#x5F15;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-comment">// compute the sum of the tips per hour for each driver</span>
+SingleOutputStreamOperator hourlyTips = fares
+        .keyBy((TaxiFare fare) -&gt; fare.driverId)
+        .process(<span class="hljs-keyword">new</span> PseudoWindow(Time.hours(<span class="hljs-number">1</span>)));
+
+hourlyTips.getSideOutput(lateFares).print();
+</code></pre>
+<p>&#x6216;&#x8005;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5177;&#x6709;&#x76F8;&#x540C;&#x540D;&#x79F0;&#x7684;&#x4E24;&#x4E2A; OutputTags &#x6765;&#x5F15;&#x7528;&#x76F8;&#x540C;&#x7684;&#x65C1;&#x8DEF;&#x8F93;&#x51FA;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x8FD9;&#x6837;&#x505A;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x7C7B;&#x578B;&#x5FC5;&#x987B;&#x76F8;&#x540C;&#x3002;</p>
+<h4 id="3&#x3001;&#x7ED3;&#x675F;&#x8BED;&#xFF08;closing-remarks&#xFF09;">3&#x3001;&#x7ED3;&#x675F;&#x8BED;&#xFF08;Closing Remarks&#xFF09;</h4>
+<p> <code>ProcessFunctions</code> &#x9664;&#x4E86;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x8FD0;&#x7B97;&#x5206;&#x6790;&#xFF0C;&#x8FD8;&#x80FD;&#x505A;&#x5F88;&#x591A;&#x5176;&#x5B83;&#x4E8B;&#x60C5;&#xFF0C;&#x6BD4;&#x5982;&#x91CA;&#x653E;&#x65E7;&#x7684;&#x72B6;&#x6001;&#x3002;&#x4F7F;&#x7528; <code>KeyedProcessFunction</code> &#x548C;&#x8BA1;&#x65F6;&#x5668;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x68C0;&#x6D4B;&#x548C;&#x6E05;&#x9664;&#x9648;&#x65E7;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="003.html" class="navigation navigation-prev " aria-label="Previous page: 流式分析">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="fault-tolerance.html" class="navigation navigation-next " aria-label="Next page: 容错">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"事件驱动应用","level":"1.2.4","depth":2,"next":{"title":"容错","level":"1.2.5","depth":2,"path":"practice/fault-tolerance.md","ref":"practice/fault-tolerance.md","articles":[]},"previous":{"title":"流式分析","level":"1.2.3","depth":2,"path":"practice/003.md","ref":"practice/003.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"practice/event-driven.md","mtime":"2022-03-10T08:55:45.227Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-20T02:10:49.782Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

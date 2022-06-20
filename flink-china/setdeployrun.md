@@ -97,12 +97,13 @@ standalone ha 部署需要依赖 Zookeeper。
 ![1639016198046](/assets/1639016198046.png)
 
 相比 standalone 模式，yarn 模式运行 flink job 的优点：
-● 资源按需使用，提高集群的资源利用率
-● 任务有优先级，根据优先级运行作业
-● 基于 YARN 调度系统，能够自动化地处理各个角色的 failover
-  ○ JobManager 进程和 TaskManager 进程都由 Yarn NodeManager 监控
-  ○ 如果 JobManager 进程异常退出，则 Yarn ResourceManager 会重新调度 JobManager 到其他机器
-  ○ 如果 TaskManager 进程异常退出，JobManager 会收到消息并重新向 Yarn ResourceManager 申请资源，重新启动 TaskManager
+
+- 资源按需使用，提高集群的资源利用率
+- 任务有优先级，根据优先级运行作业
+- 基于 YARN 调度系统，能够自动化地处理各个角色的 failover
+  - JobManager 进程和 TaskManager 进程都由 Yarn NodeManager 监控
+  - 如果 JobManager 进程异常退出，则 Yarn ResourceManager 会重新调度 JobManager 到其他机器
+  - 如果 TaskManager 进程异常退出，JobManager 会收到消息并重新向 Yarn ResourceManager 申请资源，重新启动 TaskManager
 
 ##### 2.5.1、在 Yarn 上启动 Long Running 的 Flink 集群（Session Cluster 模式）
 

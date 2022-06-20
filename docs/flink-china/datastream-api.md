@@ -36,7 +36,7 @@ DataStream<Tuple2<String, Integer>> counts = text.flatMap(new Tokenizer()).keyBy
 counts.writeAsText("output");
 ```
 
-由于流处理的计算逻辑是通过 DAG 图来表示的，因此它们的大部分 API 都是围绕构建这种计算逻辑图来设计的。例如，对于几年前非常流行的 Apache Storm，它的 Word Count 的示例如上所示。基于 Apache Storm 用户需要在图中添加 Spout 或 Bolt 这种算子，并指定算子之前的连接方式。这样，在完成整个图的构建之后，就可以将图提交到远程或本地集群运行。
+由于流处理的计算逻辑是通过 DAG 图来表示的，因此它们的大部分 API 都是围绕构建这种计算逻辑图来设计的。例如，对于几年前非常流行的 Apache Storm，它的 Word Count 的示例如上所示。基于 Apache Storm 用户需要在图中添加 Spout 或 Bolt 这种算子，并指定算子之间的连接方式。这样，在完成整个图的构建之后，就可以将图提交到远程或本地集群运行。
 
 而 Apache Flink 的接口虽然也是在构建计算逻辑图，但是 Flink 的 API 定义更加面向数据本身的处理逻辑，它把数据流抽象成为一个无限集，然后定义了一组集合上的操作，然后在底层自动构建相应的 DAG 图。Flink 的 API 要更“高层”一些。
 
@@ -61,11 +61,11 @@ env.execute("Streaming WordCount");
 
 该例给出了基于 Flink DataStream API 开发程序的基本结构。
 
-首先构建一个 `StreamExecutionEnvironment` 对象，它是构建图过程中的上下文对象。对于流处理程度，一般需要首先创建一个数据源去接入数据，在这个例子中，使用了 `Environment` 对象中内置的读取文件的数据源，得到了一个 `DataStream` 对象，它可以看作一个无限的数据集，可以在该集合上进行一系列的操作。在 Word Count 例子中，首先将每一条记录（即文件中的一行）分隔为单词，这是通过 `flatMap` 操作来实现的。调用 `flatMap` 将会在底层的 DAG 图中添加一个 `flatMap` 算子。然后，得到了一个记录为单词的流，将流中的单词进行分组（`keyBy`），然后累积计算每一个单词的数据（`sum(1)`）。计算出的单词的数据组成了一个新的流，将它写到输出文件中。
+首先构建一个 `StreamExecutionEnvironment` 对象，它是构建图过程中的上下文对象。对于流处理程序，一般需要首先创建一个数据源去接入数据，在这个例子中，使用了 `Environment` 对象中内置的读取文件的数据源，得到了一个 `DataStream` 对象，它可以看作一个无限的数据集，可以在该集合上进行一系列的操作。在 Word Count 例子中，首先将每一条记录（即文件中的一行）分隔为单词，这是通过 `flatMap` 操作来实现的。调用 `flatMap` 将会在底层的 DAG 图中添加一个 `flatMap` 算子。然后，得到了一个记录为单词的流，将流中的单词进行分组（`keyBy`），然后累积计算每一个单词的数据（`sum(1)`）。计算出的单词的数据组成了一个新的流，将它写到输出文件中。
 
-最后，调用 `env.execute` 方法来开始程序的执行。需要强调的是，前面调用的所有方法，都不是在实际处理数据，而是在构通表达计算逻辑的 DAG 图。只有将整个图构建完成并显式的调用 `execute` 方法后，框架才会把计算图提供到集群中，接入数据并执行实际的逻辑。
+最后，调用 `env.execute` 方法来开始程序的执行。需要强调的是，前面调用的所有方法，都不是在实际处理数据，而是在构建表达计算逻辑的 DAG 图。只有将整个图构建完成并显式的调用 `execute` 方法后，框架才会把计算图提供到集群中、接入数据并执行实际的逻辑。
 
-综上，基于 Flink 的 DataStream API 来编写流处理程序一般需要三步：通过 Source 接入数据、进行一系统列的处理以及将数据写出。最后，显式调用 `execute` 方法，否则前面编写的逻辑并不会真正执行。
+综上，基于 Flink 的 DataStream API 来编写流处理程序一般需要三步：通过 Source 接入数据、进行一系列的处理以及将数据写出。最后，显式调用 `execute` 方法，否则前面编写的逻辑并不会真正执行。
 
 ![操作概览](/assets/1639052012526.png)
 
@@ -103,7 +103,7 @@ Flink DataStream API 的核心，就是代表流数据的 DataStream 对象。�
 
 ##### 3.1、物理分组
 
-除了 KeyBy，Flink 在算子之前交换数据时还支持其它的物理分组方式：
+除了 KeyBy，Flink 在算子之间交换数据时还支持其它的物理分组方式：
 
 - global: 上游算子将所有记录发送给下游算子的第一个实例。
 - broadcast: 上游算子将每一条记录发送给下游算子的所有实例。
@@ -115,7 +115,7 @@ Flink DataStream API 的核心，就是代表流数据的 DataStream 对象。�
 
 ##### 3.2、类型系统
 
-Flink DataStream 对像都是强类型的，每一个 DataStream 对象都需要指定元素的类型，Flink 自己底层的序列化机制正是依赖于这些信息对序列化等进行优化。具体来说，在 Flink 底层，它是使用 TypeInformation 对象对类型进行描述的，TypeInformation 对象定义了一组类型相关的信息供序列化框架使用。
+Flink DataStream 对象都是强类型的，每一个 DataStream 对象都需要指定元素的类型，Flink 自己底层的序列化机制正是依赖于这些信息对序列化等进行优化。具体来说，在 Flink 底层，它是使用 TypeInformation 对象对类型进行描述的，TypeInformation 对象定义了一组类型相关的信息供序列化框架使用。
 
 ![1639053595537](/assets/1639053595537.png)
 
@@ -187,11 +187,11 @@ public class GroupedProcessingTimeWindowSample {
 
 本例中，首先实现了一个**模拟的数据源**，继承自 `RichParallelSourceFunction`——它是可以有多个实例的 `SourceFunction` 接口的实现。它有两个方法需要实现：`run` 方法—— Flink 在运行时对 Source 会直接调用该方法，不断地输出数据从而形成初始的流。在 `run` 方法的实现中，随机地产生了商品类别和交易量的记录，然后通过 `ctx#collect` 方法进行发送。另一个方法是 `cancel` 方法，当 Flink 需要 Cancel Source Task 的时候会掉用该方法。使用 volatile 类型的变量来标记和控制执行的状态。
 
-`main` 方法中，首先创建了一个 `StreamExecutioniEnviroment` 对象。创建对象调用的 `getExecutionEnvironment` 方法会自动判断所处的环境，从而创建合适的对象。例如，如果在 IDE 中直接右键运行，则会创建 `LocalStreamExecutionEnvironment` 对象；如果是在一个实际的环境中，则会创建 `RemoteStreamExecutionEnvironment` 对象。基于 `Environment` 对象，创建了一个 `Source`，从而得到初始的`<商品类型，成交量>`流。为了统计每种类别的成交量，使用 `keyBy(0)` 按 Tuple 的第 1 个字段（即商品类型）对输入流进行分组，并用 `sum(1)` 对每一个 Key 对应的记录的第 2 个字段（即成交量）进行求合。在底层，`sum` 算子内部会使用 state 来维护每个Key（即商品类型）对应的成交量之和。当有新记录到达时，`sum` 算子内部会更新所维护的成交量之和，并输出一条`<商品类型，更新后的成交量>`记录。
+`main` 方法中，首先创建了一个 `StreamExecutioniEnviroment` 对象。创建对象调用的 `getExecutionEnvironment` 方法会自动判断所处的环境，从而创建合适的对象。例如，如果在 IDE 中直接右键运行，则会创建 `LocalStreamExecutionEnvironment` 对象；如果是在一个实际的环境中，则会创建 `RemoteStreamExecutionEnvironment` 对象。基于 `Environment` 对象，创建了一个 `Source`，从而得到初始的`<商品类型，成交量>`流。为了统计每种类别的成交量，使用 `keyBy(0)` 按 Tuple 的第 1 个字段（即商品类型）对输入流进行分组，并用 `sum(1)` 对每一个 Key 对应的记录的第 2 个字段（即成交量）进行求和。在底层，`sum` 算子内部会使用 state 来维护每个Key（即商品类型）对应的成交量之和。当有新记录到达时，`sum` 算子内部会更新所维护的成交量之和，并输出一条`<商品类型，更新后的成交量>`记录。
 
 为了统计所有类型的总成交量。需要将所有记录输出到同一个计算节点的实例上。通过 `keyBy(new KeySelector())` 对所有记录返回一个相同的 Key，将所有记录分到同一个组中，从而可以全部发送到同一个实例上。然后，使用 `fold` 方法来在算子中维护每种类型商品的成交量。注意虽然目前 `fold` 方法已经被标记为 `Deprecated`，但是在 DataStream API 中暂时还没有能替代它的其它操作，所以仍然使用 `fold` 方法。这一方法接收一个初始值，然后当后续流中每条记录到达的时候，算子会调用所传递的 `FoldFunction` 对初始值进行更新，并发送更新后的值。使用一个 `HashMap` 来对各个类别的当前成交量进行维护，当有一条新的`<商品类别，成交量>`到达时，就更新该 `HashMap`。这样在 Sink 中，收到的是最新的商品类别和成交量的 `HashMap`，可以依赖这个值来输出各个商品的成交量和总的成交量。
 
-需要指出的是，这个例子主要是用来演示 DataStream API 的用法，实际上还会有更高效的写法，此外，更上层的 Table / SQL 还支持 Retraction（撤回）机制，可以更好的处理这种情况。
+需要指出的是，这个例子主要是用来演示 DataStream API 的用法，实际上还会有更高效的写法，此外，更上层的 Table API / SQL 还支持 Retraction（回撤）机制，可以更好的处理这种情况。
 
 ##### 4.1、API 原理
 
