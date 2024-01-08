@@ -1,5 +1,7 @@
 ### 1、前言
 
+参考链接：[1](https://github.com/flink-china/flink-training-course)、[2](https://mp.weixin.qq.com/s/oBmRhRA-52CLRLXp6sZwEw)
+
 ###### 基于 Flink 1.5 ~ 1.7
 
 #### 1.1、Flink Application
@@ -46,9 +48,9 @@ API 的表达能力及业务抽象能力都非常强大，但越接近 SQL 层�
 
 **ProcessFunctions**：Flink 提供的最具表现力（expressive）的函数接口。Flink 提供了处理一个或者多个输入流、或者分组为事件的窗口（grouped in a window）的单个事件（individual events）的 ProcessFunctions。
 
-**DataStreamAPI**：提供了许多通用的流处理的基本操作（primitives），比如，开窗（windowing）、一次记录（record-at-a-time）转换、通过查询外部存储使事件丰富\充实\扩展（enriching）。
+**DataStream API**：提供了许多通用的流处理的基本操作（primitives），比如，开窗（windowing）、一次记录（record-at-a-time，从一个数据集合中，指定和获取每一条记录）转换、通过查询外部存储使事件丰富\充实\扩展（enriching）。
 
-**SQL/TableAPI**：关系型的（relational） APIs。
+**SQL/Table API**：关系型的（relational） APIs。
 
 #### 1.3、Flink Architecture - Stateful
 

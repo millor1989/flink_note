@@ -1,5 +1,6 @@
 # Summary
 
+* [Dataflow](dataflow.md)
 * [入门](README.md)
   * [第一步](try-flink/local.md)
   * [基于DataStream API实现欺诈检测](try-flink/002.md)
@@ -17,7 +18,12 @@
   * [流概念](table-sql/streaming-concepts.md)
   * [数据类型](table-sql/data-types.md)
   * [时区](table-sql/time-zone.md)
-  * [时区](table-sql/table-api.md)
+  * [Table API](table-sql/table-api.md)
+* [部署](deployment.md)
+  * [资源提供者](deployment/resource-providers.md)
+  * [配置](deployment/configuration.md)
+  * [内存配置](deployment/memory-configuration.md)
+  * [命令行接口](deployment/cli.md)
 * [Flink 中国社区文档](flink-china.md)
   * [Flink 环境搭建、配置、部署及运行](flink-china/setdeployrun.md)
   * [DataStream API](flink-china/datastream-api.md)
@@ -26,4 +32,5 @@
   * [状态管理和容错机制](flink-china/state-fault-tolerance.md)
   * [Table API](flink-china/table-api.md)
   * [Flink SQL](flink-china/sql.md)
+* [动手实践记录](practice-log.md)
 * [外链](wai-lian.md)
